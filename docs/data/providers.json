@@ -1,0 +1,308 @@
+{
+  "providers": [
+    {
+      "provider": {
+        "id": "openai",
+        "name": "OpenAI",
+        "category": "llm",
+        "color": "#10a37f",
+        "icon": "🤖",
+        "apiUrl": "https://status.openai.com/api/v2/summary.json",
+        "statusPageUrl": "https://status.openai.com"
+      },
+      "status": {
+        "providerId": "openai",
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-28T21:27:17.934Z"
+      },
+      "stats": {
+        "providerId": "openai",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 0,
+        "avgMttr30d": null,
+        "lastIncident": null,
+        "reliabilityScore": 100
+      },
+      "recentIncidents": []
+    },
+    {
+      "provider": {
+        "id": "anthropic",
+        "name": "Anthropic",
+        "category": "llm",
+        "color": "#d97706",
+        "icon": "🧠",
+        "apiUrl": "https://status.anthropic.com/api/v2/summary.json",
+        "statusPageUrl": "https://status.anthropic.com"
+      },
+      "status": {
+        "providerId": "anthropic",
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-28T21:27:18.733Z"
+      },
+      "stats": {
+        "providerId": "anthropic",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 0,
+        "avgMttr30d": null,
+        "lastIncident": null,
+        "reliabilityScore": 100
+      },
+      "recentIncidents": []
+    },
+    {
+      "provider": {
+        "id": "groq",
+        "name": "Groq",
+        "category": "llm",
+        "color": "#f97316",
+        "icon": "⚡",
+        "apiUrl": "https://groqstatus.com/api/v2/summary.json",
+        "statusPageUrl": "https://groqstatus.com"
+      },
+      "status": {
+        "providerId": "groq",
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-28T21:27:19.410Z"
+      },
+      "stats": {
+        "providerId": "groq",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 0,
+        "avgMttr30d": null,
+        "lastIncident": null,
+        "reliabilityScore": 100
+      },
+      "recentIncidents": []
+    },
+    {
+      "provider": {
+        "id": "cohere",
+        "name": "Cohere",
+        "category": "llm",
+        "color": "#6366f1",
+        "icon": "🔮",
+        "apiUrl": "https://status.cohere.com/api/v2/summary.json",
+        "statusPageUrl": "https://status.cohere.com"
+      },
+      "status": {
+        "providerId": "cohere",
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-28T21:27:20.051Z"
+      },
+      "stats": {
+        "providerId": "cohere",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 0,
+        "avgMttr30d": null,
+        "lastIncident": null,
+        "reliabilityScore": 100
+      },
+      "recentIncidents": []
+    },
+    {
+      "provider": {
+        "id": "vercel",
+        "name": "Vercel",
+        "category": "infra",
+        "color": "#e2e8f0",
+        "icon": "▲",
+        "apiUrl": "https://www.vercel-status.com/api/v2/summary.json",
+        "statusPageUrl": "https://www.vercel-status.com"
+      },
+      "status": {
+        "providerId": "vercel",
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-28T21:27:20.562Z"
+      },
+      "stats": {
+        "providerId": "vercel",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 0,
+        "avgMttr30d": null,
+        "lastIncident": null,
+        "reliabilityScore": 100
+      },
+      "recentIncidents": []
+    },
+    {
+      "provider": {
+        "id": "cloudflare",
+        "name": "Cloudflare",
+        "category": "infra",
+        "color": "#f6821f",
+        "icon": "☁️",
+        "apiUrl": "https://www.cloudflarestatus.com/api/v2/summary.json",
+        "statusPageUrl": "https://www.cloudflarestatus.com"
+      },
+      "status": {
+        "providerId": "cloudflare",
+        "indicator": "major",
+        "description": "Partial System Outage",
+        "updatedAt": "2026-04-28T21:27:20.999Z"
+      },
+      "stats": {
+        "providerId": "cloudflare",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 1,
+        "avgMttr30d": null,
+        "lastIncident": "2026-04-28T18:31:16.922Z",
+        "reliabilityScore": 97
+      },
+      "recentIncidents": [
+        {
+          "id": "yg4t0swj39fg",
+          "providerId": "cloudflare",
+          "title": "Duplicated values in X-Forwarded-For header",
+          "severity": "critical",
+          "startedAt": "2026-04-28T18:31:16.922Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/8882twknjyks"
+        }
+      ]
+    },
+    {
+      "provider": {
+        "id": "github",
+        "name": "GitHub",
+        "category": "infra",
+        "color": "#e2e8f0",
+        "icon": "🐙",
+        "apiUrl": "https://www.githubstatus.com/api/v2/summary.json",
+        "statusPageUrl": "https://www.githubstatus.com"
+      },
+      "status": {
+        "providerId": "github",
+        "indicator": "minor",
+        "description": "Partially Degraded Service",
+        "updatedAt": "2026-04-28T21:27:21.382Z"
+      },
+      "stats": {
+        "providerId": "github",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 1,
+        "avgMttr30d": null,
+        "lastIncident": "2026-04-28T14:17:34.682Z",
+        "reliabilityScore": 97
+      },
+      "recentIncidents": [
+        {
+          "id": "x69zbgdyfzg0",
+          "providerId": "github",
+          "title": "Incomplete pull request results in repositories",
+          "severity": "minor",
+          "startedAt": "2026-04-28T14:17:34.682Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/87w0vmv3sz1r"
+        }
+      ]
+    },
+    {
+      "provider": {
+        "id": "supabase",
+        "name": "Supabase",
+        "category": "data",
+        "color": "#3ecf8e",
+        "icon": "🗄️",
+        "apiUrl": "https://status.supabase.com/api/v2/summary.json",
+        "statusPageUrl": "https://status.supabase.com"
+      },
+      "status": {
+        "providerId": "supabase",
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-28T21:27:21.833Z"
+      },
+      "stats": {
+        "providerId": "supabase",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 1,
+        "avgMttr30d": null,
+        "lastIncident": "2026-04-28T21:26:46.180Z",
+        "reliabilityScore": 97
+      },
+      "recentIncidents": [
+        {
+          "id": "rzwtq93tzd4f",
+          "providerId": "supabase",
+          "title": "403 errors for PostgREST requests",
+          "severity": "minor",
+          "startedAt": "2026-04-28T21:26:46.180Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/tcv618ssfg0s"
+        }
+      ]
+    },
+    {
+      "provider": {
+        "id": "pinecone",
+        "name": "Pinecone",
+        "category": "data",
+        "color": "#008080",
+        "icon": "🌲",
+        "apiUrl": "https://status.pinecone.io/api/v2/summary.json",
+        "statusPageUrl": "https://status.pinecone.io"
+      },
+      "status": {
+        "providerId": "pinecone",
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-28T21:27:22.360Z"
+      },
+      "stats": {
+        "providerId": "pinecone",
+        "uptime30d": 100,
+        "uptime90d": 100,
+        "incidentCount30d": 0,
+        "avgMttr30d": null,
+        "lastIncident": null,
+        "reliabilityScore": 100
+      },
+      "recentIncidents": []
+    },
+    {
+      "provider": {
+        "id": "stripe",
+        "name": "Stripe",
+        "category": "payment",
+        "color": "#635bff",
+        "icon": "💳",
+        "apiUrl": "https://status.stripe.com/api/v2/summary.json",
+        "statusPageUrl": "https://status.stripe.com"
+      },
+      "status": {
+        "providerId": "stripe",
+        "indicator": "none",
+        "description": "Status unavailable",
+        "updatedAt": "2026-04-28T21:27:22.833Z"
+      },
+      "stats": {
+        "providerId": "stripe",
+        "uptime30d": null,
+        "uptime90d": null,
+        "incidentCount30d": 0,
+        "avgMttr30d": null,
+        "lastIncident": null,
+        "reliabilityScore": null
+      },
+      "recentIncidents": []
+    }
+  ],
+  "generatedAt": "2026-04-28T21:27:23.135Z"
+}
