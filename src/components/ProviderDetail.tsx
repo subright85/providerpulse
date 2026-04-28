@@ -1,4 +1,4 @@
-import type { ProviderData, Incident } from '../types';
+import type { ProviderData, Incident, MonthlyTrend, NewsItem } from '../types';
 
 const SEV_CONFIG = {
   critical:    { color: 'text-red-400',    bg: 'bg-red-500/15',    label: 'Critical' },
@@ -17,13 +17,22 @@ function fmtDate(iso: string): string {
   return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
+function fmtRelative(iso: string): string {
+  const diff = Date.now() - new Date(iso).getTime();
+  const days = Math.floor(diff / 86400000);
+  if (days === 0) return 'Today';
+  if (days === 1) return 'Yesterday';
+  if (days < 30) return `${days}d ago`;
+  return fmtDate(iso);
+}
+
 interface Props {
   data: ProviderData;
   onClose: () => void;
 }
 
 export default function ProviderDetail({ data, onClose }: Props) {
-  const { provider, status, stats, recentIncidents } = data;
+  const { provider, status, stats, recentIncidents, news } = data;
   const score = stats.reliabilityScore;
   const scoreColor = score !== null ? (score >= 90 ? '#34d399' : score >= 75 ? '#facc15' : '#f87171') : '#94a3b8';
 
@@ -62,6 +71,11 @@ export default function ProviderDetail({ data, onClose }: Props) {
             </div>
           </div>
 
+          {/* Monthly trend */}
+          {stats.monthlyTrend.length > 0 && (
+            <TrendChart trend={stats.monthlyTrend} />
+          )}
+
           {/* Assessment */}
           {score !== null && (
             <div className="bg-white/4 border border-white/8 rounded-xl p-4">
@@ -84,6 +98,16 @@ export default function ProviderDetail({ data, onClose }: Props) {
               </div>
             )}
           </div>
+
+          {/* News */}
+          {news && news.length > 0 && (
+            <div>
+              <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-3">Related News</p>
+              <div className="flex flex-col gap-2">
+                {news.map(item => <NewsRow key={item.id} item={item} />)}
+              </div>
+            </div>
+          )}
 
           <a
             href={provider.statusPageUrl}
@@ -108,6 +132,35 @@ function StatRow({ label, value }: { label: string; value: string }) {
   );
 }
 
+function TrendChart({ trend }: { trend: MonthlyTrend[] }) {
+  const maxInc = Math.max(...trend.map(t => t.incidentCount), 1);
+  return (
+    <div className="bg-white/4 border border-white/8 rounded-xl p-4">
+      <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-4">90-Day Incident Trend</p>
+      <div className="flex items-end gap-1.5 h-20">
+        {trend.map(t => {
+          const heightPct = maxInc === 0 ? 0 : (t.incidentCount / maxInc) * 100;
+          const barColor = t.incidentCount === 0
+            ? 'bg-emerald-500/30'
+            : t.incidentCount <= 2 ? 'bg-yellow-500/50' : 'bg-orange-500/60';
+          return (
+            <div key={t.month} className="flex-1 flex flex-col items-center gap-1">
+              <span className="text-white/40 text-[9px] font-semibold tabular-nums">{t.incidentCount || ''}</span>
+              <div className="w-full flex flex-col justify-end" style={{ height: '52px' }}>
+                <div
+                  className={`w-full rounded-sm transition-all ${barColor}`}
+                  style={{ height: t.incidentCount === 0 ? '3px' : `${Math.max(8, heightPct * 0.52)}px` }}
+                />
+              </div>
+              <span className="text-white/25 text-[9px] whitespace-nowrap">{t.label}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function IncidentRow({ inc }: { inc: Incident }) {
   const sev = SEV_CONFIG[inc.severity] ?? SEV_CONFIG.minor;
   return (
@@ -124,6 +177,32 @@ function IncidentRow({ inc }: { inc: Incident }) {
           <span className="text-white/30 text-[10px]">{fmtDate(inc.startedAt)}</span>
           <span className="text-white/20 text-[10px]">·</span>
           <span className="text-white/30 text-[10px]">{fmtDuration(inc.durationMinutes)}</span>
+        </div>
+      </div>
+    </a>
+  );
+}
+
+function NewsRow({ item }: { item: NewsItem }) {
+  return (
+    <a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-start gap-3 bg-white/4 border border-white/8 rounded-xl p-3 hover:bg-white/7 transition-all"
+    >
+      <div className="flex-1 min-w-0">
+        <p className="text-white/75 text-xs font-medium leading-snug">{item.title}</p>
+        <div className="flex gap-2 mt-1">
+          <span className="text-orange-400/60 text-[10px] font-semibold">HN</span>
+          <span className="text-white/20 text-[10px]">·</span>
+          <span className="text-white/30 text-[10px]">{fmtRelative(item.publishedAt)}</span>
+          {item.points > 0 && (
+            <>
+              <span className="text-white/20 text-[10px]">·</span>
+              <span className="text-white/30 text-[10px]">{item.points}pts</span>
+            </>
+          )}
         </div>
       </div>
     </a>

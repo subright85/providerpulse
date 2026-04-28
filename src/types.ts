@@ -7,7 +7,7 @@ export interface Provider {
   name: string;
   category: ProviderCategory;
   statusPageUrl: string;
-  apiUrl: string; // Statuspage API endpoint
+  apiUrl: string;
   color: string;
   icon: string;
 }
@@ -17,10 +17,27 @@ export interface Incident {
   providerId: string;
   title: string;
   severity: IncidentSeverity;
-  startedAt: string;   // ISO
+  startedAt: string;
   resolvedAt: string | null;
   durationMinutes: number | null;
   url: string;
+}
+
+export interface MonthlyTrend {
+  month: string;        // "2026-01"
+  label: string;        // "Jan '26"
+  incidentCount: number;
+  uptime: number;       // 0-100
+}
+
+export interface NewsItem {
+  id: string;
+  title: string;
+  url: string;
+  source: 'hackernews';
+  publishedAt: string;
+  points: number;
+  commentCount: number;
 }
 
 export interface ProviderStatus {
@@ -32,12 +49,13 @@ export interface ProviderStatus {
 
 export interface ProviderStats {
   providerId: string;
-  uptime30d: number;      // 0-100
-  uptime90d: number;
+  uptime30d: number | null;
+  uptime90d: number | null;
   incidentCount30d: number;
-  avgMttr30d: number | null;  // minutes
-  lastIncident: string | null; // ISO
-  reliabilityScore: number;   // 0-100 composite
+  avgMttr30d: number | null;
+  lastIncident: string | null;
+  reliabilityScore: number | null;
+  monthlyTrend: MonthlyTrend[];
 }
 
 export interface ProviderData {
@@ -45,6 +63,7 @@ export interface ProviderData {
   status: ProviderStatus;
   stats: ProviderStats;
   recentIncidents: Incident[];
+  news: NewsItem[];
 }
 
 export interface AppData {
