@@ -14,7 +14,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-28T22:33:29.398Z"
+        "updatedAt": "2026-04-28T23:58:30.660Z"
       },
       "stats": {
         "providerId": "openai",
@@ -22,8 +22,8 @@
         "uptime90d": 98.91,
         "incidentCount30d": 25,
         "avgMttr30d": 204,
-        "lastIncident": "2026-04-28T13:52:19Z",
-        "reliabilityScore": 65,
+        "lastIncident": "2026-04-28T22:46:00Z",
+        "reliabilityScore": 62,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -34,23 +34,71 @@
           {
             "month": "2026-03",
             "label": "Mar 26",
-            "incidentCount": 1,
-            "uptime": 99.99
+            "incidentCount": 0,
+            "uptime": 100
           },
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 24,
+            "incidentCount": 25,
             "uptime": 96.51
+          }
+        ],
+        "tagSummary": [
+          {
+            "tag": "api",
+            "count30d": 14,
+            "count90d": 14
+          },
+          {
+            "tag": "inference",
+            "count30d": 12,
+            "count90d": 12
+          },
+          {
+            "tag": "other",
+            "count30d": 4,
+            "count90d": 4
+          },
+          {
+            "tag": "auth",
+            "count30d": 2,
+            "count90d": 2
+          },
+          {
+            "tag": "performance",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "availability",
+            "count30d": 1,
+            "count90d": 1
           }
         ]
       },
       "recentIncidents": [
         {
+          "id": "01KQB4AMHC9CKFYT863PMXN1YR",
+          "providerId": "openai",
+          "title": "Codex stream is disconnecting intermittently",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-28T22:46:00Z",
+          "resolvedAt": "2026-04-28T23:12:55Z",
+          "durationMinutes": 27,
+          "url": "https://status.openai.com"
+        },
+        {
           "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
           "providerId": "openai",
           "title": "Elevated error rates in Sora API for some users",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-28T13:52:19Z",
           "resolvedAt": "2026-04-28T16:10:47Z",
           "durationMinutes": 138,
@@ -61,6 +109,10 @@
           "providerId": "openai",
           "title": "Elevated errors on model gpt-5.5 in codex",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-24T21:24:59Z",
           "resolvedAt": "2026-04-24T22:15:07Z",
           "durationMinutes": 50,
@@ -71,6 +123,9 @@
           "providerId": "openai",
           "title": "Elevated errors in Codex",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-23T18:23:01Z",
           "resolvedAt": "2026-04-23T20:29:59Z",
           "durationMinutes": 127,
@@ -81,6 +136,10 @@
           "providerId": "openai",
           "title": "Elevated error rates and latency for Moderation API",
           "severity": "minor",
+          "tags": [
+            "performance",
+            "api"
+          ],
           "startedAt": "2026-04-23T16:44:18Z",
           "resolvedAt": "2026-04-23T17:57:19Z",
           "durationMinutes": 73,
@@ -91,6 +150,9 @@
           "providerId": "openai",
           "title": "Enterprise, business & education workspaces seeing elevated rate of conversation errors",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-22T13:51:00Z",
           "resolvedAt": "2026-04-22T19:23:34Z",
           "durationMinutes": 333,
@@ -101,6 +163,9 @@
           "providerId": "openai",
           "title": "ChatGPT free users are seeing errors when having conversations",
           "severity": "major",
+          "tags": [
+            "inference"
+          ],
           "startedAt": "2026-04-22T00:56:29Z",
           "resolvedAt": "2026-04-22T03:35:13Z",
           "durationMinutes": 159,
@@ -111,6 +176,9 @@
           "providerId": "openai",
           "title": "Some users may encounter issues with GPT-5.4-C model in Codex",
           "severity": "minor",
+          "tags": [
+            "inference"
+          ],
           "startedAt": "2026-04-21T02:34:32Z",
           "resolvedAt": "2026-04-21T04:33:18Z",
           "durationMinutes": 119,
@@ -121,6 +189,9 @@
           "providerId": "openai",
           "title": "Some users will see higher error rates on Codex",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-20T23:16:43Z",
           "resolvedAt": "2026-04-20T23:13:00Z",
           "durationMinutes": -4,
@@ -131,6 +202,10 @@
           "providerId": "openai",
           "title": "Elevated errors for ChatGPT conversations in Europe",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-20T17:29:30Z",
           "resolvedAt": "2026-04-20T19:17:46Z",
           "durationMinutes": 108,
@@ -141,6 +216,10 @@
           "providerId": "openai",
           "title": "Users unable to load ChatGPT, Codex and API Platform",
           "severity": "major",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-20T14:35:33Z",
           "resolvedAt": "2026-04-20T18:48:04Z",
           "durationMinutes": 253,
@@ -151,6 +230,9 @@
           "providerId": "openai",
           "title": "Users may encounter issue with ChatGPT Business after upgrade or adding new seats for up to an hour",
           "severity": "minor",
+          "tags": [
+            "inference"
+          ],
           "startedAt": "2026-04-20T07:13:42Z",
           "resolvedAt": "2026-04-20T19:33:19Z",
           "durationMinutes": 740,
@@ -161,6 +243,9 @@
           "providerId": "openai",
           "title": "Responses API Streaming Error",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-16T19:40:52Z",
           "resolvedAt": "2026-04-16T21:21:07Z",
           "durationMinutes": 100,
@@ -171,6 +256,9 @@
           "providerId": "openai",
           "title": "ChatGPT FedRAMP workspaces not loading",
           "severity": "critical",
+          "tags": [
+            "inference"
+          ],
           "startedAt": "2026-04-15T18:32:35Z",
           "resolvedAt": "2026-04-15T18:55:03Z",
           "durationMinutes": 22,
@@ -181,19 +269,12 @@
           "providerId": "openai",
           "title": "Account Creation Issues",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-14T16:49:17Z",
           "resolvedAt": "2026-04-14T17:09:21Z",
           "durationMinutes": 20,
-          "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
-          "providerId": "openai",
-          "title": "Elevated 401 errors for API endpoints",
-          "severity": "minor",
-          "startedAt": "2026-04-12T20:40:24Z",
-          "resolvedAt": "2026-04-14T08:41:42Z",
-          "durationMinutes": 2161,
           "url": "https://status.openai.com"
         }
       ],
@@ -248,18 +329,18 @@
       },
       "status": {
         "providerId": "anthropic",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-28T22:33:30.139Z"
+        "indicator": "minor",
+        "description": "Partially Degraded Service",
+        "updatedAt": "2026-04-28T23:58:31.483Z"
       },
       "stats": {
         "providerId": "anthropic",
         "uptime30d": 96.74,
-        "uptime90d": 98.77,
-        "incidentCount30d": 48,
+        "uptime90d": 98.79,
+        "incidentCount30d": 49,
         "avgMttr30d": 61,
-        "lastIncident": "2026-04-28T17:41:55.352Z",
-        "reliabilityScore": 67,
+        "lastIncident": "2026-04-28T23:33:07.339Z",
+        "reliabilityScore": 62,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -270,23 +351,79 @@
           {
             "month": "2026-03",
             "label": "Mar 26",
-            "incidentCount": 5,
-            "uptime": 99.07
+            "incidentCount": 4,
+            "uptime": 99.12
           },
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 45,
-            "uptime": 97.07
+            "incidentCount": 46,
+            "uptime": 97.08
+          }
+        ],
+        "tagSummary": [
+          {
+            "tag": "inference",
+            "count30d": 33,
+            "count90d": 34
+          },
+          {
+            "tag": "api",
+            "count30d": 27,
+            "count90d": 27
+          },
+          {
+            "tag": "availability",
+            "count30d": 6,
+            "count90d": 6
+          },
+          {
+            "tag": "other",
+            "count30d": 4,
+            "count90d": 4
+          },
+          {
+            "tag": "performance",
+            "count30d": 3,
+            "count90d": 3
+          },
+          {
+            "tag": "auth",
+            "count30d": 2,
+            "count90d": 2
+          },
+          {
+            "tag": "billing",
+            "count30d": 1,
+            "count90d": 1
           }
         ]
       },
       "recentIncidents": [
         {
+          "id": "lryjwwy0q9pl",
+          "providerId": "anthropic",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "startedAt": "2026-04-28T23:33:07.339Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/gsg6msbs6shy"
+        },
+        {
           "id": "9l93x2ht4s5w",
           "providerId": "anthropic",
           "title": "Claude.ai unavailable and elevated errors on the API",
           "severity": "major",
+          "tags": [
+            "inference",
+            "api",
+            "availability"
+          ],
           "startedAt": "2026-04-28T17:41:55.352Z",
           "resolvedAt": "2026-04-28T19:15:52.858Z",
           "durationMinutes": 94,
@@ -297,6 +434,10 @@
           "providerId": "anthropic",
           "title": "Elevated errors on Claude Sonnet 4.5",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-28T13:29:56.320Z",
           "resolvedAt": "2026-04-28T13:50:06.606Z",
           "durationMinutes": 20,
@@ -307,6 +448,10 @@
           "providerId": "anthropic",
           "title": "Elevated errors on Claude Haiku 4.5",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-28T12:24:00.726Z",
           "resolvedAt": "2026-04-28T12:45:07.680Z",
           "durationMinutes": 21,
@@ -317,6 +462,9 @@
           "providerId": "anthropic",
           "title": "Claude Code Code Review was intermittently failing",
           "severity": "minor",
+          "tags": [
+            "inference"
+          ],
           "startedAt": "2026-04-28T06:00:00.000Z",
           "resolvedAt": "2026-04-28T06:00:00.000Z",
           "durationMinutes": 0,
@@ -327,6 +475,10 @@
           "providerId": "anthropic",
           "title": "Elevated billing related errors on Claude.ai",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "billing"
+          ],
           "startedAt": "2026-04-27T14:11:29.158Z",
           "resolvedAt": "2026-04-27T15:18:47.275Z",
           "durationMinutes": 67,
@@ -337,6 +489,10 @@
           "providerId": "anthropic",
           "title": "Investigated elevated errors and slower responses on claude.ai",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-25T18:42:40.706Z",
           "resolvedAt": "2026-04-25T19:02:15.710Z",
           "durationMinutes": 20,
@@ -347,6 +503,10 @@
           "providerId": "anthropic",
           "title": "Elevated errors on Claude Opus 4.7",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-25T08:43:51.175Z",
           "resolvedAt": "2026-04-25T11:58:15.877Z",
           "durationMinutes": 194,
@@ -357,6 +517,10 @@
           "providerId": "anthropic",
           "title": "Elevated errors on Claude Opus 4.7",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-25T07:48:30.897Z",
           "resolvedAt": "2026-04-25T08:37:30.865Z",
           "durationMinutes": 49,
@@ -367,6 +531,9 @@
           "providerId": "anthropic",
           "title": "Claude Code v2.1.120 Crashes on Startup",
           "severity": "minor",
+          "tags": [
+            "inference"
+          ],
           "startedAt": "2026-04-25T01:45:32.619Z",
           "resolvedAt": "2026-04-25T02:35:50.465Z",
           "durationMinutes": 50,
@@ -377,6 +544,10 @@
           "providerId": "anthropic",
           "title": "Elevated error rates on Claude Opus 4.7",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-25T01:35:55.664Z",
           "resolvedAt": "2026-04-25T02:34:30.182Z",
           "durationMinutes": 59,
@@ -387,6 +558,9 @@
           "providerId": "anthropic",
           "title": "Issues with sign-ups on platform.claude.com",
           "severity": "major",
+          "tags": [
+            "inference"
+          ],
           "startedAt": "2026-04-24T17:03:54.478Z",
           "resolvedAt": "2026-04-24T17:32:16.135Z",
           "durationMinutes": 28,
@@ -397,6 +571,10 @@
           "providerId": "anthropic",
           "title": "Elevated errors on Claude Opus 4.7",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-24T10:05:59.992Z",
           "resolvedAt": "2026-04-24T10:59:52.400Z",
           "durationMinutes": 54,
@@ -407,6 +585,9 @@
           "providerId": "anthropic",
           "title": "Elevated errors on Sonnet 4.6",
           "severity": "critical",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-24T02:55:26.871Z",
           "resolvedAt": "2026-04-24T03:34:28.107Z",
           "durationMinutes": 39,
@@ -417,20 +598,14 @@
           "providerId": "anthropic",
           "title": "Elevated errors on Claude Opus 4.7",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
           "startedAt": "2026-04-23T15:29:04.130Z",
           "resolvedAt": "2026-04-23T15:59:21.781Z",
           "durationMinutes": 30,
           "url": "https://stspg.io/pkskbt30gw7r"
-        },
-        {
-          "id": "t6v0k97s0802",
-          "providerId": "anthropic",
-          "title": "Issues with responses using structured outputs on the API",
-          "severity": "minor",
-          "startedAt": "2026-04-23T02:00:00.000Z",
-          "resolvedAt": "2026-04-23T02:00:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/w2jwfp21p198"
         }
       ],
       "news": [
@@ -486,7 +661,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-28T22:33:30.812Z"
+        "updatedAt": "2026-04-28T23:58:32.210Z"
       },
       "stats": {
         "providerId": "groq",
@@ -515,6 +690,18 @@
             "incidentCount": 0,
             "uptime": 100
           }
+        ],
+        "tagSummary": [
+          {
+            "tag": "performance",
+            "count30d": 0,
+            "count90d": 3
+          },
+          {
+            "tag": "inference",
+            "count30d": 0,
+            "count90d": 1
+          }
         ]
       },
       "recentIncidents": [
@@ -523,6 +710,9 @@
           "providerId": "groq",
           "title": "openai/gpt-oss-120b Performance Issue",
           "severity": "minor",
+          "tags": [
+            "inference"
+          ],
           "startedAt": "2026-03-19T12:51:18Z",
           "resolvedAt": "2026-03-19T13:50:25Z",
           "durationMinutes": 59,
@@ -533,6 +723,9 @@
           "providerId": "groq",
           "title": "meta-llama/llama-4-scout-17b-16e-instruct Degraded Performance",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-02-07T10:02:11Z",
           "resolvedAt": "2026-02-07T11:34:59Z",
           "durationMinutes": 93,
@@ -543,6 +736,9 @@
           "providerId": "groq",
           "title": "meta-llama/llama-4-scout-17b-16e-instruct Degraded Performance",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-02-05T18:09:35Z",
           "resolvedAt": "2026-02-05T18:32:49Z",
           "durationMinutes": 23,
@@ -553,6 +749,9 @@
           "providerId": "groq",
           "title": "meta-llama/llama-4-scout-17b-16e-instruct Degraded Performance",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-02-05T13:23:22Z",
           "resolvedAt": "2026-02-05T15:07:23Z",
           "durationMinutes": 104,
@@ -575,7 +774,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-28T22:33:31.472Z"
+        "updatedAt": "2026-04-28T23:58:33.017Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -584,7 +783,7 @@
         "incidentCount30d": 3,
         "avgMttr30d": 36,
         "lastIncident": "2026-04-20T22:16:13Z",
-        "reliabilityScore": 90,
+        "reliabilityScore": 91,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -604,6 +803,38 @@
             "incidentCount": 3,
             "uptime": 99.92
           }
+        ],
+        "tagSummary": [
+          {
+            "tag": "performance",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "availability",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "auth",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "database",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "api",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "other",
+            "count30d": 0,
+            "count90d": 1
+          }
         ]
       },
       "recentIncidents": [
@@ -612,6 +843,9 @@
           "providerId": "cohere",
           "title": "Docs Platform Degraded Performance",
           "severity": "critical",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-20T22:16:13Z",
           "resolvedAt": "2026-04-20T22:28:56Z",
           "durationMinutes": 13,
@@ -622,6 +856,9 @@
           "providerId": "cohere",
           "title": "Multiple Model Disruptions",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-13T19:36:12Z",
           "resolvedAt": "2026-04-13T21:00:44Z",
           "durationMinutes": 85,
@@ -632,6 +869,11 @@
           "providerId": "cohere",
           "title": "Scheduled DB Maintenance: Model authentication and API access momentarily affected",
           "severity": "minor",
+          "tags": [
+            "auth",
+            "database",
+            "api"
+          ],
           "startedAt": "2026-04-11T15:31:05Z",
           "resolvedAt": "2026-04-11T15:39:51Z",
           "durationMinutes": 9,
@@ -642,6 +884,9 @@
           "providerId": "cohere",
           "title": "Some chat models are unresponsive or timing out",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-02-13T04:34:04Z",
           "resolvedAt": "2026-02-13T05:51:37Z",
           "durationMinutes": 78,
@@ -664,7 +909,7 @@
         "providerId": "vercel",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-28T22:33:32.117Z"
+        "updatedAt": "2026-04-28T23:58:33.773Z"
       },
       "stats": {
         "providerId": "vercel",
@@ -673,7 +918,7 @@
         "incidentCount30d": 17,
         "avgMttr30d": 145,
         "lastIncident": "2026-04-28T15:46:22.195Z",
-        "reliabilityScore": 67,
+        "reliabilityScore": 80,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -693,6 +938,48 @@
             "incidentCount": 15,
             "uptime": 98.76
           }
+        ],
+        "tagSummary": [
+          {
+            "tag": "api",
+            "count30d": 6,
+            "count90d": 14
+          },
+          {
+            "tag": "performance",
+            "count30d": 4,
+            "count90d": 11
+          },
+          {
+            "tag": "deployment",
+            "count30d": 5,
+            "count90d": 10
+          },
+          {
+            "tag": "other",
+            "count30d": 5,
+            "count90d": 9
+          },
+          {
+            "tag": "availability",
+            "count30d": 1,
+            "count90d": 2
+          },
+          {
+            "tag": "webhook",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "billing",
+            "count30d": 0,
+            "count90d": 1
+          },
+          {
+            "tag": "network",
+            "count30d": 0,
+            "count90d": 1
+          }
         ]
       },
       "recentIncidents": [
@@ -701,6 +988,9 @@
           "providerId": "vercel",
           "title": "Errors Deploying Templates",
           "severity": "minor",
+          "tags": [
+            "deployment"
+          ],
           "startedAt": "2026-04-28T15:46:22.195Z",
           "resolvedAt": "2026-04-28T16:53:40.983Z",
           "durationMinutes": 67,
@@ -711,6 +1001,9 @@
           "providerId": "vercel",
           "title": "Delayed Usage Data for Observability Events",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-28T09:00:00.000Z",
           "resolvedAt": "2026-04-28T09:00:00.000Z",
           "durationMinutes": 0,
@@ -721,6 +1014,9 @@
           "providerId": "vercel",
           "title": "Errors Purchasing Domains, AI Gateway Credits",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-25T00:39:58.762Z",
           "resolvedAt": "2026-04-25T04:19:37.629Z",
           "durationMinutes": 220,
@@ -731,6 +1027,9 @@
           "providerId": "vercel",
           "title": "Partial Observability Outage Affecting Compute Telemetry",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-22T23:00:00.000Z",
           "resolvedAt": "2026-04-22T23:00:00.000Z",
           "durationMinutes": 0,
@@ -741,6 +1040,9 @@
           "providerId": "vercel",
           "title": "Delays Loading Logs",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-22T18:25:40.186Z",
           "resolvedAt": "2026-04-23T01:12:50.143Z",
           "durationMinutes": 407,
@@ -751,6 +1053,9 @@
           "providerId": "vercel",
           "title": "Elevated errors on Vercel Dashboard",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-21T13:51:39.746Z",
           "resolvedAt": "2026-04-21T14:41:39.008Z",
           "durationMinutes": 50,
@@ -761,6 +1066,9 @@
           "providerId": "vercel",
           "title": "Elevated errors on Vercel Dashboard and API endpoints",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-20T19:40:58.989Z",
           "resolvedAt": "2026-04-20T20:56:06.813Z",
           "durationMinutes": 75,
@@ -771,6 +1079,9 @@
           "providerId": "vercel",
           "title": "Unaccessible runtime logs in the dashboard",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-20T10:10:28.869Z",
           "resolvedAt": "2026-04-20T10:36:15.596Z",
           "durationMinutes": 26,
@@ -781,6 +1092,9 @@
           "providerId": "vercel",
           "title": "Observability Alerts degraded",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-20T09:38:32.000Z",
           "resolvedAt": "2026-04-20T22:18:02.695Z",
           "durationMinutes": 760,
@@ -791,6 +1105,9 @@
           "providerId": "vercel",
           "title": "Delays Loading Observability, Analytics and Speed Insights",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-19T20:43:03.000Z",
           "resolvedAt": "2026-04-19T21:39:23.070Z",
           "durationMinutes": 56,
@@ -801,6 +1118,9 @@
           "providerId": "vercel",
           "title": "Elevated queue times for deployments on the Hobby plan",
           "severity": "minor",
+          "tags": [
+            "deployment"
+          ],
           "startedAt": "2026-04-07T18:06:45.565Z",
           "resolvedAt": "2026-04-07T18:56:26.102Z",
           "durationMinutes": 50,
@@ -811,6 +1131,9 @@
           "providerId": "vercel",
           "title": "Builds logs stuck in loading state in iad1",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-07T07:19:44.304Z",
           "resolvedAt": "2026-04-07T08:37:27.937Z",
           "durationMinutes": 78,
@@ -821,6 +1144,10 @@
           "providerId": "vercel",
           "title": "Elevated INTERNAL_UNEXPECTED_ERROR error rates for some deployments",
           "severity": "minor",
+          "tags": [
+            "deployment",
+            "api"
+          ],
           "startedAt": "2026-04-02T18:39:57.683Z",
           "resolvedAt": "2026-04-02T23:09:16.439Z",
           "durationMinutes": 269,
@@ -831,6 +1158,9 @@
           "providerId": "vercel",
           "title": "Elevated errors (SIGSEGV) for Vercel Functions running Node.js 20 in cle1 and dub1 regions",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-02T14:10:14.765Z",
           "resolvedAt": "2026-04-02T18:53:26.350Z",
           "durationMinutes": 283,
@@ -841,6 +1171,12 @@
           "providerId": "vercel",
           "title": "Elevated errors creating deployments with integrations and increased delays in delivering webhooks",
           "severity": "minor",
+          "tags": [
+            "webhook",
+            "deployment",
+            "performance",
+            "api"
+          ],
           "startedAt": "2026-04-01T20:48:18.344Z",
           "resolvedAt": "2026-04-01T22:17:28.723Z",
           "durationMinutes": 89,
@@ -909,7 +1245,7 @@
         "providerId": "cloudflare",
         "indicator": "major",
         "description": "Partial System Outage",
-        "updatedAt": "2026-04-28T22:33:32.764Z"
+        "updatedAt": "2026-04-28T23:58:34.536Z"
       },
       "stats": {
         "providerId": "cloudflare",
@@ -918,7 +1254,7 @@
         "incidentCount30d": 50,
         "avgMttr30d": 350,
         "lastIncident": "2026-04-28T18:31:16.922Z",
-        "reliabilityScore": 59,
+        "reliabilityScore": 63,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -936,7 +1272,44 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 91.47
+            "uptime": 91.49
+          }
+        ],
+        "tagSummary": [
+          {
+            "tag": "other",
+            "count30d": 22,
+            "count90d": 22
+          },
+          {
+            "tag": "network",
+            "count30d": 14,
+            "count90d": 14
+          },
+          {
+            "tag": "api",
+            "count30d": 8,
+            "count90d": 8
+          },
+          {
+            "tag": "performance",
+            "count30d": 6,
+            "count90d": 6
+          },
+          {
+            "tag": "auth",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "rate-limit",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "billing",
+            "count30d": 1,
+            "count90d": 1
           }
         ]
       },
@@ -946,6 +1319,9 @@
           "providerId": "cloudflare",
           "title": "Duplicated values in X-Forwarded-For header",
           "severity": "critical",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-28T18:31:16.922Z",
           "resolvedAt": null,
           "durationMinutes": null,
@@ -956,6 +1332,9 @@
           "providerId": "cloudflare",
           "title": "Network Performance Issues in IST",
           "severity": "minor",
+          "tags": [
+            "network"
+          ],
           "startedAt": "2026-04-28T08:41:04.948Z",
           "resolvedAt": "2026-04-28T10:30:16.762Z",
           "durationMinutes": 109,
@@ -966,6 +1345,9 @@
           "providerId": "cloudflare",
           "title": "Increased HTTP Errors in YUL",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-28T05:00:00.000Z",
           "resolvedAt": "2026-04-28T05:00:00.000Z",
           "durationMinutes": 0,
@@ -976,6 +1358,9 @@
           "providerId": "cloudflare",
           "title": "Turnstile Challenge Issues",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-27T06:15:21.303Z",
           "resolvedAt": "2026-04-27T07:09:24.883Z",
           "durationMinutes": 54,
@@ -986,6 +1371,9 @@
           "providerId": "cloudflare",
           "title": "Network Performance Issues in Brazil",
           "severity": "minor",
+          "tags": [
+            "network"
+          ],
           "startedAt": "2026-04-27T04:25:55.951Z",
           "resolvedAt": "2026-04-27T04:50:49.887Z",
           "durationMinutes": 25,
@@ -996,6 +1384,9 @@
           "providerId": "cloudflare",
           "title": "WARP connectivity issues in Bulgaria",
           "severity": "minor",
+          "tags": [
+            "network"
+          ],
           "startedAt": "2026-04-24T14:34:53.921Z",
           "resolvedAt": "2026-04-24T16:14:21.037Z",
           "durationMinutes": 99,
@@ -1006,6 +1397,9 @@
           "providerId": "cloudflare",
           "title": "Network Performance Issues in Miami",
           "severity": "minor",
+          "tags": [
+            "network"
+          ],
           "startedAt": "2026-04-24T03:46:59.153Z",
           "resolvedAt": "2026-04-24T03:48:00.126Z",
           "durationMinutes": 1,
@@ -1016,6 +1410,9 @@
           "providerId": "cloudflare",
           "title": "Cloudflare Health check issues",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-24T02:40:12.901Z",
           "resolvedAt": "2026-04-24T10:34:42.000Z",
           "durationMinutes": 474,
@@ -1026,6 +1423,9 @@
           "providerId": "cloudflare",
           "title": "Load Balancing Dashboard Issues",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-24T00:35:23.563Z",
           "resolvedAt": "2026-04-24T10:30:08.000Z",
           "durationMinutes": 595,
@@ -1036,6 +1436,9 @@
           "providerId": "cloudflare",
           "title": "Intermittent 5xx errors for Cloudflare Access authentication requests",
           "severity": "minor",
+          "tags": [
+            "auth"
+          ],
           "startedAt": "2026-04-23T21:05:59.180Z",
           "resolvedAt": "2026-04-24T23:53:43.690Z",
           "durationMinutes": 1608,
@@ -1046,6 +1449,9 @@
           "providerId": "cloudflare",
           "title": "Web Analytics Delays",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-23T17:03:31.667Z",
           "resolvedAt": "2026-04-23T20:34:31.226Z",
           "durationMinutes": 211,
@@ -1056,6 +1462,9 @@
           "providerId": "cloudflare",
           "title": "Cloudflare Dashboard API Issues Affecting R2 Buckets",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-23T10:37:29.978Z",
           "resolvedAt": "2026-04-23T11:48:33.544Z",
           "durationMinutes": 71,
@@ -1066,6 +1475,9 @@
           "providerId": "cloudflare",
           "title": "Network Connectivity Issues in Ashburn Virginia Area.",
           "severity": "minor",
+          "tags": [
+            "network"
+          ],
           "startedAt": "2026-04-23T03:57:10.028Z",
           "resolvedAt": "2026-04-23T04:36:26.131Z",
           "durationMinutes": 39,
@@ -1076,6 +1488,9 @@
           "providerId": "cloudflare",
           "title": "Cloudflare Registration Data Access Protocol (RDAP) Issues",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-22T20:46:49.173Z",
           "resolvedAt": "2026-04-22T22:37:37.627Z",
           "durationMinutes": 111,
@@ -1086,6 +1501,9 @@
           "providerId": "cloudflare",
           "title": "Email Delivery Delays",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-22T15:34:01.553Z",
           "resolvedAt": "2026-04-22T16:21:07.456Z",
           "durationMinutes": 47,
@@ -1154,7 +1572,7 @@
         "providerId": "github",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-28T22:33:33.406Z"
+        "updatedAt": "2026-04-28T23:58:35.217Z"
       },
       "stats": {
         "providerId": "github",
@@ -1163,7 +1581,7 @@
         "incidentCount30d": 30,
         "avgMttr30d": 191,
         "lastIncident": "2026-04-28T14:17:34.682Z",
-        "reliabilityScore": 63,
+        "reliabilityScore": 59,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -1181,7 +1599,49 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 27,
-            "uptime": 93.67
+            "uptime": 93.68
+          }
+        ],
+        "tagSummary": [
+          {
+            "tag": "availability",
+            "count30d": 15,
+            "count90d": 22
+          },
+          {
+            "tag": "other",
+            "count30d": 11,
+            "count90d": 17
+          },
+          {
+            "tag": "performance",
+            "count30d": 2,
+            "count90d": 5
+          },
+          {
+            "tag": "webhook",
+            "count30d": 1,
+            "count90d": 5
+          },
+          {
+            "tag": "inference",
+            "count30d": 3,
+            "count90d": 3
+          },
+          {
+            "tag": "billing",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "auth",
+            "count30d": 0,
+            "count90d": 1
+          },
+          {
+            "tag": "api",
+            "count30d": 0,
+            "count90d": 1
           }
         ]
       },
@@ -1191,6 +1651,9 @@
           "providerId": "github",
           "title": "Incomplete pull request results in repositories",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-28T14:17:34.682Z",
           "resolvedAt": null,
           "durationMinutes": null,
@@ -1201,6 +1664,9 @@
           "providerId": "github",
           "title": "Disruption with some GitHub services",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-28T13:59:16.225Z",
           "resolvedAt": "2026-04-28T17:09:02.449Z",
           "durationMinutes": 190,
@@ -1211,6 +1677,9 @@
           "providerId": "github",
           "title": "Disruption with some GitHub services",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-27T16:48:18.031Z",
           "resolvedAt": "2026-04-27T19:02:59.816Z",
           "durationMinutes": 135,
@@ -1221,6 +1690,9 @@
           "providerId": "github",
           "title": "GitHub search is degraded",
           "severity": "critical",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-27T16:31:07.245Z",
           "resolvedAt": "2026-04-27T22:46:42.326Z",
           "durationMinutes": 376,
@@ -1231,6 +1703,9 @@
           "providerId": "github",
           "title": "Delays with Actions Jobs for Larger Runners using VNet Injection in the East US region",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-24T19:02:39.061Z",
           "resolvedAt": "2026-04-25T00:36:04.272Z",
           "durationMinutes": 333,
@@ -1241,6 +1716,9 @@
           "providerId": "github",
           "title": "Incident with Pull Requests",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-23T19:50:51.291Z",
           "resolvedAt": "2026-04-23T21:43:26.000Z",
           "durationMinutes": 113,
@@ -1251,6 +1729,10 @@
           "providerId": "github",
           "title": "Disruption with users unable to start Claude and Codex agent task from the web",
           "severity": "minor",
+          "tags": [
+            "inference",
+            "availability"
+          ],
           "startedAt": "2026-04-23T19:28:42.976Z",
           "resolvedAt": "2026-04-23T19:42:25.277Z",
           "durationMinutes": 14,
@@ -1261,6 +1743,9 @@
           "providerId": "github",
           "title": "Incident with multiple GitHub services",
           "severity": "critical",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-23T16:12:47.744Z",
           "resolvedAt": "2026-04-23T17:30:49.716Z",
           "durationMinutes": 78,
@@ -1271,6 +1756,9 @@
           "providerId": "github",
           "title": "Investigating errors on GitHub",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-23T14:40:17.981Z",
           "resolvedAt": "2026-04-23T15:18:41.367Z",
           "durationMinutes": 38,
@@ -1281,6 +1769,9 @@
           "providerId": "github",
           "title": "Disruption with some GitHub services",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-22T19:53:49.917Z",
           "resolvedAt": "2026-04-22T22:43:59.100Z",
           "durationMinutes": 170,
@@ -1291,6 +1782,9 @@
           "providerId": "github",
           "title": "Disruption with Copilot chat and Copilot Coding Agent",
           "severity": "critical",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-22T15:35:45.298Z",
           "resolvedAt": "2026-04-22T19:18:26.916Z",
           "durationMinutes": 223,
@@ -1301,6 +1795,9 @@
           "providerId": "github",
           "title": "Disruption with projects service",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-21T15:03:21.160Z",
           "resolvedAt": "2026-04-22T01:24:13.877Z",
           "durationMinutes": 621,
@@ -1311,6 +1808,9 @@
           "providerId": "github",
           "title": "Partial degradation for code scanning default setup and for code quality",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-20T13:28:48.571Z",
           "resolvedAt": "2026-04-21T05:04:56.242Z",
           "durationMinutes": 936,
@@ -1321,6 +1821,9 @@
           "providerId": "github",
           "title": "Disruption with some GitHub services",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-17T14:56:22.556Z",
           "resolvedAt": "2026-04-17T15:18:14.767Z",
           "durationMinutes": 22,
@@ -1331,6 +1834,9 @@
           "providerId": "github",
           "title": "Incident with Codespaces",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-16T15:06:56.493Z",
           "resolvedAt": "2026-04-16T18:28:07.238Z",
           "durationMinutes": 201,
@@ -1387,6 +1893,290 @@
     },
     {
       "provider": {
+        "id": "twilio",
+        "name": "Twilio",
+        "category": "infra",
+        "color": "#f22f46",
+        "icon": "📡",
+        "apiUrl": "https://status.twilio.com/api/v2/summary.json",
+        "statusPageUrl": "https://status.twilio.com"
+      },
+      "status": {
+        "providerId": "twilio",
+        "indicator": "minor",
+        "description": "Partially Degraded Service",
+        "updatedAt": "2026-04-28T23:58:35.928Z"
+      },
+      "stats": {
+        "providerId": "twilio",
+        "uptime30d": 81.29,
+        "uptime90d": 93.76,
+        "incidentCount30d": 50,
+        "avgMttr30d": 825,
+        "lastIncident": "2026-04-28T13:53:13.239-07:00",
+        "reliabilityScore": 64,
+        "monthlyTrend": [
+          {
+            "month": "2026-02",
+            "label": "Feb 26",
+            "incidentCount": 0,
+            "uptime": 100
+          },
+          {
+            "month": "2026-03",
+            "label": "Mar 26",
+            "incidentCount": 0,
+            "uptime": 100
+          },
+          {
+            "month": "2026-04",
+            "label": "Apr 26",
+            "incidentCount": 50,
+            "uptime": 79.95
+          }
+        ],
+        "tagSummary": [
+          {
+            "tag": "performance",
+            "count30d": 35,
+            "count90d": 35
+          },
+          {
+            "tag": "other",
+            "count30d": 10,
+            "count90d": 10
+          },
+          {
+            "tag": "network",
+            "count30d": 8,
+            "count90d": 8
+          },
+          {
+            "tag": "api",
+            "count30d": 5,
+            "count90d": 5
+          },
+          {
+            "tag": "auth",
+            "count30d": 2,
+            "count90d": 2
+          }
+        ]
+      },
+      "recentIncidents": [
+        {
+          "id": "xfbygc0vj207",
+          "providerId": "twilio",
+          "title": "SMS Delivery Delays from Twilio Phone Numbers to Orange Cameroon",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-28T13:53:13.239-07:00",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/58ttghh9l7tc"
+        },
+        {
+          "id": "xgrcz5sjxnd6",
+          "providerId": "twilio",
+          "title": "User Authentication Identity Gateway API High Latency for T-Mobile in United States",
+          "severity": "minor",
+          "tags": [
+            "auth",
+            "performance",
+            "api"
+          ],
+          "startedAt": "2026-04-28T08:37:06.496-07:00",
+          "resolvedAt": "2026-04-28T12:44:08.635-07:00",
+          "durationMinutes": 247,
+          "url": "https://stspg.io/yhxlwbhb99yn"
+        },
+        {
+          "id": "k6bqtsm2rflk",
+          "providerId": "twilio",
+          "title": "SMS Delivery Delays and Failures from Twilio to MTS Russia",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-28T08:34:25.580-07:00",
+          "resolvedAt": "2026-04-28T10:44:52.872-07:00",
+          "durationMinutes": 130,
+          "url": "https://stspg.io/11ys0xvhd1rp"
+        },
+        {
+          "id": "7jtwh60j2vpt",
+          "providerId": "twilio",
+          "title": "SMS Delivery Receipt Delays from Twilio to Globe Philippines",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-27T18:07:33.546-07:00",
+          "resolvedAt": "2026-04-27T20:39:39.653-07:00",
+          "durationMinutes": 152,
+          "url": "https://stspg.io/md600xf8sxq7"
+        },
+        {
+          "id": "c7b40qsd7nkm",
+          "providerId": "twilio",
+          "title": "Lookup Identity Match Lookup V2 API package Increased Error Rate",
+          "severity": "minor",
+          "tags": [
+            "api"
+          ],
+          "startedAt": "2026-04-27T16:17:10.000-07:00",
+          "resolvedAt": "2026-04-27T17:53:55.877-07:00",
+          "durationMinutes": 97,
+          "url": "https://stspg.io/z6jhmnr0dmml"
+        },
+        {
+          "id": "453zvjlcw1fj",
+          "providerId": "twilio",
+          "title": "SMS Delivery Delays and Failures From a Subset of Twilio Alphanumeric Sender IDs and Long Codes to Jazz Pakistan",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-27T14:29:28.563-07:00",
+          "resolvedAt": "2026-04-28T01:04:22.776-07:00",
+          "durationMinutes": 635,
+          "url": "https://stspg.io/h493df108p7r"
+        },
+        {
+          "id": "fg3rv71swcq7",
+          "providerId": "twilio",
+          "title": "Increased rate of 11200 warnings from Programmable Video",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-27T11:49:08.670-07:00",
+          "resolvedAt": "2026-04-27T14:44:53.692-07:00",
+          "durationMinutes": 176,
+          "url": "https://stspg.io/2vplxdkgqr3d"
+        },
+        {
+          "id": "hdsxyldm9n4n",
+          "providerId": "twilio",
+          "title": "SMS Delivery Delays from Twilio Phone Numbers to Orange Cameroon",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-27T08:44:27.050-07:00",
+          "resolvedAt": "2026-04-28T05:18:02.770-07:00",
+          "durationMinutes": 1234,
+          "url": "https://stspg.io/tw0bwb92mpmh"
+        },
+        {
+          "id": "45y7qj466xmd",
+          "providerId": "twilio",
+          "title": "Programmable Messaging - Service Interruption With Programmable Messaging for a Percentage of Messaging Services",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-26T21:28:56.000-07:00",
+          "resolvedAt": "2026-04-26T21:59:11.984-07:00",
+          "durationMinutes": 30,
+          "url": "https://stspg.io/1ybh5fqcy7sg"
+        },
+        {
+          "id": "98d5n5y8h0hw",
+          "providerId": "twilio",
+          "title": "SMS Delivery Failures from Twilio to Telefonica Peru",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-25T14:00:27.769-07:00",
+          "resolvedAt": "2026-04-26T14:10:37.066-07:00",
+          "durationMinutes": 1450,
+          "url": "https://stspg.io/qxpm82z7f0fc"
+        },
+        {
+          "id": "wxp50bpcxxwj",
+          "providerId": "twilio",
+          "title": "SMS Delivery Delays from Twilio to Etisalat Afghanistan",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-25T01:16:52.439-07:00",
+          "resolvedAt": "2026-04-25T17:46:35.986-07:00",
+          "durationMinutes": 990,
+          "url": "https://stspg.io/dwn0brf34rfg"
+        },
+        {
+          "id": "01qbp5n6d4rm",
+          "providerId": "twilio",
+          "title": "Delays in Whatsapp Template Approvals",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-24T17:04:50.286-07:00",
+          "resolvedAt": "2026-04-24T21:31:31.998-07:00",
+          "durationMinutes": 267,
+          "url": "https://stspg.io/btq3qjh2hhcl"
+        },
+        {
+          "id": "ztrxbvjmbkx0",
+          "providerId": "twilio",
+          "title": "User Authentication Identity Gateway API Failure Increase in United States",
+          "severity": "minor",
+          "tags": [
+            "auth",
+            "api"
+          ],
+          "startedAt": "2026-04-23T23:05:32.336-07:00",
+          "resolvedAt": "2026-04-23T23:40:17.275-07:00",
+          "durationMinutes": 35,
+          "url": "https://stspg.io/k6mnvmlrv2s5"
+        },
+        {
+          "id": "5pm03t18rb8x",
+          "providerId": "twilio",
+          "title": "Delay in Transcription Processing",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-23T11:16:26.911-07:00",
+          "resolvedAt": "2026-04-23T13:37:57.542-07:00",
+          "durationMinutes": 142,
+          "url": "https://stspg.io/w571w0qhh7zh"
+        },
+        {
+          "id": "zl24vtfjlxzn",
+          "providerId": "twilio",
+          "title": "Intermittent Issues with API Recording Downloads",
+          "severity": "minor",
+          "tags": [
+            "api"
+          ],
+          "startedAt": "2026-04-23T10:31:40.028-07:00",
+          "resolvedAt": "2026-04-23T14:46:20.461-07:00",
+          "durationMinutes": 255,
+          "url": "https://stspg.io/wm4zr9fdzjmd"
+        }
+      ],
+      "news": [
+        {
+          "id": "47322794",
+          "title": "SHOW HN: A usage circuit breaker for Cloudflare Workers",
+          "url": "https://news.ycombinator.com/item?id=47322794",
+          "source": "hackernews",
+          "publishedAt": "2026-03-10T13:09:00Z",
+          "points": 29,
+          "commentCount": 9
+        }
+      ]
+    },
+    {
+      "provider": {
         "id": "supabase",
         "name": "Supabase",
         "category": "data",
@@ -1397,18 +2187,18 @@
       },
       "status": {
         "providerId": "supabase",
-        "indicator": "minor",
-        "description": "Minor Service Outage",
-        "updatedAt": "2026-04-28T22:33:34.016Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-28T23:58:36.728Z"
       },
       "stats": {
         "providerId": "supabase",
-        "uptime30d": 95.72,
-        "uptime90d": 93.39,
+        "uptime30d": 95.52,
+        "uptime90d": 93.32,
         "incidentCount30d": 12,
-        "avgMttr30d": 323,
+        "avgMttr30d": 307,
         "lastIncident": "2026-04-28T21:26:46.180Z",
-        "reliabilityScore": 62,
+        "reliabilityScore": 60,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -1426,7 +2216,49 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 12,
-            "uptime": 95.4
+            "uptime": 95.2
+          }
+        ],
+        "tagSummary": [
+          {
+            "tag": "other",
+            "count30d": 4,
+            "count90d": 16
+          },
+          {
+            "tag": "network",
+            "count30d": 1,
+            "count90d": 10
+          },
+          {
+            "tag": "api",
+            "count30d": 2,
+            "count90d": 7
+          },
+          {
+            "tag": "performance",
+            "count30d": 1,
+            "count90d": 7
+          },
+          {
+            "tag": "availability",
+            "count30d": 3,
+            "count90d": 6
+          },
+          {
+            "tag": "database",
+            "count30d": 1,
+            "count90d": 4
+          },
+          {
+            "tag": "auth",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "billing",
+            "count30d": 0,
+            "count90d": 1
           }
         ]
       },
@@ -1436,9 +2268,13 @@
           "providerId": "supabase",
           "title": "403 errors for PostgREST requests",
           "severity": "major",
+          "tags": [
+            "auth",
+            "database"
+          ],
           "startedAt": "2026-04-28T21:26:46.180Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-04-28T23:31:17.827Z",
+          "durationMinutes": 125,
           "url": "https://stspg.io/tcv618ssfg0s"
         },
         {
@@ -1446,6 +2282,9 @@
           "providerId": "supabase",
           "title": "Some projects unavailable across multiple regions",
           "severity": "major",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-27T12:39:59.000Z",
           "resolvedAt": "2026-04-27T19:04:52.858Z",
           "durationMinutes": 385,
@@ -1456,6 +2295,9 @@
           "providerId": "supabase",
           "title": "Some Projects Unreachable following Project Restart",
           "severity": "major",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-27T10:54:37.695Z",
           "resolvedAt": "2026-04-27T20:05:43.266Z",
           "durationMinutes": 551,
@@ -1466,6 +2308,9 @@
           "providerId": "supabase",
           "title": "Increased errors in project creation and configuration changes in US-East-2 and AP-Northeast-1",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-25T04:16:30.327Z",
           "resolvedAt": "2026-04-25T05:47:13.582Z",
           "durationMinutes": 91,
@@ -1476,6 +2321,9 @@
           "providerId": "supabase",
           "title": "Newly created projects may be unreachable",
           "severity": "major",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-24T11:21:26.653Z",
           "resolvedAt": "2026-04-24T14:36:48.127Z",
           "durationMinutes": 195,
@@ -1486,6 +2334,9 @@
           "providerId": "supabase",
           "title": "Edge Functions: Several users reported 503 errors with SUPABASE_EDGE_RUNTIME_ERROR error code",
           "severity": "minor",
+          "tags": [
+            "network"
+          ],
           "startedAt": "2026-04-24T10:00:00.000Z",
           "resolvedAt": "2026-04-24T10:00:00.000Z",
           "durationMinutes": 0,
@@ -1496,6 +2347,9 @@
           "providerId": "supabase",
           "title": "Increased Errors on HTTP Endpoints",
           "severity": "major",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-17T13:02:16.449Z",
           "resolvedAt": "2026-04-18T02:01:40.726Z",
           "durationMinutes": 779,
@@ -1506,6 +2360,9 @@
           "providerId": "supabase",
           "title": "Transactional Email Delivery Delays",
           "severity": "minor",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-16T19:05:37.000Z",
           "resolvedAt": "2026-04-17T17:00:18.429Z",
           "durationMinutes": 1315,
@@ -1516,6 +2373,9 @@
           "providerId": "supabase",
           "title": "Project creation failures in some APAC regions",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-12T15:51:36.590Z",
           "resolvedAt": "2026-04-12T17:03:40.019Z",
           "durationMinutes": 72,
@@ -1526,6 +2386,9 @@
           "providerId": "supabase",
           "title": "Logs currently inaccessible via the Dashboard and Log Drains",
           "severity": "critical",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-08T19:10:59.912Z",
           "resolvedAt": "2026-04-08T20:05:17.516Z",
           "durationMinutes": 54,
@@ -1536,6 +2399,9 @@
           "providerId": "supabase",
           "title": "Increased error rates for plan upgrades",
           "severity": "major",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-04-02T08:28:48.170Z",
           "resolvedAt": "2026-04-02T09:24:54.267Z",
           "durationMinutes": 56,
@@ -1546,6 +2412,9 @@
           "providerId": "supabase",
           "title": "Degraded logs ingestion",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-01T00:13:16.102Z",
           "resolvedAt": "2026-04-01T01:11:57.430Z",
           "durationMinutes": 59,
@@ -1556,6 +2425,9 @@
           "providerId": "supabase",
           "title": "Supabase dashboard experiencing intermittent errors in Europe region",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-03-27T17:58:13.282Z",
           "resolvedAt": "2026-03-27T18:43:02.475Z",
           "durationMinutes": 45,
@@ -1566,6 +2438,9 @@
           "providerId": "supabase",
           "title": "Degraded Log Ingestion",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-03-27T15:13:19.507Z",
           "resolvedAt": "2026-03-27T17:03:28.339Z",
           "durationMinutes": 110,
@@ -1576,6 +2451,9 @@
           "providerId": "supabase",
           "title": "Realtime services unavailable",
           "severity": "major",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-03-26T23:41:36.627Z",
           "resolvedAt": "2026-03-27T02:58:55.779Z",
           "durationMinutes": 197,
@@ -1626,7 +2504,7 @@
         "providerId": "pinecone",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-28T22:33:34.784Z"
+        "updatedAt": "2026-04-28T23:58:37.464Z"
       },
       "stats": {
         "providerId": "pinecone",
@@ -1655,6 +2533,18 @@
             "incidentCount": 0,
             "uptime": 100
           }
+        ],
+        "tagSummary": [
+          {
+            "tag": "other",
+            "count30d": 0,
+            "count90d": 4
+          },
+          {
+            "tag": "availability",
+            "count30d": 0,
+            "count90d": 1
+          }
         ]
       },
       "recentIncidents": [
@@ -1663,6 +2553,9 @@
           "providerId": "pinecone",
           "title": "[GCP][europe-west4] Errors for upsert operations on some indexes",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-03-13T08:50:03.000Z",
           "resolvedAt": "2026-03-13T09:53:17.000Z",
           "durationMinutes": 63,
@@ -1673,6 +2566,9 @@
           "providerId": "pinecone",
           "title": "[AWS][us-east-1] Prometheus metrics are unavailable through the Pinecone console or the metric proxy",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-03-05T21:57:20.000Z",
           "resolvedAt": "2026-03-05T23:02:17.000Z",
           "durationMinutes": 65,
@@ -1683,6 +2579,9 @@
           "providerId": "pinecone",
           "title": "[Serverless][GCP][us-central1] 5xx errors on some read operations for some indexes",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-03-04T21:06:09.000Z",
           "resolvedAt": "2026-03-04T22:16:28.000Z",
           "durationMinutes": 70,
@@ -1693,6 +2592,9 @@
           "providerId": "pinecone",
           "title": "[GCP][us-central1][europe-west4] Errors on some read operations",
           "severity": "major",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-02-23T23:14:35.000Z",
           "resolvedAt": "2026-02-24T01:52:43.000Z",
           "durationMinutes": 158,
@@ -1703,6 +2605,9 @@
           "providerId": "pinecone",
           "title": "[Serverless][AWS][us-east-1] Increase in freshness lag for some namespaces",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-02-05T10:55:24.000Z",
           "resolvedAt": "2026-02-05T21:57:04.000Z",
           "durationMinutes": 662,
@@ -1710,215 +2615,6 @@
         }
       ],
       "news": []
-    },
-    {
-      "provider": {
-        "id": "twilio",
-        "name": "Twilio",
-        "category": "infra",
-        "color": "#f22f46",
-        "icon": "📡",
-        "apiUrl": "https://status.twilio.com/api/v2/summary.json",
-        "statusPageUrl": "https://status.twilio.com"
-      },
-      "status": {
-        "providerId": "twilio",
-        "indicator": "minor",
-        "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-28T22:33:35.414Z"
-      },
-      "stats": {
-        "providerId": "twilio",
-        "uptime30d": 81.29,
-        "uptime90d": 93.76,
-        "incidentCount30d": 50,
-        "avgMttr30d": 825,
-        "lastIncident": "2026-04-28T13:53:13.239-07:00",
-        "reliabilityScore": 49,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 50,
-            "uptime": 79.91
-          }
-        ]
-      },
-      "recentIncidents": [
-        {
-          "id": "xfbygc0vj207",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays from Twilio to Orange Cameroon",
-          "severity": "minor",
-          "startedAt": "2026-04-28T13:53:13.239-07:00",
-          "resolvedAt": null,
-          "durationMinutes": null,
-          "url": "https://stspg.io/58ttghh9l7tc"
-        },
-        {
-          "id": "xgrcz5sjxnd6",
-          "providerId": "twilio",
-          "title": "User Authentication Identity Gateway API High Latency for T-Mobile in United States",
-          "severity": "minor",
-          "startedAt": "2026-04-28T08:37:06.496-07:00",
-          "resolvedAt": "2026-04-28T12:44:08.635-07:00",
-          "durationMinutes": 247,
-          "url": "https://stspg.io/yhxlwbhb99yn"
-        },
-        {
-          "id": "k6bqtsm2rflk",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays and Failures from Twilio to MTS Russia",
-          "severity": "minor",
-          "startedAt": "2026-04-28T08:34:25.580-07:00",
-          "resolvedAt": "2026-04-28T10:44:52.872-07:00",
-          "durationMinutes": 130,
-          "url": "https://stspg.io/11ys0xvhd1rp"
-        },
-        {
-          "id": "7jtwh60j2vpt",
-          "providerId": "twilio",
-          "title": "SMS Delivery Receipt Delays from Twilio to Globe Philippines",
-          "severity": "minor",
-          "startedAt": "2026-04-27T18:07:33.546-07:00",
-          "resolvedAt": "2026-04-27T20:39:39.653-07:00",
-          "durationMinutes": 152,
-          "url": "https://stspg.io/md600xf8sxq7"
-        },
-        {
-          "id": "c7b40qsd7nkm",
-          "providerId": "twilio",
-          "title": "Lookup Identity Match Lookup V2 API package Increased Error Rate",
-          "severity": "minor",
-          "startedAt": "2026-04-27T16:17:10.000-07:00",
-          "resolvedAt": "2026-04-27T17:53:55.877-07:00",
-          "durationMinutes": 97,
-          "url": "https://stspg.io/z6jhmnr0dmml"
-        },
-        {
-          "id": "453zvjlcw1fj",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays and Failures From a Subset of Twilio Alphanumeric Sender IDs and Long Codes to Jazz Pakistan",
-          "severity": "minor",
-          "startedAt": "2026-04-27T14:29:28.563-07:00",
-          "resolvedAt": "2026-04-28T01:04:22.776-07:00",
-          "durationMinutes": 635,
-          "url": "https://stspg.io/h493df108p7r"
-        },
-        {
-          "id": "fg3rv71swcq7",
-          "providerId": "twilio",
-          "title": "Increased rate of 11200 warnings from Programmable Video",
-          "severity": "minor",
-          "startedAt": "2026-04-27T11:49:08.670-07:00",
-          "resolvedAt": "2026-04-27T14:44:53.692-07:00",
-          "durationMinutes": 176,
-          "url": "https://stspg.io/2vplxdkgqr3d"
-        },
-        {
-          "id": "hdsxyldm9n4n",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays from Twilio Phone Numbers to Orange Cameroon",
-          "severity": "minor",
-          "startedAt": "2026-04-27T08:44:27.050-07:00",
-          "resolvedAt": "2026-04-28T05:18:02.770-07:00",
-          "durationMinutes": 1234,
-          "url": "https://stspg.io/tw0bwb92mpmh"
-        },
-        {
-          "id": "45y7qj466xmd",
-          "providerId": "twilio",
-          "title": "Programmable Messaging - Service Interruption With Programmable Messaging for a Percentage of Messaging Services",
-          "severity": "minor",
-          "startedAt": "2026-04-26T21:28:56.000-07:00",
-          "resolvedAt": "2026-04-26T21:59:11.984-07:00",
-          "durationMinutes": 30,
-          "url": "https://stspg.io/1ybh5fqcy7sg"
-        },
-        {
-          "id": "98d5n5y8h0hw",
-          "providerId": "twilio",
-          "title": "SMS Delivery Failures from Twilio to Telefonica Peru",
-          "severity": "minor",
-          "startedAt": "2026-04-25T14:00:27.769-07:00",
-          "resolvedAt": "2026-04-26T14:10:37.066-07:00",
-          "durationMinutes": 1450,
-          "url": "https://stspg.io/qxpm82z7f0fc"
-        },
-        {
-          "id": "wxp50bpcxxwj",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays from Twilio to Etisalat Afghanistan",
-          "severity": "minor",
-          "startedAt": "2026-04-25T01:16:52.439-07:00",
-          "resolvedAt": "2026-04-25T17:46:35.986-07:00",
-          "durationMinutes": 990,
-          "url": "https://stspg.io/dwn0brf34rfg"
-        },
-        {
-          "id": "01qbp5n6d4rm",
-          "providerId": "twilio",
-          "title": "Delays in Whatsapp Template Approvals",
-          "severity": "minor",
-          "startedAt": "2026-04-24T17:04:50.286-07:00",
-          "resolvedAt": "2026-04-24T21:31:31.998-07:00",
-          "durationMinutes": 267,
-          "url": "https://stspg.io/btq3qjh2hhcl"
-        },
-        {
-          "id": "ztrxbvjmbkx0",
-          "providerId": "twilio",
-          "title": "User Authentication Identity Gateway API Failure Increase in United States",
-          "severity": "minor",
-          "startedAt": "2026-04-23T23:05:32.336-07:00",
-          "resolvedAt": "2026-04-23T23:40:17.275-07:00",
-          "durationMinutes": 35,
-          "url": "https://stspg.io/k6mnvmlrv2s5"
-        },
-        {
-          "id": "5pm03t18rb8x",
-          "providerId": "twilio",
-          "title": "Delay in Transcription Processing",
-          "severity": "minor",
-          "startedAt": "2026-04-23T11:16:26.911-07:00",
-          "resolvedAt": "2026-04-23T13:37:57.542-07:00",
-          "durationMinutes": 142,
-          "url": "https://stspg.io/w571w0qhh7zh"
-        },
-        {
-          "id": "zl24vtfjlxzn",
-          "providerId": "twilio",
-          "title": "Intermittent Issues with API Recording Downloads",
-          "severity": "minor",
-          "startedAt": "2026-04-23T10:31:40.028-07:00",
-          "resolvedAt": "2026-04-23T14:46:20.461-07:00",
-          "durationMinutes": 255,
-          "url": "https://stspg.io/wm4zr9fdzjmd"
-        }
-      ],
-      "news": [
-        {
-          "id": "47322794",
-          "title": "SHOW HN: A usage circuit breaker for Cloudflare Workers",
-          "url": "https://news.ycombinator.com/item?id=47322794",
-          "source": "hackernews",
-          "publishedAt": "2026-03-10T13:09:00Z",
-          "points": 29,
-          "commentCount": 9
-        }
-      ]
     },
     {
       "provider": {
@@ -1934,7 +2630,7 @@
         "providerId": "plaid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-28T22:33:36.015Z"
+        "updatedAt": "2026-04-28T23:58:38.161Z"
       },
       "stats": {
         "providerId": "plaid",
@@ -1943,7 +2639,7 @@
         "incidentCount30d": 8,
         "avgMttr30d": 210,
         "lastIncident": "2026-04-23T17:33:22.887Z",
-        "reliabilityScore": 72,
+        "reliabilityScore": 88,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -1963,6 +2659,38 @@
             "incidentCount": 6,
             "uptime": 98.72
           }
+        ],
+        "tagSummary": [
+          {
+            "tag": "availability",
+            "count30d": 3,
+            "count90d": 9
+          },
+          {
+            "tag": "api",
+            "count30d": 1,
+            "count90d": 7
+          },
+          {
+            "tag": "other",
+            "count30d": 2,
+            "count90d": 4
+          },
+          {
+            "tag": "performance",
+            "count30d": 3,
+            "count90d": 4
+          },
+          {
+            "tag": "webhook",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "billing",
+            "count30d": 0,
+            "count90d": 1
+          }
         ]
       },
       "recentIncidents": [
@@ -1971,6 +2699,9 @@
           "providerId": "plaid",
           "title": "IDV Downtime",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-23T17:33:22.887Z",
           "resolvedAt": "2026-04-23T17:58:49.670Z",
           "durationMinutes": 25,
@@ -1981,6 +2712,9 @@
           "providerId": "plaid",
           "title": "Transaction Updates Delayed",
           "severity": "major",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-23T14:57:56.091Z",
           "resolvedAt": "2026-04-23T22:23:34.087Z",
           "durationMinutes": 446,
@@ -1991,6 +2725,9 @@
           "providerId": "plaid",
           "title": "Service Disruption Impacting Wells Fargo connections",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-22T03:45:26.028Z",
           "resolvedAt": "2026-04-22T03:57:52.036Z",
           "durationMinutes": 12,
@@ -2001,6 +2738,9 @@
           "providerId": "plaid",
           "title": "Service Disruption Impacting Chase connections",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-04-19T03:37:05.000Z",
           "resolvedAt": "2026-04-19T13:07:08.083Z",
           "durationMinutes": 570,
@@ -2011,6 +2751,9 @@
           "providerId": "plaid",
           "title": "Elevated Link errors",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-04-18T01:30:12.000Z",
           "resolvedAt": "2026-04-18T07:47:41.610Z",
           "durationMinutes": 377,
@@ -2021,6 +2764,10 @@
           "providerId": "plaid",
           "title": "Increased Transactions webhook latency",
           "severity": "minor",
+          "tags": [
+            "webhook",
+            "performance"
+          ],
           "startedAt": "2026-04-01T20:30:14.000Z",
           "resolvedAt": "2026-04-01T21:07:17.115Z",
           "durationMinutes": 37,
@@ -2031,6 +2778,9 @@
           "providerId": "plaid",
           "title": "Transaction Updates Delayed",
           "severity": "maintenance",
+          "tags": [
+            "performance"
+          ],
           "startedAt": "2026-04-01T05:07:25.230Z",
           "resolvedAt": "2026-04-01T14:27:33.357Z",
           "durationMinutes": 560,
@@ -2041,6 +2791,9 @@
           "providerId": "plaid",
           "title": "Elevated API errors",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-03-31T19:01:53.567Z",
           "resolvedAt": "2026-03-31T20:33:53.486Z",
           "durationMinutes": 92,
@@ -2051,6 +2804,9 @@
           "providerId": "plaid",
           "title": "Service Disruption Impacting Wells Fargo connections",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-03-30T15:16:20.846Z",
           "resolvedAt": "2026-03-30T17:19:10.143Z",
           "durationMinutes": 123,
@@ -2061,6 +2817,9 @@
           "providerId": "plaid",
           "title": "Elevated dashboard error rates",
           "severity": "major",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-03-27T17:06:02.955Z",
           "resolvedAt": "2026-03-27T21:26:58.032Z",
           "durationMinutes": 261,
@@ -2071,6 +2830,9 @@
           "providerId": "plaid",
           "title": "Elevated dashboard error rates",
           "severity": "minor",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-03-26T15:53:12.021Z",
           "resolvedAt": "2026-03-26T16:32:12.356Z",
           "durationMinutes": 39,
@@ -2081,6 +2843,9 @@
           "providerId": "plaid",
           "title": "IDV Downtime",
           "severity": "minor",
+          "tags": [
+            "other"
+          ],
           "startedAt": "2026-03-19T15:32:05.773Z",
           "resolvedAt": "2026-03-19T15:32:05.826Z",
           "durationMinutes": 0,
@@ -2091,6 +2856,9 @@
           "providerId": "plaid",
           "title": "Service Disruption Impacting Fidelity and Fidelity NetBenefit connections",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-03-13T16:28:41.477Z",
           "resolvedAt": "2026-03-13T17:37:55.259Z",
           "durationMinutes": 69,
@@ -2101,6 +2869,9 @@
           "providerId": "plaid",
           "title": "API downtime",
           "severity": "critical",
+          "tags": [
+            "api"
+          ],
           "startedAt": "2026-03-09T21:44:39.000Z",
           "resolvedAt": "2026-03-09T23:14:47.517Z",
           "durationMinutes": 90,
@@ -2111,6 +2882,9 @@
           "providerId": "plaid",
           "title": "Service Disruption Impacting Wells Fargo connections",
           "severity": "minor",
+          "tags": [
+            "availability"
+          ],
           "startedAt": "2026-03-06T15:54:14.656Z",
           "resolvedAt": "2026-03-06T19:12:52.680Z",
           "durationMinutes": 199,
@@ -2139,5 +2913,327 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-28T22:33:42.053Z"
+  "categoryTagTrends": [
+    {
+      "category": "llm",
+      "tags": [
+        {
+          "tag": "inference",
+          "count30d": 45,
+          "count90d": 47,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "groq"
+          ]
+        },
+        {
+          "tag": "api",
+          "count30d": 42,
+          "count90d": 42,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "cohere"
+          ]
+        },
+        {
+          "tag": "other",
+          "count30d": 8,
+          "count90d": 9,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "cohere"
+          ]
+        },
+        {
+          "tag": "performance",
+          "count30d": 5,
+          "count90d": 8,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "groq",
+            "cohere"
+          ]
+        },
+        {
+          "tag": "availability",
+          "count30d": 8,
+          "count90d": 8,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "cohere"
+          ]
+        },
+        {
+          "tag": "auth",
+          "count30d": 5,
+          "count90d": 5,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "cohere"
+          ]
+        },
+        {
+          "tag": "billing",
+          "count30d": 1,
+          "count90d": 1,
+          "trend": "up",
+          "providers": [
+            "anthropic"
+          ]
+        },
+        {
+          "tag": "database",
+          "count30d": 1,
+          "count90d": 1,
+          "trend": "up",
+          "providers": [
+            "cohere"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "infra",
+      "tags": [
+        {
+          "tag": "other",
+          "count30d": 48,
+          "count90d": 58,
+          "trend": "up",
+          "providers": [
+            "vercel",
+            "cloudflare",
+            "github",
+            "twilio"
+          ]
+        },
+        {
+          "tag": "performance",
+          "count30d": 47,
+          "count90d": 57,
+          "trend": "up",
+          "providers": [
+            "vercel",
+            "cloudflare",
+            "github",
+            "twilio"
+          ]
+        },
+        {
+          "tag": "api",
+          "count30d": 19,
+          "count90d": 28,
+          "trend": "up",
+          "providers": [
+            "vercel",
+            "cloudflare",
+            "github",
+            "twilio"
+          ]
+        },
+        {
+          "tag": "availability",
+          "count30d": 16,
+          "count90d": 24,
+          "trend": "up",
+          "providers": [
+            "vercel",
+            "github"
+          ]
+        },
+        {
+          "tag": "network",
+          "count30d": 22,
+          "count90d": 23,
+          "trend": "up",
+          "providers": [
+            "vercel",
+            "cloudflare",
+            "twilio"
+          ]
+        },
+        {
+          "tag": "deployment",
+          "count30d": 5,
+          "count90d": 10,
+          "trend": "up",
+          "providers": [
+            "vercel"
+          ]
+        },
+        {
+          "tag": "webhook",
+          "count30d": 2,
+          "count90d": 6,
+          "trend": "stable",
+          "providers": [
+            "vercel",
+            "github"
+          ]
+        },
+        {
+          "tag": "auth",
+          "count30d": 3,
+          "count90d": 4,
+          "trend": "up",
+          "providers": [
+            "cloudflare",
+            "github",
+            "twilio"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "data",
+      "tags": [
+        {
+          "tag": "other",
+          "count30d": 4,
+          "count90d": 20,
+          "trend": "stable",
+          "providers": [
+            "supabase",
+            "pinecone"
+          ]
+        },
+        {
+          "tag": "network",
+          "count30d": 1,
+          "count90d": 10,
+          "trend": "down",
+          "providers": [
+            "supabase"
+          ]
+        },
+        {
+          "tag": "api",
+          "count30d": 2,
+          "count90d": 7,
+          "trend": "stable",
+          "providers": [
+            "supabase"
+          ]
+        },
+        {
+          "tag": "performance",
+          "count30d": 1,
+          "count90d": 7,
+          "trend": "down",
+          "providers": [
+            "supabase"
+          ]
+        },
+        {
+          "tag": "availability",
+          "count30d": 3,
+          "count90d": 7,
+          "trend": "stable",
+          "providers": [
+            "supabase",
+            "pinecone"
+          ]
+        },
+        {
+          "tag": "database",
+          "count30d": 1,
+          "count90d": 4,
+          "trend": "stable",
+          "providers": [
+            "supabase"
+          ]
+        },
+        {
+          "tag": "auth",
+          "count30d": 1,
+          "count90d": 1,
+          "trend": "up",
+          "providers": [
+            "supabase"
+          ]
+        },
+        {
+          "tag": "billing",
+          "count30d": 0,
+          "count90d": 1,
+          "trend": "down",
+          "providers": [
+            "supabase"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "payment",
+      "tags": [
+        {
+          "tag": "availability",
+          "count30d": 3,
+          "count90d": 9,
+          "trend": "stable",
+          "providers": [
+            "plaid"
+          ]
+        },
+        {
+          "tag": "api",
+          "count30d": 1,
+          "count90d": 7,
+          "trend": "down",
+          "providers": [
+            "plaid"
+          ]
+        },
+        {
+          "tag": "other",
+          "count30d": 2,
+          "count90d": 4,
+          "trend": "up",
+          "providers": [
+            "plaid"
+          ]
+        },
+        {
+          "tag": "performance",
+          "count30d": 3,
+          "count90d": 4,
+          "trend": "up",
+          "providers": [
+            "plaid"
+          ]
+        },
+        {
+          "tag": "webhook",
+          "count30d": 1,
+          "count90d": 1,
+          "trend": "up",
+          "providers": [
+            "plaid"
+          ]
+        },
+        {
+          "tag": "billing",
+          "count30d": 0,
+          "count90d": 1,
+          "trend": "down",
+          "providers": [
+            "plaid"
+          ]
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-04-28T23:58:44.231Z"
 }
