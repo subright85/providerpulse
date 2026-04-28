@@ -37,43 +37,47 @@ export default function ProviderDetail({ data, onClose }: Props) {
         {/* Header */}
         <div className="sticky top-0 bg-[#0f1117] border-b border-white/8 px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-3xl">{provider.icon}</span>
+            <span className="text-2xl">{provider.icon}</span>
             <div>
               <h2 className="text-white font-bold text-lg leading-tight">{provider.name}</h2>
               <p className="text-white/40 text-xs">{status.description}</p>
             </div>
           </div>
-          <button onClick={onClose} className="text-white/40 hover:text-white text-xl w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 transition-all">✕</button>
+          <button onClick={onClose} className="text-white/40 hover:text-white w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 transition-all text-xl">✕</button>
         </div>
 
         <div className="p-5 flex flex-col gap-5">
           {/* Score + stats */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-white/5 border border-white/8 rounded-xl p-4 text-center">
+            <div className="bg-white/5 border border-white/8 rounded-xl p-4 text-center flex flex-col items-center justify-center gap-1">
               <p className="text-4xl font-black" style={{ color: scoreColor }}>{score ?? '—'}</p>
-              <p className="text-white/40 text-xs uppercase tracking-widest mt-1">Reliability Score</p>
+              <p className="text-white/40 text-xs uppercase tracking-widest">Reliability Score</p>
+              <p className="text-white/25 text-[10px]">out of 100</p>
             </div>
-            <div className="bg-white/5 border border-white/8 rounded-xl p-4 flex flex-col gap-2">
-              <StatRow label="30d uptime" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} />
-              <StatRow label="90d uptime" value={stats.uptime90d !== null ? `${stats.uptime90d}%` : '—'} />
-              <StatRow label="Incidents/30d" value={String(stats.incidentCount30d)} />
-              <StatRow label="Avg MTTR" value={stats.avgMttr30d !== null ? `${stats.avgMttr30d}m` : '—'} />
+            <div className="bg-white/5 border border-white/8 rounded-xl p-4 flex flex-col gap-2.5">
+              <StatRow label="30-day uptime" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} />
+              <StatRow label="90-day uptime" value={stats.uptime90d !== null ? `${stats.uptime90d}%` : '—'} />
+              <StatRow label="Incidents (30d)" value={String(stats.incidentCount30d)} />
+              <StatRow label="Avg. MTTR" value={stats.avgMttr30d !== null ? `${stats.avgMttr30d}m` : '—'} />
             </div>
           </div>
 
-          {/* Chopper's assessment */}
+          {/* Assessment */}
           {score !== null && (
-            <div className="bg-emerald-900/20 border border-emerald-500/20 rounded-xl p-4">
-              <p className="text-emerald-400 text-xs font-black uppercase tracking-widest mb-2">🦌 쵸파의 진단</p>
-              <p className="text-emerald-300/80 text-sm leading-relaxed">{getAssessment(stats)}</p>
+            <div className="bg-white/4 border border-white/8 rounded-xl p-4">
+              <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-2">Assessment</p>
+              <p className="text-white/70 text-sm leading-relaxed">{getAssessment(stats)}</p>
             </div>
           )}
 
           {/* Incidents */}
           <div>
-            <p className="text-white/50 text-xs font-bold uppercase tracking-widest mb-3">Recent Incidents (90d)</p>
+            <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-3">Incident History (90 days)</p>
             {recentIncidents.length === 0 ? (
-              <p className="text-white/25 text-sm text-center py-4">No incidents recorded 🎉</p>
+              <div className="bg-white/4 border border-white/8 rounded-xl py-6 text-center">
+                <p className="text-emerald-400 text-sm font-semibold">No incidents recorded</p>
+                <p className="text-white/30 text-xs mt-1">Clean track record for the past 90 days</p>
+              </div>
             ) : (
               <div className="flex flex-col gap-2">
                 {recentIncidents.map(inc => <IncidentRow key={inc.id} inc={inc} />)}
@@ -85,9 +89,9 @@ export default function ProviderDetail({ data, onClose }: Props) {
             href={provider.statusPageUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-center py-2.5 rounded-xl border border-white/15 text-white/60 hover:text-white hover:border-white/30 text-sm font-semibold transition-all"
+            className="block text-center py-2.5 rounded-xl border border-white/12 text-white/50 hover:text-white hover:border-white/25 text-sm font-medium transition-all"
           >
-            View Official Status Page ↗
+            Official Status Page ↗
           </a>
         </div>
       </div>
@@ -99,7 +103,7 @@ function StatRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex justify-between items-center">
       <span className="text-white/40 text-xs">{label}</span>
-      <span className="text-white/80 text-xs font-bold">{value}</span>
+      <span className="text-white/80 text-xs font-semibold">{value}</span>
     </div>
   );
 }
@@ -113,12 +117,12 @@ function IncidentRow({ inc }: { inc: Incident }) {
       rel="noopener noreferrer"
       className="flex items-start gap-3 bg-white/4 border border-white/8 rounded-xl p-3 hover:bg-white/7 transition-all"
     >
-      <span className={`mt-0.5 px-1.5 py-0.5 rounded text-[10px] font-bold uppercase ${sev.bg} ${sev.color} shrink-0`}>{sev.label}</span>
+      <span className={`mt-0.5 px-1.5 py-0.5 rounded text-[10px] font-bold uppercase shrink-0 ${sev.bg} ${sev.color}`}>{sev.label}</span>
       <div className="flex-1 min-w-0">
-        <p className="text-white/80 text-xs font-semibold truncate">{inc.title}</p>
+        <p className="text-white/80 text-xs font-medium truncate">{inc.title}</p>
         <div className="flex gap-2 mt-0.5">
           <span className="text-white/30 text-[10px]">{fmtDate(inc.startedAt)}</span>
-          <span className="text-white/30 text-[10px]">·</span>
+          <span className="text-white/20 text-[10px]">·</span>
           <span className="text-white/30 text-[10px]">{fmtDuration(inc.durationMinutes)}</span>
         </div>
       </div>
@@ -128,8 +132,11 @@ function IncidentRow({ inc }: { inc: Incident }) {
 
 function getAssessment(stats: ProviderData['stats']): string {
   const s = stats.reliabilityScore ?? 0;
-  if (s >= 95) return `신뢰도 최상급이야! 인시던트도 거의 없고 복구도 빨라. 이 provider 믿어도 돼.`;
-  if (s >= 85) return `전반적으로 안정적이야. 가끔 이슈는 있지만 빠르게 회복해. 프로덕션 사용 가능한 수준이야.`;
-  if (s >= 70) return `주의가 필요해. 인시던트 빈도나 복구 시간이 조금 걸려. 중요한 서비스엔 fallback 계획 세워둬.`;
-  return `신뢰도가 낮아! 반복적인 인시던트나 느린 복구 시간이 보여. 의존하기 전에 대안도 고려해봐.`;
+  const inc = stats.incidentCount30d;
+  const mttr = stats.avgMttr30d;
+
+  if (s >= 95) return `Excellent reliability. ${inc === 0 ? 'No incidents in the past 30 days.' : `Rare incidents with fast recovery (avg ${mttr}m MTTR).`} Suitable for production-critical workloads.`;
+  if (s >= 85) return `Good reliability overall. ${inc > 0 ? `${inc} incident${inc > 1 ? 's' : ''} in 30 days with ${mttr ? `${mttr}m avg recovery` : 'variable recovery time'}.` : ''} Recommended to have a fallback plan for sensitive services.`;
+  if (s >= 70) return `Moderate reliability. Recurring incidents may impact SLA-sensitive applications. Consider redundancy or multi-provider architecture.`;
+  return `Below-average reliability based on historical data. High incident frequency or slow recovery times observed. Evaluate alternatives before critical adoption.`;
 }
