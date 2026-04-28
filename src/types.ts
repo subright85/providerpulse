@@ -2,6 +2,11 @@ export type ProviderCategory = 'llm' | 'infra' | 'data' | 'payment';
 
 export type IncidentSeverity = 'critical' | 'major' | 'minor' | 'maintenance';
 
+export type IncidentTag =
+  | 'inference' | 'api' | 'availability' | 'performance'
+  | 'auth' | 'rate-limit' | 'billing' | 'database'
+  | 'network' | 'webhook' | 'deployment' | 'other';
+
 export interface Provider {
   id: string;
   name: string;
@@ -17,6 +22,7 @@ export interface Incident {
   providerId: string;
   title: string;
   severity: IncidentSeverity;
+  tags: IncidentTag[];
   startedAt: string;
   resolvedAt: string | null;
   durationMinutes: number | null;
@@ -24,10 +30,29 @@ export interface Incident {
 }
 
 export interface MonthlyTrend {
-  month: string;        // "2026-01"
-  label: string;        // "Jan '26"
+  month: string;   // "2026-01"
+  label: string;   // "Jan '26"
   incidentCount: number;
-  uptime: number;       // 0-100
+  uptime: number;  // 0-100
+}
+
+export interface TagSummaryItem {
+  tag: IncidentTag;
+  count30d: number;
+  count90d: number;
+}
+
+export interface CategoryTagTrendItem {
+  tag: IncidentTag;
+  count30d: number;
+  count90d: number;
+  trend: 'up' | 'down' | 'stable';
+  providers: string[];  // provider IDs
+}
+
+export interface CategoryTagTrend {
+  category: string;
+  tags: CategoryTagTrendItem[];
 }
 
 export interface NewsItem {
@@ -56,6 +81,7 @@ export interface ProviderStats {
   lastIncident: string | null;
   reliabilityScore: number | null;
   monthlyTrend: MonthlyTrend[];
+  tagSummary: TagSummaryItem[];
 }
 
 export interface ProviderData {
@@ -68,5 +94,6 @@ export interface ProviderData {
 
 export interface AppData {
   providers: ProviderData[];
+  categoryTagTrends: CategoryTagTrend[];
   generatedAt: string;
 }

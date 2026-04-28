@@ -1,10 +1,25 @@
-import type { ProviderData, Incident, MonthlyTrend, NewsItem } from '../types';
+import type { ProviderData, Incident, MonthlyTrend, NewsItem, TagSummaryItem, IncidentTag } from '../types';
 
 const SEV_CONFIG = {
   critical:    { color: 'text-red-400',    bg: 'bg-red-500/15',    label: 'Critical' },
   major:       { color: 'text-orange-400', bg: 'bg-orange-500/15', label: 'Major' },
   minor:       { color: 'text-yellow-400', bg: 'bg-yellow-500/15', label: 'Minor' },
   maintenance: { color: 'text-blue-400',   bg: 'bg-blue-500/15',   label: 'Maintenance' },
+};
+
+const TAG_COLORS: Record<IncidentTag, string> = {
+  'availability': 'bg-red-500/20 text-red-300',
+  'api':          'bg-orange-500/20 text-orange-300',
+  'inference':    'bg-violet-500/20 text-violet-300',
+  'performance':  'bg-yellow-500/20 text-yellow-300',
+  'auth':         'bg-blue-500/20 text-blue-300',
+  'rate-limit':   'bg-cyan-500/20 text-cyan-300',
+  'network':      'bg-indigo-500/20 text-indigo-300',
+  'database':     'bg-teal-500/20 text-teal-300',
+  'billing':      'bg-green-500/20 text-green-300',
+  'webhook':      'bg-pink-500/20 text-pink-300',
+  'deployment':   'bg-amber-500/20 text-amber-300',
+  'other':        'bg-white/10 text-white/40',
 };
 
 function fmtDuration(mins: number | null): string {
@@ -72,9 +87,10 @@ export default function ProviderDetail({ data, onClose }: Props) {
           </div>
 
           {/* Monthly trend */}
-          {stats.monthlyTrend.length > 0 && (
-            <TrendChart trend={stats.monthlyTrend} />
-          )}
+          {stats.monthlyTrend.length > 0 && <TrendChart trend={stats.monthlyTrend} />}
+
+          {/* Tag breakdown */}
+          {stats.tagSummary.length > 0 && <TagBreakdown tags={stats.tagSummary} />}
 
           {/* Assessment */}
           {score !== null && (
@@ -139,7 +155,6 @@ function TrendChart({ trend }: { trend: MonthlyTrend[] }) {
       <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-4">90-Day Incident Trend</p>
       <div className="flex items-end gap-1.5 h-20">
         {trend.map(t => {
-          const heightPct = maxInc === 0 ? 0 : (t.incidentCount / maxInc) * 100;
           const barColor = t.incidentCount === 0
             ? 'bg-emerald-500/30'
             : t.incidentCount <= 2 ? 'bg-yellow-500/50' : 'bg-orange-500/60';
@@ -148,8 +163,8 @@ function TrendChart({ trend }: { trend: MonthlyTrend[] }) {
               <span className="text-white/40 text-[9px] font-semibold tabular-nums">{t.incidentCount || ''}</span>
               <div className="w-full flex flex-col justify-end" style={{ height: '52px' }}>
                 <div
-                  className={`w-full rounded-sm transition-all ${barColor}`}
-                  style={{ height: t.incidentCount === 0 ? '3px' : `${Math.max(8, heightPct * 0.52)}px` }}
+                  className={`w-full rounded-sm ${barColor}`}
+                  style={{ height: t.incidentCount === 0 ? '3px' : `${Math.max(8, (t.incidentCount / maxInc) * 52)}px` }}
                 />
               </div>
               <span className="text-white/25 text-[9px] whitespace-nowrap">{t.label}</span>
@@ -158,6 +173,42 @@ function TrendChart({ trend }: { trend: MonthlyTrend[] }) {
         })}
       </div>
     </div>
+  );
+}
+
+function TagBreakdown({ tags }: { tags: TagSummaryItem[] }) {
+  const max = Math.max(...tags.map(t => t.count90d), 1);
+  const top = tags.slice(0, 6);
+  return (
+    <div className="bg-white/4 border border-white/8 rounded-xl p-4">
+      <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-3">Incident Type Breakdown (90d)</p>
+      <div className="flex flex-col gap-2">
+        {top.map(t => {
+          const tagColor = TAG_COLORS[t.tag as IncidentTag] ?? TAG_COLORS.other;
+          const pct = (t.count90d / max) * 100;
+          const trend30 = t.count30d / Math.max(t.count90d, 1);
+          const trendIcon = trend30 > 0.45 ? '↑' : trend30 < 0.20 ? '↓' : '→';
+          const trendColor = trend30 > 0.45 ? 'text-red-400' : trend30 < 0.20 ? 'text-emerald-400' : 'text-white/30';
+          return (
+            <div key={t.tag} className="flex items-center gap-2">
+              <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded shrink-0 w-24 text-center ${tagColor}`}>{t.tag}</span>
+              <div className="flex-1 h-1.5 bg-white/6 rounded-full overflow-hidden">
+                <div className="h-full bg-white/25 rounded-full" style={{ width: `${pct}%` }} />
+              </div>
+              <span className="text-white/40 text-[10px] tabular-nums w-6 text-right">{t.count90d}</span>
+              <span className={`text-[10px] font-bold w-3 ${trendColor}`}>{trendIcon}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function TagPill({ tag }: { tag: IncidentTag }) {
+  const cls = TAG_COLORS[tag] ?? TAG_COLORS.other;
+  return (
+    <span className={`text-[9px] font-semibold px-1 py-0.5 rounded ${cls}`}>{tag}</span>
   );
 }
 
@@ -172,8 +223,11 @@ function IncidentRow({ inc }: { inc: Incident }) {
     >
       <span className={`mt-0.5 px-1.5 py-0.5 rounded text-[10px] font-bold uppercase shrink-0 ${sev.bg} ${sev.color}`}>{sev.label}</span>
       <div className="flex-1 min-w-0">
-        <p className="text-white/80 text-xs font-medium truncate">{inc.title}</p>
-        <div className="flex gap-2 mt-0.5">
+        <p className="text-white/80 text-xs font-medium leading-snug">{inc.title}</p>
+        <div className="flex flex-wrap gap-1 mt-1">
+          {inc.tags?.map(tag => <TagPill key={tag} tag={tag} />)}
+        </div>
+        <div className="flex gap-2 mt-1">
           <span className="text-white/30 text-[10px]">{fmtDate(inc.startedAt)}</span>
           <span className="text-white/20 text-[10px]">·</span>
           <span className="text-white/30 text-[10px]">{fmtDuration(inc.durationMinutes)}</span>
