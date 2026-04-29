@@ -29,11 +29,6 @@ export default function App() {
     p.status.indicator !== 'none' && p.status.indicator !== 'maintenance'
   );
 
-  const worstThree = [...providers]
-    .filter(p => p.stats.reliabilityScore !== null)
-    .sort((a, b) => (a.stats.reliabilityScore ?? 100) - (b.stats.reliabilityScore ?? 100))
-    .slice(0, 3);
-
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-white">
       <div className="max-w-2xl mx-auto px-4 py-8">
@@ -77,11 +72,6 @@ export default function App() {
           ))}
         </div>
 
-        {/* Worst of month panel */}
-        {data && worstThree.length > 0 && (
-          <WorstOfMonth providers={worstThree} onSelect={setSelected} />
-        )}
-
         {/* Loading skeleton */}
         {!data && !error && (
           <div className="flex flex-col gap-3">
@@ -100,7 +90,7 @@ export default function App() {
         )}
 
         {/* Provider list */}
-        {data && (
+        {data && filter !== 'all' && (
           <div className="flex flex-col gap-3">
             {filtered.length === 0 && (
               <p className="text-center text-white/30 text-sm py-10">No providers in this category.</p>
@@ -111,6 +101,11 @@ export default function App() {
           </div>
         )}
 
+        {/* All tab: grouped by category */}
+        {data && filter === 'all' && (
+          <AllProviders providers={providers} onSelect={setSelected} />
+        )}
+
         {/* Footer */}
         <div className="mt-10 pt-6 border-t border-white/6 text-center space-y-1">
           <p className="text-white/20 text-xs">Data sourced from official status pages · Refreshed every 30 minutes</p>
@@ -119,6 +114,37 @@ export default function App() {
       </div>
 
       {selected && <ProviderDetail data={selected} onClose={() => setSelected(null)} />}
+    </div>
+  );
+}
+
+const CATEGORY_ORDER = ['llm', 'infra', 'data', 'payment'] as const;
+
+function AllProviders({ providers, onSelect }: { providers: ProviderData[]; onSelect: (p: ProviderData) => void }) {
+  return (
+    <div className="flex flex-col gap-6">
+      {CATEGORY_ORDER.map(cat => {
+        const group = providers.filter(p => p.provider.category === cat);
+        if (group.length === 0) return null;
+        const downCount = group.filter(p => p.status.indicator !== 'none' && p.status.indicator !== 'maintenance').length;
+        return (
+          <div key={cat}>
+            <div className="flex items-center gap-2 mb-2 px-1">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-white/30">{CATEGORY_LABELS[cat]}</p>
+              {downCount > 0 && (
+                <span className="text-[10px] font-semibold text-yellow-400 bg-yellow-400/10 px-1.5 py-0.5 rounded-full">
+                  {downCount} issue{downCount > 1 ? 's' : ''}
+                </span>
+              )}
+            </div>
+            <div className="flex flex-col gap-3">
+              {group.map(p => (
+                <ProviderCard key={p.provider.id} data={p} onClick={() => onSelect(p)} />
+              ))}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -156,42 +182,3 @@ function ActiveIncidentsBanner({ incidents, onSelect }: { incidents: ProviderDat
   );
 }
 
-const MEDAL = ['🥇', '🥈', '🥉'];
-
-function scoreColor(score: number): string {
-  return score >= 90 ? 'text-emerald-400' : score >= 75 ? 'text-yellow-400' : 'text-red-400';
-}
-
-function WorstOfMonth({ providers, onSelect }: { providers: ProviderData[]; onSelect: (p: ProviderData) => void }) {
-  return (
-    <div className="mb-5 bg-white/4 border border-white/8 rounded-2xl p-4">
-      <div className="flex items-center justify-between mb-3">
-        <p className="text-white/40 text-xs font-semibold uppercase tracking-widest">Reliability Rankings</p>
-        <span className="text-white/20 text-[10px]">bottom 3 · 30d score</span>
-      </div>
-      <div className="flex flex-col gap-1">
-        {providers.map((p, i) => {
-          const score = p.stats.reliabilityScore ?? 0;
-          return (
-            <button
-              key={p.provider.id}
-              onClick={() => onSelect(p)}
-              className="flex items-center gap-3 text-left hover:bg-white/4 rounded-xl px-2 py-1.5 transition-colors -mx-2"
-            >
-              <span className="text-sm w-5 text-center shrink-0">{MEDAL[i]}</span>
-              <span className="text-lg shrink-0">{p.provider.icon}</span>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-white/85">{p.provider.name}</p>
-                <p className="text-[10px] text-white/30">
-                  {p.stats.incidentCount30d} incident{p.stats.incidentCount30d !== 1 ? 's' : ''}
-                  {p.stats.uptime30d !== null ? ` · ${p.stats.uptime30d}% uptime` : ''}
-                </p>
-              </div>
-              <span className={`text-base font-bold tabular-nums ${scoreColor(score)}`}>{score}</span>
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
