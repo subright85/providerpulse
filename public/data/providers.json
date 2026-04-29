@@ -15,17 +15,17 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-04-29T21:11:51.059Z"
+        "updatedAt": "2026-04-29T22:32:54.056Z"
       },
       "stats": {
         "providerId": "openai",
-        "uptime30d": 97.26,
+        "uptime30d": 97.27,
         "uptime90d": 99.09,
         "incidentCount30d": 25,
-        "avgMttr30d": 192,
-        "lastIncident": "2026-04-29T21:01:17Z",
-        "reliabilityScore": 63,
-        "reliabilityScore90d": 86,
+        "avgMttr30d": 195,
+        "lastIncident": "2026-04-29T21:59:10Z",
+        "reliabilityScore": 64,
+        "reliabilityScore90d": 87,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -43,19 +43,19 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 25,
-            "uptime": 97.15
+            "uptime": 97.17
           }
         ],
         "tagSummary": [
           {
-            "tag": "api",
-            "count30d": 14,
-            "count90d": 14
+            "tag": "inference",
+            "count30d": 13,
+            "count90d": 13
           },
           {
-            "tag": "inference",
-            "count30d": 12,
-            "count90d": 12
+            "tag": "api",
+            "count30d": 13,
+            "count90d": 13
           },
           {
             "tag": "other",
@@ -68,28 +68,43 @@
             "count90d": 2
           },
           {
-            "tag": "performance",
+            "tag": "availability",
             "count30d": 1,
             "count90d": 1
           },
           {
-            "tag": "availability",
+            "tag": "performance",
             "count30d": 1,
             "count90d": 1
           }
         ],
         "audienceBreakdown": {
-          "b2b": 11,
-          "b2c": 9,
+          "b2b": 10,
+          "b2c": 10,
           "both": 2,
           "unknown": 3
         }
       },
       "recentIncidents": [
         {
+          "id": "01KQDM1K1826RP1FFN86ZNA3WG",
+          "providerId": "openai",
+          "title": "Partial Disruption of ChatGPT Workspace Connector Write Actions",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "availability"
+          ],
+          "audience": "b2c",
+          "startedAt": "2026-04-29T21:59:10Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://status.openai.com"
+        },
+        {
           "id": "01KQDGQKRTSJ02E03R134H5JFD",
           "providerId": "openai",
-          "title": "Elevated errors for ChatGPT Go",
+          "title": "Elevated errors for ChatGPT Go (5.3 Thinking)",
           "severity": "minor",
           "tags": [
             "inference",
@@ -97,8 +112,8 @@
           ],
           "audience": "b2c",
           "startedAt": "2026-04-29T21:01:17Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-04-29T22:24:07Z",
+          "durationMinutes": 83,
           "url": "https://status.openai.com"
         },
         {
@@ -287,20 +302,6 @@
           "resolvedAt": "2026-04-20T18:48:04Z",
           "durationMinutes": 253,
           "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KPMVSSRWY55RX257730KS2FA",
-          "providerId": "openai",
-          "title": "Users may encounter issue with ChatGPT Business after upgrade or adding new seats for up to an hour",
-          "severity": "minor",
-          "tags": [
-            "inference"
-          ],
-          "audience": "b2c",
-          "startedAt": "2026-04-20T07:13:42Z",
-          "resolvedAt": "2026-04-20T19:33:19Z",
-          "durationMinutes": 740,
-          "url": "https://status.openai.com"
         }
       ],
       "news": [
@@ -357,7 +358,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:51.785Z"
+        "updatedAt": "2026-04-29T22:32:54.919Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -385,7 +386,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 47,
-            "uptime": 97.14
+            "uptime": 97.15
           }
         ],
         "tagSummary": [
@@ -711,7 +712,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:52.279Z"
+        "updatedAt": "2026-04-29T22:32:55.373Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -814,7 +815,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:52.966Z"
+        "updatedAt": "2026-04-29T22:32:56.150Z"
       },
       "stats": {
         "providerId": "groq",
@@ -939,7 +940,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:53.648Z"
+        "updatedAt": "2026-04-29T22:32:56.811Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1086,7 +1087,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:54.281Z"
+        "updatedAt": "2026-04-29T22:32:57.511Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1374,7 +1375,7 @@
         "providerId": "vercel",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:54.953Z"
+        "updatedAt": "2026-04-29T22:32:58.281Z"
       },
       "stats": {
         "providerId": "vercel",
@@ -1402,7 +1403,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 16,
-            "uptime": 98.76
+            "uptime": 98.77
           }
         ],
         "tagSummary": [
@@ -1730,7 +1731,7 @@
         "providerId": "cloudflare",
         "indicator": "minor",
         "description": "Minor Service Outage",
-        "updatedAt": "2026-04-29T21:11:55.690Z"
+        "updatedAt": "2026-04-29T22:32:59.103Z"
       },
       "stats": {
         "providerId": "cloudflare",
@@ -1758,7 +1759,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 89.64
+            "uptime": 89.66
           }
         ],
         "tagSummary": [
@@ -2075,7 +2076,7 @@
         "providerId": "github",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T21:11:56.277Z"
+        "updatedAt": "2026-04-29T22:32:59.806Z"
       },
       "stats": {
         "providerId": "github",
@@ -2103,7 +2104,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 27,
-            "uptime": 93.87
+            "uptime": 93.89
           }
         ],
         "tagSummary": [
@@ -2432,7 +2433,7 @@
         "providerId": "azure",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:56.697Z"
+        "updatedAt": "2026-04-29T22:33:00.253Z"
       },
       "stats": {
         "providerId": "azure",
@@ -2480,7 +2481,7 @@
         "providerId": "netlify",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:57.353Z"
+        "updatedAt": "2026-04-29T22:33:00.898Z"
       },
       "stats": {
         "providerId": "netlify",
@@ -2781,7 +2782,7 @@
         "providerId": "render",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:58.070Z"
+        "updatedAt": "2026-04-29T22:33:01.735Z"
       },
       "stats": {
         "providerId": "render",
@@ -3082,7 +3083,7 @@
         "providerId": "supabase",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:58.728Z"
+        "updatedAt": "2026-04-29T22:33:02.482Z"
       },
       "stats": {
         "providerId": "supabase",
@@ -3110,7 +3111,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 13,
-            "uptime": 95.34
+            "uptime": 95.35
           }
         ],
         "tagSummary": [
@@ -3420,7 +3421,7 @@
         "providerId": "pinecone",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:11:59.390Z"
+        "updatedAt": "2026-04-29T22:33:03.230Z"
       },
       "stats": {
         "providerId": "pinecone",
@@ -3559,16 +3560,16 @@
         "providerId": "mongodb",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:12:00.042Z"
+        "updatedAt": "2026-04-29T22:33:04.002Z"
       },
       "stats": {
         "providerId": "mongodb",
-        "uptime30d": 90.6,
-        "uptime90d": 89.83,
-        "incidentCount30d": 4,
-        "avgMttr30d": 1465,
+        "uptime30d": 90.64,
+        "uptime90d": 89.85,
+        "incidentCount30d": 3,
+        "avgMttr30d": 1925,
         "lastIncident": "2026-04-27T17:16:46.000Z",
-        "reliabilityScore": 80,
+        "reliabilityScore": 81,
         "reliabilityScore90d": 70,
         "monthlyTrend": [
           {
@@ -3587,7 +3588,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 3,
-            "uptime": 90.28
+            "uptime": 90.3
           }
         ],
         "tagSummary": [
@@ -3612,11 +3613,6 @@
             "count90d": 3
           },
           {
-            "tag": "performance",
-            "count30d": 1,
-            "count90d": 2
-          },
-          {
             "tag": "network",
             "count30d": 0,
             "count90d": 2
@@ -3624,6 +3620,11 @@
           {
             "tag": "billing",
             "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "performance",
+            "count30d": 0,
             "count90d": 1
           },
           {
@@ -3638,7 +3639,7 @@
           }
         ],
         "audienceBreakdown": {
-          "b2b": 4,
+          "b2b": 3,
           "b2c": 0,
           "both": 0,
           "unknown": 0
@@ -3877,7 +3878,7 @@
         "providerId": "upstash",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:12:00.785Z"
+        "updatedAt": "2026-04-29T22:33:04.643Z"
       },
       "stats": {
         "providerId": "upstash",
@@ -4019,16 +4020,16 @@
         "providerId": "twilio",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T21:12:01.416Z"
+        "updatedAt": "2026-04-29T22:33:05.311Z"
       },
       "stats": {
         "providerId": "twilio",
-        "uptime30d": 81.3,
-        "uptime90d": 93.77,
+        "uptime30d": 80.53,
+        "uptime90d": 93.51,
         "incidentCount30d": 50,
-        "avgMttr30d": 860,
+        "avgMttr30d": 859,
         "lastIncident": "2026-04-29T10:40:36.588-07:00",
-        "reliabilityScore": 64,
+        "reliabilityScore": 63,
         "reliabilityScore90d": 88,
         "monthlyTrend": [
           {
@@ -4047,7 +4048,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 80.58
+            "uptime": 79.82
           }
         ],
         "tagSummary": [
@@ -4058,13 +4059,13 @@
           },
           {
             "tag": "other",
-            "count30d": 11,
-            "count90d": 11
+            "count30d": 12,
+            "count90d": 12
           },
           {
             "tag": "network",
-            "count30d": 8,
-            "count90d": 8
+            "count30d": 7,
+            "count90d": 7
           },
           {
             "tag": "api",
@@ -4102,15 +4103,15 @@
         {
           "id": "vhn17m89ljh2",
           "providerId": "twilio",
-          "title": "Voice Call Failures from Network Subscribers to Twilio Sweden Phone Numbers",
+          "title": "Voice Call Failures from Sweden to Twilio Sweden Phone Numbers",
           "severity": "minor",
           "tags": [
-            "network"
+            "other"
           ],
           "audience": "b2b",
           "startedAt": "2026-04-29T03:23:26.839-07:00",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-04-29T14:38:18.367-07:00",
+          "durationMinutes": 675,
           "url": "https://stspg.io/smvzhc7nc9g3"
         },
         {
@@ -4123,8 +4124,8 @@
           ],
           "audience": "b2b",
           "startedAt": "2026-04-28T21:52:53.371-07:00",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-04-29T14:22:32.470-07:00",
+          "durationMinutes": 990,
           "url": "https://stspg.io/hzczyrp35l1v"
         },
         {
@@ -4325,7 +4326,7 @@
         "providerId": "sendgrid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:12:02.067Z"
+        "updatedAt": "2026-04-29T22:33:06.062Z"
       },
       "stats": {
         "providerId": "sendgrid",
@@ -4624,7 +4625,7 @@
         "providerId": "plaid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T21:12:02.716Z"
+        "updatedAt": "2026-04-29T22:33:06.751Z"
       },
       "stats": {
         "providerId": "plaid",
@@ -4934,9 +4935,21 @@
       "category": "llm",
       "tags": [
         {
-          "tag": "api",
-          "count30d": 45,
+          "tag": "inference",
+          "count30d": 47,
           "count90d": 49,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "google-ai",
+            "groq"
+          ]
+        },
+        {
+          "tag": "api",
+          "count30d": 44,
+          "count90d": 48,
           "trend": "up",
           "providers": [
             "openai",
@@ -4944,18 +4957,6 @@
             "google-ai",
             "cohere",
             "deepseek"
-          ]
-        },
-        {
-          "tag": "inference",
-          "count30d": 46,
-          "count90d": 48,
-          "trend": "up",
-          "providers": [
-            "openai",
-            "anthropic",
-            "google-ai",
-            "groq"
           ]
         },
         {
@@ -5171,8 +5172,8 @@
         },
         {
           "tag": "performance",
-          "count30d": 3,
-          "count90d": 10,
+          "count30d": 2,
+          "count90d": 9,
           "trend": "stable",
           "providers": [
             "supabase",
@@ -5230,8 +5231,8 @@
         },
         {
           "tag": "other",
-          "count30d": 19,
-          "count90d": 23,
+          "count30d": 20,
+          "count90d": 24,
           "trend": "up",
           "providers": [
             "twilio",
@@ -5261,8 +5262,8 @@
         },
         {
           "tag": "network",
-          "count30d": 8,
-          "count90d": 8,
+          "count30d": 7,
+          "count90d": 7,
           "trend": "up",
           "providers": [
             "twilio"
@@ -5301,5 +5302,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-29T21:12:14.031Z"
+  "generatedAt": "2026-04-29T22:33:17.015Z"
 }
