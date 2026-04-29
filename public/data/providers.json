@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:21.246Z"
+        "updatedAt": "2026-04-29T17:43:05.923Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 25,
-            "uptime": 97.06
+            "uptime": 97.07
           }
         ],
         "tagSummary": [
@@ -356,7 +356,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:21.981Z"
+        "updatedAt": "2026-04-29T17:43:06.757Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -384,7 +384,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 47,
-            "uptime": 97.12
+            "uptime": 97.13
           }
         ],
         "tagSummary": [
@@ -710,7 +710,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:22.438Z"
+        "updatedAt": "2026-04-29T17:43:07.198Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -813,7 +813,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:23.166Z"
+        "updatedAt": "2026-04-29T17:43:07.848Z"
       },
       "stats": {
         "providerId": "groq",
@@ -938,7 +938,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:23.799Z"
+        "updatedAt": "2026-04-29T17:43:08.454Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1085,7 +1085,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:24.631Z"
+        "updatedAt": "2026-04-29T17:43:09.126Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1371,16 +1371,16 @@
       },
       "status": {
         "providerId": "vercel",
-        "indicator": "minor",
-        "description": "Minor Service Outage",
-        "updatedAt": "2026-04-29T15:33:25.382Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-29T17:43:09.869Z"
       },
       "stats": {
         "providerId": "vercel",
-        "uptime30d": 98.8,
-        "uptime90d": 95.52,
+        "uptime30d": 98.76,
+        "uptime90d": 95.69,
         "incidentCount30d": 18,
-        "avgMttr30d": 145,
+        "avgMttr30d": 141,
         "lastIncident": "2026-04-29T15:28:00.839Z",
         "reliabilityScore": 80,
         "reliabilityScore90d": 82,
@@ -1401,7 +1401,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 16,
-            "uptime": 98.79
+            "uptime": 98.76
           }
         ],
         "tagSummary": [
@@ -1416,14 +1416,14 @@
             "count90d": 11
           },
           {
-            "tag": "other",
-            "count30d": 6,
-            "count90d": 10
-          },
-          {
             "tag": "deployment",
             "count30d": 5,
             "count90d": 10
+          },
+          {
+            "tag": "other",
+            "count30d": 6,
+            "count90d": 9
           },
           {
             "tag": "availability",
@@ -1464,8 +1464,8 @@
           ],
           "audience": "b2b",
           "startedAt": "2026-04-29T15:28:00.839Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-04-29T16:42:35.620Z",
+          "durationMinutes": 75,
           "url": "https://stspg.io/cpt63yzm29tj"
         },
         {
@@ -1702,6 +1702,15 @@
           "publishedAt": "2026-03-07T09:08:25Z",
           "points": 2,
           "commentCount": 1
+        },
+        {
+          "id": "47762044",
+          "title": "I built a product that allows you to generate a ad off of just a product url",
+          "url": "https://cutagent.vercel.app/",
+          "source": "hackernews",
+          "publishedAt": "2026-04-14T06:38:20Z",
+          "points": 1,
+          "commentCount": 0
         }
       ]
     },
@@ -1720,7 +1729,7 @@
         "providerId": "cloudflare",
         "indicator": "minor",
         "description": "Minor Service Outage",
-        "updatedAt": "2026-04-29T15:33:26.113Z"
+        "updatedAt": "2026-04-29T17:43:10.504Z"
       },
       "stats": {
         "providerId": "cloudflare",
@@ -1748,7 +1757,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 89.5
+            "uptime": 89.53
           }
         ],
         "tagSummary": [
@@ -2070,7 +2079,7 @@
         "providerId": "github",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T15:33:26.956Z"
+        "updatedAt": "2026-04-29T17:43:11.113Z"
       },
       "stats": {
         "providerId": "github",
@@ -2098,7 +2107,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 27,
-            "uptime": 93.82
+            "uptime": 93.84
           }
         ],
         "tagSummary": [
@@ -2427,7 +2436,7 @@
         "providerId": "azure",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:27.401Z"
+        "updatedAt": "2026-04-29T17:43:11.540Z"
       },
       "stats": {
         "providerId": "azure",
@@ -2475,7 +2484,7 @@
         "providerId": "netlify",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:28.160Z"
+        "updatedAt": "2026-04-29T17:43:12.241Z"
       },
       "stats": {
         "providerId": "netlify",
@@ -2776,7 +2785,7 @@
         "providerId": "render",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:28.842Z"
+        "updatedAt": "2026-04-29T17:43:12.891Z"
       },
       "stats": {
         "providerId": "render",
@@ -2804,7 +2813,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 8,
-            "uptime": 98.62
+            "uptime": 98.63
           }
         ],
         "tagSummary": [
@@ -3060,17 +3069,7 @@
           "url": "https://stspg.io/c102250yyl8p"
         }
       ],
-      "news": [
-        {
-          "id": "46811701",
-          "title": "Show HN: Craft – Claude Code running on a VM with all your workplace docs",
-          "url": "https://news.ycombinator.com/item?id=46811701",
-          "source": "hackernews",
-          "publishedAt": "2026-01-29T15:45:28Z",
-          "points": 7,
-          "commentCount": 0
-        }
-      ]
+      "news": []
     },
     {
       "provider": {
@@ -3087,7 +3086,7 @@
         "providerId": "supabase",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:29.518Z"
+        "updatedAt": "2026-04-29T17:43:13.577Z"
       },
       "stats": {
         "providerId": "supabase",
@@ -3115,7 +3114,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 12,
-            "uptime": 95.3
+            "uptime": 95.32
           }
         ],
         "tagSummary": [
@@ -3425,7 +3424,7 @@
         "providerId": "pinecone",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:30.185Z"
+        "updatedAt": "2026-04-29T17:43:14.233Z"
       },
       "stats": {
         "providerId": "pinecone",
@@ -3564,7 +3563,7 @@
         "providerId": "mongodb",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:30.906Z"
+        "updatedAt": "2026-04-29T17:43:14.962Z"
       },
       "stats": {
         "providerId": "mongodb",
@@ -3592,7 +3591,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 3,
-            "uptime": 90.2
+            "uptime": 90.23
           }
         ],
         "tagSummary": [
@@ -3882,7 +3881,7 @@
         "providerId": "upstash",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:31.739Z"
+        "updatedAt": "2026-04-29T17:43:15.595Z"
       },
       "stats": {
         "providerId": "upstash",
@@ -4024,15 +4023,15 @@
         "providerId": "twilio",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T15:33:32.413Z"
+        "updatedAt": "2026-04-29T17:43:16.230Z"
       },
       "stats": {
         "providerId": "twilio",
-        "uptime30d": 81.19,
-        "uptime90d": 93.73,
+        "uptime30d": 81.3,
+        "uptime90d": 93.77,
         "incidentCount30d": 50,
-        "avgMttr30d": 847,
-        "lastIncident": "2026-04-29T03:23:26.839-07:00",
+        "avgMttr30d": 860,
+        "lastIncident": "2026-04-29T10:40:36.588-07:00",
         "reliabilityScore": 64,
         "reliabilityScore90d": 88,
         "monthlyTrend": [
@@ -4052,19 +4051,19 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 80.3
+            "uptime": 80.48
           }
         ],
         "tagSummary": [
           {
             "tag": "performance",
-            "count30d": 34,
-            "count90d": 34
+            "count30d": 33,
+            "count90d": 33
           },
           {
             "tag": "other",
-            "count30d": 10,
-            "count90d": 10
+            "count30d": 11,
+            "count90d": 11
           },
           {
             "tag": "network",
@@ -4091,9 +4090,23 @@
       },
       "recentIncidents": [
         {
+          "id": "441kvr95r8xj",
+          "providerId": "twilio",
+          "title": "New Accounts Are Being Incorrectly Tagged With Legacy Whatsapp Account Flags",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "audience": "b2b",
+          "startedAt": "2026-04-29T10:40:36.588-07:00",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/lljy8rk0rm0z"
+        },
+        {
           "id": "vhn17m89ljh2",
           "providerId": "twilio",
-          "title": "Voice Call Failures from Sweden Network Subscribers to Twilio Sweden Numbers",
+          "title": "Voice Call Failures from Network Subscribers to Twilio Sweden Phone Numbers",
           "severity": "minor",
           "tags": [
             "network"
@@ -4287,21 +4300,6 @@
           "resolvedAt": "2026-04-24T21:31:31.998-07:00",
           "durationMinutes": 267,
           "url": "https://stspg.io/btq3qjh2hhcl"
-        },
-        {
-          "id": "ztrxbvjmbkx0",
-          "providerId": "twilio",
-          "title": "User Authentication Identity Gateway API Failure Increase in United States",
-          "severity": "minor",
-          "tags": [
-            "auth",
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T23:05:32.336-07:00",
-          "resolvedAt": "2026-04-23T23:40:17.275-07:00",
-          "durationMinutes": 35,
-          "url": "https://stspg.io/k6mnvmlrv2s5"
         }
       ],
       "news": [
@@ -4331,7 +4329,7 @@
         "providerId": "sendgrid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:33.088Z"
+        "updatedAt": "2026-04-29T17:43:16.863Z"
       },
       "stats": {
         "providerId": "sendgrid",
@@ -4359,7 +4357,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 11,
-            "uptime": 97.93
+            "uptime": 97.94
           }
         ],
         "tagSummary": [
@@ -4630,7 +4628,7 @@
         "providerId": "plaid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T15:33:33.878Z"
+        "updatedAt": "2026-04-29T17:43:17.591Z"
       },
       "stats": {
         "providerId": "plaid",
@@ -5037,7 +5035,7 @@
         {
           "tag": "other",
           "count30d": 46,
-          "count90d": 62,
+          "count90d": 61,
           "trend": "up",
           "providers": [
             "vercel",
@@ -5227,8 +5225,8 @@
       "tags": [
         {
           "tag": "performance",
-          "count30d": 41,
-          "count90d": 49,
+          "count30d": 40,
+          "count90d": 48,
           "trend": "up",
           "providers": [
             "twilio",
@@ -5238,8 +5236,8 @@
         },
         {
           "tag": "other",
-          "count30d": 18,
-          "count90d": 22,
+          "count30d": 19,
+          "count90d": 23,
           "trend": "up",
           "providers": [
             "twilio",
@@ -5309,5 +5307,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-29T15:33:45.528Z"
+  "generatedAt": "2026-04-29T17:43:27.697Z"
 }
