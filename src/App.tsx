@@ -169,9 +169,13 @@ function ActiveIncidentsBanner({ incidents, onSelect }: { incidents: ProviderDat
             <button
               key={p.provider.id}
               onClick={() => onSelect(p)}
-              className="flex items-center gap-1 text-xs font-semibold text-white/75 hover:text-white transition-colors"
+              className="flex items-center gap-1.5 text-xs font-semibold text-white/75 hover:text-white transition-colors"
             >
-              <span>{p.provider.icon}</span>
+              <img
+                src={`https://www.google.com/s2/favicons?domain=${p.provider.domain}&sz=32`}
+                alt=""
+                className="w-3.5 h-3.5 rounded"
+              />
               <span>{p.provider.name}</span>
             </button>
           ))}

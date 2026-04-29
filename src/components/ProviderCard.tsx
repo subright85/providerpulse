@@ -1,4 +1,5 @@
-import type { ProviderData } from '../types';
+import { useState } from 'react';
+import type { ProviderData, Provider } from '../types';
 
 const INDICATOR_CONFIG = {
   none:        { label: 'Operational',  bg: 'bg-emerald-500/12', text: 'text-emerald-400', dot: 'bg-emerald-400' },
@@ -23,23 +24,46 @@ function fmtLastIncident(iso: string | null): string {
   return `${days}d ago`;
 }
 
+// Score ring uses cool palette only (blue→indigo→violet) so it can't be
+// mistaken for the warm status indicator (red/orange/yellow). 90+ stays
+// emerald since "operational" green is universally understood as positive
+// regardless of context.
 function ScoreRing({ score }: { score: number | null }) {
   if (score === null) return (
-    <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/25 text-xs font-medium">N/A</div>
+    <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/25 text-[10px] font-medium" title="Historical reliability data unavailable">N/A</div>
   );
   const r = 20;
   const circ = 2 * Math.PI * r;
   const dash = (score / 100) * circ;
-  const scoreColor = score >= 90 ? '#34d399' : score >= 75 ? '#facc15' : '#f87171';
+  const scoreColor = score >= 90 ? '#34d399' : score >= 75 ? '#60a5fa' : score >= 60 ? '#818cf8' : '#a78bfa';
   return (
-    <div className="relative w-12 h-12 flex items-center justify-center shrink-0">
+    <div
+      className="relative w-12 h-12 flex flex-col items-center justify-center shrink-0"
+      title="30-day reliability score (historical, not current status)"
+    >
       <svg className="absolute inset-0 -rotate-90" width="48" height="48" viewBox="0 0 48 48">
         <circle cx="24" cy="24" r={r} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="2.5" />
         <circle cx="24" cy="24" r={r} fill="none" stroke={scoreColor} strokeWidth="2.5"
           strokeDasharray={`${dash} ${circ}`} strokeLinecap="round" />
       </svg>
-      <span className="text-[11px] font-bold" style={{ color: scoreColor }}>{score}</span>
+      <span className="text-[11px] font-bold leading-none" style={{ color: scoreColor }}>{score}</span>
+      <span className="text-[7px] text-white/30 font-semibold uppercase tracking-wide leading-none mt-0.5">30d</span>
     </div>
+  );
+}
+
+function ProviderIcon({ provider }: { provider: Provider }) {
+  const [failed, setFailed] = useState(false);
+  if (failed || !provider.domain) {
+    return <span className="text-xl shrink-0">{provider.icon}</span>;
+  }
+  return (
+    <img
+      src={`https://www.google.com/s2/favicons?domain=${provider.domain}&sz=64`}
+      alt={provider.name}
+      className="w-6 h-6 shrink-0 rounded"
+      onError={() => setFailed(true)}
+    />
   );
 }
 
@@ -67,7 +91,7 @@ export default function ProviderCard({ data, onClick }: Props) {
       className={`w-full text-left bg-white/4 rounded-2xl p-4 hover:bg-white/6 transition-all duration-150 active:scale-99 ${borderCls}`}
     >
       <div className="flex items-center gap-3">
-        <span className="text-xl shrink-0">{provider.icon}</span>
+        <ProviderIcon provider={provider} />
 
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">

@@ -6,6 +6,7 @@
         "name": "OpenAI",
         "category": "llm",
         "icon": "🤖",
+        "domain": "openai.com",
         "apiUrl": "https://status.openai.com/api/v2/summary.json",
         "statusPageUrl": "https://status.openai.com"
       },
@@ -13,7 +14,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:29.040Z"
+        "updatedAt": "2026-04-29T03:09:21.074Z"
       },
       "stats": {
         "providerId": "openai",
@@ -322,6 +323,7 @@
         "name": "Anthropic",
         "category": "llm",
         "icon": "🧠",
+        "domain": "anthropic.com",
         "apiUrl": "https://status.anthropic.com/api/v2/summary.json",
         "statusPageUrl": "https://status.anthropic.com"
       },
@@ -329,7 +331,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:29.929Z"
+        "updatedAt": "2026-04-29T03:09:21.814Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -651,6 +653,7 @@
         "name": "Google AI",
         "category": "llm",
         "icon": "✨",
+        "domain": "cloud.google.com",
         "apiUrl": "https://status.cloud.google.com/incidents.json",
         "statusPageUrl": "https://status.cloud.google.com",
         "type": "gcp"
@@ -659,7 +662,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:30.686Z"
+        "updatedAt": "2026-04-29T03:09:22.561Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -745,6 +748,7 @@
         "name": "Groq",
         "category": "llm",
         "icon": "⚡",
+        "domain": "groq.com",
         "apiUrl": "https://groqstatus.com/api/v2/summary.json",
         "statusPageUrl": "https://groqstatus.com"
       },
@@ -752,7 +756,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:31.374Z"
+        "updatedAt": "2026-04-29T03:09:23.212Z"
       },
       "stats": {
         "providerId": "groq",
@@ -857,6 +861,7 @@
         "name": "Cohere",
         "category": "llm",
         "icon": "🔮",
+        "domain": "cohere.com",
         "apiUrl": "https://status.cohere.com/api/v2/summary.json",
         "statusPageUrl": "https://status.cohere.com"
       },
@@ -864,7 +869,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:32.064Z"
+        "updatedAt": "2026-04-29T03:09:23.894Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -991,6 +996,7 @@
         "name": "DeepSeek",
         "category": "llm",
         "icon": "🐋",
+        "domain": "deepseek.com",
         "apiUrl": "https://status.deepseek.com/api/v2/summary.json",
         "statusPageUrl": "https://status.deepseek.com"
       },
@@ -998,7 +1004,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:32.799Z"
+        "updatedAt": "2026-04-29T03:09:24.612Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1257,6 +1263,7 @@
         "name": "Vercel",
         "category": "infra",
         "icon": "▲",
+        "domain": "vercel.com",
         "apiUrl": "https://www.vercel-status.com/api/v2/summary.json",
         "statusPageUrl": "https://www.vercel-status.com"
       },
@@ -1264,7 +1271,7 @@
         "providerId": "vercel",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:33.473Z"
+        "updatedAt": "2026-04-29T03:09:25.381Z"
       },
       "stats": {
         "providerId": "vercel",
@@ -1291,7 +1298,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 15,
-            "uptime": 98.75
+            "uptime": 98.76
           }
         ],
         "tagSummary": [
@@ -1574,15 +1581,6 @@
           "publishedAt": "2026-03-07T09:08:25Z",
           "points": 2,
           "commentCount": 1
-        },
-        {
-          "id": "47762044",
-          "title": "I built a product that allows you to generate a ad off of just a product url",
-          "url": "https://cutagent.vercel.app/",
-          "source": "hackernews",
-          "publishedAt": "2026-04-14T06:38:20Z",
-          "points": 1,
-          "commentCount": 0
         }
       ]
     },
@@ -1592,6 +1590,7 @@
         "name": "Cloudflare",
         "category": "infra",
         "icon": "☁️",
+        "domain": "cloudflare.com",
         "apiUrl": "https://www.cloudflarestatus.com/api/v2/summary.json",
         "statusPageUrl": "https://www.cloudflarestatus.com"
       },
@@ -1599,7 +1598,7 @@
         "providerId": "cloudflare",
         "indicator": "major",
         "description": "Partial System Outage",
-        "updatedAt": "2026-04-29T02:58:34.120Z"
+        "updatedAt": "2026-04-29T03:09:26.123Z"
       },
       "stats": {
         "providerId": "cloudflare",
@@ -1626,7 +1625,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 91.43
+            "uptime": 91.44
           }
         ],
         "tagSummary": [
@@ -1918,27 +1917,285 @@
         "name": "GitHub",
         "category": "infra",
         "icon": "🐙",
+        "domain": "github.com",
         "apiUrl": "https://www.githubstatus.com/api/v2/summary.json",
         "statusPageUrl": "https://www.githubstatus.com"
       },
       "status": {
         "providerId": "github",
-        "indicator": "none",
-        "description": "Status unavailable",
-        "updatedAt": "2026-04-29T02:58:34.746Z"
+        "indicator": "minor",
+        "description": "Partially Degraded Service",
+        "updatedAt": "2026-04-29T03:09:26.799Z"
       },
       "stats": {
         "providerId": "github",
-        "uptime30d": null,
-        "uptime90d": null,
-        "incidentCount30d": 0,
-        "avgMttr30d": null,
-        "lastIncident": null,
-        "reliabilityScore": null,
-        "monthlyTrend": [],
-        "tagSummary": []
+        "uptime30d": 93.88,
+        "uptime90d": 97.48,
+        "incidentCount30d": 30,
+        "avgMttr30d": 191,
+        "lastIncident": "2026-04-28T14:17:34.682Z",
+        "reliabilityScore": 59,
+        "monthlyTrend": [
+          {
+            "month": "2026-02",
+            "label": "Feb 26",
+            "incidentCount": 0,
+            "uptime": 100
+          },
+          {
+            "month": "2026-03",
+            "label": "Mar 26",
+            "incidentCount": 23,
+            "uptime": 98.39
+          },
+          {
+            "month": "2026-04",
+            "label": "Apr 26",
+            "incidentCount": 27,
+            "uptime": 93.64
+          }
+        ],
+        "tagSummary": [
+          {
+            "tag": "availability",
+            "count30d": 15,
+            "count90d": 22
+          },
+          {
+            "tag": "other",
+            "count30d": 11,
+            "count90d": 17
+          },
+          {
+            "tag": "performance",
+            "count30d": 2,
+            "count90d": 5
+          },
+          {
+            "tag": "webhook",
+            "count30d": 1,
+            "count90d": 5
+          },
+          {
+            "tag": "inference",
+            "count30d": 3,
+            "count90d": 3
+          },
+          {
+            "tag": "billing",
+            "count30d": 1,
+            "count90d": 1
+          },
+          {
+            "tag": "auth",
+            "count30d": 0,
+            "count90d": 1
+          },
+          {
+            "tag": "api",
+            "count30d": 0,
+            "count90d": 1
+          }
+        ]
       },
-      "recentIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "x69zbgdyfzg0",
+          "providerId": "github",
+          "title": "Incomplete pull request results in repositories",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-28T14:17:34.682Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/87w0vmv3sz1r"
+        },
+        {
+          "id": "dbypmw7h77l5",
+          "providerId": "github",
+          "title": "Disruption with some GitHub services",
+          "severity": "minor",
+          "tags": [
+            "availability"
+          ],
+          "startedAt": "2026-04-28T13:59:16.225Z",
+          "resolvedAt": "2026-04-28T17:09:02.449Z",
+          "durationMinutes": 190,
+          "url": "https://stspg.io/70pkmpfqz6pc"
+        },
+        {
+          "id": "vq183jvj6vrw",
+          "providerId": "github",
+          "title": "Disruption with some GitHub services",
+          "severity": "minor",
+          "tags": [
+            "availability"
+          ],
+          "startedAt": "2026-04-27T16:48:18.031Z",
+          "resolvedAt": "2026-04-27T19:02:59.816Z",
+          "durationMinutes": 135,
+          "url": "https://stspg.io/sqvl4sp1cfgz"
+        },
+        {
+          "id": "ql942tw29yl6",
+          "providerId": "github",
+          "title": "GitHub search is degraded",
+          "severity": "critical",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-27T16:31:07.245Z",
+          "resolvedAt": "2026-04-27T22:46:42.326Z",
+          "durationMinutes": 376,
+          "url": "https://stspg.io/x5cnngb211t7"
+        },
+        {
+          "id": "3dqg0nhwnxs2",
+          "providerId": "github",
+          "title": "Delays with Actions Jobs for Larger Runners using VNet Injection in the East US region",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "startedAt": "2026-04-24T19:02:39.061Z",
+          "resolvedAt": "2026-04-25T00:36:04.272Z",
+          "durationMinutes": 333,
+          "url": "https://stspg.io/mcrpvdrwjzf3"
+        },
+        {
+          "id": "zsg1lk7w13cf",
+          "providerId": "github",
+          "title": "Incident with Pull Requests",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-23T19:50:51.291Z",
+          "resolvedAt": "2026-04-23T21:43:26.000Z",
+          "durationMinutes": 113,
+          "url": "https://stspg.io/byp3p9jymrpl"
+        },
+        {
+          "id": "40f3r1jvjwl2",
+          "providerId": "github",
+          "title": "Disruption with users unable to start Claude and Codex agent task from the web",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "availability"
+          ],
+          "startedAt": "2026-04-23T19:28:42.976Z",
+          "resolvedAt": "2026-04-23T19:42:25.277Z",
+          "durationMinutes": 14,
+          "url": "https://stspg.io/nwmzvw3twyyg"
+        },
+        {
+          "id": "myrbk7jvvs6p",
+          "providerId": "github",
+          "title": "Incident with multiple GitHub services",
+          "severity": "critical",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-23T16:12:47.744Z",
+          "resolvedAt": "2026-04-23T17:30:49.716Z",
+          "durationMinutes": 78,
+          "url": "https://stspg.io/1wm8c7d53454"
+        },
+        {
+          "id": "3f30ycplyr7l",
+          "providerId": "github",
+          "title": "Investigating errors on GitHub",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-23T14:40:17.981Z",
+          "resolvedAt": "2026-04-23T15:18:41.367Z",
+          "durationMinutes": 38,
+          "url": "https://stspg.io/v510xk27crlr"
+        },
+        {
+          "id": "c53mty24vwg8",
+          "providerId": "github",
+          "title": "Disruption with some GitHub services",
+          "severity": "minor",
+          "tags": [
+            "availability"
+          ],
+          "startedAt": "2026-04-22T19:53:49.917Z",
+          "resolvedAt": "2026-04-22T22:43:59.100Z",
+          "durationMinutes": 170,
+          "url": "https://stspg.io/xmhs8h2d6zlj"
+        },
+        {
+          "id": "8790jgb3ky6t",
+          "providerId": "github",
+          "title": "Disruption with Copilot chat and Copilot Coding Agent",
+          "severity": "critical",
+          "tags": [
+            "availability"
+          ],
+          "startedAt": "2026-04-22T15:35:45.298Z",
+          "resolvedAt": "2026-04-22T19:18:26.916Z",
+          "durationMinutes": 223,
+          "url": "https://stspg.io/0m0g0r5htdxy"
+        },
+        {
+          "id": "b4235qyfzx2z",
+          "providerId": "github",
+          "title": "Disruption with projects service",
+          "severity": "minor",
+          "tags": [
+            "availability"
+          ],
+          "startedAt": "2026-04-21T15:03:21.160Z",
+          "resolvedAt": "2026-04-22T01:24:13.877Z",
+          "durationMinutes": 621,
+          "url": "https://stspg.io/z7byhh6vyyrb"
+        },
+        {
+          "id": "m7pgzw1wlfq7",
+          "providerId": "github",
+          "title": "Partial degradation for code scanning default setup and for code quality",
+          "severity": "major",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-20T13:28:48.571Z",
+          "resolvedAt": "2026-04-21T05:04:56.242Z",
+          "durationMinutes": 936,
+          "url": "https://stspg.io/qxk1qwhj9xdd"
+        },
+        {
+          "id": "kcf0thb1zp30",
+          "providerId": "github",
+          "title": "Disruption with some GitHub services",
+          "severity": "minor",
+          "tags": [
+            "availability"
+          ],
+          "startedAt": "2026-04-17T14:56:22.556Z",
+          "resolvedAt": "2026-04-17T15:18:14.767Z",
+          "durationMinutes": 22,
+          "url": "https://stspg.io/96xp38b8l8rn"
+        },
+        {
+          "id": "bjyfg0yz1lwj",
+          "providerId": "github",
+          "title": "Incident with Codespaces",
+          "severity": "major",
+          "tags": [
+            "other"
+          ],
+          "startedAt": "2026-04-16T15:06:56.493Z",
+          "resolvedAt": "2026-04-16T18:28:07.238Z",
+          "durationMinutes": 201,
+          "url": "https://stspg.io/1pw46p8cqh5s"
+        }
+      ],
       "news": [
         {
           "id": "46949452",
@@ -1993,6 +2250,7 @@
         "name": "Azure",
         "category": "infra",
         "icon": "🔷",
+        "domain": "azure.microsoft.com",
         "apiUrl": "https://azurestatuscdn.azureedge.net/en-us/status/feed/",
         "statusPageUrl": "https://azure.status.microsoft/en-us/status/",
         "type": "azure-rss"
@@ -2001,7 +2259,7 @@
         "providerId": "azure",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:35.282Z"
+        "updatedAt": "2026-04-29T03:09:27.409Z"
       },
       "stats": {
         "providerId": "azure",
@@ -2033,6 +2291,7 @@
         "name": "Netlify",
         "category": "infra",
         "icon": "🌐",
+        "domain": "netlify.com",
         "apiUrl": "https://www.netlifystatus.com/api/v2/summary.json",
         "statusPageUrl": "https://www.netlifystatus.com"
       },
@@ -2040,7 +2299,7 @@
         "providerId": "netlify",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:36.009Z"
+        "updatedAt": "2026-04-29T03:09:28.152Z"
       },
       "stats": {
         "providerId": "netlify",
@@ -2310,6 +2569,7 @@
         "name": "Render",
         "category": "infra",
         "icon": "🎨",
+        "domain": "render.com",
         "apiUrl": "https://status.render.com/api/v2/summary.json",
         "statusPageUrl": "https://status.render.com"
       },
@@ -2317,7 +2577,7 @@
         "providerId": "render",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:36.724Z"
+        "updatedAt": "2026-04-29T03:09:28.904Z"
       },
       "stats": {
         "providerId": "render",
@@ -2597,6 +2857,7 @@
         "name": "Supabase",
         "category": "data",
         "icon": "🗄️",
+        "domain": "supabase.com",
         "apiUrl": "https://status.supabase.com/api/v2/summary.json",
         "statusPageUrl": "https://status.supabase.com"
       },
@@ -2604,7 +2865,7 @@
         "providerId": "supabase",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:37.441Z"
+        "updatedAt": "2026-04-29T03:09:29.624Z"
       },
       "stats": {
         "providerId": "supabase",
@@ -2911,6 +3172,7 @@
         "name": "Pinecone",
         "category": "data",
         "icon": "🌲",
+        "domain": "pinecone.io",
         "apiUrl": "https://status.pinecone.io/api/v2/summary.json",
         "statusPageUrl": "https://status.pinecone.io"
       },
@@ -2918,7 +3180,7 @@
         "providerId": "pinecone",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:38.206Z"
+        "updatedAt": "2026-04-29T03:09:30.359Z"
       },
       "stats": {
         "providerId": "pinecone",
@@ -3036,6 +3298,7 @@
         "name": "MongoDB Atlas",
         "category": "data",
         "icon": "🍃",
+        "domain": "mongodb.com",
         "apiUrl": "https://status.mongodb.com/api/v2/summary.json",
         "statusPageUrl": "https://status.mongodb.com"
       },
@@ -3043,7 +3306,7 @@
         "providerId": "mongodb",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:38.906Z"
+        "updatedAt": "2026-04-29T03:09:31.147Z"
       },
       "stats": {
         "providerId": "mongodb",
@@ -3070,7 +3333,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 3,
-            "uptime": 89.91
+            "uptime": 89.92
           }
         ],
         "tagSummary": [
@@ -3330,6 +3593,7 @@
         "name": "Upstash",
         "category": "data",
         "icon": "🔴",
+        "domain": "upstash.com",
         "apiUrl": "https://status.upstash.com/api/v2/summary.json",
         "statusPageUrl": "https://status.upstash.com"
       },
@@ -3337,7 +3601,7 @@
         "providerId": "upstash",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:39.614Z"
+        "updatedAt": "2026-04-29T03:09:31.891Z"
       },
       "stats": {
         "providerId": "upstash",
@@ -3459,6 +3723,7 @@
         "name": "Twilio",
         "category": "payment",
         "icon": "📡",
+        "domain": "twilio.com",
         "apiUrl": "https://status.twilio.com/api/v2/summary.json",
         "statusPageUrl": "https://status.twilio.com"
       },
@@ -3466,7 +3731,7 @@
         "providerId": "twilio",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T02:58:40.350Z"
+        "updatedAt": "2026-04-29T03:09:32.631Z"
       },
       "stats": {
         "providerId": "twilio",
@@ -3493,7 +3758,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 79.83
+            "uptime": 79.84
           }
         ],
         "tagSummary": [
@@ -3742,6 +4007,7 @@
         "name": "SendGrid",
         "category": "payment",
         "icon": "📧",
+        "domain": "sendgrid.com",
         "apiUrl": "https://status.sendgrid.com/api/v2/summary.json",
         "statusPageUrl": "https://status.sendgrid.com"
       },
@@ -3749,7 +4015,7 @@
         "providerId": "sendgrid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:41.011Z"
+        "updatedAt": "2026-04-29T03:09:33.402Z"
       },
       "stats": {
         "providerId": "sendgrid",
@@ -4017,6 +4283,7 @@
         "name": "Plaid",
         "category": "payment",
         "icon": "🏦",
+        "domain": "plaid.com",
         "apiUrl": "https://status.plaid.com/api/v2/summary.json",
         "statusPageUrl": "https://status.plaid.com"
       },
@@ -4024,7 +4291,7 @@
         "providerId": "plaid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T02:58:41.701Z"
+        "updatedAt": "2026-04-29T03:09:34.241Z"
       },
       "stats": {
         "providerId": "plaid",
@@ -4408,24 +4675,38 @@
       "tags": [
         {
           "tag": "other",
-          "count30d": 35,
-          "count90d": 44,
+          "count30d": 46,
+          "count90d": 61,
           "trend": "up",
           "providers": [
             "vercel",
             "cloudflare",
+            "github",
             "netlify",
             "render"
           ]
         },
         {
           "tag": "performance",
-          "count30d": 12,
-          "count90d": 26,
+          "count30d": 14,
+          "count90d": 31,
           "trend": "up",
           "providers": [
             "vercel",
             "cloudflare",
+            "github",
+            "netlify",
+            "render"
+          ]
+        },
+        {
+          "tag": "availability",
+          "count30d": 18,
+          "count90d": 28,
+          "trend": "up",
+          "providers": [
+            "vercel",
+            "github",
             "netlify",
             "render"
           ]
@@ -4445,11 +4726,12 @@
         {
           "tag": "api",
           "count30d": 14,
-          "count90d": 23,
+          "count90d": 24,
           "trend": "up",
           "providers": [
             "vercel",
             "cloudflare",
+            "github",
             "netlify"
           ]
         },
@@ -4465,33 +4747,24 @@
           ]
         },
         {
-          "tag": "availability",
-          "count30d": 3,
+          "tag": "webhook",
+          "count30d": 2,
           "count90d": 6,
-          "trend": "up",
+          "trend": "stable",
           "providers": [
             "vercel",
-            "netlify",
-            "render"
+            "github"
           ]
         },
         {
           "tag": "billing",
-          "count30d": 1,
-          "count90d": 2,
+          "count30d": 2,
+          "count90d": 3,
           "trend": "up",
           "providers": [
             "vercel",
-            "cloudflare"
-          ]
-        },
-        {
-          "tag": "database",
-          "count30d": 1,
-          "count90d": 2,
-          "trend": "up",
-          "providers": [
-            "render"
+            "cloudflare",
+            "github"
           ]
         }
       ]
@@ -4675,5 +4948,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-29T02:58:52.554Z"
+  "generatedAt": "2026-04-29T03:09:45.351Z"
 }

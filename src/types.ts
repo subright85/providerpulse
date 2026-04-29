@@ -15,6 +15,7 @@ export interface Provider {
   apiUrl: string;
   color: string;
   icon: string;
+  domain: string;
 }
 
 export interface Incident {

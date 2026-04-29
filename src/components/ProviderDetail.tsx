@@ -1,4 +1,5 @@
-import type { ProviderData, Incident, MonthlyTrend, NewsItem, TagSummaryItem, IncidentTag } from '../types';
+import { useState } from 'react';
+import type { ProviderData, Incident, MonthlyTrend, NewsItem, TagSummaryItem, IncidentTag, Provider } from '../types';
 
 const SEV_CONFIG = {
   critical:    { color: 'text-red-400',    bg: 'bg-red-500/15',    label: 'Critical' },
@@ -46,10 +47,28 @@ interface Props {
   onClose: () => void;
 }
 
+function ProviderLogo({ provider, size = 24 }: { provider: Provider; size?: number }) {
+  const [failed, setFailed] = useState(false);
+  if (failed || !provider.domain) {
+    return <span style={{ fontSize: size }}>{provider.icon}</span>;
+  }
+  return (
+    <img
+      src={`https://www.google.com/s2/favicons?domain=${provider.domain}&sz=64`}
+      alt={provider.name}
+      style={{ width: size, height: size }}
+      className="rounded shrink-0"
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
 export default function ProviderDetail({ data, onClose }: Props) {
   const { provider, status, stats, recentIncidents, news } = data;
   const score = stats.reliabilityScore;
-  const scoreColor = score !== null ? (score >= 90 ? '#34d399' : score >= 75 ? '#facc15' : '#f87171') : '#94a3b8';
+  const scoreColor = score !== null
+    ? (score >= 90 ? '#34d399' : score >= 75 ? '#60a5fa' : score >= 60 ? '#818cf8' : '#a78bfa')
+    : '#94a3b8';
 
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" onClick={onClose}>
@@ -61,7 +80,7 @@ export default function ProviderDetail({ data, onClose }: Props) {
         {/* Header */}
         <div className="sticky top-0 bg-[#0f1117] border-b border-white/8 px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-2xl">{provider.icon}</span>
+            <ProviderLogo provider={provider} size={28} />
             <div>
               <h2 className="text-white font-bold text-lg leading-tight">{provider.name}</h2>
               <p className="text-white/40 text-xs">{status.description}</p>
