@@ -40,11 +40,14 @@ export default function SubscribeForm({ providers }: Props) {
     }
 
     setStatus('submitting');
+    // RLS only allows anon insert (no update). For "already subscribed", treat
+    // 23505 unique-constraint as success — we don't expose update to anon to
+    // prevent strangers from overwriting someone else's subscription list.
     const { error } = await supabase
       .from('subscribers')
-      .upsert({ email, providers: [...selected] }, { onConflict: 'email' });
+      .insert({ email, providers: [...selected] });
 
-    if (error) {
+    if (error && error.code !== '23505') {
       setStatus('error');
       setErrorMsg(error.message || 'Something went wrong. Try again.');
       return;

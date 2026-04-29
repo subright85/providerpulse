@@ -25,6 +25,7 @@ const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? 'alerts@providerpulse.dev';
+const SITE_URL = process.env.SITE_URL ?? 'https://subright85.github.io/providerpulse';
 const subscriptionsEnabled = SUPABASE_URL && SUPABASE_SERVICE_KEY && RESEND_API_KEY;
 
 // Loaded from public/data/providers.json so monitor stays in sync with collect.mjs.
@@ -103,7 +104,7 @@ async function fetchSubscribersFor(providerIds) {
 }
 
 async function sendEmail(to, subject, html) {
-  if (!RESEND_API_KEY) return;
+  if (!RESEND_API_KEY) return false;
   try {
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -116,9 +117,12 @@ async function sendEmail(to, subject, html) {
     });
     if (!res.ok) {
       console.error(`Resend send failed for ${to}: HTTP ${res.status}`, await res.text());
+      return false;
     }
+    return true;
   } catch (e) {
     console.error(`Resend error for ${to}:`, e.message);
+    return false;
   }
 }
 
@@ -134,7 +138,7 @@ function buildIncidentEmail(provider, incident) {
         <p style="margin: 0 0 16px 0; color: #555;">A new incident was just posted on ${provider.name}'s status page.</p>
         <a href="${link}" style="display: inline-block; padding: 10px 16px; background: #0a0a0f; color: #fff; text-decoration: none; border-radius: 8px;">View on status page</a>
         <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;" />
-        <p style="font-size: 12px; color: #999; margin: 0;">You're receiving this because you subscribed to alerts on ProviderPulse. <a href="https://subright85.github.io/providerpulse/">Manage subscription</a></p>
+        <p style="font-size: 12px; color: #999; margin: 0;">You're receiving this because you subscribed to alerts on ProviderPulse. <a href="${SITE_URL}">Manage subscription</a></p>
       </div>
     `,
   };
@@ -192,8 +196,13 @@ async function main() {
       if (subs.length > 0) {
         const { subject, html } = buildIncidentEmail(p, inc);
         console.log(`[${p.name}] notifying ${subs.length} subscriber(s) by email`);
+        let failCount = 0;
         for (const sub of subs) {
-          await sendEmail(sub.email, subject, html);
+          const ok = await sendEmail(sub.email, subject, html);
+          if (!ok) failCount++;
+        }
+        if (failCount > 0) {
+          await sendTelegram(`⚠️ <b>Email delivery failed</b>: ${failCount}/${subs.length} subscribers for ${p.name} incident "${inc.name}". Check Resend domain verification.`);
         }
       }
     }

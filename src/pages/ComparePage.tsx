@@ -26,6 +26,7 @@ function setMeta(title: string, description: string) {
   };
   setOg('og:title', title);
   setOg('og:description', description);
+  setOg('og:url', window.location.href);
 }
 
 function scoreColor(score: number | null): string {
@@ -80,6 +81,7 @@ export default function ComparePage() {
   if (error) return <ErrorState message={error} />;
   if (!data) return <LoadingState />;
   if (!idA || !idB) return <ErrorState message="Bad URL — expected /compare/{providerA}-vs-{providerB}" />;
+  if (idA === idB) return <ErrorState message="Pick two different providers to compare." />;
 
   const a = data.providers.find(p => p.provider.id === idA);
   const b = data.providers.find(p => p.provider.id === idB);
