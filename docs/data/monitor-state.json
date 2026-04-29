@@ -1,0 +1,12 @@
+{
+  "openai": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T00:03:07.325Z"
+  },
+  "anthropic": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T00:03:07.797Z"
+  }
+}
