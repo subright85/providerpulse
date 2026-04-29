@@ -1,14 +1,12 @@
 {
   "openai": {
-    "knownIds": [
-      "01KQB4AMHC9CKFYT863PMXN1YR"
-    ],
-    "indicator": "minor",
-    "lastCheckedAt": "2026-04-28T22:58:09.565Z"
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T00:03:07.325Z"
   },
   "anthropic": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-28T22:58:09.829Z"
+    "lastCheckedAt": "2026-04-29T00:03:07.797Z"
   }
 }
