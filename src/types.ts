@@ -81,6 +81,7 @@ export interface ProviderStats {
   avgMttr30d: number | null;
   lastIncident: string | null;
   reliabilityScore: number | null;
+  reliabilityScore90d: number | null;
   monthlyTrend: MonthlyTrend[];
   tagSummary: TagSummaryItem[];
 }

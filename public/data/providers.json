@@ -14,7 +14,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:21.074Z"
+        "updatedAt": "2026-04-29T03:18:51.918Z"
       },
       "stats": {
         "providerId": "openai",
@@ -24,6 +24,7 @@
         "avgMttr30d": 204,
         "lastIncident": "2026-04-28T22:46:00Z",
         "reliabilityScore": 62,
+        "reliabilityScore90d": 86,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -331,7 +332,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:21.814Z"
+        "updatedAt": "2026-04-29T03:18:52.773Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -341,6 +342,7 @@
         "avgMttr30d": 61,
         "lastIncident": "2026-04-28T23:33:07.339Z",
         "reliabilityScore": 62,
+        "reliabilityScore90d": 64,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -662,7 +664,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:22.561Z"
+        "updatedAt": "2026-04-29T03:18:53.510Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -672,6 +674,7 @@
         "avgMttr30d": null,
         "lastIncident": "2026-02-27T12:37:00.000Z",
         "reliabilityScore": 100,
+        "reliabilityScore90d": 100,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -756,7 +759,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:23.212Z"
+        "updatedAt": "2026-04-29T03:18:54.174Z"
       },
       "stats": {
         "providerId": "groq",
@@ -766,6 +769,7 @@
         "avgMttr30d": null,
         "lastIncident": "2026-03-19T12:51:18Z",
         "reliabilityScore": 100,
+        "reliabilityScore90d": 99,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -869,7 +873,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:23.894Z"
+        "updatedAt": "2026-04-29T03:18:54.875Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -879,6 +883,7 @@
         "avgMttr30d": 36,
         "lastIncident": "2026-04-20T22:16:13Z",
         "reliabilityScore": 91,
+        "reliabilityScore90d": 95,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -1004,7 +1009,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:24.612Z"
+        "updatedAt": "2026-04-29T03:18:55.650Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1014,6 +1019,7 @@
         "avgMttr30d": 87,
         "lastIncident": "2026-04-22T18:23:18.547+08:00",
         "reliabilityScore": 86,
+        "reliabilityScore90d": 84,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -1271,7 +1277,7 @@
         "providerId": "vercel",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:25.381Z"
+        "updatedAt": "2026-04-29T03:18:56.398Z"
       },
       "stats": {
         "providerId": "vercel",
@@ -1281,6 +1287,7 @@
         "avgMttr30d": 145,
         "lastIncident": "2026-04-28T15:46:22.195Z",
         "reliabilityScore": 80,
+        "reliabilityScore90d": 82,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -1581,6 +1588,15 @@
           "publishedAt": "2026-03-07T09:08:25Z",
           "points": 2,
           "commentCount": 1
+        },
+        {
+          "id": "47762044",
+          "title": "I built a product that allows you to generate a ad off of just a product url",
+          "url": "https://cutagent.vercel.app/",
+          "source": "hackernews",
+          "publishedAt": "2026-04-14T06:38:20Z",
+          "points": 1,
+          "commentCount": 0
         }
       ]
     },
@@ -1598,7 +1614,7 @@
         "providerId": "cloudflare",
         "indicator": "major",
         "description": "Partial System Outage",
-        "updatedAt": "2026-04-29T03:09:26.123Z"
+        "updatedAt": "2026-04-29T03:18:57.157Z"
       },
       "stats": {
         "providerId": "cloudflare",
@@ -1608,6 +1624,7 @@
         "avgMttr30d": 350,
         "lastIncident": "2026-04-28T18:31:16.922Z",
         "reliabilityScore": 63,
+        "reliabilityScore90d": 88,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -1925,7 +1942,7 @@
         "providerId": "github",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T03:09:26.799Z"
+        "updatedAt": "2026-04-29T03:18:57.775Z"
       },
       "stats": {
         "providerId": "github",
@@ -1935,6 +1952,7 @@
         "avgMttr30d": 191,
         "lastIncident": "2026-04-28T14:17:34.682Z",
         "reliabilityScore": 59,
+        "reliabilityScore90d": 69,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -1952,7 +1970,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 27,
-            "uptime": 93.64
+            "uptime": 93.65
           }
         ],
         "tagSummary": [
@@ -2259,7 +2277,7 @@
         "providerId": "azure",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:27.409Z"
+        "updatedAt": "2026-04-29T03:18:58.314Z"
       },
       "stats": {
         "providerId": "azure",
@@ -2269,6 +2287,7 @@
         "avgMttr30d": null,
         "lastIncident": null,
         "reliabilityScore": null,
+        "reliabilityScore90d": null,
         "monthlyTrend": [],
         "tagSummary": []
       },
@@ -2299,7 +2318,7 @@
         "providerId": "netlify",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:28.152Z"
+        "updatedAt": "2026-04-29T03:18:59.022Z"
       },
       "stats": {
         "providerId": "netlify",
@@ -2309,6 +2328,7 @@
         "avgMttr30d": 153,
         "lastIncident": "2026-04-26T03:55:00.000Z",
         "reliabilityScore": 85,
+        "reliabilityScore90d": 84,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -2577,7 +2597,7 @@
         "providerId": "render",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:28.904Z"
+        "updatedAt": "2026-04-29T03:18:59.753Z"
       },
       "stats": {
         "providerId": "render",
@@ -2587,6 +2607,7 @@
         "avgMttr30d": 114,
         "lastIncident": "2026-04-23T16:51:26.000Z",
         "reliabilityScore": 83,
+        "reliabilityScore90d": 84,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -2865,7 +2886,7 @@
         "providerId": "supabase",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:29.624Z"
+        "updatedAt": "2026-04-29T03:19:00.524Z"
       },
       "stats": {
         "providerId": "supabase",
@@ -2875,6 +2896,7 @@
         "avgMttr30d": 307,
         "lastIncident": "2026-04-28T21:26:46.180Z",
         "reliabilityScore": 60,
+        "reliabilityScore90d": 59,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -3180,7 +3202,7 @@
         "providerId": "pinecone",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:30.359Z"
+        "updatedAt": "2026-04-29T03:19:01.274Z"
       },
       "stats": {
         "providerId": "pinecone",
@@ -3190,6 +3212,7 @@
         "avgMttr30d": null,
         "lastIncident": "2026-03-13T08:50:03.000Z",
         "reliabilityScore": 100,
+        "reliabilityScore90d": 95,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -3306,7 +3329,7 @@
         "providerId": "mongodb",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:31.147Z"
+        "updatedAt": "2026-04-29T03:19:02.040Z"
       },
       "stats": {
         "providerId": "mongodb",
@@ -3316,6 +3339,7 @@
         "avgMttr30d": 1465,
         "lastIncident": "2026-04-27T17:16:46.000Z",
         "reliabilityScore": 80,
+        "reliabilityScore90d": 70,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -3601,7 +3625,7 @@
         "providerId": "upstash",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:31.891Z"
+        "updatedAt": "2026-04-29T03:19:02.810Z"
       },
       "stats": {
         "providerId": "upstash",
@@ -3611,6 +3635,7 @@
         "avgMttr30d": 126,
         "lastIncident": "2026-04-27T16:09:35.088Z",
         "reliabilityScore": 94,
+        "reliabilityScore90d": 95,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -3731,7 +3756,7 @@
         "providerId": "twilio",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T03:09:32.631Z"
+        "updatedAt": "2026-04-29T03:19:03.550Z"
       },
       "stats": {
         "providerId": "twilio",
@@ -3741,6 +3766,7 @@
         "avgMttr30d": 825,
         "lastIncident": "2026-04-28T13:53:13.239-07:00",
         "reliabilityScore": 64,
+        "reliabilityScore90d": 88,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -4015,7 +4041,7 @@
         "providerId": "sendgrid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:33.402Z"
+        "updatedAt": "2026-04-29T03:19:04.222Z"
       },
       "stats": {
         "providerId": "sendgrid",
@@ -4025,6 +4051,7 @@
         "avgMttr30d": 388,
         "lastIncident": "2026-04-22T09:32:53.000-07:00",
         "reliabilityScore": 93,
+        "reliabilityScore90d": 95,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -4291,7 +4318,7 @@
         "providerId": "plaid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:09:34.241Z"
+        "updatedAt": "2026-04-29T03:19:04.912Z"
       },
       "stats": {
         "providerId": "plaid",
@@ -4301,6 +4328,7 @@
         "avgMttr30d": 210,
         "lastIncident": "2026-04-29T02:20:25.000Z",
         "reliabilityScore": 88,
+        "reliabilityScore90d": 87,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -4948,5 +4976,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-29T03:09:45.351Z"
+  "generatedAt": "2026-04-29T03:19:15.975Z"
 }

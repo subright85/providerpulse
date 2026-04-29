@@ -47,6 +47,20 @@ interface Props {
   onClose: () => void;
 }
 
+function getScoreColor(score: number | null): string {
+  if (score === null) return '#94a3b8';
+  return score >= 90 ? '#34d399' : score >= 75 ? '#60a5fa' : score >= 60 ? '#818cf8' : '#a78bfa';
+}
+
+function ScoreBlock({ score, label }: { score: number | null; label: string }) {
+  return (
+    <div className="flex flex-col items-center gap-0.5 flex-1">
+      <p className="text-3xl font-black leading-none" style={{ color: getScoreColor(score) }}>{score ?? '—'}</p>
+      <p className="text-white/40 text-[9px] font-semibold uppercase tracking-widest mt-1">{label}</p>
+    </div>
+  );
+}
+
 function ProviderLogo({ provider, size = 24 }: { provider: Provider; size?: number }) {
   const [failed, setFailed] = useState(false);
   if (failed || !provider.domain) {
@@ -66,9 +80,6 @@ function ProviderLogo({ provider, size = 24 }: { provider: Provider; size?: numb
 export default function ProviderDetail({ data, onClose }: Props) {
   const { provider, status, stats, recentIncidents, news } = data;
   const score = stats.reliabilityScore;
-  const scoreColor = score !== null
-    ? (score >= 90 ? '#34d399' : score >= 75 ? '#60a5fa' : score >= 60 ? '#818cf8' : '#a78bfa')
-    : '#94a3b8';
 
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" onClick={onClose}>
@@ -92,10 +103,10 @@ export default function ProviderDetail({ data, onClose }: Props) {
         <div className="p-5 flex flex-col gap-5">
           {/* Score + stats */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-white/5 border border-white/8 rounded-xl p-4 text-center flex flex-col items-center justify-center gap-1">
-              <p className="text-4xl font-black" style={{ color: scoreColor }}>{score ?? '—'}</p>
-              <p className="text-white/40 text-xs uppercase tracking-widest">Reliability Score</p>
-              <p className="text-white/25 text-[10px]">out of 100</p>
+            <div className="bg-white/5 border border-white/8 rounded-xl p-4 flex items-center justify-around gap-2">
+              <ScoreBlock score={score} label="30-Day" />
+              <div className="w-px h-12 bg-white/10" />
+              <ScoreBlock score={stats.reliabilityScore90d} label="90-Day" />
             </div>
             <div className="bg-white/5 border border-white/8 rounded-xl p-4 flex flex-col gap-2.5">
               <StatRow label="30-day uptime" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} />

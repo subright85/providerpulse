@@ -62,22 +62,25 @@ function tagIncident(title) {
   return tags.length > 0 ? tags : ['other'];
 }
 
-function calcReliabilityScore(uptime30d, incidents30d) {
-  if (uptime30d === null) return null;
+// 90d uses scaled penalties (×3 window) so the same incident count doesn't
+// dominate; otherwise 90d score would always look much worse than 30d.
+function calcReliabilityScore(uptime, incidents, windowDays = 30) {
+  if (uptime === null) return null;
+  const scale = windowDays / 30;
   let incPenalty = 0;
-  for (const inc of incidents30d) {
-    if (inc.severity === 'critical') incPenalty += 8;
-    else if (inc.severity === 'major') incPenalty += 4;
-    else if (inc.severity === 'minor') incPenalty += 0.5;
+  for (const inc of incidents) {
+    if (inc.severity === 'critical') incPenalty += 8 / scale;
+    else if (inc.severity === 'major') incPenalty += 4 / scale;
+    else if (inc.severity === 'minor') incPenalty += 0.5 / scale;
   }
   incPenalty = Math.min(35, incPenalty);
-  const majorResolved = incidents30d.filter(i =>
+  const majorResolved = incidents.filter(i =>
     (i.severity === 'critical' || i.severity === 'major') && i.durationMinutes !== null
   );
   const avgMttrMajor = majorResolved.length > 0
     ? majorResolved.reduce((s, i) => s + i.durationMinutes, 0) / majorResolved.length : 0;
   const mttrPenalty = Math.min(5, avgMttrMajor / 120);
-  return Math.max(0, Math.min(100, Math.round(uptime30d * 0.6 + 40 - incPenalty - mttrPenalty)));
+  return Math.max(0, Math.min(100, Math.round(uptime * 0.6 + 40 - incPenalty - mttrPenalty)));
 }
 
 function buildMonthlyTrend(incidents) {
@@ -140,7 +143,8 @@ function buildStats(p, incidents, cutoff30) {
     incidentCount30d: recent30.length,
     avgMttr30d: avgMttr,
     lastIncident: incidents[0]?.startedAt ?? null,
-    reliabilityScore: calcReliabilityScore(uptime30d, recent30),
+    reliabilityScore:    calcReliabilityScore(uptime30d, recent30, 30),
+    reliabilityScore90d: calcReliabilityScore(uptime90d, nonMaint90, 90),
     monthlyTrend: buildMonthlyTrend(incidents),
     tagSummary: buildTagSummary(incidents, cutoff30),
   };
@@ -181,7 +185,7 @@ function nullStats(p) {
   return {
     provider: p,
     status: { providerId: p.id, indicator: 'none', description: 'Status unavailable', updatedAt: new Date().toISOString() },
-    stats: { providerId: p.id, uptime30d: null, uptime90d: null, incidentCount30d: 0, avgMttr30d: null, lastIncident: null, reliabilityScore: null, monthlyTrend: [], tagSummary: [] },
+    stats: { providerId: p.id, uptime30d: null, uptime90d: null, incidentCount30d: 0, avgMttr30d: null, lastIncident: null, reliabilityScore: null, reliabilityScore90d: null, monthlyTrend: [], tagSummary: [] },
     recentIncidents: [],
   };
 }
@@ -286,6 +290,7 @@ async function fetchAzureProvider(p) {
         avgMttr30d: null,
         lastIncident: incidents[0]?.startedAt ?? null,
         reliabilityScore: null,
+        reliabilityScore90d: null,
         monthlyTrend: [], tagSummary: [],
       },
       recentIncidents: incidents,
