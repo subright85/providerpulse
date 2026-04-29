@@ -8,6 +8,21 @@ const INDICATOR_CONFIG = {
   maintenance: { label: 'Maintenance',  bg: 'bg-blue-500/12',    text: 'text-blue-400',    dot: 'bg-blue-400' },
 };
 
+const ACTIVE_BORDER = {
+  critical:    'border-red-500/60',
+  major:       'border-orange-500/50',
+  minor:       'border-yellow-500/40',
+  maintenance: 'border-blue-500/30',
+};
+
+function fmtLastIncident(iso: string | null): string {
+  if (!iso) return 'No incidents';
+  const days = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
+  if (days === 0) return 'Today';
+  if (days === 1) return '1d ago';
+  return `${days}d ago`;
+}
+
 function ScoreRing({ score }: { score: number | null }) {
   if (score === null) return (
     <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/25 text-xs font-medium">N/A</div>
@@ -34,13 +49,22 @@ interface Props {
 }
 
 export default function ProviderCard({ data, onClick }: Props) {
-  const { provider, status, stats } = data;
+  const { provider, status, stats, recentIncidents } = data;
   const ind = INDICATOR_CONFIG[status.indicator] ?? INDICATOR_CONFIG.none;
+  const isActive = status.indicator !== 'none' && status.indicator !== 'maintenance';
+  const borderCls = isActive
+    ? `border-l-[3px] ${ACTIVE_BORDER[status.indicator as keyof typeof ACTIVE_BORDER] ?? 'border-yellow-500/40'} border-t border-r border-b border-t-white/8 border-r-white/8 border-b-white/8`
+    : 'border border-white/8';
+
+  // Most recent active incident title (for the card summary line)
+  const activeIncident = recentIncidents.find(i =>
+    i.resolvedAt === null && i.severity !== 'maintenance'
+  );
 
   return (
     <button
       onClick={onClick}
-      className="w-full text-left bg-white/4 border border-white/8 rounded-2xl p-4 hover:bg-white/6 hover:border-white/12 transition-all duration-150 active:scale-99"
+      className={`w-full text-left bg-white/4 rounded-2xl p-4 hover:bg-white/6 transition-all duration-150 active:scale-99 ${borderCls}`}
     >
       <div className="flex items-center gap-3">
         <span className="text-xl shrink-0">{provider.icon}</span>
@@ -49,15 +73,22 @@ export default function ProviderCard({ data, onClick }: Props) {
           <div className="flex items-center gap-2 flex-wrap">
             <p className="font-semibold text-white text-sm">{provider.name}</p>
             <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold ${ind.bg} ${ind.text}`}>
-              <span className={`w-1 h-1 rounded-full ${ind.dot}`} />
+              <span className={`w-1 h-1 rounded-full ${isActive ? 'animate-pulse' : ''} ${ind.dot}`} />
               {ind.label}
             </span>
           </div>
 
+          {/* Active incident summary line */}
+          {activeIncident && (
+            <p className="text-[11px] text-orange-300/80 mt-1 truncate leading-tight">
+              ⚠ {activeIncident.title}
+            </p>
+          )}
+
           <div className="flex gap-4 mt-2">
             <Stat label="30d uptime" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} ok={stats.uptime30d !== null && stats.uptime30d >= 99.5} />
             <Stat label="Incidents" value={String(stats.incidentCount30d)} ok={stats.incidentCount30d === 0} />
-            <Stat label="MTTR" value={stats.avgMttr30d !== null ? `${stats.avgMttr30d}m` : '—'} ok={stats.avgMttr30d !== null && stats.avgMttr30d < 60} />
+            <Stat label="Last inc." value={fmtLastIncident(stats.lastIncident)} ok={!stats.lastIncident} />
           </div>
         </div>
 
