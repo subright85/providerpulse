@@ -166,8 +166,8 @@ function WorstOfMonth({ providers, onSelect }: { providers: ProviderData[]; onSe
   return (
     <div className="mb-5 bg-white/4 border border-white/8 rounded-2xl p-4">
       <div className="flex items-center justify-between mb-3">
-        <p className="text-white/40 text-xs font-semibold uppercase tracking-widest">Worst This Month</p>
-        <span className="text-white/20 text-[10px]">by reliability score · 30d</span>
+        <p className="text-white/40 text-xs font-semibold uppercase tracking-widest">Reliability Rankings</p>
+        <span className="text-white/20 text-[10px]">bottom 3 · 30d score</span>
       </div>
       <div className="flex flex-col gap-1">
         {providers.map((p, i) => {
