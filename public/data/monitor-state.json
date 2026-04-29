@@ -2,11 +2,95 @@
   "openai": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T04:00:40.188Z"
+    "lastCheckedAt": "2026-04-29T06:34:15.919Z"
   },
   "anthropic": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T04:00:40.584Z"
+    "lastCheckedAt": "2026-04-29T06:34:16.278Z"
+  },
+  "groq": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:16.553Z"
+  },
+  "cohere": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:16.943Z"
+  },
+  "deepseek": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:17.063Z"
+  },
+  "vercel": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:17.226Z"
+  },
+  "cloudflare": {
+    "knownIds": [
+      "yg4t0swj39fg"
+    ],
+    "indicator": "major",
+    "lastCheckedAt": "2026-04-29T06:34:17.342Z"
+  },
+  "github": {
+    "knownIds": [
+      "x69zbgdyfzg0"
+    ],
+    "indicator": "minor",
+    "lastCheckedAt": "2026-04-29T06:34:17.557Z"
+  },
+  "netlify": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:17.764Z"
+  },
+  "render": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:18.011Z"
+  },
+  "supabase": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:18.187Z"
+  },
+  "pinecone": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:18.346Z"
+  },
+  "mongodb": {
+    "knownIds": [
+      "7g5qmxgkc2y4"
+    ],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:18.460Z"
+  },
+  "upstash": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:18.668Z"
+  },
+  "twilio": {
+    "knownIds": [
+      "js1932809r3j",
+      "xfbygc0vj207"
+    ],
+    "indicator": "minor",
+    "lastCheckedAt": "2026-04-29T06:34:18.761Z"
+  },
+  "sendgrid": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:18.945Z"
+  },
+  "plaid": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T06:34:19.157Z"
   }
 }
