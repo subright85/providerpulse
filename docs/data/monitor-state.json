@@ -1,12 +1,98 @@
 {
   "openai": {
-    "knownIds": [],
-    "indicator": "none",
-    "lastCheckedAt": "2026-04-29T00:03:07.325Z"
+    "knownIds": [
+      "01KQBTE67HFNEC7R3J3Y22YC3G"
+    ],
+    "indicator": "minor",
+    "lastCheckedAt": "2026-04-29T05:12:53.630Z"
   },
   "anthropic": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T00:03:07.797Z"
+    "lastCheckedAt": "2026-04-29T05:12:54.134Z"
+  },
+  "groq": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:54.469Z"
+  },
+  "cohere": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:54.748Z"
+  },
+  "deepseek": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:54.913Z"
+  },
+  "vercel": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:54.998Z"
+  },
+  "cloudflare": {
+    "knownIds": [
+      "yg4t0swj39fg"
+    ],
+    "indicator": "major",
+    "lastCheckedAt": "2026-04-29T05:12:55.149Z"
+  },
+  "github": {
+    "knownIds": [
+      "x69zbgdyfzg0"
+    ],
+    "indicator": "minor",
+    "lastCheckedAt": "2026-04-29T05:12:55.221Z"
+  },
+  "netlify": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:55.385Z"
+  },
+  "render": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:55.573Z"
+  },
+  "supabase": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:55.741Z"
+  },
+  "pinecone": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:56.171Z"
+  },
+  "mongodb": {
+    "knownIds": [
+      "7g5qmxgkc2y4"
+    ],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:56.461Z"
+  },
+  "upstash": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:56.708Z"
+  },
+  "twilio": {
+    "knownIds": [
+      "js1932809r3j",
+      "xfbygc0vj207"
+    ],
+    "indicator": "minor",
+    "lastCheckedAt": "2026-04-29T05:12:56.856Z"
+  },
+  "sendgrid": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:57.018Z"
+  },
+  "plaid": {
+    "knownIds": [],
+    "indicator": "none",
+    "lastCheckedAt": "2026-04-29T05:12:57.199Z"
   }
 }

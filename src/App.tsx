@@ -4,6 +4,9 @@ import type { AppData, ProviderData } from './types';
 import { CATEGORY_LABELS } from './providers';
 import ProviderCard from './components/ProviderCard';
 import ProviderDetail from './components/ProviderDetail';
+import SubscribeForm from './components/SubscribeForm';
+import ReportForm from './components/ReportForm';
+import AdSlot from './components/AdSlot';
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/providers.json`;
 
@@ -106,10 +109,20 @@ export default function App() {
           <AllProviders providers={providers} onSelect={setSelected} />
         )}
 
+        {/* Subscribe + Report (free) */}
+        {data && (
+          <div className="mt-8 flex flex-col gap-4">
+            <SubscribeForm providers={providers} />
+            <AdSlot />
+            <ReportForm providers={providers} />
+          </div>
+        )}
+
         {/* Footer */}
         <div className="mt-10 pt-6 border-t border-white/6 text-center space-y-1">
           <p className="text-white/20 text-xs">Data sourced from official status pages · Refreshed every 30 minutes</p>
           <p className="text-white/15 text-xs">Score = severity-weighted uptime · Critical −8pts · Major −4pts · Minor −0.5pts</p>
+          <p className="text-white/15 text-xs">All features free · No subscription · <a href="mailto:hello@providerpulse.dev" className="hover:text-white/40 underline">B2B API plans</a></p>
         </div>
       </div>
 
