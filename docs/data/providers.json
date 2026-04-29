@@ -7,6 +7,7 @@
         "category": "llm",
         "icon": "🤖",
         "domain": "openai.com",
+        "audienceProfile": "mixed",
         "apiUrl": "https://status.openai.com/api/v2/summary.json",
         "statusPageUrl": "https://status.openai.com"
       },
@@ -14,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:51.918Z"
+        "updatedAt": "2026-04-29T03:26:06.822Z"
       },
       "stats": {
         "providerId": "openai",
@@ -76,7 +77,13 @@
             "count30d": 1,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 11,
+          "b2c": 9,
+          "both": 2,
+          "unknown": 3
+        }
       },
       "recentIncidents": [
         {
@@ -87,6 +94,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T22:46:00Z",
           "resolvedAt": "2026-04-28T23:12:55Z",
           "durationMinutes": 27,
@@ -100,6 +108,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T13:52:19Z",
           "resolvedAt": "2026-04-28T16:10:47Z",
           "durationMinutes": 138,
@@ -114,6 +123,7 @@
             "inference",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T21:24:59Z",
           "resolvedAt": "2026-04-24T22:15:07Z",
           "durationMinutes": 50,
@@ -127,6 +137,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T18:23:01Z",
           "resolvedAt": "2026-04-23T20:29:59Z",
           "durationMinutes": 127,
@@ -141,6 +152,7 @@
             "performance",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T16:44:18Z",
           "resolvedAt": "2026-04-23T17:57:19Z",
           "durationMinutes": 73,
@@ -154,6 +166,7 @@
           "tags": [
             "other"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-22T13:51:00Z",
           "resolvedAt": "2026-04-22T19:23:34Z",
           "durationMinutes": 333,
@@ -167,6 +180,7 @@
           "tags": [
             "inference"
           ],
+          "audience": "b2c",
           "startedAt": "2026-04-22T00:56:29Z",
           "resolvedAt": "2026-04-22T03:35:13Z",
           "durationMinutes": 159,
@@ -180,6 +194,7 @@
           "tags": [
             "inference"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-21T02:34:32Z",
           "resolvedAt": "2026-04-21T04:33:18Z",
           "durationMinutes": 119,
@@ -193,6 +208,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-20T23:16:43Z",
           "resolvedAt": "2026-04-20T23:13:00Z",
           "durationMinutes": -4,
@@ -207,6 +223,7 @@
             "inference",
             "api"
           ],
+          "audience": "b2c",
           "startedAt": "2026-04-20T17:29:30Z",
           "resolvedAt": "2026-04-20T19:17:46Z",
           "durationMinutes": 108,
@@ -221,6 +238,7 @@
             "inference",
             "api"
           ],
+          "audience": "both",
           "startedAt": "2026-04-20T14:35:33Z",
           "resolvedAt": "2026-04-20T18:48:04Z",
           "durationMinutes": 253,
@@ -234,6 +252,7 @@
           "tags": [
             "inference"
           ],
+          "audience": "b2c",
           "startedAt": "2026-04-20T07:13:42Z",
           "resolvedAt": "2026-04-20T19:33:19Z",
           "durationMinutes": 740,
@@ -247,6 +266,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-16T19:40:52Z",
           "resolvedAt": "2026-04-16T21:21:07Z",
           "durationMinutes": 100,
@@ -260,6 +280,7 @@
           "tags": [
             "inference"
           ],
+          "audience": "b2c",
           "startedAt": "2026-04-15T18:32:35Z",
           "resolvedAt": "2026-04-15T18:55:03Z",
           "durationMinutes": 22,
@@ -273,6 +294,7 @@
           "tags": [
             "other"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-14T16:49:17Z",
           "resolvedAt": "2026-04-14T17:09:21Z",
           "durationMinutes": 20,
@@ -325,6 +347,7 @@
         "category": "llm",
         "icon": "🧠",
         "domain": "anthropic.com",
+        "audienceProfile": "mixed",
         "apiUrl": "https://status.anthropic.com/api/v2/summary.json",
         "statusPageUrl": "https://status.anthropic.com"
       },
@@ -332,7 +355,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:52.773Z"
+        "updatedAt": "2026-04-29T03:26:07.647Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -399,7 +422,13 @@
             "count30d": 1,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 2,
+          "b2c": 13,
+          "both": 3,
+          "unknown": 31
+        }
       },
       "recentIncidents": [
         {
@@ -411,6 +440,7 @@
             "inference",
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-28T23:33:07.339Z",
           "resolvedAt": "2026-04-29T00:00:29.047Z",
           "durationMinutes": 27,
@@ -426,6 +456,7 @@
             "api",
             "availability"
           ],
+          "audience": "both",
           "startedAt": "2026-04-28T17:41:55.352Z",
           "resolvedAt": "2026-04-28T19:15:52.858Z",
           "durationMinutes": 94,
@@ -440,6 +471,7 @@
             "inference",
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-28T13:29:56.320Z",
           "resolvedAt": "2026-04-28T13:50:06.606Z",
           "durationMinutes": 20,
@@ -454,6 +486,7 @@
             "inference",
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-28T12:24:00.726Z",
           "resolvedAt": "2026-04-28T12:45:07.680Z",
           "durationMinutes": 21,
@@ -467,6 +500,7 @@
           "tags": [
             "inference"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-28T06:00:00.000Z",
           "resolvedAt": "2026-04-28T06:00:00.000Z",
           "durationMinutes": 0,
@@ -481,6 +515,7 @@
             "inference",
             "billing"
           ],
+          "audience": "b2c",
           "startedAt": "2026-04-27T14:11:29.158Z",
           "resolvedAt": "2026-04-27T15:18:47.275Z",
           "durationMinutes": 67,
@@ -495,6 +530,7 @@
             "inference",
             "api"
           ],
+          "audience": "b2c",
           "startedAt": "2026-04-25T18:42:40.706Z",
           "resolvedAt": "2026-04-25T19:02:15.710Z",
           "durationMinutes": 20,
@@ -509,6 +545,7 @@
             "inference",
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-25T08:43:51.175Z",
           "resolvedAt": "2026-04-25T11:58:15.877Z",
           "durationMinutes": 194,
@@ -523,6 +560,7 @@
             "inference",
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-25T07:48:30.897Z",
           "resolvedAt": "2026-04-25T08:37:30.865Z",
           "durationMinutes": 49,
@@ -536,6 +574,7 @@
           "tags": [
             "inference"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-25T01:45:32.619Z",
           "resolvedAt": "2026-04-25T02:35:50.465Z",
           "durationMinutes": 50,
@@ -550,6 +589,7 @@
             "inference",
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-25T01:35:55.664Z",
           "resolvedAt": "2026-04-25T02:34:30.182Z",
           "durationMinutes": 59,
@@ -563,6 +603,7 @@
           "tags": [
             "inference"
           ],
+          "audience": "b2c",
           "startedAt": "2026-04-24T17:03:54.478Z",
           "resolvedAt": "2026-04-24T17:32:16.135Z",
           "durationMinutes": 28,
@@ -577,6 +618,7 @@
             "inference",
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-24T10:05:59.992Z",
           "resolvedAt": "2026-04-24T10:59:52.400Z",
           "durationMinutes": 54,
@@ -590,6 +632,7 @@
           "tags": [
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-24T02:55:26.871Z",
           "resolvedAt": "2026-04-24T03:34:28.107Z",
           "durationMinutes": 39,
@@ -604,6 +647,7 @@
             "inference",
             "api"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-23T15:29:04.130Z",
           "resolvedAt": "2026-04-23T15:59:21.781Z",
           "durationMinutes": 30,
@@ -656,6 +700,7 @@
         "category": "llm",
         "icon": "✨",
         "domain": "cloud.google.com",
+        "audienceProfile": "mixed",
         "apiUrl": "https://status.cloud.google.com/incidents.json",
         "statusPageUrl": "https://status.cloud.google.com",
         "type": "gcp"
@@ -664,7 +709,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:53.510Z"
+        "updatedAt": "2026-04-29T03:26:08.412Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -706,7 +751,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 0,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -718,6 +769,7 @@
             "inference",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-27T12:37:00.000Z",
           "resolvedAt": "2026-02-27T14:35:00.000Z",
           "durationMinutes": 118,
@@ -752,6 +804,7 @@
         "category": "llm",
         "icon": "⚡",
         "domain": "groq.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://groqstatus.com/api/v2/summary.json",
         "statusPageUrl": "https://groqstatus.com"
       },
@@ -759,7 +812,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:54.174Z"
+        "updatedAt": "2026-04-29T03:26:09.084Z"
       },
       "stats": {
         "providerId": "groq",
@@ -801,7 +854,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 0,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -812,6 +871,7 @@
           "tags": [
             "inference"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-19T12:51:18Z",
           "resolvedAt": "2026-03-19T13:50:25Z",
           "durationMinutes": 59,
@@ -825,6 +885,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-07T10:02:11Z",
           "resolvedAt": "2026-02-07T11:34:59Z",
           "durationMinutes": 93,
@@ -838,6 +899,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-05T18:09:35Z",
           "resolvedAt": "2026-02-05T18:32:49Z",
           "durationMinutes": 23,
@@ -851,6 +913,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-05T13:23:22Z",
           "resolvedAt": "2026-02-05T15:07:23Z",
           "durationMinutes": 104,
@@ -866,6 +929,7 @@
         "category": "llm",
         "icon": "🔮",
         "domain": "cohere.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.cohere.com/api/v2/summary.json",
         "statusPageUrl": "https://status.cohere.com"
       },
@@ -873,7 +937,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:54.875Z"
+        "updatedAt": "2026-04-29T03:26:09.769Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -935,7 +999,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 3,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -946,6 +1016,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-20T22:16:13Z",
           "resolvedAt": "2026-04-20T22:28:56Z",
           "durationMinutes": 13,
@@ -959,6 +1030,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-13T19:36:12Z",
           "resolvedAt": "2026-04-13T21:00:44Z",
           "durationMinutes": 85,
@@ -974,6 +1046,7 @@
             "database",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-11T15:31:05Z",
           "resolvedAt": "2026-04-11T15:39:51Z",
           "durationMinutes": 9,
@@ -987,6 +1060,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-13T04:34:04Z",
           "resolvedAt": "2026-02-13T05:51:37Z",
           "durationMinutes": 78,
@@ -1002,6 +1076,7 @@
         "category": "llm",
         "icon": "🐋",
         "domain": "deepseek.com",
+        "audienceProfile": "mixed",
         "apiUrl": "https://status.deepseek.com/api/v2/summary.json",
         "statusPageUrl": "https://status.deepseek.com"
       },
@@ -1009,7 +1084,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:55.650Z"
+        "updatedAt": "2026-04-29T03:26:10.519Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1056,7 +1131,13 @@
             "count30d": 2,
             "count90d": 5
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 2,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 2
+        }
       },
       "recentIncidents": [
         {
@@ -1067,6 +1148,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T18:23:18.547+08:00",
           "resolvedAt": "2026-04-22T19:26:32.880+08:00",
           "durationMinutes": 63,
@@ -1080,6 +1162,7 @@
           "tags": [
             "other"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-20T20:40:00.465+08:00",
           "resolvedAt": "2026-04-21T00:08:27.560+08:00",
           "durationMinutes": 208,
@@ -1093,6 +1176,7 @@
           "tags": [
             "other"
           ],
+          "audience": "unknown",
           "startedAt": "2026-04-03T16:36:41.657+08:00",
           "resolvedAt": "2026-04-03T16:50:18.545+08:00",
           "durationMinutes": 14,
@@ -1107,6 +1191,7 @@
             "performance",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-31T17:02:39.993+08:00",
           "resolvedAt": "2026-03-31T18:05:54.775+08:00",
           "durationMinutes": 63,
@@ -1120,6 +1205,7 @@
           "tags": [
             "other"
           ],
+          "audience": "unknown",
           "startedAt": "2026-03-30T00:20:14.892+08:00",
           "resolvedAt": "2026-03-30T10:33:42.800+08:00",
           "durationMinutes": 613,
@@ -1133,6 +1219,7 @@
           "tags": [
             "other"
           ],
+          "audience": "unknown",
           "startedAt": "2026-03-29T21:35:52.087+08:00",
           "resolvedAt": "2026-03-29T23:23:17.278+08:00",
           "durationMinutes": 107,
@@ -1146,6 +1233,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "unknown",
           "startedAt": "2026-03-18T20:26:52.895+08:00",
           "resolvedAt": "2026-03-18T20:37:07.234+08:00",
           "durationMinutes": 10,
@@ -1159,6 +1247,7 @@
           "tags": [
             "other"
           ],
+          "audience": "unknown",
           "startedAt": "2026-03-10T14:54:11.096+08:00",
           "resolvedAt": "2026-03-10T16:10:56.706+08:00",
           "durationMinutes": 77,
@@ -1172,6 +1261,7 @@
           "tags": [
             "other"
           ],
+          "audience": "unknown",
           "startedAt": "2026-03-05T11:50:18.252+08:00",
           "resolvedAt": "2026-03-05T12:35:01.861+08:00",
           "durationMinutes": 45,
@@ -1185,6 +1275,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "unknown",
           "startedAt": "2026-02-28T14:40:27.095+08:00",
           "resolvedAt": "2026-02-28T15:30:30.630+08:00",
           "durationMinutes": 50,
@@ -1199,6 +1290,7 @@
             "performance",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-06T15:23:57.581+08:00",
           "resolvedAt": "2026-02-06T16:42:14.000+08:00",
           "durationMinutes": 78,
@@ -1213,6 +1305,7 @@
             "performance",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-06T09:40:48.297+08:00",
           "resolvedAt": "2026-02-06T09:47:32.031+08:00",
           "durationMinutes": 7,
@@ -1227,6 +1320,7 @@
             "performance",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-03T10:03:07.102+08:00",
           "resolvedAt": "2026-02-03T10:30:54.669+08:00",
           "durationMinutes": 28,
@@ -1270,6 +1364,7 @@
         "category": "infra",
         "icon": "▲",
         "domain": "vercel.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://www.vercel-status.com/api/v2/summary.json",
         "statusPageUrl": "https://www.vercel-status.com"
       },
@@ -1277,7 +1372,7 @@
         "providerId": "vercel",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:56.398Z"
+        "updatedAt": "2026-04-29T03:26:11.313Z"
       },
       "stats": {
         "providerId": "vercel",
@@ -1349,7 +1444,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 17,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -1360,6 +1461,7 @@
           "tags": [
             "deployment"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T15:46:22.195Z",
           "resolvedAt": "2026-04-28T16:53:40.983Z",
           "durationMinutes": 67,
@@ -1373,6 +1475,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T09:00:00.000Z",
           "resolvedAt": "2026-04-28T09:00:00.000Z",
           "durationMinutes": 0,
@@ -1386,6 +1489,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-25T00:39:58.762Z",
           "resolvedAt": "2026-04-25T04:19:37.629Z",
           "durationMinutes": 220,
@@ -1399,6 +1503,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T23:00:00.000Z",
           "resolvedAt": "2026-04-22T23:00:00.000Z",
           "durationMinutes": 0,
@@ -1412,6 +1517,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T18:25:40.186Z",
           "resolvedAt": "2026-04-23T01:12:50.143Z",
           "durationMinutes": 407,
@@ -1425,6 +1531,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-21T13:51:39.746Z",
           "resolvedAt": "2026-04-21T14:41:39.008Z",
           "durationMinutes": 50,
@@ -1438,6 +1545,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-20T19:40:58.989Z",
           "resolvedAt": "2026-04-20T20:56:06.813Z",
           "durationMinutes": 75,
@@ -1451,6 +1559,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-20T10:10:28.869Z",
           "resolvedAt": "2026-04-20T10:36:15.596Z",
           "durationMinutes": 26,
@@ -1464,6 +1573,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-20T09:38:32.000Z",
           "resolvedAt": "2026-04-20T22:18:02.695Z",
           "durationMinutes": 760,
@@ -1477,6 +1587,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-19T20:43:03.000Z",
           "resolvedAt": "2026-04-19T21:39:23.070Z",
           "durationMinutes": 56,
@@ -1490,6 +1601,7 @@
           "tags": [
             "deployment"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-07T18:06:45.565Z",
           "resolvedAt": "2026-04-07T18:56:26.102Z",
           "durationMinutes": 50,
@@ -1503,6 +1615,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-07T07:19:44.304Z",
           "resolvedAt": "2026-04-07T08:37:27.937Z",
           "durationMinutes": 78,
@@ -1517,6 +1630,7 @@
             "deployment",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-02T18:39:57.683Z",
           "resolvedAt": "2026-04-02T23:09:16.439Z",
           "durationMinutes": 269,
@@ -1530,6 +1644,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-02T14:10:14.765Z",
           "resolvedAt": "2026-04-02T18:53:26.350Z",
           "durationMinutes": 283,
@@ -1546,6 +1661,7 @@
             "performance",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-01T20:48:18.344Z",
           "resolvedAt": "2026-04-01T22:17:28.723Z",
           "durationMinutes": 89,
@@ -1607,6 +1723,7 @@
         "category": "infra",
         "icon": "☁️",
         "domain": "cloudflare.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://www.cloudflarestatus.com/api/v2/summary.json",
         "statusPageUrl": "https://www.cloudflarestatus.com"
       },
@@ -1614,7 +1731,7 @@
         "providerId": "cloudflare",
         "indicator": "major",
         "description": "Partial System Outage",
-        "updatedAt": "2026-04-29T03:18:57.157Z"
+        "updatedAt": "2026-04-29T03:26:11.958Z"
       },
       "stats": {
         "providerId": "cloudflare",
@@ -1681,7 +1798,13 @@
             "count30d": 1,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 50,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -1692,6 +1815,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T18:31:16.922Z",
           "resolvedAt": null,
           "durationMinutes": null,
@@ -1705,6 +1829,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T08:41:04.948Z",
           "resolvedAt": "2026-04-28T10:30:16.762Z",
           "durationMinutes": 109,
@@ -1718,6 +1843,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T05:00:00.000Z",
           "resolvedAt": "2026-04-28T05:00:00.000Z",
           "durationMinutes": 0,
@@ -1731,6 +1857,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T06:15:21.303Z",
           "resolvedAt": "2026-04-27T07:09:24.883Z",
           "durationMinutes": 54,
@@ -1744,6 +1871,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T04:25:55.951Z",
           "resolvedAt": "2026-04-27T04:50:49.887Z",
           "durationMinutes": 25,
@@ -1757,6 +1885,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T14:34:53.921Z",
           "resolvedAt": "2026-04-24T16:14:21.037Z",
           "durationMinutes": 99,
@@ -1770,6 +1899,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T03:46:59.153Z",
           "resolvedAt": "2026-04-24T03:48:00.126Z",
           "durationMinutes": 1,
@@ -1783,6 +1913,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T02:40:12.901Z",
           "resolvedAt": "2026-04-24T10:34:42.000Z",
           "durationMinutes": 474,
@@ -1796,6 +1927,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T00:35:23.563Z",
           "resolvedAt": "2026-04-24T10:30:08.000Z",
           "durationMinutes": 595,
@@ -1809,6 +1941,7 @@
           "tags": [
             "auth"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T21:05:59.180Z",
           "resolvedAt": "2026-04-24T23:53:43.690Z",
           "durationMinutes": 1608,
@@ -1822,6 +1955,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T17:03:31.667Z",
           "resolvedAt": "2026-04-23T20:34:31.226Z",
           "durationMinutes": 211,
@@ -1835,6 +1969,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T10:37:29.978Z",
           "resolvedAt": "2026-04-23T11:48:33.544Z",
           "durationMinutes": 71,
@@ -1848,6 +1983,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T03:57:10.028Z",
           "resolvedAt": "2026-04-23T04:36:26.131Z",
           "durationMinutes": 39,
@@ -1861,6 +1997,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T20:46:49.173Z",
           "resolvedAt": "2026-04-22T22:37:37.627Z",
           "durationMinutes": 111,
@@ -1874,6 +2011,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T15:34:01.553Z",
           "resolvedAt": "2026-04-22T16:21:07.456Z",
           "durationMinutes": 47,
@@ -1935,6 +2073,7 @@
         "category": "infra",
         "icon": "🐙",
         "domain": "github.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://www.githubstatus.com/api/v2/summary.json",
         "statusPageUrl": "https://www.githubstatus.com"
       },
@@ -1942,7 +2081,7 @@
         "providerId": "github",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T03:18:57.775Z"
+        "updatedAt": "2026-04-29T03:26:12.575Z"
       },
       "stats": {
         "providerId": "github",
@@ -2014,7 +2153,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 30,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -2025,6 +2170,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T14:17:34.682Z",
           "resolvedAt": null,
           "durationMinutes": null,
@@ -2038,6 +2184,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T13:59:16.225Z",
           "resolvedAt": "2026-04-28T17:09:02.449Z",
           "durationMinutes": 190,
@@ -2051,6 +2198,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T16:48:18.031Z",
           "resolvedAt": "2026-04-27T19:02:59.816Z",
           "durationMinutes": 135,
@@ -2064,6 +2212,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T16:31:07.245Z",
           "resolvedAt": "2026-04-27T22:46:42.326Z",
           "durationMinutes": 376,
@@ -2077,6 +2226,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T19:02:39.061Z",
           "resolvedAt": "2026-04-25T00:36:04.272Z",
           "durationMinutes": 333,
@@ -2090,6 +2240,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T19:50:51.291Z",
           "resolvedAt": "2026-04-23T21:43:26.000Z",
           "durationMinutes": 113,
@@ -2104,6 +2255,7 @@
             "inference",
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T19:28:42.976Z",
           "resolvedAt": "2026-04-23T19:42:25.277Z",
           "durationMinutes": 14,
@@ -2117,6 +2269,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T16:12:47.744Z",
           "resolvedAt": "2026-04-23T17:30:49.716Z",
           "durationMinutes": 78,
@@ -2130,6 +2283,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T14:40:17.981Z",
           "resolvedAt": "2026-04-23T15:18:41.367Z",
           "durationMinutes": 38,
@@ -2143,6 +2297,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T19:53:49.917Z",
           "resolvedAt": "2026-04-22T22:43:59.100Z",
           "durationMinutes": 170,
@@ -2156,6 +2311,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T15:35:45.298Z",
           "resolvedAt": "2026-04-22T19:18:26.916Z",
           "durationMinutes": 223,
@@ -2169,6 +2325,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-21T15:03:21.160Z",
           "resolvedAt": "2026-04-22T01:24:13.877Z",
           "durationMinutes": 621,
@@ -2182,6 +2339,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-20T13:28:48.571Z",
           "resolvedAt": "2026-04-21T05:04:56.242Z",
           "durationMinutes": 936,
@@ -2195,6 +2353,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-17T14:56:22.556Z",
           "resolvedAt": "2026-04-17T15:18:14.767Z",
           "durationMinutes": 22,
@@ -2208,6 +2367,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-16T15:06:56.493Z",
           "resolvedAt": "2026-04-16T18:28:07.238Z",
           "durationMinutes": 201,
@@ -2269,6 +2429,7 @@
         "category": "infra",
         "icon": "🔷",
         "domain": "azure.microsoft.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://azurestatuscdn.azureedge.net/en-us/status/feed/",
         "statusPageUrl": "https://azure.status.microsoft/en-us/status/",
         "type": "azure-rss"
@@ -2277,7 +2438,7 @@
         "providerId": "azure",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:58.314Z"
+        "updatedAt": "2026-04-29T03:26:13.196Z"
       },
       "stats": {
         "providerId": "azure",
@@ -2289,7 +2450,13 @@
         "reliabilityScore": null,
         "reliabilityScore90d": null,
         "monthlyTrend": [],
-        "tagSummary": []
+        "tagSummary": [],
+        "audienceBreakdown": {
+          "b2b": 0,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [],
       "news": [
@@ -2311,6 +2478,7 @@
         "category": "infra",
         "icon": "🌐",
         "domain": "netlify.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://www.netlifystatus.com/api/v2/summary.json",
         "statusPageUrl": "https://www.netlifystatus.com"
       },
@@ -2318,7 +2486,7 @@
         "providerId": "netlify",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:59.022Z"
+        "updatedAt": "2026-04-29T03:26:13.888Z"
       },
       "stats": {
         "providerId": "netlify",
@@ -2380,7 +2548,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 8,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -2391,6 +2565,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-26T03:55:00.000Z",
           "resolvedAt": "2026-04-26T03:55:00.000Z",
           "durationMinutes": 0,
@@ -2404,6 +2579,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T14:10:10.800Z",
           "resolvedAt": "2026-04-24T14:57:07.249Z",
           "durationMinutes": 47,
@@ -2417,6 +2593,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T16:23:42.467Z",
           "resolvedAt": "2026-04-23T17:23:56.704Z",
           "durationMinutes": 60,
@@ -2430,6 +2607,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-13T00:39:16.228Z",
           "resolvedAt": "2026-04-13T01:16:58.472Z",
           "durationMinutes": 38,
@@ -2443,6 +2621,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-09T18:00:00.000Z",
           "resolvedAt": "2026-04-09T18:00:00.000Z",
           "durationMinutes": 0,
@@ -2456,6 +2635,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-06T09:30:00.000Z",
           "resolvedAt": "2026-04-06T09:30:00.000Z",
           "durationMinutes": 0,
@@ -2469,6 +2649,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-02T12:26:17.000Z",
           "resolvedAt": "2026-04-02T17:59:12.279Z",
           "durationMinutes": 333,
@@ -2482,6 +2663,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-30T08:48:01.036Z",
           "resolvedAt": "2026-03-30T21:09:50.000Z",
           "durationMinutes": 742,
@@ -2495,6 +2677,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-27T16:30:00.000Z",
           "resolvedAt": "2026-03-27T16:30:00.000Z",
           "durationMinutes": 0,
@@ -2508,6 +2691,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-24T00:30:26.000Z",
           "resolvedAt": "2026-03-24T01:32:31.533Z",
           "durationMinutes": 62,
@@ -2522,6 +2706,7 @@
             "performance",
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-20T21:08:00.000Z",
           "resolvedAt": "2026-03-20T21:08:00.000Z",
           "durationMinutes": 0,
@@ -2535,6 +2720,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-17T14:07:35.951Z",
           "resolvedAt": "2026-03-17T14:44:24.308Z",
           "durationMinutes": 37,
@@ -2548,6 +2734,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-12T03:43:42.536Z",
           "resolvedAt": "2026-03-12T04:17:09.931Z",
           "durationMinutes": 33,
@@ -2562,6 +2749,7 @@
             "api",
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-11T08:44:06.156Z",
           "resolvedAt": "2026-03-11T11:33:20.912Z",
           "durationMinutes": 169,
@@ -2575,6 +2763,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-10T16:43:00.000Z",
           "resolvedAt": "2026-03-10T16:43:00.000Z",
           "durationMinutes": 0,
@@ -2590,6 +2779,7 @@
         "category": "infra",
         "icon": "🎨",
         "domain": "render.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.render.com/api/v2/summary.json",
         "statusPageUrl": "https://status.render.com"
       },
@@ -2597,7 +2787,7 @@
         "providerId": "render",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:18:59.753Z"
+        "updatedAt": "2026-04-29T03:26:14.646Z"
       },
       "stats": {
         "providerId": "render",
@@ -2659,7 +2849,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 8,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -2671,6 +2867,7 @@
             "deployment",
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T16:51:26.000Z",
           "resolvedAt": "2026-04-23T17:21:44.113Z",
           "durationMinutes": 30,
@@ -2684,6 +2881,7 @@
           "tags": [
             "database"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-16T23:36:59.714Z",
           "resolvedAt": "2026-04-16T23:51:19.380Z",
           "durationMinutes": 14,
@@ -2697,6 +2895,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-14T14:31:55.626Z",
           "resolvedAt": "2026-04-14T16:04:56.339Z",
           "durationMinutes": 93,
@@ -2710,6 +2909,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-13T22:03:10.282Z",
           "resolvedAt": "2026-04-13T22:26:41.377Z",
           "durationMinutes": 24,
@@ -2723,6 +2923,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-10T14:41:51.687Z",
           "resolvedAt": "2026-04-10T14:56:53.400Z",
           "durationMinutes": 15,
@@ -2736,6 +2937,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-08T12:30:00.000Z",
           "resolvedAt": "2026-04-08T12:30:00.000Z",
           "durationMinutes": 0,
@@ -2749,6 +2951,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-08T09:57:54.234Z",
           "resolvedAt": "2026-04-08T22:11:59.902Z",
           "durationMinutes": 734,
@@ -2762,6 +2965,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-07T18:00:00.000Z",
           "resolvedAt": "2026-04-07T18:00:00.000Z",
           "durationMinutes": 0,
@@ -2775,6 +2979,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-25T14:45:50.385Z",
           "resolvedAt": "2026-03-26T19:51:06.000Z",
           "durationMinutes": 1745,
@@ -2788,6 +2993,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-24T13:09:41.070Z",
           "resolvedAt": "2026-03-24T13:31:55.700Z",
           "durationMinutes": 22,
@@ -2801,6 +3007,7 @@
           "tags": [
             "deployment"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-13T15:51:55.772Z",
           "resolvedAt": "2026-03-13T18:07:25.978Z",
           "durationMinutes": 136,
@@ -2814,6 +3021,7 @@
           "tags": [
             "deployment"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-13T08:52:05.840Z",
           "resolvedAt": "2026-03-13T11:09:17.592Z",
           "durationMinutes": 137,
@@ -2827,6 +3035,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-09T20:19:30.514Z",
           "resolvedAt": "2026-03-09T20:39:35.189Z",
           "durationMinutes": 20,
@@ -2840,6 +3049,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-03T00:41:04.035Z",
           "resolvedAt": "2026-03-03T01:00:54.475Z",
           "durationMinutes": 20,
@@ -2854,6 +3064,7 @@
             "deployment",
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-11T16:16:56.919Z",
           "resolvedAt": "2026-02-11T19:25:23.382Z",
           "durationMinutes": 188,
@@ -2879,6 +3090,7 @@
         "category": "data",
         "icon": "🗄️",
         "domain": "supabase.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.supabase.com/api/v2/summary.json",
         "statusPageUrl": "https://status.supabase.com"
       },
@@ -2886,7 +3098,7 @@
         "providerId": "supabase",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:19:00.524Z"
+        "updatedAt": "2026-04-29T03:26:15.523Z"
       },
       "stats": {
         "providerId": "supabase",
@@ -2958,7 +3170,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 12,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -2970,6 +3188,7 @@
             "auth",
             "database"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T21:26:46.180Z",
           "resolvedAt": "2026-04-28T23:31:17.827Z",
           "durationMinutes": 125,
@@ -2983,6 +3202,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T12:39:59.000Z",
           "resolvedAt": "2026-04-27T19:04:52.858Z",
           "durationMinutes": 385,
@@ -2996,6 +3216,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T10:54:37.695Z",
           "resolvedAt": "2026-04-27T20:05:43.266Z",
           "durationMinutes": 551,
@@ -3009,6 +3230,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-25T04:16:30.327Z",
           "resolvedAt": "2026-04-25T05:47:13.582Z",
           "durationMinutes": 91,
@@ -3022,6 +3244,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T11:21:26.653Z",
           "resolvedAt": "2026-04-24T14:36:48.127Z",
           "durationMinutes": 195,
@@ -3035,6 +3258,7 @@
           "tags": [
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T10:00:00.000Z",
           "resolvedAt": "2026-04-24T10:00:00.000Z",
           "durationMinutes": 0,
@@ -3048,6 +3272,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-17T13:02:16.449Z",
           "resolvedAt": "2026-04-18T02:01:40.726Z",
           "durationMinutes": 779,
@@ -3061,6 +3286,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-16T19:05:37.000Z",
           "resolvedAt": "2026-04-17T17:00:18.429Z",
           "durationMinutes": 1315,
@@ -3074,6 +3300,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-12T15:51:36.590Z",
           "resolvedAt": "2026-04-12T17:03:40.019Z",
           "durationMinutes": 72,
@@ -3087,6 +3314,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-08T19:10:59.912Z",
           "resolvedAt": "2026-04-08T20:05:17.516Z",
           "durationMinutes": 54,
@@ -3100,6 +3328,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-02T08:28:48.170Z",
           "resolvedAt": "2026-04-02T09:24:54.267Z",
           "durationMinutes": 56,
@@ -3113,6 +3342,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-01T00:13:16.102Z",
           "resolvedAt": "2026-04-01T01:11:57.430Z",
           "durationMinutes": 59,
@@ -3126,6 +3356,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-27T17:58:13.282Z",
           "resolvedAt": "2026-03-27T18:43:02.475Z",
           "durationMinutes": 45,
@@ -3139,6 +3370,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-27T15:13:19.507Z",
           "resolvedAt": "2026-03-27T17:03:28.339Z",
           "durationMinutes": 110,
@@ -3152,6 +3384,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-26T23:41:36.627Z",
           "resolvedAt": "2026-03-27T02:58:55.779Z",
           "durationMinutes": 197,
@@ -3195,6 +3428,7 @@
         "category": "data",
         "icon": "🌲",
         "domain": "pinecone.io",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.pinecone.io/api/v2/summary.json",
         "statusPageUrl": "https://status.pinecone.io"
       },
@@ -3202,7 +3436,7 @@
         "providerId": "pinecone",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:19:01.274Z"
+        "updatedAt": "2026-04-29T03:26:16.406Z"
       },
       "stats": {
         "providerId": "pinecone",
@@ -3244,7 +3478,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 0,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -3255,6 +3495,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-13T08:50:03.000Z",
           "resolvedAt": "2026-03-13T09:53:17.000Z",
           "durationMinutes": 63,
@@ -3268,6 +3509,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-05T21:57:20.000Z",
           "resolvedAt": "2026-03-05T23:02:17.000Z",
           "durationMinutes": 65,
@@ -3281,6 +3523,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-04T21:06:09.000Z",
           "resolvedAt": "2026-03-04T22:16:28.000Z",
           "durationMinutes": 70,
@@ -3294,6 +3537,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-23T23:14:35.000Z",
           "resolvedAt": "2026-02-24T01:52:43.000Z",
           "durationMinutes": 158,
@@ -3307,6 +3551,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-05T10:55:24.000Z",
           "resolvedAt": "2026-02-05T21:57:04.000Z",
           "durationMinutes": 662,
@@ -3322,6 +3567,7 @@
         "category": "data",
         "icon": "🍃",
         "domain": "mongodb.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.mongodb.com/api/v2/summary.json",
         "statusPageUrl": "https://status.mongodb.com"
       },
@@ -3329,7 +3575,7 @@
         "providerId": "mongodb",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:19:02.040Z"
+        "updatedAt": "2026-04-29T03:26:17.116Z"
       },
       "stats": {
         "providerId": "mongodb",
@@ -3406,7 +3652,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 4,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -3417,6 +3669,7 @@
           "tags": [
             "billing"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T17:16:46.000Z",
           "resolvedAt": "2026-04-27T20:50:07.135Z",
           "durationMinutes": 213,
@@ -3430,6 +3683,7 @@
           "tags": [
             "database"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-17T17:03:13.080Z",
           "resolvedAt": "2026-04-21T13:45:37.550Z",
           "durationMinutes": 5562,
@@ -3443,6 +3697,7 @@
           "tags": [
             "auth"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-01T12:55:24.603Z",
           "resolvedAt": "2026-04-01T12:55:24.656Z",
           "durationMinutes": 0,
@@ -3456,6 +3711,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-30T21:47:40.515Z",
           "resolvedAt": "2026-03-30T23:10:14.473Z",
           "durationMinutes": 83,
@@ -3469,6 +3725,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-25T21:31:18.127Z",
           "resolvedAt": "2026-03-27T13:21:19.612Z",
           "durationMinutes": 2390,
@@ -3482,6 +3739,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-19T18:11:03.701Z",
           "resolvedAt": "2026-03-19T19:19:57.264Z",
           "durationMinutes": 69,
@@ -3495,6 +3753,7 @@
           "tags": [
             "database"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-19T14:42:39.221Z",
           "resolvedAt": "2026-03-19T15:28:05.181Z",
           "durationMinutes": 45,
@@ -3509,6 +3768,7 @@
             "auth",
             "database"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-19T00:24:26.242Z",
           "resolvedAt": "2026-03-31T21:19:47.430Z",
           "durationMinutes": 18535,
@@ -3522,6 +3782,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-11T20:10:35.160Z",
           "resolvedAt": "2026-03-11T20:10:35.214Z",
           "durationMinutes": 0,
@@ -3535,6 +3796,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-10T23:18:53.836Z",
           "resolvedAt": "2026-03-11T02:30:15.059Z",
           "durationMinutes": 191,
@@ -3549,6 +3811,7 @@
             "database",
             "webhook"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-02T15:50:09.328Z",
           "resolvedAt": "2026-03-02T16:28:53.503Z",
           "durationMinutes": 39,
@@ -3563,6 +3826,7 @@
             "database",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-02T12:00:00.000Z",
           "resolvedAt": "2026-03-02T12:00:00.000Z",
           "durationMinutes": 0,
@@ -3576,6 +3840,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-01T13:48:14.360Z",
           "resolvedAt": null,
           "durationMinutes": null,
@@ -3590,6 +3855,7 @@
             "database",
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-28T19:53:36.768Z",
           "resolvedAt": "2026-03-02T03:05:05.384Z",
           "durationMinutes": 1871,
@@ -3603,6 +3869,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-02-26T19:21:05.486Z",
           "resolvedAt": "2026-02-26T20:04:33.862Z",
           "durationMinutes": 43,
@@ -3618,6 +3885,7 @@
         "category": "data",
         "icon": "🔴",
         "domain": "upstash.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.upstash.com/api/v2/summary.json",
         "statusPageUrl": "https://status.upstash.com"
       },
@@ -3625,7 +3893,7 @@
         "providerId": "upstash",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:19:02.810Z"
+        "updatedAt": "2026-04-29T03:26:17.853Z"
       },
       "stats": {
         "providerId": "upstash",
@@ -3682,7 +3950,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 2,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -3693,6 +3967,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T16:09:35.088Z",
           "resolvedAt": "2026-04-27T19:13:45.748Z",
           "durationMinutes": 184,
@@ -3707,6 +3982,7 @@
             "database",
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-02T18:45:17.073Z",
           "resolvedAt": "2026-04-02T19:53:23.947Z",
           "durationMinutes": 68,
@@ -3721,6 +3997,7 @@
             "database",
             "network"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-27T15:30:00.000Z",
           "resolvedAt": "2026-03-27T15:30:00.000Z",
           "durationMinutes": 0,
@@ -3734,6 +4011,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-06T13:50:17.434Z",
           "resolvedAt": "2026-03-06T14:49:57.180Z",
           "durationMinutes": 60,
@@ -3749,6 +4027,7 @@
         "category": "payment",
         "icon": "📡",
         "domain": "twilio.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.twilio.com/api/v2/summary.json",
         "statusPageUrl": "https://status.twilio.com"
       },
@@ -3756,7 +4035,7 @@
         "providerId": "twilio",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T03:19:03.550Z"
+        "updatedAt": "2026-04-29T03:26:18.554Z"
       },
       "stats": {
         "providerId": "twilio",
@@ -3813,7 +4092,13 @@
             "count30d": 2,
             "count90d": 2
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 50,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -3824,6 +4109,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T13:53:13.239-07:00",
           "resolvedAt": null,
           "durationMinutes": null,
@@ -3839,6 +4125,7 @@
             "performance",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T08:37:06.496-07:00",
           "resolvedAt": "2026-04-28T12:44:08.635-07:00",
           "durationMinutes": 247,
@@ -3852,6 +4139,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-28T08:34:25.580-07:00",
           "resolvedAt": "2026-04-28T10:44:52.872-07:00",
           "durationMinutes": 130,
@@ -3865,6 +4153,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T18:07:33.546-07:00",
           "resolvedAt": "2026-04-27T20:39:39.653-07:00",
           "durationMinutes": 152,
@@ -3878,6 +4167,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T16:17:10.000-07:00",
           "resolvedAt": "2026-04-27T17:53:55.877-07:00",
           "durationMinutes": 97,
@@ -3891,6 +4181,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T14:29:28.563-07:00",
           "resolvedAt": "2026-04-28T01:04:22.776-07:00",
           "durationMinutes": 635,
@@ -3904,6 +4195,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T11:49:08.670-07:00",
           "resolvedAt": "2026-04-27T14:44:53.692-07:00",
           "durationMinutes": 176,
@@ -3917,6 +4209,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-27T08:44:27.050-07:00",
           "resolvedAt": "2026-04-28T05:18:02.770-07:00",
           "durationMinutes": 1234,
@@ -3930,6 +4223,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-26T21:28:56.000-07:00",
           "resolvedAt": "2026-04-26T21:59:11.984-07:00",
           "durationMinutes": 30,
@@ -3943,6 +4237,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-25T14:00:27.769-07:00",
           "resolvedAt": "2026-04-26T14:10:37.066-07:00",
           "durationMinutes": 1450,
@@ -3956,6 +4251,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-25T01:16:52.439-07:00",
           "resolvedAt": "2026-04-25T17:46:35.986-07:00",
           "durationMinutes": 990,
@@ -3969,6 +4265,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-24T17:04:50.286-07:00",
           "resolvedAt": "2026-04-24T21:31:31.998-07:00",
           "durationMinutes": 267,
@@ -3983,6 +4280,7 @@
             "auth",
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T23:05:32.336-07:00",
           "resolvedAt": "2026-04-23T23:40:17.275-07:00",
           "durationMinutes": 35,
@@ -3996,6 +4294,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T11:16:26.911-07:00",
           "resolvedAt": "2026-04-23T13:37:57.542-07:00",
           "durationMinutes": 142,
@@ -4009,6 +4308,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T10:31:40.028-07:00",
           "resolvedAt": "2026-04-23T14:46:20.461-07:00",
           "durationMinutes": 255,
@@ -4034,6 +4334,7 @@
         "category": "payment",
         "icon": "📧",
         "domain": "sendgrid.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.sendgrid.com/api/v2/summary.json",
         "statusPageUrl": "https://status.sendgrid.com"
       },
@@ -4041,7 +4342,7 @@
         "providerId": "sendgrid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:19:04.222Z"
+        "updatedAt": "2026-04-29T03:26:19.282Z"
       },
       "stats": {
         "providerId": "sendgrid",
@@ -4103,7 +4404,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 11,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -4114,6 +4421,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T09:32:53.000-07:00",
           "resolvedAt": "2026-04-23T14:18:25.911-07:00",
           "durationMinutes": 1726,
@@ -4127,6 +4435,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-18T13:07:43.679-07:00",
           "resolvedAt": "2026-04-18T13:07:43.712-07:00",
           "durationMinutes": 0,
@@ -4140,6 +4449,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-17T04:58:17.227-07:00",
           "resolvedAt": "2026-04-17T06:13:28.935-07:00",
           "durationMinutes": 75,
@@ -4153,6 +4463,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-15T09:00:17.894-07:00",
           "resolvedAt": "2026-04-15T11:44:03.451-07:00",
           "durationMinutes": 164,
@@ -4166,6 +4477,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-15T08:19:53.272-07:00",
           "resolvedAt": "2026-04-15T08:49:43.646-07:00",
           "durationMinutes": 30,
@@ -4179,6 +4491,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-10T01:08:15.841-07:00",
           "resolvedAt": "2026-04-10T01:08:15.896-07:00",
           "durationMinutes": 0,
@@ -4192,6 +4505,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-08T13:30:00.000-07:00",
           "resolvedAt": "2026-04-08T13:30:00.000-07:00",
           "durationMinutes": 0,
@@ -4205,6 +4519,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-08T08:17:59.651-07:00",
           "resolvedAt": "2026-04-08T10:06:59.985-07:00",
           "durationMinutes": 109,
@@ -4218,6 +4533,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-07T14:00:00.000-07:00",
           "resolvedAt": "2026-04-07T14:00:00.000-07:00",
           "durationMinutes": 0,
@@ -4231,6 +4547,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-06T08:08:32.767-07:00",
           "resolvedAt": "2026-04-06T14:45:34.514-07:00",
           "durationMinutes": 397,
@@ -4244,6 +4561,7 @@
           "tags": [
             "billing"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-06T06:23:00.000-07:00",
           "resolvedAt": "2026-04-07T11:53:07.436-07:00",
           "durationMinutes": 1770,
@@ -4257,6 +4575,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-25T13:58:02.227-07:00",
           "resolvedAt": "2026-03-25T13:58:02.261-07:00",
           "durationMinutes": 0,
@@ -4270,6 +4589,7 @@
           "tags": [
             "auth"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-18T11:33:19.079-07:00",
           "resolvedAt": "2026-03-18T19:17:28.313-07:00",
           "durationMinutes": 464,
@@ -4283,6 +4603,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-05T11:14:03.976-08:00",
           "resolvedAt": "2026-03-05T11:14:04.012-08:00",
           "durationMinutes": 0,
@@ -4296,6 +4617,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-04T08:44:25.806-08:00",
           "resolvedAt": "2026-03-04T08:44:25.840-08:00",
           "durationMinutes": 0,
@@ -4311,6 +4633,7 @@
         "category": "payment",
         "icon": "🏦",
         "domain": "plaid.com",
+        "audienceProfile": "b2b",
         "apiUrl": "https://status.plaid.com/api/v2/summary.json",
         "statusPageUrl": "https://status.plaid.com"
       },
@@ -4318,16 +4641,16 @@
         "providerId": "plaid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:19:04.912Z"
+        "updatedAt": "2026-04-29T03:26:19.938Z"
       },
       "stats": {
         "providerId": "plaid",
-        "uptime30d": 98.71,
-        "uptime90d": 99.19,
+        "uptime30d": 98.68,
+        "uptime90d": 99.18,
         "incidentCount30d": 9,
-        "avgMttr30d": 210,
+        "avgMttr30d": 194,
         "lastIncident": "2026-04-29T02:20:25.000Z",
-        "reliabilityScore": 88,
+        "reliabilityScore": 87,
         "reliabilityScore90d": 87,
         "monthlyTrend": [
           {
@@ -4346,7 +4669,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 7,
-            "uptime": 98.72
+            "uptime": 98.68
           }
         ],
         "tagSummary": [
@@ -4380,7 +4703,13 @@
             "count30d": 0,
             "count90d": 1
           }
-        ]
+        ],
+        "audienceBreakdown": {
+          "b2b": 9,
+          "b2c": 0,
+          "both": 0,
+          "unknown": 0
+        }
       },
       "recentIncidents": [
         {
@@ -4391,9 +4720,10 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-29T02:20:25.000Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-04-29T03:25:34.281Z",
+          "durationMinutes": 65,
           "url": "https://stspg.io/8dlx5xm5tsy8"
         },
         {
@@ -4404,6 +4734,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T17:33:22.887Z",
           "resolvedAt": "2026-04-23T17:58:49.670Z",
           "durationMinutes": 25,
@@ -4417,6 +4748,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-23T14:57:56.091Z",
           "resolvedAt": "2026-04-23T22:23:34.087Z",
           "durationMinutes": 446,
@@ -4430,6 +4762,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-22T03:45:26.028Z",
           "resolvedAt": "2026-04-22T03:57:52.036Z",
           "durationMinutes": 12,
@@ -4443,6 +4776,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-19T03:37:05.000Z",
           "resolvedAt": "2026-04-19T13:07:08.083Z",
           "durationMinutes": 570,
@@ -4456,6 +4790,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-18T01:30:12.000Z",
           "resolvedAt": "2026-04-18T07:47:41.610Z",
           "durationMinutes": 377,
@@ -4470,6 +4805,7 @@
             "webhook",
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-01T20:30:14.000Z",
           "resolvedAt": "2026-04-01T21:07:17.115Z",
           "durationMinutes": 37,
@@ -4483,6 +4819,7 @@
           "tags": [
             "performance"
           ],
+          "audience": "b2b",
           "startedAt": "2026-04-01T05:07:25.230Z",
           "resolvedAt": "2026-04-01T14:27:33.357Z",
           "durationMinutes": 560,
@@ -4496,6 +4833,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-31T19:01:53.567Z",
           "resolvedAt": "2026-03-31T20:33:53.486Z",
           "durationMinutes": 92,
@@ -4509,6 +4847,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-30T15:16:20.846Z",
           "resolvedAt": "2026-03-30T17:19:10.143Z",
           "durationMinutes": 123,
@@ -4522,6 +4861,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-27T17:06:02.955Z",
           "resolvedAt": "2026-03-27T21:26:58.032Z",
           "durationMinutes": 261,
@@ -4535,6 +4875,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-26T15:53:12.021Z",
           "resolvedAt": "2026-03-26T16:32:12.356Z",
           "durationMinutes": 39,
@@ -4548,6 +4889,7 @@
           "tags": [
             "other"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-19T15:32:05.773Z",
           "resolvedAt": "2026-03-19T15:32:05.826Z",
           "durationMinutes": 0,
@@ -4561,6 +4903,7 @@
           "tags": [
             "availability"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-13T16:28:41.477Z",
           "resolvedAt": "2026-03-13T17:37:55.259Z",
           "durationMinutes": 69,
@@ -4574,6 +4917,7 @@
           "tags": [
             "api"
           ],
+          "audience": "b2b",
           "startedAt": "2026-03-09T21:44:39.000Z",
           "resolvedAt": "2026-03-09T23:14:47.517Z",
           "durationMinutes": 90,
@@ -4976,5 +5320,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-29T03:19:15.975Z"
+  "generatedAt": "2026-04-29T03:26:31.112Z"
 }

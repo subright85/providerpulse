@@ -66,12 +66,13 @@ function AudienceBadge({ audience }: { audience: IncidentAudience }) {
 function ImpactBreakdown({ breakdown }: { breakdown: AudienceBreakdown }) {
   const total = breakdown.b2b + breakdown.b2c + breakdown.both + breakdown.unknown;
   if (total === 0) return null;
-  const segments: { key: IncidentAudience; pct: number; count: number }[] = [
+  const allSegments: { key: IncidentAudience; pct: number; count: number }[] = [
     { key: 'b2c',     pct: (breakdown.b2c / total) * 100,     count: breakdown.b2c },
     { key: 'b2b',     pct: (breakdown.b2b / total) * 100,     count: breakdown.b2b },
     { key: 'both',    pct: (breakdown.both / total) * 100,    count: breakdown.both },
     { key: 'unknown', pct: (breakdown.unknown / total) * 100, count: breakdown.unknown },
-  ].filter(s => s.count > 0);
+  ];
+  const segments = allSegments.filter(s => s.count > 0);
   const segColor: Record<IncidentAudience, string> = {
     b2c:     'bg-emerald-400',
     b2b:     'bg-blue-400',
