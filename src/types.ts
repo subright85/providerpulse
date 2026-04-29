@@ -1,4 +1,18 @@
-export type ProviderCategory = 'llm' | 'infra' | 'data' | 'payment';
+export type ProviderCategory = 'llm';
+
+export type ComponentStatus =
+  | 'operational'
+  | 'degraded_performance'
+  | 'partial_outage'
+  | 'major_outage'
+  | 'under_maintenance';
+
+export interface ProviderComponent {
+  id: string;
+  name: string;
+  status: ComponentStatus;
+  description?: string;
+}
 
 export type IncidentSeverity = 'critical' | 'major' | 'minor' | 'maintenance';
 
@@ -103,6 +117,7 @@ export interface ProviderData {
   stats: ProviderStats;
   recentIncidents: Incident[];
   news: NewsItem[];
+  components: ProviderComponent[];
 }
 
 export interface AppData {

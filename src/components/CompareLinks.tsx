@@ -1,23 +1,21 @@
 import { Link } from 'react-router-dom';
 
-const FEATURED_COMPARISONS: Array<{ slug: string; label: string; tag: string }> = [
-  { slug: 'openai-vs-anthropic',  label: 'OpenAI vs Anthropic',     tag: 'LLM' },
-  { slug: 'groq-vs-openai',       label: 'Groq vs OpenAI',          tag: 'LLM' },
-  { slug: 'cohere-vs-anthropic',  label: 'Cohere vs Anthropic',     tag: 'LLM' },
-  { slug: 'vercel-vs-netlify',    label: 'Vercel vs Netlify',       tag: 'Hosting' },
-  { slug: 'supabase-vs-mongodb',  label: 'Supabase vs MongoDB',     tag: 'Data' },
-  { slug: 'twilio-vs-sendgrid',   label: 'Twilio vs SendGrid',      tag: 'Comms' },
+const PROVIDER_PAIRS: Array<{ slug: string; label: string; tag: string }> = [
+  { slug: 'openai-vs-anthropic',  label: 'OpenAI vs Anthropic',  tag: 'flagship' },
+  { slug: 'groq-vs-openai',       label: 'Groq vs OpenAI',       tag: 'speed vs scale' },
+  { slug: 'anthropic-vs-cohere',  label: 'Anthropic vs Cohere',  tag: 'enterprise' },
+  { slug: 'deepseek-vs-openai',   label: 'DeepSeek vs OpenAI',   tag: 'cost vs scale' },
 ];
 
 export default function CompareLinks() {
   return (
     <div className="bg-white/4 border border-white/8 rounded-2xl p-5">
-      <p className="text-white font-semibold text-sm">⚖️ Compare two providers head-to-head</p>
+      <p className="text-white font-semibold text-sm">⚖️ Compare LLM providers</p>
       <p className="text-white/40 text-xs mt-0.5">
         Side-by-side reliability scores, uptime, and incident counts.
       </p>
       <div className="grid grid-cols-2 gap-2 mt-3">
-        {FEATURED_COMPARISONS.map(c => (
+        {PROVIDER_PAIRS.map(c => (
           <Link
             key={c.slug}
             to={`/compare/${c.slug}`}

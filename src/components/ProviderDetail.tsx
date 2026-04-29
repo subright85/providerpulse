@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { ProviderData, Incident, MonthlyTrend, NewsItem, TagSummaryItem, IncidentTag, Provider, IncidentAudience, AudienceBreakdown } from '../types';
+import type { ProviderData, Incident, MonthlyTrend, NewsItem, TagSummaryItem, IncidentTag, Provider, IncidentAudience, AudienceBreakdown, ProviderComponent } from '../types';
 
 const SEV_CONFIG = {
   critical:    { color: 'text-red-400',    bg: 'bg-red-500/15',    label: 'Critical' },
@@ -117,6 +117,51 @@ function ScoreBlock({ score, label }: { score: number | null; label: string }) {
   );
 }
 
+const COMPONENT_STATUS_CONFIG: Record<ProviderComponent['status'], { label: string; cls: string; dot: string }> = {
+  operational:         { label: 'Operational',  cls: 'text-emerald-300', dot: 'bg-emerald-400' },
+  degraded_performance:{ label: 'Degraded',     cls: 'text-yellow-300',  dot: 'bg-yellow-400' },
+  partial_outage:      { label: 'Partial out',  cls: 'text-orange-300',  dot: 'bg-orange-400' },
+  major_outage:        { label: 'Major out',    cls: 'text-red-300',     dot: 'bg-red-400' },
+  under_maintenance:   { label: 'Maintenance',  cls: 'text-blue-300',    dot: 'bg-blue-400' },
+};
+
+function ComponentGrid({ components }: { components: ProviderComponent[] }) {
+  // Sort: failing first, then alphabetical
+  const sorted = [...components].sort((a, b) => {
+    const aBad = a.status !== 'operational' ? 0 : 1;
+    const bBad = b.status !== 'operational' ? 0 : 1;
+    if (aBad !== bBad) return aBad - bBad;
+    return a.name.localeCompare(b.name);
+  });
+  const failing = components.filter(c => c.status !== 'operational').length;
+  return (
+    <div className="bg-white/4 border border-white/8 rounded-xl p-4">
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-white/40 text-xs font-semibold uppercase tracking-widest">Component Health</p>
+        <span className="text-white/20 text-[10px]">
+          {failing === 0
+            ? `All ${components.length} operational`
+            : `${failing} of ${components.length} affected`}
+        </span>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+        {sorted.map(c => {
+          const cfg = COMPONENT_STATUS_CONFIG[c.status] ?? COMPONENT_STATUS_CONFIG.operational;
+          return (
+            <div key={c.id} className="flex items-center gap-2 text-xs" title={c.description}>
+              <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${cfg.dot}`} />
+              <span className="text-white/75 truncate flex-1">{c.name}</span>
+              {c.status !== 'operational' && (
+                <span className={`text-[10px] ${cfg.cls} shrink-0`}>{cfg.label}</span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function ProviderLogo({ provider, size = 24 }: { provider: Provider; size?: number }) {
   const [failed, setFailed] = useState(false);
   if (failed || !provider.domain) {
@@ -134,7 +179,7 @@ function ProviderLogo({ provider, size = 24 }: { provider: Provider; size?: numb
 }
 
 export default function ProviderDetail({ data, onClose }: Props) {
-  const { provider, status, stats, recentIncidents, news } = data;
+  const { provider, status, stats, recentIncidents, news, components } = data;
   const score = stats.reliabilityScore;
 
   return (
@@ -171,6 +216,9 @@ export default function ProviderDetail({ data, onClose }: Props) {
               <StatRow label="Avg. MTTR" value={stats.avgMttr30d !== null ? `${stats.avgMttr30d}m` : '—'} />
             </div>
           </div>
+
+          {/* Component-level health (LLM-only differentiator) */}
+          {components.length > 0 && <ComponentGrid components={components} />}
 
           {/* Monthly trend */}
           {stats.monthlyTrend.length > 0 && <TrendChart trend={stats.monthlyTrend} />}

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './index.css';
 import type { AppData, ProviderData } from './types';
-import { CATEGORY_LABELS } from './providers';
 import ProviderCard from './components/ProviderCard';
 import ProviderDetail from './components/ProviderDetail';
 import SubscribeForm from './components/SubscribeForm';
@@ -15,7 +14,6 @@ export default function App() {
   const [data, setData] = useState<AppData | null>(null);
   const [error, setError] = useState(false);
   const [selected, setSelected] = useState<ProviderData | null>(null);
-  const [filter, setFilter] = useState<string>('all');
 
   useEffect(() => {
     fetch(DATA_URL)
@@ -24,11 +22,8 @@ export default function App() {
       .catch(() => setError(true));
   }, []);
 
-  const categories = ['all', 'llm', 'infra', 'data', 'payment'];
   const providers = data?.providers ?? [];
-  const filtered = filter === 'all' ? providers : providers.filter(p => p.provider.category === filter);
   const overallDown = providers.filter(p => p.status.indicator !== 'none' && p.status.indicator !== 'maintenance').length;
-
   const activeIncidents = providers.filter(p =>
     p.status.indicator !== 'none' && p.status.indicator !== 'maintenance'
   );
@@ -41,13 +36,13 @@ export default function App() {
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-white tracking-tight">ProviderPulse</h1>
           <p className="text-white/40 text-sm mt-1">
-            Historical reliability scores for LLM APIs and critical SaaS dependencies.
+            Component-level health for the LLM APIs your stack depends on.
           </p>
           {data && (
             <div className="flex items-center gap-3 mt-3">
               <span className={`flex items-center gap-1.5 text-xs font-medium ${overallDown === 0 ? 'text-emerald-400' : 'text-yellow-400'}`}>
                 <span className={`w-1.5 h-1.5 rounded-full ${overallDown === 0 ? 'bg-emerald-400' : 'bg-yellow-400'} animate-pulse`} />
-                {overallDown === 0 ? 'All systems operational' : `${overallDown} provider${overallDown > 1 ? 's' : ''} with active issues`}
+                {overallDown === 0 ? 'All providers operational' : `${overallDown} provider${overallDown > 1 ? 's' : ''} with active issues`}
               </span>
               <span className="text-white/20 text-xs">
                 Updated {new Date(data.generatedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
@@ -60,21 +55,6 @@ export default function App() {
         {data && activeIncidents.length > 0 && (
           <ActiveIncidentsBanner incidents={activeIncidents} onSelect={setSelected} />
         )}
-
-        {/* Category tabs */}
-        <div className="flex gap-1 mb-5 bg-white/5 rounded-xl p-1 overflow-x-auto">
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all flex-1 ${
-                filter === cat ? 'bg-white/12 text-white' : 'text-white/40 hover:text-white/70'
-              }`}
-            >
-              {cat === 'all' ? 'All' : CATEGORY_LABELS[cat]}
-            </button>
-          ))}
-        </div>
 
         {/* Loading skeleton */}
         {!data && !error && (
@@ -94,23 +74,15 @@ export default function App() {
         )}
 
         {/* Provider list */}
-        {data && filter !== 'all' && (
+        {data && (
           <div className="flex flex-col gap-3">
-            {filtered.length === 0 && (
-              <p className="text-center text-white/30 text-sm py-10">No providers in this category.</p>
-            )}
-            {filtered.map(p => (
+            {providers.map(p => (
               <ProviderCard key={p.provider.id} data={p} onClick={() => setSelected(p)} />
             ))}
           </div>
         )}
 
-        {/* All tab: grouped by category */}
-        {data && filter === 'all' && (
-          <AllProviders providers={providers} onSelect={setSelected} />
-        )}
-
-        {/* Subscribe + Report (free) + Compare links */}
+        {/* Subscribe + Compare + Report (free) */}
         {data && (
           <div className="mt-8 flex flex-col gap-4">
             <SubscribeForm providers={providers} />
@@ -124,42 +96,11 @@ export default function App() {
         <div className="mt-10 pt-6 border-t border-white/6 text-center space-y-1">
           <p className="text-white/20 text-xs">Data sourced from official status pages · Refreshed every 30 minutes</p>
           <p className="text-white/15 text-xs">Score = severity-weighted uptime · Critical −8pts · Major −4pts · Minor −0.5pts</p>
-          <p className="text-white/15 text-xs">All features free · No subscription · <a href="mailto:hello@providerpulse.dev" className="hover:text-white/40 underline">B2B API plans</a></p>
+          <p className="text-white/15 text-xs">All features free · No subscription · <a href="mailto:hello@providerpulse.dev" className="hover:text-white/40 underline">Enterprise tier</a></p>
         </div>
       </div>
 
       {selected && <ProviderDetail data={selected} onClose={() => setSelected(null)} />}
-    </div>
-  );
-}
-
-const CATEGORY_ORDER = ['llm', 'infra', 'data', 'payment'] as const;
-
-function AllProviders({ providers, onSelect }: { providers: ProviderData[]; onSelect: (p: ProviderData) => void }) {
-  return (
-    <div className="flex flex-col gap-6">
-      {CATEGORY_ORDER.map(cat => {
-        const group = providers.filter(p => p.provider.category === cat);
-        if (group.length === 0) return null;
-        const downCount = group.filter(p => p.status.indicator !== 'none' && p.status.indicator !== 'maintenance').length;
-        return (
-          <div key={cat}>
-            <div className="flex items-center gap-2 mb-2 px-1">
-              <p className="text-[11px] font-bold uppercase tracking-widest text-white/30">{CATEGORY_LABELS[cat]}</p>
-              {downCount > 0 && (
-                <span className="text-[10px] font-semibold text-yellow-400 bg-yellow-400/10 px-1.5 py-0.5 rounded-full">
-                  {downCount} issue{downCount > 1 ? 's' : ''}
-                </span>
-              )}
-            </div>
-            <div className="flex flex-col gap-3">
-              {group.map(p => (
-                <ProviderCard key={p.provider.id} data={p} onClick={() => onSelect(p)} />
-              ))}
-            </div>
-          </div>
-        );
-      })}
     </div>
   );
 }
@@ -200,4 +141,3 @@ function ActiveIncidentsBanner({ incidents, onSelect }: { incidents: ProviderDat
     </div>
   );
 }
-

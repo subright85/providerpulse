@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { ProviderData, Provider } from '../types';
+import type { ProviderData, Provider, ProviderComponent } from '../types';
 
 const INDICATOR_CONFIG = {
   none:        { label: 'Operational',  bg: 'bg-emerald-500/12', text: 'text-emerald-400', dot: 'bg-emerald-400' },
@@ -126,6 +126,9 @@ export default function ProviderCard({ data, onClick }: Props) {
             </p>
           )}
 
+          {/* Component health summary — the LLM-only differentiator */}
+          <ComponentSummary components={data.components} />
+
           <div className="flex gap-4 mt-2">
             <Stat label="30d uptime" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} ok={stats.uptime30d !== null && stats.uptime30d >= 99.5} />
             <Stat label="Incidents" value={String(stats.incidentCount30d)} ok={stats.incidentCount30d === 0} />
@@ -140,6 +143,47 @@ export default function ProviderCard({ data, onClick }: Props) {
       </div>
     </button>
   );
+}
+
+function ComponentSummary({ components }: { components: ProviderComponent[] }) {
+  if (components.length === 0) return null;
+  const failing = components.filter(c => c.status !== 'operational');
+  if (failing.length === 0) {
+    return (
+      <p className="text-[11px] text-emerald-400/70 mt-1 leading-tight">
+        ✓ All {components.length} components operational
+      </p>
+    );
+  }
+  // Show up to 3 failing components inline
+  const display = failing.slice(0, 3);
+  const more = failing.length - display.length;
+  return (
+    <div className="flex flex-wrap gap-1 mt-1">
+      {display.map(c => (
+        <span
+          key={c.id}
+          className={`text-[10px] px-1.5 py-0.5 rounded ${componentStatusBadge(c.status)}`}
+          title={c.description ?? c.status}
+        >
+          {c.name}
+        </span>
+      ))}
+      {more > 0 && (
+        <span className="text-[10px] px-1.5 py-0.5 text-white/40">+{more} more</span>
+      )}
+    </div>
+  );
+}
+
+function componentStatusBadge(status: ProviderComponent['status']): string {
+  switch (status) {
+    case 'major_outage':         return 'bg-red-500/20 text-red-300';
+    case 'partial_outage':       return 'bg-orange-500/20 text-orange-300';
+    case 'degraded_performance': return 'bg-yellow-500/20 text-yellow-300';
+    case 'under_maintenance':    return 'bg-blue-500/20 text-blue-300';
+    default:                     return 'bg-white/10 text-white/50';
+  }
 }
 
 function Stat({ label, value, ok }: { label: string; value: string; ok: boolean }) {
