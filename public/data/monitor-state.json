@@ -1,99 +1,98 @@
 {
   "openai": {
     "knownIds": [
-      "01KQDGQKRTSJ02E03R134H5JFD"
+      "01KQDGQKRTSJ02E03R134H5JFD",
+      "01KQDM1K1826RP1FFN86ZNA3WG"
     ],
     "indicator": "minor",
-    "lastCheckedAt": "2026-04-29T21:16:16.847Z"
+    "lastCheckedAt": "2026-04-29T22:15:07.919Z"
   },
   "anthropic": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:17.281Z"
+    "lastCheckedAt": "2026-04-29T22:15:08.154Z"
   },
   "groq": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:17.547Z"
+    "lastCheckedAt": "2026-04-29T22:15:08.482Z"
   },
   "cohere": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:17.908Z"
+    "lastCheckedAt": "2026-04-29T22:15:08.724Z"
   },
   "deepseek": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:18.271Z"
+    "lastCheckedAt": "2026-04-29T22:15:08.839Z"
   },
   "vercel": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:18.509Z"
+    "lastCheckedAt": "2026-04-29T22:15:08.891Z"
   },
   "cloudflare": {
     "knownIds": [
       "yhp2dw512p4b"
     ],
     "indicator": "minor",
-    "lastCheckedAt": "2026-04-29T21:16:18.891Z"
+    "lastCheckedAt": "2026-04-29T22:15:09.060Z"
   },
   "github": {
     "knownIds": [
       "x69zbgdyfzg0"
     ],
     "indicator": "minor",
-    "lastCheckedAt": "2026-04-29T21:16:18.974Z"
+    "lastCheckedAt": "2026-04-29T22:15:09.108Z"
   },
   "netlify": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:19.078Z"
+    "lastCheckedAt": "2026-04-29T22:15:09.171Z"
   },
   "render": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:19.199Z"
+    "lastCheckedAt": "2026-04-29T22:15:09.238Z"
   },
   "supabase": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:19.312Z"
+    "lastCheckedAt": "2026-04-29T22:15:09.290Z"
   },
   "pinecone": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:19.627Z"
+    "lastCheckedAt": "2026-04-29T22:15:09.511Z"
   },
   "mongodb": {
     "knownIds": [
       "7g5qmxgkc2y4"
     ],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:19.845Z"
+    "lastCheckedAt": "2026-04-29T22:15:09.558Z"
   },
   "upstash": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:20.110Z"
+    "lastCheckedAt": "2026-04-29T22:15:12.987Z"
   },
   "twilio": {
     "knownIds": [
-      "vhn17m89ljh2",
-      "js1932809r3j",
       "441kvr95r8xj"
     ],
     "indicator": "minor",
-    "lastCheckedAt": "2026-04-29T21:16:20.214Z"
+    "lastCheckedAt": "2026-04-29T22:15:13.068Z"
   },
   "sendgrid": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:20.368Z"
+    "lastCheckedAt": "2026-04-29T22:15:13.108Z"
   },
   "plaid": {
     "knownIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-04-29T21:16:20.586Z"
+    "lastCheckedAt": "2026-04-29T22:15:13.232Z"
   }
 }
