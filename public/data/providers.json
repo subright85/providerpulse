@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:09.357Z"
+        "updatedAt": "2026-04-29T15:33:21.246Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 25,
-            "uptime": 97.05
+            "uptime": 97.06
           }
         ],
         "tagSummary": [
@@ -356,17 +356,17 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:10.367Z"
+        "updatedAt": "2026-04-29T15:33:21.981Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 96.72,
-        "uptime90d": 98.78,
-        "incidentCount30d": 49,
-        "avgMttr30d": 61,
-        "lastIncident": "2026-04-28T23:33:07.339Z",
+        "uptime30d": 96.71,
+        "uptime90d": 98.9,
+        "incidentCount30d": 50,
+        "avgMttr30d": 60,
+        "lastIncident": "2026-04-29T13:47:45.184Z",
         "reliabilityScore": 62,
-        "reliabilityScore90d": 64,
+        "reliabilityScore90d": 65,
         "monthlyTrend": [
           {
             "month": "2026-02",
@@ -377,26 +377,26 @@
           {
             "month": "2026-03",
             "label": "Mar 26",
-            "incidentCount": 4,
-            "uptime": 99.12
+            "incidentCount": 3,
+            "uptime": 99.48
           },
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 46,
+            "incidentCount": 47,
             "uptime": 97.12
           }
         ],
         "tagSummary": [
           {
             "tag": "inference",
-            "count30d": 33,
+            "count30d": 34,
             "count90d": 34
           },
           {
             "tag": "api",
-            "count30d": 27,
-            "count90d": 27
+            "count30d": 28,
+            "count90d": 28
           },
           {
             "tag": "availability",
@@ -428,10 +428,25 @@
           "b2b": 2,
           "b2c": 13,
           "both": 3,
-          "unknown": 31
+          "unknown": 32
         }
       },
       "recentIncidents": [
+        {
+          "id": "3yxsctr39y3j",
+          "providerId": "anthropic",
+          "title": "Elevated errors on Claude Haiku 4.5",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "audience": "unknown",
+          "startedAt": "2026-04-29T13:47:45.184Z",
+          "resolvedAt": "2026-04-29T14:14:34.340Z",
+          "durationMinutes": 27,
+          "url": "https://stspg.io/m50jwrs9k9hf"
+        },
         {
           "id": "lryjwwy0q9pl",
           "providerId": "anthropic",
@@ -638,21 +653,6 @@
           "resolvedAt": "2026-04-24T03:34:28.107Z",
           "durationMinutes": 39,
           "url": "https://stspg.io/1bbclk6dkxh7"
-        },
-        {
-          "id": "1gz3fcvd76fx",
-          "providerId": "anthropic",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "severity": "minor",
-          "tags": [
-            "inference",
-            "api"
-          ],
-          "audience": "unknown",
-          "startedAt": "2026-04-23T15:29:04.130Z",
-          "resolvedAt": "2026-04-23T15:59:21.781Z",
-          "durationMinutes": 30,
-          "url": "https://stspg.io/pkskbt30gw7r"
         }
       ],
       "news": [
@@ -710,7 +710,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:10.823Z"
+        "updatedAt": "2026-04-29T15:33:22.438Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -813,7 +813,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:11.517Z"
+        "updatedAt": "2026-04-29T15:33:23.166Z"
       },
       "stats": {
         "providerId": "groq",
@@ -938,7 +938,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:12.172Z"
+        "updatedAt": "2026-04-29T15:33:23.799Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1085,7 +1085,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:12.975Z"
+        "updatedAt": "2026-04-29T15:33:24.631Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1371,17 +1371,17 @@
       },
       "status": {
         "providerId": "vercel",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:13.732Z"
+        "indicator": "minor",
+        "description": "Minor Service Outage",
+        "updatedAt": "2026-04-29T15:33:25.382Z"
       },
       "stats": {
         "providerId": "vercel",
         "uptime30d": 98.8,
         "uptime90d": 95.52,
-        "incidentCount30d": 17,
+        "incidentCount30d": 18,
         "avgMttr30d": 145,
-        "lastIncident": "2026-04-28T15:46:22.195Z",
+        "lastIncident": "2026-04-29T15:28:00.839Z",
         "reliabilityScore": 80,
         "reliabilityScore90d": 82,
         "monthlyTrend": [
@@ -1400,7 +1400,7 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 15,
+            "incidentCount": 16,
             "uptime": 98.79
           }
         ],
@@ -1416,14 +1416,14 @@
             "count90d": 11
           },
           {
-            "tag": "deployment",
-            "count30d": 5,
+            "tag": "other",
+            "count30d": 6,
             "count90d": 10
           },
           {
-            "tag": "other",
+            "tag": "deployment",
             "count30d": 5,
-            "count90d": 9
+            "count90d": 10
           },
           {
             "tag": "availability",
@@ -1447,13 +1447,27 @@
           }
         ],
         "audienceBreakdown": {
-          "b2b": 17,
+          "b2b": 18,
           "b2c": 0,
           "both": 0,
           "unknown": 0
         }
       },
       "recentIncidents": [
+        {
+          "id": "j7fqlhkhmng6",
+          "providerId": "vercel",
+          "title": "Elevated Domains Errors",
+          "severity": "minor",
+          "tags": [
+            "other"
+          ],
+          "audience": "b2b",
+          "startedAt": "2026-04-29T15:28:00.839Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/cpt63yzm29tj"
+        },
         {
           "id": "fj1l831cmjlk",
           "providerId": "vercel",
@@ -1650,23 +1664,6 @@
           "resolvedAt": "2026-04-02T18:53:26.350Z",
           "durationMinutes": 283,
           "url": "https://stspg.io/2zy4m92qfj2n"
-        },
-        {
-          "id": "3lm82hkft7tg",
-          "providerId": "vercel",
-          "title": "Elevated errors creating deployments with integrations and increased delays in delivering webhooks",
-          "severity": "minor",
-          "tags": [
-            "webhook",
-            "deployment",
-            "performance",
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-01T20:48:18.344Z",
-          "resolvedAt": "2026-04-01T22:17:28.723Z",
-          "durationMinutes": 89,
-          "url": "https://stspg.io/vmlj4vync5gk"
         }
       ],
       "news": [
@@ -1705,15 +1702,6 @@
           "publishedAt": "2026-03-07T09:08:25Z",
           "points": 2,
           "commentCount": 1
-        },
-        {
-          "id": "47762044",
-          "title": "I built a product that allows you to generate a ad off of just a product url",
-          "url": "https://cutagent.vercel.app/",
-          "source": "hackernews",
-          "publishedAt": "2026-04-14T06:38:20Z",
-          "points": 1,
-          "commentCount": 0
         }
       ]
     },
@@ -1732,7 +1720,7 @@
         "providerId": "cloudflare",
         "indicator": "minor",
         "description": "Minor Service Outage",
-        "updatedAt": "2026-04-29T13:09:14.442Z"
+        "updatedAt": "2026-04-29T15:33:26.113Z"
       },
       "stats": {
         "providerId": "cloudflare",
@@ -1760,7 +1748,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 89.46
+            "uptime": 89.5
           }
         ],
         "tagSummary": [
@@ -2082,7 +2070,7 @@
         "providerId": "github",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T13:09:15.354Z"
+        "updatedAt": "2026-04-29T15:33:26.956Z"
       },
       "stats": {
         "providerId": "github",
@@ -2110,7 +2098,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 27,
-            "uptime": 93.8
+            "uptime": 93.82
           }
         ],
         "tagSummary": [
@@ -2439,7 +2427,7 @@
         "providerId": "azure",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:15.784Z"
+        "updatedAt": "2026-04-29T15:33:27.401Z"
       },
       "stats": {
         "providerId": "azure",
@@ -2487,7 +2475,7 @@
         "providerId": "netlify",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:16.599Z"
+        "updatedAt": "2026-04-29T15:33:28.160Z"
       },
       "stats": {
         "providerId": "netlify",
@@ -2788,7 +2776,7 @@
         "providerId": "render",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:17.309Z"
+        "updatedAt": "2026-04-29T15:33:28.842Z"
       },
       "stats": {
         "providerId": "render",
@@ -3099,7 +3087,7 @@
         "providerId": "supabase",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:18.098Z"
+        "updatedAt": "2026-04-29T15:33:29.518Z"
       },
       "stats": {
         "providerId": "supabase",
@@ -3127,7 +3115,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 12,
-            "uptime": 95.29
+            "uptime": 95.3
           }
         ],
         "tagSummary": [
@@ -3437,7 +3425,7 @@
         "providerId": "pinecone",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:18.799Z"
+        "updatedAt": "2026-04-29T15:33:30.185Z"
       },
       "stats": {
         "providerId": "pinecone",
@@ -3576,7 +3564,7 @@
         "providerId": "mongodb",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:19.507Z"
+        "updatedAt": "2026-04-29T15:33:30.906Z"
       },
       "stats": {
         "providerId": "mongodb",
@@ -3604,7 +3592,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 3,
-            "uptime": 90.17
+            "uptime": 90.2
           }
         ],
         "tagSummary": [
@@ -3894,7 +3882,7 @@
         "providerId": "upstash",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:20.325Z"
+        "updatedAt": "2026-04-29T15:33:31.739Z"
       },
       "stats": {
         "providerId": "upstash",
@@ -4036,7 +4024,7 @@
         "providerId": "twilio",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T13:09:20.967Z"
+        "updatedAt": "2026-04-29T15:33:32.413Z"
       },
       "stats": {
         "providerId": "twilio",
@@ -4064,7 +4052,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 80.23
+            "uptime": 80.3
           }
         ],
         "tagSummary": [
@@ -4343,7 +4331,7 @@
         "providerId": "sendgrid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:21.635Z"
+        "updatedAt": "2026-04-29T15:33:33.088Z"
       },
       "stats": {
         "providerId": "sendgrid",
@@ -4371,7 +4359,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 11,
-            "uptime": 97.92
+            "uptime": 97.93
           }
         ],
         "tagSummary": [
@@ -4642,16 +4630,16 @@
         "providerId": "plaid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T13:09:22.356Z"
+        "updatedAt": "2026-04-29T15:33:33.878Z"
       },
       "stats": {
         "providerId": "plaid",
-        "uptime30d": 98.68,
+        "uptime30d": 98.74,
         "uptime90d": 99.18,
-        "incidentCount30d": 9,
-        "avgMttr30d": 194,
+        "incidentCount30d": 8,
+        "avgMttr30d": 203,
         "lastIncident": "2026-04-29T02:20:25.000Z",
-        "reliabilityScore": 87,
+        "reliabilityScore": 88,
         "reliabilityScore90d": 87,
         "monthlyTrend": [
           {
@@ -4676,7 +4664,7 @@
         "tagSummary": [
           {
             "tag": "availability",
-            "count30d": 3,
+            "count30d": 2,
             "count90d": 9
           },
           {
@@ -4706,7 +4694,7 @@
           }
         ],
         "audienceBreakdown": {
-          "b2b": 9,
+          "b2b": 8,
           "b2c": 0,
           "both": 0,
           "unknown": 0
@@ -4952,21 +4940,9 @@
       "category": "llm",
       "tags": [
         {
-          "tag": "inference",
-          "count30d": 45,
-          "count90d": 48,
-          "trend": "up",
-          "providers": [
-            "openai",
-            "anthropic",
-            "google-ai",
-            "groq"
-          ]
-        },
-        {
           "tag": "api",
-          "count30d": 43,
-          "count90d": 47,
+          "count30d": 44,
+          "count90d": 48,
           "trend": "up",
           "providers": [
             "openai",
@@ -4974,6 +4950,18 @@
             "google-ai",
             "cohere",
             "deepseek"
+          ]
+        },
+        {
+          "tag": "inference",
+          "count30d": 46,
+          "count90d": 48,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "google-ai",
+            "groq"
           ]
         },
         {
@@ -5048,8 +5036,8 @@
       "tags": [
         {
           "tag": "other",
-          "count30d": 45,
-          "count90d": 61,
+          "count30d": 46,
+          "count90d": 62,
           "trend": "up",
           "providers": [
             "vercel",
@@ -5272,7 +5260,7 @@
         },
         {
           "tag": "availability",
-          "count30d": 3,
+          "count30d": 2,
           "count90d": 9,
           "trend": "stable",
           "providers": [
@@ -5321,5 +5309,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-29T13:09:32.420Z"
+  "generatedAt": "2026-04-29T15:33:45.528Z"
 }
