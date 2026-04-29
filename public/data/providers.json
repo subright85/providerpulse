@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-04-29T22:32:54.056Z"
+        "updatedAt": "2026-04-29T23:59:04.600Z"
       },
       "stats": {
         "providerId": "openai",
@@ -304,6 +304,133 @@
           "url": "https://status.openai.com"
         }
       ],
+      "components": [
+        {
+          "id": "01JMXBRMFE6N2NNT7DG6XZQ6PW",
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "id": "01JP8CD9JR3HR6Y7G4Q75N4DVW",
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "id": "01KMP3KP5M8X0EBTVW6KN327EE",
+          "name": "VS Code extension",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFEMZK0HPK19RYET250",
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFE4MAP2BHSJNZ787WX",
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFE5ESNNV8JDHVCGSRD",
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFEKVBWKK82B44QFMCE",
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFEVZ7E0X9GD9FWR9WX",
+          "name": "Moderations",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFEV0AJ0VVS68N9CD6R",
+          "name": "Embeddings",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFESJCBGJR10PDD3WCQ",
+          "name": "Files",
+          "status": "operational"
+        },
+        {
+          "id": "01JSM5RTJWHRWDTS6Q604VEW3B",
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "id": "01JVCV8YSWZFRSM1G5CVP253SK",
+          "name": "Codex Web",
+          "status": "operational"
+        },
+        {
+          "id": "01KMKFAMWKNQ84Z1766MV08ZDE",
+          "name": "CLI",
+          "status": "operational"
+        },
+        {
+          "id": "01KKAD7C71MCCH3FTREMJH4AAS",
+          "name": "FedRAMP",
+          "status": "operational"
+        },
+        {
+          "id": "01JNKS9D9S72PMP1938PVFFQN4",
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "id": "01K8C008QVXHA6JX98PAS42VPD",
+          "name": "ChatGPT Atlas",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBNJXG1YMQPPCPCQX3MPA2",
+          "name": "File uploads",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFEQW613TFE89F45035",
+          "name": "Realtime",
+          "status": "operational"
+        },
+        {
+          "id": "01K9G527YRPY1EFRMHTKB5BKT5",
+          "name": "Sora",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBNJXGV1T5GT2M9XA83XNG",
+          "name": "Conversations",
+          "status": "operational"
+        },
+        {
+          "id": "01JSG1XMJ9RVJJQ0E85NVSJ2AZ",
+          "name": "Agent",
+          "status": "operational"
+        },
+        {
+          "id": "01JMXBNJXGGT5SR5DB9J7GYY48",
+          "name": "Voice mode",
+          "status": "operational"
+        },
+        {
+          "id": "01K6TVGGGDCP0PPGCHXAG3AQX8",
+          "name": "Connectors/Apps",
+          "status": "degraded_performance"
+        },
+        {
+          "id": "01KMKFAMWKQ81YWSE1Z18R6VHR",
+          "name": "App",
+          "status": "operational"
+        },
+        {
+          "id": "01KMP3KP5MGE23B80K1EK4S8PV",
+          "name": "Codex API",
+          "status": "operational"
+        }
+      ],
       "news": [
         {
           "id": "47316132",
@@ -358,7 +485,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:32:54.919Z"
+        "updatedAt": "2026-04-29T23:59:05.610Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -386,7 +513,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 47,
-            "uptime": 97.15
+            "uptime": 97.16
           }
         ],
         "tagSummary": [
@@ -657,6 +784,38 @@
           "url": "https://stspg.io/1bbclk6dkxh7"
         }
       ],
+      "components": [
+        {
+          "id": "rwppv331jlwc",
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
+          "id": "0qbwn08sd68x",
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "id": "k8w3r06qmzrp",
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "id": "yyzkbfz2thpt",
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "id": "bpp5gb3hpjcl",
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "id": "0scnb50nvy53",
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
       "news": [
         {
           "id": "47235892",
@@ -712,7 +871,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:32:55.373Z"
+        "updatedAt": "2026-04-29T23:59:06.059Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -779,6 +938,7 @@
           "url": "https://status.cloud.google.com/incidents/41E5S3mkTGDfkZuJZH5k"
         }
       ],
+      "components": [],
       "news": [
         {
           "id": "47099660",
@@ -815,7 +975,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:32:56.150Z"
+        "updatedAt": "2026-04-29T23:59:06.788Z"
       },
       "stats": {
         "providerId": "groq",
@@ -923,6 +1083,109 @@
           "url": "https://groqstatus.com"
         }
       ],
+      "components": [
+        {
+          "id": "01K6Y7AE9B4D28CW023BVEHRWC",
+          "name": "meta-llama/llama-guard-4-12b",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BFXCCZGAP08KRFX0C",
+          "name": "openai/gpt-oss-20b",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BV96KK16JNHQC6H09",
+          "name": "groq/compound-mini",
+          "status": "operational"
+        },
+        {
+          "id": "01KD6DG59NFJREPYMMSF9A48GJ",
+          "name": "Canopy Labs Orpheus Arabic Saudi",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BXTFV76A9WK0AFGM3",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9B0EC9MMK29ZBRS5YR",
+          "name": "meta-llama/llama-prompt-guard-2-86m",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9B02E51XN6DK0BQWJK",
+          "name": "moonshotai/kimi-k2-instruct-0905",
+          "status": "operational"
+        },
+        {
+          "id": "01K8R45PBNMKVK1GM18WXJ6F54",
+          "name": "openai/gpt-oss-safeguard-20b",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BT3JCHWXKKB98GD0N",
+          "name": "qwen/qwen3-32b",
+          "status": "operational"
+        },
+        {
+          "id": "01K053E2FAFPVT8SKR4T23WHQK",
+          "name": "Website",
+          "status": "operational",
+          "description": "groq.com and console.groq.com"
+        },
+        {
+          "id": "01K6Y7AE9BDH78Q7P0GAVJ7PX1",
+          "name": "llama-3.1-8b-instant",
+          "status": "operational"
+        },
+        {
+          "id": "01K053E2FAKWKEYHXEV7WAHJBM",
+          "name": "API",
+          "status": "operational"
+        },
+        {
+          "id": "01KD6DE2KKE9AZKYPBN7E8BKT6",
+          "name": "Canopy Labs Orpheus English",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BWQMK2RSC6SX46019",
+          "name": "meta-llama/llama-prompt-guard-2-22m",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BVFH7CWEXN74MND4V",
+          "name": "whisper-large-v3",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9B8GNTTX2MQFCAS3MX",
+          "name": "groq/compound",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BZFN4QCY3TNQXFBHC",
+          "name": "whisper-large-v3-turbo",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BBBKD92266DJ23AGX",
+          "name": "openai/gpt-oss-120b",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BSWJ2SGHJT92HG53X",
+          "name": "meta-llama/llama-4-maverick-17b-128e-instruct",
+          "status": "operational"
+        },
+        {
+          "id": "01K6Y7AE9BWXJATX45RHX9SQEV",
+          "name": "llama-3.3-70b-versatile",
+          "status": "operational"
+        }
+      ],
       "news": []
     },
     {
@@ -940,7 +1203,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:32:56.811Z"
+        "updatedAt": "2026-04-29T23:59:07.543Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1070,6 +1333,145 @@
           "url": "https://status.cohere.com"
         }
       ],
+      "components": [
+        {
+          "id": "01HPSDNEQZM6R7MGPCN9VPZ83H",
+          "name": "Docs",
+          "status": "operational",
+          "description": "Comprehensive documentation that outlines Cohere's APIs, endpoints, and related developer resources."
+        },
+        {
+          "id": "01HPSDNEQZNDBHHC90FDBS70EP",
+          "name": "Website",
+          "status": "operational",
+          "description": "This represents Cohere's main website, which serves as a primary interface for users and customers to learn about the company's products and services."
+        },
+        {
+          "id": "01HQ6CA39NZ5X3PRFPN71Q89TE",
+          "name": "embeddings",
+          "status": "operational",
+          "description": "Generates word embeddings for words or phrases."
+        },
+        {
+          "id": "01JVSVZEEWNAY445Z6KQ2FWBHV",
+          "name": "embed-v4.0",
+          "status": "operational"
+        },
+        {
+          "id": "01K3615WHHNP4YXCG1S7Y9DWJJ",
+          "name": "command-a-reasoning-08-2025",
+          "status": "operational"
+        },
+        {
+          "id": "01JPJY4Y5P9N4AYA7FXXKQ71FA",
+          "name": "command-a-03-2025",
+          "status": "operational",
+          "description": "Command A is our most performant model to date, excelling at tool use, agents, retrieval augmented generation (RAG), and multilingual use cases."
+        },
+        {
+          "id": "01HQ6CA39NK5QH224R8VYAQ8AG",
+          "name": "embed-multilingual-light-v3.0",
+          "status": "operational",
+          "description": "A smaller, faster version of embed-multilingual-v3.0. Almost as capable, but a lot faster. Supports multiple languages."
+        },
+        {
+          "id": "01HTQRNEDQ3JJENABEB4X6TS6N",
+          "name": "Coral",
+          "status": "operational",
+          "description": "Coral is an AI-assistant chatbot, trained to provide helpful and thorough responses to user queries, offering a safe and friendly conversation experience."
+        },
+        {
+          "id": "01HTJQBPX6BPFRKNY2EQJ2S3ZA",
+          "name": "embed-english-v3.0",
+          "status": "operational",
+          "description": "A model that allows for text to be classified or turned into embeddings. English only."
+        },
+        {
+          "id": "01HPSPCNBW0R74QDXBWQ10RTC0",
+          "name": "Infrastructure",
+          "status": "operational",
+          "description": "It provides real-time information on the health and performance of Cohere's API infrastructure, indicating whether the services are functioning optimally or experiencing any disruptions"
+        },
+        {
+          "id": "01HTQRNEDQQ9E16WRMZF16HH40",
+          "name": "Playground",
+          "status": "operational",
+          "description": "The Playground is an interactive testing environment for users to experiment with Cohere's API, observe response generation, and explore the capabilities of the underlying language model."
+        },
+        {
+          "id": "01HTJQBPX6PV33KCJVX6FHRRB1",
+          "name": "embed-english-light-v3.0",
+          "status": "operational",
+          "description": "A smaller, faster version of embed-english-v3.0. Almost as capable, but a lot faster. English only."
+        },
+        {
+          "id": "01HVPXG9XDKMV4J7QHD4DR77BT",
+          "name": "rerank-english-v3.0",
+          "status": "operational",
+          "description": "Rerank endpoint enables you to significantly improve search quality by augmenting traditional key-word based search systems with a semantic-based reranking system which can contextualize the meaning of a user's query beyond keyword relevance. "
+        },
+        {
+          "id": "01JDSM6NYV4NB4B000NKMN0GD0",
+          "name": "command-r-082024",
+          "status": "operational"
+        },
+        {
+          "id": "01K3615WHH42XCRT45M5EMXQ80",
+          "name": "command-a-vision-07-2025",
+          "status": "operational"
+        },
+        {
+          "id": "01JFBAF0C96Z5SGTH6158ZYX42",
+          "name": "command-r7b",
+          "status": "operational",
+          "description": "The smallest model in our R series delivers top-tier speed, efficiency, and quality to build powerful AI applications on commodity GPUs and edge devices."
+        },
+        {
+          "id": "01HVPXG9XD4PZWMT2E6WJWKEYG",
+          "name": "rerank-multilingual-v3.0",
+          "status": "operational",
+          "description": "Rerank endpoint enables you to significantly improve search quality by augmenting traditional key-word based search systems with a semantic-based reranking system which can contextualize the meaning of a user's query beyond keyword relevance.  In over 100 languages."
+        },
+        {
+          "id": "01KC9J08TST7F3FPCWBZM2QNVM",
+          "name": "rerank-v4.0-fast",
+          "status": "operational"
+        },
+        {
+          "id": "01HVPXG9XD2Q8DWDJ7P9Q7E21C",
+          "name": "rerank-english-v2.0",
+          "status": "operational",
+          "description": "Rerank will return a sorted list of documents based on the semantic similarity between the query and documents."
+        },
+        {
+          "id": "01JE3W0DMZT3SQZKJDRSMQR6TS",
+          "name": "rerank-v3.5",
+          "status": "operational",
+          "description": "Rerank 3.5 delivers improved reasoning and multilingual capabilities to search complex enterprise data with greater accuracy. "
+        },
+        {
+          "id": "01KC9J08TSXWHF9GKWDY20S4XF",
+          "name": "rerank-v4.0-pro",
+          "status": "operational"
+        },
+        {
+          "id": "01JDSM6NYVCPM4HD2JEJ6Y1B16",
+          "name": "command-r-plus-082024",
+          "status": "operational"
+        },
+        {
+          "id": "01HVPXG9XDA72BSQJMPWXG06YQ",
+          "name": "rerank-multilingual-v2.0",
+          "status": "operational",
+          "description": "Rerank will return a sorted list of documents based on the semantic similarity between the query and documents in over 100 languages."
+        },
+        {
+          "id": "01HQ6CA39NZXA9MTA2W4QM5K51",
+          "name": "embed-multilingual-v3.0",
+          "status": "operational",
+          "description": "Provides multilingual classification and embedding support."
+        }
+      ],
       "news": []
     },
     {
@@ -1087,7 +1489,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:32:57.511Z"
+        "updatedAt": "2026-04-29T23:59:08.380Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1330,6 +1732,20 @@
           "url": "https://stspg.io/tpp7mh4fcydk"
         }
       ],
+      "components": [
+        {
+          "id": "j4n367d9mh3x",
+          "name": "API 服务 (API Service)",
+          "status": "operational",
+          "description": "https://api.deepseek.com 的状态 (The status of https://api.deepseek.com)"
+        },
+        {
+          "id": "b76wbf9n5nq3",
+          "name": "网页对话服务 (Web Chat Service)",
+          "status": "operational",
+          "description": "https://chat.deepseek.com 的状态 (The status of https://chat.deepseek.com)"
+        }
+      ],
       "news": [
         {
           "id": "47573193",
@@ -1357,3575 +1773,6 @@
           "publishedAt": "2026-04-10T15:49:04Z",
           "points": 2,
           "commentCount": 0
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": "vercel",
-        "name": "Vercel",
-        "category": "infra",
-        "icon": "▲",
-        "domain": "vercel.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://www.vercel-status.com/api/v2/summary.json",
-        "statusPageUrl": "https://www.vercel-status.com"
-      },
-      "status": {
-        "providerId": "vercel",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:32:58.281Z"
-      },
-      "stats": {
-        "providerId": "vercel",
-        "uptime30d": 98.76,
-        "uptime90d": 95.69,
-        "incidentCount30d": 18,
-        "avgMttr30d": 141,
-        "lastIncident": "2026-04-29T15:28:00.839Z",
-        "reliabilityScore": 80,
-        "reliabilityScore90d": 82,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 9,
-            "uptime": 99.09
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 14,
-            "uptime": 89.46
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 16,
-            "uptime": 98.77
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "api",
-            "count30d": 6,
-            "count90d": 14
-          },
-          {
-            "tag": "performance",
-            "count30d": 4,
-            "count90d": 11
-          },
-          {
-            "tag": "deployment",
-            "count30d": 5,
-            "count90d": 10
-          },
-          {
-            "tag": "other",
-            "count30d": 6,
-            "count90d": 9
-          },
-          {
-            "tag": "availability",
-            "count30d": 1,
-            "count90d": 2
-          },
-          {
-            "tag": "webhook",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "billing",
-            "count30d": 0,
-            "count90d": 1
-          },
-          {
-            "tag": "network",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 18,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "j7fqlhkhmng6",
-          "providerId": "vercel",
-          "title": "Elevated Domains Errors",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-29T15:28:00.839Z",
-          "resolvedAt": "2026-04-29T16:42:35.620Z",
-          "durationMinutes": 75,
-          "url": "https://stspg.io/cpt63yzm29tj"
-        },
-        {
-          "id": "fj1l831cmjlk",
-          "providerId": "vercel",
-          "title": "Errors Deploying Templates",
-          "severity": "minor",
-          "tags": [
-            "deployment"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T15:46:22.195Z",
-          "resolvedAt": "2026-04-28T16:53:40.983Z",
-          "durationMinutes": 67,
-          "url": "https://stspg.io/qcg7qnr3xj1z"
-        },
-        {
-          "id": "gp7hyv3p9lh7",
-          "providerId": "vercel",
-          "title": "Delayed Usage Data for Observability Events",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T09:00:00.000Z",
-          "resolvedAt": "2026-04-28T09:00:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/1fymnc6pnjhg"
-        },
-        {
-          "id": "r98wgd6yk2q7",
-          "providerId": "vercel",
-          "title": "Errors Purchasing Domains, AI Gateway Credits",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-25T00:39:58.762Z",
-          "resolvedAt": "2026-04-25T04:19:37.629Z",
-          "durationMinutes": 220,
-          "url": "https://stspg.io/29qbhs8hwfcr"
-        },
-        {
-          "id": "jzslkpxzv3x1",
-          "providerId": "vercel",
-          "title": "Partial Observability Outage Affecting Compute Telemetry",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-22T23:00:00.000Z",
-          "resolvedAt": "2026-04-22T23:00:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/t21ks8bv18kk"
-        },
-        {
-          "id": "rmjrmx866ytg",
-          "providerId": "vercel",
-          "title": "Delays Loading Logs",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-22T18:25:40.186Z",
-          "resolvedAt": "2026-04-23T01:12:50.143Z",
-          "durationMinutes": 407,
-          "url": "https://stspg.io/fmrgpm6hwfbg"
-        },
-        {
-          "id": "0yxcg01fmkrt",
-          "providerId": "vercel",
-          "title": "Elevated errors on Vercel Dashboard",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-21T13:51:39.746Z",
-          "resolvedAt": "2026-04-21T14:41:39.008Z",
-          "durationMinutes": 50,
-          "url": "https://stspg.io/xnv54x757ns7"
-        },
-        {
-          "id": "mq881xjms6bq",
-          "providerId": "vercel",
-          "title": "Elevated errors on Vercel Dashboard and API endpoints",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-20T19:40:58.989Z",
-          "resolvedAt": "2026-04-20T20:56:06.813Z",
-          "durationMinutes": 75,
-          "url": "https://stspg.io/wrqpg5spy92n"
-        },
-        {
-          "id": "lk2q4f19llwb",
-          "providerId": "vercel",
-          "title": "Unaccessible runtime logs in the dashboard",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-20T10:10:28.869Z",
-          "resolvedAt": "2026-04-20T10:36:15.596Z",
-          "durationMinutes": 26,
-          "url": "https://stspg.io/m6czdx9vzjnz"
-        },
-        {
-          "id": "d6v8pn1phpky",
-          "providerId": "vercel",
-          "title": "Observability Alerts degraded",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-20T09:38:32.000Z",
-          "resolvedAt": "2026-04-20T22:18:02.695Z",
-          "durationMinutes": 760,
-          "url": "https://stspg.io/8pbf2k5stwjl"
-        },
-        {
-          "id": "y0nj9lwzywk3",
-          "providerId": "vercel",
-          "title": "Delays Loading Observability, Analytics and Speed Insights",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-19T20:43:03.000Z",
-          "resolvedAt": "2026-04-19T21:39:23.070Z",
-          "durationMinutes": 56,
-          "url": "https://stspg.io/s7zffq0qxtnl"
-        },
-        {
-          "id": "bnsx15h1zws7",
-          "providerId": "vercel",
-          "title": "Elevated queue times for deployments on the Hobby plan",
-          "severity": "minor",
-          "tags": [
-            "deployment"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-07T18:06:45.565Z",
-          "resolvedAt": "2026-04-07T18:56:26.102Z",
-          "durationMinutes": 50,
-          "url": "https://stspg.io/th8dzywxmplp"
-        },
-        {
-          "id": "xp5s28zds60n",
-          "providerId": "vercel",
-          "title": "Builds logs stuck in loading state in iad1",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-07T07:19:44.304Z",
-          "resolvedAt": "2026-04-07T08:37:27.937Z",
-          "durationMinutes": 78,
-          "url": "https://stspg.io/zmym753mdstn"
-        },
-        {
-          "id": "820l7jdlx34z",
-          "providerId": "vercel",
-          "title": "Elevated INTERNAL_UNEXPECTED_ERROR error rates for some deployments",
-          "severity": "minor",
-          "tags": [
-            "deployment",
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-02T18:39:57.683Z",
-          "resolvedAt": "2026-04-02T23:09:16.439Z",
-          "durationMinutes": 269,
-          "url": "https://stspg.io/drc0srj06t3t"
-        },
-        {
-          "id": "5r9bp5y8rql2",
-          "providerId": "vercel",
-          "title": "Elevated errors (SIGSEGV) for Vercel Functions running Node.js 20 in cle1 and dub1 regions",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-02T14:10:14.765Z",
-          "resolvedAt": "2026-04-02T18:53:26.350Z",
-          "durationMinutes": 283,
-          "url": "https://stspg.io/2zy4m92qfj2n"
-        }
-      ],
-      "news": [
-        {
-          "id": "47844674",
-          "title": "I made a rap album about SRE/DevOps incidents and outages and it slaps",
-          "url": "https://poddaddy5x9.vercel.app/",
-          "source": "hackernews",
-          "publishedAt": "2026-04-21T04:55:42Z",
-          "points": 1,
-          "commentCount": 3
-        },
-        {
-          "id": "47184495",
-          "title": "Show HN: My iPhone notifies me about cloud outages before they blow up here",
-          "url": "https://apps.apple.com/us/app/pingy-cloud-outage-alerts/id6759363978",
-          "source": "hackernews",
-          "publishedAt": "2026-02-27T19:27:50Z",
-          "points": 1,
-          "commentCount": 0
-        },
-        {
-          "id": "47322794",
-          "title": "SHOW HN: A usage circuit breaker for Cloudflare Workers",
-          "url": "https://news.ycombinator.com/item?id=47322794",
-          "source": "hackernews",
-          "publishedAt": "2026-03-10T13:09:00Z",
-          "points": 29,
-          "commentCount": 9
-        },
-        {
-          "id": "47285913",
-          "title": "Show HN: Pre-Launch – $15/Mo Status Page (Vs Atlassian $299) – Join Waitlist",
-          "url": "https://news.ycombinator.com/item?id=47285913",
-          "source": "hackernews",
-          "publishedAt": "2026-03-07T09:08:25Z",
-          "points": 2,
-          "commentCount": 1
-        },
-        {
-          "id": "47762044",
-          "title": "I built a product that allows you to generate a ad off of just a product url",
-          "url": "https://cutagent.vercel.app/",
-          "source": "hackernews",
-          "publishedAt": "2026-04-14T06:38:20Z",
-          "points": 1,
-          "commentCount": 0
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": "cloudflare",
-        "name": "Cloudflare",
-        "category": "infra",
-        "icon": "☁️",
-        "domain": "cloudflare.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://www.cloudflarestatus.com/api/v2/summary.json",
-        "statusPageUrl": "https://www.cloudflarestatus.com"
-      },
-      "status": {
-        "providerId": "cloudflare",
-        "indicator": "minor",
-        "description": "Minor Service Outage",
-        "updatedAt": "2026-04-29T22:32:59.103Z"
-      },
-      "stats": {
-        "providerId": "cloudflare",
-        "uptime30d": 90.03,
-        "uptime90d": 96.68,
-        "incidentCount30d": 50,
-        "avgMttr30d": 366,
-        "lastIncident": "2026-04-29T19:19:06.595Z",
-        "reliabilityScore": 57,
-        "reliabilityScore90d": 82,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 50,
-            "uptime": 89.66
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "other",
-            "count30d": 22,
-            "count90d": 22
-          },
-          {
-            "tag": "network",
-            "count30d": 14,
-            "count90d": 14
-          },
-          {
-            "tag": "api",
-            "count30d": 8,
-            "count90d": 8
-          },
-          {
-            "tag": "performance",
-            "count30d": 7,
-            "count90d": 7
-          },
-          {
-            "tag": "auth",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "rate-limit",
-            "count30d": 1,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 50,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "yhp2dw512p4b",
-          "providerId": "cloudflare",
-          "title": "Cloudflare Access experiencing delays with audit logs",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-29T19:19:06.595Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
-          "url": "https://stspg.io/p29ylwrzpp01"
-        },
-        {
-          "id": "yg4t0swj39fg",
-          "providerId": "cloudflare",
-          "title": "Duplicated values in X-Forwarded-For header",
-          "severity": "critical",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T18:31:16.922Z",
-          "resolvedAt": "2026-04-29T09:30:19.892Z",
-          "durationMinutes": 899,
-          "url": "https://stspg.io/8882twknjyks"
-        },
-        {
-          "id": "946z5w0bkkjm",
-          "providerId": "cloudflare",
-          "title": "Network Performance Issues in IST",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T08:41:04.948Z",
-          "resolvedAt": "2026-04-28T10:30:16.762Z",
-          "durationMinutes": 109,
-          "url": "https://stspg.io/d3f2zn9ncpbt"
-        },
-        {
-          "id": "q3dfc2fh97v5",
-          "providerId": "cloudflare",
-          "title": "Increased HTTP Errors in YUL",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T05:00:00.000Z",
-          "resolvedAt": "2026-04-28T05:00:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/22w6rt8zpk7b"
-        },
-        {
-          "id": "hv7d740x2fy2",
-          "providerId": "cloudflare",
-          "title": "Turnstile Challenge Issues",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T06:15:21.303Z",
-          "resolvedAt": "2026-04-27T07:09:24.883Z",
-          "durationMinutes": 54,
-          "url": "https://stspg.io/5tw81b1dw64k"
-        },
-        {
-          "id": "95n79xjdtpjw",
-          "providerId": "cloudflare",
-          "title": "Network Performance Issues in Brazil",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T04:25:55.951Z",
-          "resolvedAt": "2026-04-27T04:50:49.887Z",
-          "durationMinutes": 25,
-          "url": "https://stspg.io/9tf18yqjsvwm"
-        },
-        {
-          "id": "skp2cqydhpqy",
-          "providerId": "cloudflare",
-          "title": "WARP connectivity issues in Bulgaria",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T14:34:53.921Z",
-          "resolvedAt": "2026-04-24T16:14:21.037Z",
-          "durationMinutes": 99,
-          "url": "https://stspg.io/78ntkzt74f6g"
-        },
-        {
-          "id": "npmy39sb6n4s",
-          "providerId": "cloudflare",
-          "title": "Network Performance Issues in Miami",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T03:46:59.153Z",
-          "resolvedAt": "2026-04-24T03:48:00.126Z",
-          "durationMinutes": 1,
-          "url": "https://stspg.io/lmmgw8jsv440"
-        },
-        {
-          "id": "0n62ktcf8sb7",
-          "providerId": "cloudflare",
-          "title": "Cloudflare Health check issues",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T02:40:12.901Z",
-          "resolvedAt": "2026-04-24T10:34:42.000Z",
-          "durationMinutes": 474,
-          "url": "https://stspg.io/ft6dsfgmrcpv"
-        },
-        {
-          "id": "38lzgw3xj4pj",
-          "providerId": "cloudflare",
-          "title": "Load Balancing Dashboard Issues",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T00:35:23.563Z",
-          "resolvedAt": "2026-04-24T10:30:08.000Z",
-          "durationMinutes": 595,
-          "url": "https://stspg.io/2nh93s2fb279"
-        },
-        {
-          "id": "yfsclk2fc70s",
-          "providerId": "cloudflare",
-          "title": "Intermittent 5xx errors for Cloudflare Access authentication requests",
-          "severity": "minor",
-          "tags": [
-            "auth"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T21:05:59.180Z",
-          "resolvedAt": "2026-04-24T23:53:43.690Z",
-          "durationMinutes": 1608,
-          "url": "https://stspg.io/q3f65t2gdy8w"
-        },
-        {
-          "id": "jtkhdctxpm2p",
-          "providerId": "cloudflare",
-          "title": "Web Analytics Delays",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T17:03:31.667Z",
-          "resolvedAt": "2026-04-23T20:34:31.226Z",
-          "durationMinutes": 211,
-          "url": "https://stspg.io/f5nt37xkcs2z"
-        },
-        {
-          "id": "69ml7dvdwqd5",
-          "providerId": "cloudflare",
-          "title": "Cloudflare Dashboard API Issues Affecting R2 Buckets",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T10:37:29.978Z",
-          "resolvedAt": "2026-04-23T11:48:33.544Z",
-          "durationMinutes": 71,
-          "url": "https://stspg.io/dr2wr5zr3gn4"
-        },
-        {
-          "id": "qzb6ncj7v2qc",
-          "providerId": "cloudflare",
-          "title": "Network Connectivity Issues in Ashburn Virginia Area.",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T03:57:10.028Z",
-          "resolvedAt": "2026-04-23T04:36:26.131Z",
-          "durationMinutes": 39,
-          "url": "https://stspg.io/r2zsf7jglg1z"
-        },
-        {
-          "id": "8j595rnp7wd8",
-          "providerId": "cloudflare",
-          "title": "Cloudflare Registration Data Access Protocol (RDAP) Issues",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-22T20:46:49.173Z",
-          "resolvedAt": "2026-04-22T22:37:37.627Z",
-          "durationMinutes": 111,
-          "url": "https://stspg.io/q1hr4tb3zgf5"
-        }
-      ],
-      "news": [
-        {
-          "id": "47103649",
-          "title": "Cloudflare outage on February 20, 2026",
-          "url": "https://blog.cloudflare.com/cloudflare-outage-february-20-2026/",
-          "source": "hackernews",
-          "publishedAt": "2026-02-21T19:05:31Z",
-          "points": 190,
-          "commentCount": 125
-        },
-        {
-          "id": "47091882",
-          "title": "Cloudflare Outage",
-          "url": "https://downdetector.com/status/cloudflare/",
-          "source": "hackernews",
-          "publishedAt": "2026-02-20T18:36:17Z",
-          "points": 16,
-          "commentCount": 3
-        },
-        {
-          "id": "47113956",
-          "title": "Quick takes on Feb 20 Cloudflare outage",
-          "url": "https://surfingcomplexity.blog/2026/02/21/quick-takes-on-feb-20-cloudflare-outage/",
-          "source": "hackernews",
-          "publishedAt": "2026-02-22T19:41:44Z",
-          "points": 2,
-          "commentCount": 0
-        },
-        {
-          "id": "47092885",
-          "title": "Cloudflare outage affecting many services",
-          "url": "https://downdetector.co.uk/",
-          "source": "hackernews",
-          "publishedAt": "2026-02-20T19:43:14Z",
-          "points": 1,
-          "commentCount": 0
-        },
-        {
-          "id": "47036177",
-          "title": "Cloudflare Reports Issues as X and Amazon Web Services Are Disrupted",
-          "url": "https://www.nytimes.com/2026/02/16/technology/cloudflare-outage-aws-x-down.html",
-          "source": "hackernews",
-          "publishedAt": "2026-02-16T15:24:21Z",
-          "points": 4,
-          "commentCount": 0
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": "github",
-        "name": "GitHub",
-        "category": "infra",
-        "icon": "🐙",
-        "domain": "github.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://www.githubstatus.com/api/v2/summary.json",
-        "statusPageUrl": "https://www.githubstatus.com"
-      },
-      "status": {
-        "providerId": "github",
-        "indicator": "minor",
-        "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T22:32:59.806Z"
-      },
-      "stats": {
-        "providerId": "github",
-        "uptime30d": 93.89,
-        "uptime90d": 97.48,
-        "incidentCount30d": 29,
-        "avgMttr30d": 197,
-        "lastIncident": "2026-04-28T14:17:34.682Z",
-        "reliabilityScore": 59,
-        "reliabilityScore90d": 69,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 23,
-            "uptime": 98.39
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 27,
-            "uptime": 93.89
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "availability",
-            "count30d": 15,
-            "count90d": 22
-          },
-          {
-            "tag": "other",
-            "count30d": 11,
-            "count90d": 17
-          },
-          {
-            "tag": "performance",
-            "count30d": 1,
-            "count90d": 5
-          },
-          {
-            "tag": "webhook",
-            "count30d": 1,
-            "count90d": 5
-          },
-          {
-            "tag": "inference",
-            "count30d": 3,
-            "count90d": 3
-          },
-          {
-            "tag": "billing",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "auth",
-            "count30d": 0,
-            "count90d": 1
-          },
-          {
-            "tag": "api",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 29,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "x69zbgdyfzg0",
-          "providerId": "github",
-          "title": "Incomplete pull request results in repositories",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T14:17:34.682Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
-          "url": "https://stspg.io/87w0vmv3sz1r"
-        },
-        {
-          "id": "dbypmw7h77l5",
-          "providerId": "github",
-          "title": "Disruption with some GitHub services",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T13:59:16.225Z",
-          "resolvedAt": "2026-04-28T17:09:02.449Z",
-          "durationMinutes": 190,
-          "url": "https://stspg.io/70pkmpfqz6pc"
-        },
-        {
-          "id": "vq183jvj6vrw",
-          "providerId": "github",
-          "title": "Disruption with some GitHub services",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T16:48:18.031Z",
-          "resolvedAt": "2026-04-27T19:02:59.816Z",
-          "durationMinutes": 135,
-          "url": "https://stspg.io/sqvl4sp1cfgz"
-        },
-        {
-          "id": "ql942tw29yl6",
-          "providerId": "github",
-          "title": "GitHub search is degraded",
-          "severity": "critical",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T16:31:07.245Z",
-          "resolvedAt": "2026-04-27T22:46:42.326Z",
-          "durationMinutes": 376,
-          "url": "https://stspg.io/x5cnngb211t7"
-        },
-        {
-          "id": "3dqg0nhwnxs2",
-          "providerId": "github",
-          "title": "Delays with Actions Jobs for Larger Runners using VNet Injection in the East US region",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T19:02:39.061Z",
-          "resolvedAt": "2026-04-25T00:36:04.272Z",
-          "durationMinutes": 333,
-          "url": "https://stspg.io/mcrpvdrwjzf3"
-        },
-        {
-          "id": "zsg1lk7w13cf",
-          "providerId": "github",
-          "title": "Incident with Pull Requests",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T19:50:51.291Z",
-          "resolvedAt": "2026-04-23T21:43:26.000Z",
-          "durationMinutes": 113,
-          "url": "https://stspg.io/byp3p9jymrpl"
-        },
-        {
-          "id": "40f3r1jvjwl2",
-          "providerId": "github",
-          "title": "Disruption with users unable to start Claude and Codex agent task from the web",
-          "severity": "minor",
-          "tags": [
-            "inference",
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T19:28:42.976Z",
-          "resolvedAt": "2026-04-23T19:42:25.277Z",
-          "durationMinutes": 14,
-          "url": "https://stspg.io/nwmzvw3twyyg"
-        },
-        {
-          "id": "myrbk7jvvs6p",
-          "providerId": "github",
-          "title": "Incident with multiple GitHub services",
-          "severity": "critical",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T16:12:47.744Z",
-          "resolvedAt": "2026-04-23T17:30:49.716Z",
-          "durationMinutes": 78,
-          "url": "https://stspg.io/1wm8c7d53454"
-        },
-        {
-          "id": "3f30ycplyr7l",
-          "providerId": "github",
-          "title": "Investigating errors on GitHub",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T14:40:17.981Z",
-          "resolvedAt": "2026-04-23T15:18:41.367Z",
-          "durationMinutes": 38,
-          "url": "https://stspg.io/v510xk27crlr"
-        },
-        {
-          "id": "c53mty24vwg8",
-          "providerId": "github",
-          "title": "Disruption with some GitHub services",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-22T19:53:49.917Z",
-          "resolvedAt": "2026-04-22T22:43:59.100Z",
-          "durationMinutes": 170,
-          "url": "https://stspg.io/xmhs8h2d6zlj"
-        },
-        {
-          "id": "8790jgb3ky6t",
-          "providerId": "github",
-          "title": "Disruption with Copilot chat and Copilot Coding Agent",
-          "severity": "critical",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-22T15:35:45.298Z",
-          "resolvedAt": "2026-04-22T19:18:26.916Z",
-          "durationMinutes": 223,
-          "url": "https://stspg.io/0m0g0r5htdxy"
-        },
-        {
-          "id": "b4235qyfzx2z",
-          "providerId": "github",
-          "title": "Disruption with projects service",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-21T15:03:21.160Z",
-          "resolvedAt": "2026-04-22T01:24:13.877Z",
-          "durationMinutes": 621,
-          "url": "https://stspg.io/z7byhh6vyyrb"
-        },
-        {
-          "id": "m7pgzw1wlfq7",
-          "providerId": "github",
-          "title": "Partial degradation for code scanning default setup and for code quality",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-20T13:28:48.571Z",
-          "resolvedAt": "2026-04-21T05:04:56.242Z",
-          "durationMinutes": 936,
-          "url": "https://stspg.io/qxk1qwhj9xdd"
-        },
-        {
-          "id": "kcf0thb1zp30",
-          "providerId": "github",
-          "title": "Disruption with some GitHub services",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-17T14:56:22.556Z",
-          "resolvedAt": "2026-04-17T15:18:14.767Z",
-          "durationMinutes": 22,
-          "url": "https://stspg.io/96xp38b8l8rn"
-        },
-        {
-          "id": "bjyfg0yz1lwj",
-          "providerId": "github",
-          "title": "Incident with Codespaces",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-16T15:06:56.493Z",
-          "resolvedAt": "2026-04-16T18:28:07.238Z",
-          "durationMinutes": 201,
-          "url": "https://stspg.io/1pw46p8cqh5s"
-        }
-      ],
-      "news": [
-        {
-          "id": "46949452",
-          "title": "Another GitHub outage in the same day",
-          "url": "https://www.githubstatus.com/incidents/lcw3tg2f6zsd",
-          "source": "hackernews",
-          "publishedAt": "2026-02-09T19:07:25Z",
-          "points": 375,
-          "commentCount": 283
-        },
-        {
-          "id": "47918403",
-          "title": "GitHub outages since Microsoft acquisition",
-          "url": "https://old.reddit.com/r/github/comments/1rnvhs9/githubs_historic_downtime_scraped_and_plotted/",
-          "source": "hackernews",
-          "publishedAt": "2026-04-27T06:39:04Z",
-          "points": 5,
-          "commentCount": 0
-        },
-        {
-          "id": "47909814",
-          "title": "GitHub's Outages Since the Microsoft Acquisition",
-          "url": "https://old.reddit.com/r/github/comments/1rnvhs9/githubs_historic_downtime_scraped_and_plotted/",
-          "source": "hackernews",
-          "publishedAt": "2026-04-26T12:32:58Z",
-          "points": 3,
-          "commentCount": 1
-        },
-        {
-          "id": "47237018",
-          "title": "Tell HN: GitHub Having Issues",
-          "url": "https://news.ycombinator.com/item?id=47237018",
-          "source": "hackernews",
-          "publishedAt": "2026-03-03T18:58:33Z",
-          "points": 52,
-          "commentCount": 27
-        },
-        {
-          "id": "46963107",
-          "title": "Show HN: GitEcho – set-and-forget Git mirroring on every push",
-          "url": "https://github.com/prashantsengar/GitEcho",
-          "source": "hackernews",
-          "publishedAt": "2026-02-10T17:10:41Z",
-          "points": 1,
-          "commentCount": 0
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": "azure",
-        "name": "Azure",
-        "category": "infra",
-        "icon": "🔷",
-        "domain": "azure.microsoft.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://azurestatuscdn.azureedge.net/en-us/status/feed/",
-        "statusPageUrl": "https://azure.status.microsoft/en-us/status/",
-        "type": "azure-rss"
-      },
-      "status": {
-        "providerId": "azure",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:00.253Z"
-      },
-      "stats": {
-        "providerId": "azure",
-        "uptime30d": null,
-        "uptime90d": null,
-        "incidentCount30d": 0,
-        "avgMttr30d": null,
-        "lastIncident": null,
-        "reliabilityScore": null,
-        "reliabilityScore90d": null,
-        "monthlyTrend": [],
-        "tagSummary": [],
-        "audienceBreakdown": {
-          "b2b": 0,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [],
-      "news": [
-        {
-          "id": "47184495",
-          "title": "Show HN: My iPhone notifies me about cloud outages before they blow up here",
-          "url": "https://apps.apple.com/us/app/pingy-cloud-outage-alerts/id6759363978",
-          "source": "hackernews",
-          "publishedAt": "2026-02-27T19:27:50Z",
-          "points": 1,
-          "commentCount": 0
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": "netlify",
-        "name": "Netlify",
-        "category": "infra",
-        "icon": "🌐",
-        "domain": "netlify.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://www.netlifystatus.com/api/v2/summary.json",
-        "statusPageUrl": "https://www.netlifystatus.com"
-      },
-      "status": {
-        "providerId": "netlify",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:00.898Z"
-      },
-      "stats": {
-        "providerId": "netlify",
-        "uptime30d": 99.73,
-        "uptime90d": 99.3,
-        "incidentCount30d": 7,
-        "avgMttr30d": 68,
-        "lastIncident": "2026-04-26T03:55:00.000Z",
-        "reliabilityScore": 93,
-        "reliabilityScore90d": 84,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 6,
-            "uptime": 99.75
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 10,
-            "uptime": 98.46
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 7,
-            "uptime": 99.72
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "network",
-            "count30d": 3,
-            "count90d": 9
-          },
-          {
-            "tag": "other",
-            "count30d": 3,
-            "count90d": 6
-          },
-          {
-            "tag": "performance",
-            "count30d": 0,
-            "count90d": 4
-          },
-          {
-            "tag": "availability",
-            "count30d": 1,
-            "count90d": 3
-          },
-          {
-            "tag": "deployment",
-            "count30d": 0,
-            "count90d": 2
-          },
-          {
-            "tag": "api",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 7,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "n2g28kxm1xm2",
-          "providerId": "netlify",
-          "title": "Increased errors on Image CDN",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-26T03:55:00.000Z",
-          "resolvedAt": "2026-04-26T03:55:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/l0d2xxdv9j5w"
-        },
-        {
-          "id": "d0k5f9jlk4xr",
-          "providerId": "netlify",
-          "title": "Increased Errors on Image CDN",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T14:10:10.800Z",
-          "resolvedAt": "2026-04-24T14:57:07.249Z",
-          "durationMinutes": 47,
-          "url": "https://stspg.io/fgts29hbk7fb"
-        },
-        {
-          "id": "xzbvsv46032j",
-          "providerId": "netlify",
-          "title": "Elevated Rate of Build Failures",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T16:23:42.467Z",
-          "resolvedAt": "2026-04-23T17:23:56.704Z",
-          "durationMinutes": 60,
-          "url": "https://stspg.io/6hxvw5fvt4cm"
-        },
-        {
-          "id": "zjxbjm389prq",
-          "providerId": "netlify",
-          "title": "Scheduled Functions Auto-Triggering Not Executing",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-13T00:39:16.228Z",
-          "resolvedAt": "2026-04-13T01:16:58.472Z",
-          "durationMinutes": 38,
-          "url": "https://stspg.io/1208sd924tsm"
-        },
-        {
-          "id": "1z2p2z2xhryq",
-          "providerId": "netlify",
-          "title": "Issues with credit purchases and auto top-ups",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-09T18:00:00.000Z",
-          "resolvedAt": "2026-04-09T18:00:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/spbrhtgsyy00"
-        },
-        {
-          "id": "239yqvxtr2zc",
-          "providerId": "netlify",
-          "title": "Agent Runners Outage",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-06T09:30:00.000Z",
-          "resolvedAt": "2026-04-06T09:30:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/dnbn2798j0hp"
-        },
-        {
-          "id": "h0nlp4gmsvzf",
-          "providerId": "netlify",
-          "title": "Increased errors on the CDN",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-02T12:26:17.000Z",
-          "resolvedAt": "2026-04-02T17:59:12.279Z",
-          "durationMinutes": 333,
-          "url": "https://stspg.io/wzpxgykcp6zj"
-        },
-        {
-          "id": "qvlyvz9rj25f",
-          "providerId": "netlify",
-          "title": "Environment Variables Issues",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-30T08:48:01.036Z",
-          "resolvedAt": "2026-03-30T21:09:50.000Z",
-          "durationMinutes": 742,
-          "url": "https://stspg.io/sfvt32tjln6r"
-        },
-        {
-          "id": "c90505f3136h",
-          "providerId": "netlify",
-          "title": "Increased errors for Edge Functions on Standard Edge Network",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-27T16:30:00.000Z",
-          "resolvedAt": "2026-03-27T16:30:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/sglzldr2qq5v"
-        },
-        {
-          "id": "hqxlsn8kkxb9",
-          "providerId": "netlify",
-          "title": "Delayed Cache Purges",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-24T00:30:26.000Z",
-          "resolvedAt": "2026-03-24T01:32:31.533Z",
-          "durationMinutes": 62,
-          "url": "https://stspg.io/vlqqdwyz757n"
-        },
-        {
-          "id": "297304jpf9cs",
-          "providerId": "netlify",
-          "title": "Increased errors and latency on the Standard Edge Network",
-          "severity": "minor",
-          "tags": [
-            "performance",
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-20T21:08:00.000Z",
-          "resolvedAt": "2026-03-20T21:08:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/fqcbwjk3d5mb"
-        },
-        {
-          "id": "94dlvfpltv41",
-          "providerId": "netlify",
-          "title": "Elevated Edge Function errors on Standard Edge Network",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-17T14:07:35.951Z",
-          "resolvedAt": "2026-03-17T14:44:24.308Z",
-          "durationMinutes": 37,
-          "url": "https://stspg.io/fg9bt0j8vy3f"
-        },
-        {
-          "id": "ts7ghgzkys69",
-          "providerId": "netlify",
-          "title": "Increased errors on High Performance Edge in Mumbai region",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-12T03:43:42.536Z",
-          "resolvedAt": "2026-03-12T04:17:09.931Z",
-          "durationMinutes": 33,
-          "url": "https://stspg.io/dxqkxypvh8vc"
-        },
-        {
-          "id": "5915gspnb59r",
-          "providerId": "netlify",
-          "title": "Service disruption for Netlify application, sites, builds & API",
-          "severity": "major",
-          "tags": [
-            "api",
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-11T08:44:06.156Z",
-          "resolvedAt": "2026-03-11T11:33:20.912Z",
-          "durationMinutes": 169,
-          "url": "https://stspg.io/pkwy0105q5mg"
-        },
-        {
-          "id": "21c4nsgh0hg1",
-          "providerId": "netlify",
-          "title": "Increased errors for Edge Functions on Standard Edge Network",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-10T16:43:00.000Z",
-          "resolvedAt": "2026-03-10T16:43:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/sq9f6cyf7t67"
-        }
-      ],
-      "news": []
-    },
-    {
-      "provider": {
-        "id": "render",
-        "name": "Render",
-        "category": "infra",
-        "icon": "🎨",
-        "domain": "render.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://status.render.com/api/v2/summary.json",
-        "statusPageUrl": "https://status.render.com"
-      },
-      "status": {
-        "providerId": "render",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:01.735Z"
-      },
-      "stats": {
-        "providerId": "render",
-        "uptime30d": 98.68,
-        "uptime90d": 98.47,
-        "incidentCount30d": 8,
-        "avgMttr30d": 114,
-        "lastIncident": "2026-04-23T16:51:26.000Z",
-        "reliabilityScore": 83,
-        "reliabilityScore90d": 84,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 5,
-            "uptime": 97.83
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 6,
-            "uptime": 98.87
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 8,
-            "uptime": 98.63
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "deployment",
-            "count30d": 1,
-            "count90d": 7
-          },
-          {
-            "tag": "other",
-            "count30d": 4,
-            "count90d": 7
-          },
-          {
-            "tag": "performance",
-            "count30d": 2,
-            "count90d": 5
-          },
-          {
-            "tag": "database",
-            "count30d": 1,
-            "count90d": 2
-          },
-          {
-            "tag": "availability",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "network",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 8,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "9mqdx7nvr7jp",
-          "providerId": "render",
-          "title": "Delayed deployment for new services in Oregon region",
-          "severity": "minor",
-          "tags": [
-            "deployment",
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T16:51:26.000Z",
-          "resolvedAt": "2026-04-23T17:21:44.113Z",
-          "durationMinutes": 30,
-          "url": "https://stspg.io/pg65zcxjtdm2"
-        },
-        {
-          "id": "gzcskpsq2121",
-          "providerId": "render",
-          "title": "Some web services and databases in Oregon are unresponsive",
-          "severity": "major",
-          "tags": [
-            "database"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-16T23:36:59.714Z",
-          "resolvedAt": "2026-04-16T23:51:19.380Z",
-          "durationMinutes": 14,
-          "url": "https://stspg.io/t45f6gzmlzgz"
-        },
-        {
-          "id": "zzj87dfbmqbn",
-          "providerId": "render",
-          "title": "BitBucket account connection issues",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-14T14:31:55.626Z",
-          "resolvedAt": "2026-04-14T16:04:56.339Z",
-          "durationMinutes": 93,
-          "url": "https://stspg.io/s4k9qmgnpjk5"
-        },
-        {
-          "id": "bzzpqv85jtbg",
-          "providerId": "render",
-          "title": "Image pull failures in Oregon",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-13T22:03:10.282Z",
-          "resolvedAt": "2026-04-13T22:26:41.377Z",
-          "durationMinutes": 24,
-          "url": "https://stspg.io/fmn61n7ptyb6"
-        },
-        {
-          "id": "2xhvzhlfx4b4",
-          "providerId": "render",
-          "title": "Infrastructure maintenance operations are currently in progress for outbound IPs in the Oregon region",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-10T14:41:51.687Z",
-          "resolvedAt": "2026-04-10T14:56:53.400Z",
-          "durationMinutes": 15,
-          "url": "https://stspg.io/kv877l23jvfd"
-        },
-        {
-          "id": "85ltx4l9bqh6",
-          "providerId": "render",
-          "title": "Delays in stateful service creation in Oregon",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-08T12:30:00.000Z",
-          "resolvedAt": "2026-04-08T12:30:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/0gxtj70t67td"
-        },
-        {
-          "id": "1sjd0k0fstjs",
-          "providerId": "render",
-          "title": "Disruption affecting the provisioning of new instances in Singapore and partially in Oregon",
-          "severity": "major",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-08T09:57:54.234Z",
-          "resolvedAt": "2026-04-08T22:11:59.902Z",
-          "durationMinutes": 734,
-          "url": "https://stspg.io/g7knh2152gv0"
-        },
-        {
-          "id": "x0jxtc50g460",
-          "providerId": "render",
-          "title": "Unable to view workflows in the Dashboard",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-07T18:00:00.000Z",
-          "resolvedAt": "2026-04-07T18:00:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/t7w14s4336rd"
-        },
-        {
-          "id": "skdkcjf3vzxw",
-          "providerId": "render",
-          "title": "Some Render Workflows tasks are not being scheduled",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-25T14:45:50.385Z",
-          "resolvedAt": "2026-03-26T19:51:06.000Z",
-          "durationMinutes": 1745,
-          "url": "https://stspg.io/1hnjx38c7qxc"
-        },
-        {
-          "id": "6y1nlj71vzrg",
-          "providerId": "render",
-          "title": "Some users may experience delayed logs in the Oregon region",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-24T13:09:41.070Z",
-          "resolvedAt": "2026-03-24T13:31:55.700Z",
-          "durationMinutes": 22,
-          "url": "https://stspg.io/qxw0pcy6w5cn"
-        },
-        {
-          "id": "3cl07pp8yw2r",
-          "providerId": "render",
-          "title": "Degraded builds and deployments in the Singapore region",
-          "severity": "minor",
-          "tags": [
-            "deployment"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-13T15:51:55.772Z",
-          "resolvedAt": "2026-03-13T18:07:25.978Z",
-          "durationMinutes": 136,
-          "url": "https://stspg.io/yfx8zrlqbb53"
-        },
-        {
-          "id": "d9k4p51v1y7g",
-          "providerId": "render",
-          "title": "Degraded builds and deployments in the Singapore region",
-          "severity": "major",
-          "tags": [
-            "deployment"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-13T08:52:05.840Z",
-          "resolvedAt": "2026-03-13T11:09:17.592Z",
-          "durationMinutes": 137,
-          "url": "https://stspg.io/ymgtlrh6k21y"
-        },
-        {
-          "id": "svf22l01vjpm",
-          "providerId": "render",
-          "title": "Custom domains are unable to be created",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-09T20:19:30.514Z",
-          "resolvedAt": "2026-03-09T20:39:35.189Z",
-          "durationMinutes": 20,
-          "url": "https://stspg.io/05hf867jxx3y"
-        },
-        {
-          "id": "2w7sbz5r2whh",
-          "providerId": "render",
-          "title": "Ohio Services with Disks, Data Persistence failing",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-03T00:41:04.035Z",
-          "resolvedAt": "2026-03-03T01:00:54.475Z",
-          "durationMinutes": 20,
-          "url": "https://stspg.io/9p3vh5t3cjc7"
-        },
-        {
-          "id": "0x6pgbj95j3b",
-          "providerId": "render",
-          "title": "Some deploys may be slow or hanging",
-          "severity": "major",
-          "tags": [
-            "deployment",
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-02-11T16:16:56.919Z",
-          "resolvedAt": "2026-02-11T19:25:23.382Z",
-          "durationMinutes": 188,
-          "url": "https://stspg.io/c102250yyl8p"
-        }
-      ],
-      "news": []
-    },
-    {
-      "provider": {
-        "id": "supabase",
-        "name": "Supabase",
-        "category": "data",
-        "icon": "🗄️",
-        "domain": "supabase.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://status.supabase.com/api/v2/summary.json",
-        "statusPageUrl": "https://status.supabase.com"
-      },
-      "status": {
-        "providerId": "supabase",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:02.482Z"
-      },
-      "stats": {
-        "providerId": "supabase",
-        "uptime30d": 95.52,
-        "uptime90d": 93.32,
-        "incidentCount30d": 13,
-        "avgMttr30d": 283,
-        "lastIncident": "2026-04-28T21:26:46.180Z",
-        "reliabilityScore": 60,
-        "reliabilityScore90d": 59,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 18,
-            "uptime": 85.7
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 18,
-            "uptime": 97.86
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 13,
-            "uptime": 95.35
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "other",
-            "count30d": 5,
-            "count90d": 17
-          },
-          {
-            "tag": "network",
-            "count30d": 1,
-            "count90d": 10
-          },
-          {
-            "tag": "api",
-            "count30d": 2,
-            "count90d": 7
-          },
-          {
-            "tag": "performance",
-            "count30d": 1,
-            "count90d": 7
-          },
-          {
-            "tag": "availability",
-            "count30d": 3,
-            "count90d": 6
-          },
-          {
-            "tag": "database",
-            "count30d": 1,
-            "count90d": 4
-          },
-          {
-            "tag": "auth",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "billing",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 13,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "rzwtq93tzd4f",
-          "providerId": "supabase",
-          "title": "403 errors for PostgREST requests",
-          "severity": "major",
-          "tags": [
-            "auth",
-            "database"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T21:26:46.180Z",
-          "resolvedAt": "2026-04-28T23:31:17.827Z",
-          "durationMinutes": 125,
-          "url": "https://stspg.io/tcv618ssfg0s"
-        },
-        {
-          "id": "m8fzj42277s1",
-          "providerId": "supabase",
-          "title": "Some projects unavailable across multiple regions",
-          "severity": "major",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T12:39:59.000Z",
-          "resolvedAt": "2026-04-27T19:04:52.858Z",
-          "durationMinutes": 385,
-          "url": "https://stspg.io/dj502ykhyd9f"
-        },
-        {
-          "id": "m9lv5ttn4bny",
-          "providerId": "supabase",
-          "title": "Some Projects Unreachable following Project Restart",
-          "severity": "major",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T10:54:37.695Z",
-          "resolvedAt": "2026-04-27T20:05:43.266Z",
-          "durationMinutes": 551,
-          "url": "https://stspg.io/7rqcm4yftl23"
-        },
-        {
-          "id": "2t3nn82wxj97",
-          "providerId": "supabase",
-          "title": "Inadvertently disabled pg_graphql for some projects",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-26T17:52:09.000Z",
-          "resolvedAt": "2026-04-26T17:52:09.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/nvh7xrhybk66"
-        },
-        {
-          "id": "btgcd54tyh7k",
-          "providerId": "supabase",
-          "title": "Increased errors in project creation and configuration changes in US-East-2 and AP-Northeast-1",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-25T04:16:30.327Z",
-          "resolvedAt": "2026-04-25T05:47:13.582Z",
-          "durationMinutes": 91,
-          "url": "https://stspg.io/1bz2bqn2rdh6"
-        },
-        {
-          "id": "1nzvd1b85lzn",
-          "providerId": "supabase",
-          "title": "Newly created projects may be unreachable",
-          "severity": "major",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T11:21:26.653Z",
-          "resolvedAt": "2026-04-24T14:36:48.127Z",
-          "durationMinutes": 195,
-          "url": "https://stspg.io/lphwzlx4ck85"
-        },
-        {
-          "id": "f258dnpx3ss2",
-          "providerId": "supabase",
-          "title": "Edge Functions: Several users reported 503 errors with SUPABASE_EDGE_RUNTIME_ERROR error code",
-          "severity": "minor",
-          "tags": [
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T10:00:00.000Z",
-          "resolvedAt": "2026-04-24T10:00:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/q02lfm5f41fw"
-        },
-        {
-          "id": "kj2hm399j9cw",
-          "providerId": "supabase",
-          "title": "Increased Errors on HTTP Endpoints",
-          "severity": "major",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-17T13:02:16.449Z",
-          "resolvedAt": "2026-04-18T02:01:40.726Z",
-          "durationMinutes": 779,
-          "url": "https://stspg.io/5h77bsqcqbld"
-        },
-        {
-          "id": "vgs22b2h1xr6",
-          "providerId": "supabase",
-          "title": "Transactional Email Delivery Delays",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-16T19:05:37.000Z",
-          "resolvedAt": "2026-04-17T17:00:18.429Z",
-          "durationMinutes": 1315,
-          "url": "https://stspg.io/fsscyj3npl5w"
-        },
-        {
-          "id": "mq5wbksl70j7",
-          "providerId": "supabase",
-          "title": "Project creation failures in some APAC regions",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-12T15:51:36.590Z",
-          "resolvedAt": "2026-04-12T17:03:40.019Z",
-          "durationMinutes": 72,
-          "url": "https://stspg.io/l93kn3nv91p3"
-        },
-        {
-          "id": "xt9yl88y2wkk",
-          "providerId": "supabase",
-          "title": "Logs currently inaccessible via the Dashboard and Log Drains",
-          "severity": "critical",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-08T19:10:59.912Z",
-          "resolvedAt": "2026-04-08T20:05:17.516Z",
-          "durationMinutes": 54,
-          "url": "https://stspg.io/lsyydsq7fn9f"
-        },
-        {
-          "id": "bcljwj8rwxks",
-          "providerId": "supabase",
-          "title": "Increased error rates for plan upgrades",
-          "severity": "major",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-02T08:28:48.170Z",
-          "resolvedAt": "2026-04-02T09:24:54.267Z",
-          "durationMinutes": 56,
-          "url": "https://stspg.io/bkcypkfhm7gl"
-        },
-        {
-          "id": "x62jgpkdqdtt",
-          "providerId": "supabase",
-          "title": "Degraded logs ingestion",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-01T00:13:16.102Z",
-          "resolvedAt": "2026-04-01T01:11:57.430Z",
-          "durationMinutes": 59,
-          "url": "https://stspg.io/wky81qj53q9r"
-        },
-        {
-          "id": "4k3fs6hr1mtn",
-          "providerId": "supabase",
-          "title": "Supabase dashboard experiencing intermittent errors in Europe region",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-27T17:58:13.282Z",
-          "resolvedAt": "2026-03-27T18:43:02.475Z",
-          "durationMinutes": 45,
-          "url": "https://stspg.io/3lmvtlzg9qj5"
-        },
-        {
-          "id": "xg8gq2b45wk1",
-          "providerId": "supabase",
-          "title": "Degraded Log Ingestion",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-27T15:13:19.507Z",
-          "resolvedAt": "2026-03-27T17:03:28.339Z",
-          "durationMinutes": 110,
-          "url": "https://stspg.io/jpyktnc5s4rt"
-        }
-      ],
-      "news": [
-        {
-          "id": "47394240",
-          "title": "Ask HN: Supabase PG upgrade wiped production DB, PITR backups failing",
-          "url": "https://news.ycombinator.com/item?id=47394240",
-          "source": "hackernews",
-          "publishedAt": "2026-03-16T01:55:10Z",
-          "points": 1,
-          "commentCount": 1
-        },
-        {
-          "id": "47184495",
-          "title": "Show HN: My iPhone notifies me about cloud outages before they blow up here",
-          "url": "https://apps.apple.com/us/app/pingy-cloud-outage-alerts/id6759363978",
-          "source": "hackernews",
-          "publishedAt": "2026-02-27T19:27:50Z",
-          "points": 1,
-          "commentCount": 0
-        },
-        {
-          "id": "47322794",
-          "title": "SHOW HN: A usage circuit breaker for Cloudflare Workers",
-          "url": "https://news.ycombinator.com/item?id=47322794",
-          "source": "hackernews",
-          "publishedAt": "2026-03-10T13:09:00Z",
-          "points": 29,
-          "commentCount": 9
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": "pinecone",
-        "name": "Pinecone",
-        "category": "data",
-        "icon": "🌲",
-        "domain": "pinecone.io",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://status.pinecone.io/api/v2/summary.json",
-        "statusPageUrl": "https://status.pinecone.io"
-      },
-      "status": {
-        "providerId": "pinecone",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:03.230Z"
-      },
-      "stats": {
-        "providerId": "pinecone",
-        "uptime30d": 100,
-        "uptime90d": 99.73,
-        "incidentCount30d": 0,
-        "avgMttr30d": null,
-        "lastIncident": "2026-03-13T08:50:03.000Z",
-        "reliabilityScore": 100,
-        "reliabilityScore90d": 95,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 2,
-            "uptime": 99.4
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 3,
-            "uptime": 99.76
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 0,
-            "uptime": 100
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "other",
-            "count30d": 0,
-            "count90d": 4
-          },
-          {
-            "tag": "availability",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 0,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "s1jv4vdbf0rx",
-          "providerId": "pinecone",
-          "title": "[GCP][europe-west4] Errors for upsert operations on some indexes",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-13T08:50:03.000Z",
-          "resolvedAt": "2026-03-13T09:53:17.000Z",
-          "durationMinutes": 63,
-          "url": "https://stspg.io/1q347rkjvkz3"
-        },
-        {
-          "id": "1xm1cbph5vlg",
-          "providerId": "pinecone",
-          "title": "[AWS][us-east-1] Prometheus metrics are unavailable through the Pinecone console or the metric proxy",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-05T21:57:20.000Z",
-          "resolvedAt": "2026-03-05T23:02:17.000Z",
-          "durationMinutes": 65,
-          "url": "https://stspg.io/cnpqf9qk52v3"
-        },
-        {
-          "id": "zd8c7hb0vpt6",
-          "providerId": "pinecone",
-          "title": "[Serverless][GCP][us-central1] 5xx errors on some read operations for some indexes",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-04T21:06:09.000Z",
-          "resolvedAt": "2026-03-04T22:16:28.000Z",
-          "durationMinutes": 70,
-          "url": "https://stspg.io/yx5v2py96z2k"
-        },
-        {
-          "id": "rxh0hqkjymdd",
-          "providerId": "pinecone",
-          "title": "[GCP][us-central1][europe-west4] Errors on some read operations",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-02-23T23:14:35.000Z",
-          "resolvedAt": "2026-02-24T01:52:43.000Z",
-          "durationMinutes": 158,
-          "url": "https://stspg.io/bfnhfmpm1vvx"
-        },
-        {
-          "id": "ks10vph23rq0",
-          "providerId": "pinecone",
-          "title": "[Serverless][AWS][us-east-1] Increase in freshness lag for some namespaces",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-02-05T10:55:24.000Z",
-          "resolvedAt": "2026-02-05T21:57:04.000Z",
-          "durationMinutes": 662,
-          "url": "https://stspg.io/spzqmgqsmqyt"
-        }
-      ],
-      "news": []
-    },
-    {
-      "provider": {
-        "id": "mongodb",
-        "name": "MongoDB Atlas",
-        "category": "data",
-        "icon": "🍃",
-        "domain": "mongodb.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://status.mongodb.com/api/v2/summary.json",
-        "statusPageUrl": "https://status.mongodb.com"
-      },
-      "status": {
-        "providerId": "mongodb",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:04.002Z"
-      },
-      "stats": {
-        "providerId": "mongodb",
-        "uptime30d": 90.64,
-        "uptime90d": 89.85,
-        "incidentCount30d": 3,
-        "avgMttr30d": 1925,
-        "lastIncident": "2026-04-27T17:16:46.000Z",
-        "reliabilityScore": 81,
-        "reliabilityScore90d": 70,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 8,
-            "uptime": 95.54
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 10,
-            "uptime": 87.37
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 3,
-            "uptime": 90.3
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "database",
-            "count30d": 1,
-            "count90d": 8
-          },
-          {
-            "tag": "other",
-            "count30d": 0,
-            "count90d": 6
-          },
-          {
-            "tag": "api",
-            "count30d": 0,
-            "count90d": 4
-          },
-          {
-            "tag": "auth",
-            "count30d": 1,
-            "count90d": 3
-          },
-          {
-            "tag": "network",
-            "count30d": 0,
-            "count90d": 2
-          },
-          {
-            "tag": "billing",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "performance",
-            "count30d": 0,
-            "count90d": 1
-          },
-          {
-            "tag": "webhook",
-            "count30d": 0,
-            "count90d": 1
-          },
-          {
-            "tag": "availability",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 3,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "32wsqrsbhvh6",
-          "providerId": "mongodb",
-          "title": "Increase in Billing for Backup Usage",
-          "severity": "major",
-          "tags": [
-            "billing"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T17:16:46.000Z",
-          "resolvedAt": "2026-04-27T20:50:07.135Z",
-          "durationMinutes": 213,
-          "url": "https://stspg.io/ryk00jrqkw7w"
-        },
-        {
-          "id": "hlhym701zs9m",
-          "providerId": "mongodb",
-          "title": "MongoDB Atlas BI Connector: Connections and queries fail",
-          "severity": "major",
-          "tags": [
-            "database"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-17T17:03:13.080Z",
-          "resolvedAt": "2026-04-21T13:45:37.550Z",
-          "durationMinutes": 5562,
-          "url": "https://stspg.io/gg0lkx6qf43g"
-        },
-        {
-          "id": "d74nshb79dgz",
-          "providerId": "mongodb",
-          "title": "Atlas Charts users unable to login",
-          "severity": "minor",
-          "tags": [
-            "auth"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-01T12:55:24.603Z",
-          "resolvedAt": "2026-04-01T12:55:24.656Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/w3mhl4vn1q1t"
-        },
-        {
-          "id": "b66vgs5vz8rz",
-          "providerId": "mongodb",
-          "title": "Delays in cluster creation and adding new cluster nodes in Azure East US 2 region",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-30T21:47:40.515Z",
-          "resolvedAt": "2026-03-30T23:10:14.473Z",
-          "durationMinutes": 83,
-          "url": "https://stspg.io/3vjd3s0kkmlm"
-        },
-        {
-          "id": "gch8hbs1yfz5",
-          "providerId": "mongodb",
-          "title": "Intermittent 503 Errors on Atlas Admin API and Automation Tooling",
-          "severity": "major",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-25T21:31:18.127Z",
-          "resolvedAt": "2026-03-27T13:21:19.612Z",
-          "durationMinutes": 2390,
-          "url": "https://stspg.io/jzjbn35bsc7r"
-        },
-        {
-          "id": "cy5vvcwnrgxq",
-          "providerId": "mongodb",
-          "title": "Issue querying Azure blob storage containers in Atlas Data Federation",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-19T18:11:03.701Z",
-          "resolvedAt": "2026-03-19T19:19:57.264Z",
-          "durationMinutes": 69,
-          "url": "https://stspg.io/5y67l14lfs1x"
-        },
-        {
-          "id": "pwv9vb90vkdc",
-          "providerId": "mongodb",
-          "title": "MongoDB Atlas: Clusters page failing to load",
-          "severity": "major",
-          "tags": [
-            "database"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-19T14:42:39.221Z",
-          "resolvedAt": "2026-03-19T15:28:05.181Z",
-          "durationMinutes": 45,
-          "url": "https://stspg.io/7ql9037sq1yq"
-        },
-        {
-          "id": "ts5bjz6km9f9",
-          "providerId": "mongodb",
-          "title": "MongoDB Atlas for Government: SSO login failures for some users",
-          "severity": "minor",
-          "tags": [
-            "auth",
-            "database"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-19T00:24:26.242Z",
-          "resolvedAt": "2026-03-31T21:19:47.430Z",
-          "durationMinutes": 18535,
-          "url": "https://stspg.io/nhvz9t2hs7s2"
-        },
-        {
-          "id": "ggrxstpcnljv",
-          "providerId": "mongodb",
-          "title": "Issue affecting stream processing within the AWS US-EAST-1 region",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-11T20:10:35.160Z",
-          "resolvedAt": "2026-03-11T20:10:35.214Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/g1nmlyx08f8r"
-        },
-        {
-          "id": "3dts1g4b0n7g",
-          "providerId": "mongodb",
-          "title": "Atlas Clusters Snapshot Failures",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-10T23:18:53.836Z",
-          "resolvedAt": "2026-03-11T02:30:15.059Z",
-          "durationMinutes": 191,
-          "url": "https://stspg.io/tyn1fstlpnvb"
-        },
-        {
-          "id": "sx5zh206myxg",
-          "providerId": "mongodb",
-          "title": "MongoDB Atlas: Email notifications may be failing",
-          "severity": "major",
-          "tags": [
-            "database",
-            "webhook"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-02T15:50:09.328Z",
-          "resolvedAt": "2026-03-02T16:28:53.503Z",
-          "durationMinutes": 39,
-          "url": "https://stspg.io/3fx0hpw59xhw"
-        },
-        {
-          "id": "rtbthsrxzt6x",
-          "providerId": "mongodb",
-          "title": "MongoDB Atlas Admin API: Temporary failures for tools using older API versions",
-          "severity": "minor",
-          "tags": [
-            "database",
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-02T12:00:00.000Z",
-          "resolvedAt": "2026-03-02T12:00:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/77sj4vmk5dlq"
-        },
-        {
-          "id": "7g5qmxgkc2y4",
-          "providerId": "mongodb",
-          "title": "Impaired Cluster Operations – AWS me-central-1 (United Arab Emirates)  and AWS me-south-1 (Bahrain)",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-01T13:48:14.360Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
-          "url": "https://stspg.io/mg7m971rdhw8"
-        },
-        {
-          "id": "yw96wbq7mtz1",
-          "providerId": "mongodb",
-          "title": "MongoDB App Services: Connectivity issues",
-          "severity": "major",
-          "tags": [
-            "database",
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-02-28T19:53:36.768Z",
-          "resolvedAt": "2026-03-02T03:05:05.384Z",
-          "durationMinutes": 1871,
-          "url": "https://stspg.io/dxd0y34wps83"
-        },
-        {
-          "id": "l705pf8q03t2",
-          "providerId": "mongodb",
-          "title": "DataDog Integration Degraded Experience",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-02-26T19:21:05.486Z",
-          "resolvedAt": "2026-02-26T20:04:33.862Z",
-          "durationMinutes": 43,
-          "url": "https://stspg.io/wcxvlsl4tty4"
-        }
-      ],
-      "news": []
-    },
-    {
-      "provider": {
-        "id": "upstash",
-        "name": "Upstash",
-        "category": "data",
-        "icon": "🔴",
-        "domain": "upstash.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://status.upstash.com/api/v2/summary.json",
-        "statusPageUrl": "https://status.upstash.com"
-      },
-      "status": {
-        "providerId": "upstash",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:04.643Z"
-      },
-      "stats": {
-        "providerId": "upstash",
-        "uptime30d": 99.67,
-        "uptime90d": 99.84,
-        "incidentCount30d": 2,
-        "avgMttr30d": 126,
-        "lastIncident": "2026-04-27T16:09:35.088Z",
-        "reliabilityScore": 94,
-        "reliabilityScore90d": 95,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 2,
-            "uptime": 99.87
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 2,
-            "uptime": 99.66
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "database",
-            "count30d": 1,
-            "count90d": 2
-          },
-          {
-            "tag": "other",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "performance",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "network",
-            "count30d": 0,
-            "count90d": 1
-          },
-          {
-            "tag": "availability",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 2,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "pvhsdp563lzb",
-          "providerId": "upstash",
-          "title": "QStash us-east-1 Schedules",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T16:09:35.088Z",
-          "resolvedAt": "2026-04-27T19:13:45.748Z",
-          "durationMinutes": 184,
-          "url": "https://stspg.io/t904h10vgmgd"
-        },
-        {
-          "id": "hxl1mqj7vj0r",
-          "providerId": "upstash",
-          "title": "Fly.io Upstash Redis – iad Region Elevated Latency and Temporary Read-Only State",
-          "severity": "minor",
-          "tags": [
-            "database",
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-02T18:45:17.073Z",
-          "resolvedAt": "2026-04-02T19:53:23.947Z",
-          "durationMinutes": 68,
-          "url": "https://stspg.io/jhtjz9c6723c"
-        },
-        {
-          "id": "b236s8xyn6t2",
-          "providerId": "upstash",
-          "title": "Upstash Redis: GCP Global Connectivity Problems",
-          "severity": "minor",
-          "tags": [
-            "database",
-            "network"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-27T15:30:00.000Z",
-          "resolvedAt": "2026-03-27T15:30:00.000Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/wjqvlzqpdsps"
-        },
-        {
-          "id": "774krfq667vd",
-          "providerId": "upstash",
-          "title": "Region ap-northeast-1 outage on Upstash Global",
-          "severity": "critical",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-06T13:50:17.434Z",
-          "resolvedAt": "2026-03-06T14:49:57.180Z",
-          "durationMinutes": 60,
-          "url": "https://stspg.io/fstdc8k6z87l"
-        }
-      ],
-      "news": []
-    },
-    {
-      "provider": {
-        "id": "twilio",
-        "name": "Twilio",
-        "category": "payment",
-        "icon": "📡",
-        "domain": "twilio.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://status.twilio.com/api/v2/summary.json",
-        "statusPageUrl": "https://status.twilio.com"
-      },
-      "status": {
-        "providerId": "twilio",
-        "indicator": "minor",
-        "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T22:33:05.311Z"
-      },
-      "stats": {
-        "providerId": "twilio",
-        "uptime30d": 80.53,
-        "uptime90d": 93.51,
-        "incidentCount30d": 50,
-        "avgMttr30d": 859,
-        "lastIncident": "2026-04-29T10:40:36.588-07:00",
-        "reliabilityScore": 63,
-        "reliabilityScore90d": 88,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 50,
-            "uptime": 79.82
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "performance",
-            "count30d": 33,
-            "count90d": 33
-          },
-          {
-            "tag": "other",
-            "count30d": 12,
-            "count90d": 12
-          },
-          {
-            "tag": "network",
-            "count30d": 7,
-            "count90d": 7
-          },
-          {
-            "tag": "api",
-            "count30d": 5,
-            "count90d": 5
-          },
-          {
-            "tag": "auth",
-            "count30d": 2,
-            "count90d": 2
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 50,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "441kvr95r8xj",
-          "providerId": "twilio",
-          "title": "New Accounts Are Being Incorrectly Identified as Legacy Whatsapp Account",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-29T10:40:36.588-07:00",
-          "resolvedAt": null,
-          "durationMinutes": null,
-          "url": "https://stspg.io/lljy8rk0rm0z"
-        },
-        {
-          "id": "vhn17m89ljh2",
-          "providerId": "twilio",
-          "title": "Voice Call Failures from Sweden to Twilio Sweden Phone Numbers",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-29T03:23:26.839-07:00",
-          "resolvedAt": "2026-04-29T14:38:18.367-07:00",
-          "durationMinutes": 675,
-          "url": "https://stspg.io/smvzhc7nc9g3"
-        },
-        {
-          "id": "js1932809r3j",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays from Twilio to Telefonica Costa Rica",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T21:52:53.371-07:00",
-          "resolvedAt": "2026-04-29T14:22:32.470-07:00",
-          "durationMinutes": 990,
-          "url": "https://stspg.io/hzczyrp35l1v"
-        },
-        {
-          "id": "xfbygc0vj207",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays from Twilio Phone Numbers to Orange Cameroon",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T13:53:13.239-07:00",
-          "resolvedAt": "2026-04-29T02:08:11.469-07:00",
-          "durationMinutes": 735,
-          "url": "https://stspg.io/58ttghh9l7tc"
-        },
-        {
-          "id": "xgrcz5sjxnd6",
-          "providerId": "twilio",
-          "title": "User Authentication Identity Gateway API High Latency for T-Mobile in United States",
-          "severity": "minor",
-          "tags": [
-            "auth",
-            "performance",
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T08:37:06.496-07:00",
-          "resolvedAt": "2026-04-28T12:44:08.635-07:00",
-          "durationMinutes": 247,
-          "url": "https://stspg.io/yhxlwbhb99yn"
-        },
-        {
-          "id": "k6bqtsm2rflk",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays and Failures from Twilio to MTS Russia",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T08:34:25.580-07:00",
-          "resolvedAt": "2026-04-28T10:44:52.872-07:00",
-          "durationMinutes": 130,
-          "url": "https://stspg.io/11ys0xvhd1rp"
-        },
-        {
-          "id": "7jtwh60j2vpt",
-          "providerId": "twilio",
-          "title": "SMS Delivery Receipt Delays from Twilio to Globe Philippines",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T18:07:33.546-07:00",
-          "resolvedAt": "2026-04-27T20:39:39.653-07:00",
-          "durationMinutes": 152,
-          "url": "https://stspg.io/md600xf8sxq7"
-        },
-        {
-          "id": "c7b40qsd7nkm",
-          "providerId": "twilio",
-          "title": "Lookup Identity Match Lookup V2 API package Increased Error Rate",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T16:17:10.000-07:00",
-          "resolvedAt": "2026-04-27T17:53:55.877-07:00",
-          "durationMinutes": 97,
-          "url": "https://stspg.io/z6jhmnr0dmml"
-        },
-        {
-          "id": "453zvjlcw1fj",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays and Failures From a Subset of Twilio Alphanumeric Sender IDs and Long Codes to Jazz Pakistan",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T14:29:28.563-07:00",
-          "resolvedAt": "2026-04-28T01:04:22.776-07:00",
-          "durationMinutes": 635,
-          "url": "https://stspg.io/h493df108p7r"
-        },
-        {
-          "id": "fg3rv71swcq7",
-          "providerId": "twilio",
-          "title": "Increased rate of 11200 warnings from Programmable Video",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T11:49:08.670-07:00",
-          "resolvedAt": "2026-04-27T14:44:53.692-07:00",
-          "durationMinutes": 176,
-          "url": "https://stspg.io/2vplxdkgqr3d"
-        },
-        {
-          "id": "hdsxyldm9n4n",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays from Twilio Phone Numbers to Orange Cameroon",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-27T08:44:27.050-07:00",
-          "resolvedAt": "2026-04-28T05:18:02.770-07:00",
-          "durationMinutes": 1234,
-          "url": "https://stspg.io/tw0bwb92mpmh"
-        },
-        {
-          "id": "45y7qj466xmd",
-          "providerId": "twilio",
-          "title": "Programmable Messaging - Service Interruption With Programmable Messaging for a Percentage of Messaging Services",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-26T21:28:56.000-07:00",
-          "resolvedAt": "2026-04-26T21:59:11.984-07:00",
-          "durationMinutes": 30,
-          "url": "https://stspg.io/1ybh5fqcy7sg"
-        },
-        {
-          "id": "98d5n5y8h0hw",
-          "providerId": "twilio",
-          "title": "SMS Delivery Failures from Twilio to Telefonica Peru",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-25T14:00:27.769-07:00",
-          "resolvedAt": "2026-04-26T14:10:37.066-07:00",
-          "durationMinutes": 1450,
-          "url": "https://stspg.io/qxpm82z7f0fc"
-        },
-        {
-          "id": "wxp50bpcxxwj",
-          "providerId": "twilio",
-          "title": "SMS Delivery Delays from Twilio to Etisalat Afghanistan",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-25T01:16:52.439-07:00",
-          "resolvedAt": "2026-04-25T17:46:35.986-07:00",
-          "durationMinutes": 990,
-          "url": "https://stspg.io/dwn0brf34rfg"
-        },
-        {
-          "id": "01qbp5n6d4rm",
-          "providerId": "twilio",
-          "title": "Delays in Whatsapp Template Approvals",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-24T17:04:50.286-07:00",
-          "resolvedAt": "2026-04-24T21:31:31.998-07:00",
-          "durationMinutes": 267,
-          "url": "https://stspg.io/btq3qjh2hhcl"
-        }
-      ],
-      "news": [
-        {
-          "id": "47322794",
-          "title": "SHOW HN: A usage circuit breaker for Cloudflare Workers",
-          "url": "https://news.ycombinator.com/item?id=47322794",
-          "source": "hackernews",
-          "publishedAt": "2026-03-10T13:09:00Z",
-          "points": 29,
-          "commentCount": 9
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": "sendgrid",
-        "name": "SendGrid",
-        "category": "payment",
-        "icon": "📧",
-        "domain": "sendgrid.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://status.sendgrid.com/api/v2/summary.json",
-        "statusPageUrl": "https://status.sendgrid.com"
-      },
-      "status": {
-        "providerId": "sendgrid",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:06.062Z"
-      },
-      "stats": {
-        "providerId": "sendgrid",
-        "uptime30d": 98.02,
-        "uptime90d": 98.1,
-        "incidentCount30d": 11,
-        "avgMttr30d": 388,
-        "lastIncident": "2026-04-22T09:32:53.000-07:00",
-        "reliabilityScore": 93,
-        "reliabilityScore90d": 95,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 7,
-            "uptime": 96.23
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 7,
-            "uptime": 99.79
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 11,
-            "uptime": 97.95
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "performance",
-            "count30d": 4,
-            "count90d": 11
-          },
-          {
-            "tag": "other",
-            "count30d": 6,
-            "count90d": 8
-          },
-          {
-            "tag": "auth",
-            "count30d": 0,
-            "count90d": 3
-          },
-          {
-            "tag": "billing",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "webhook",
-            "count30d": 0,
-            "count90d": 1
-          },
-          {
-            "tag": "api",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 11,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "0slwwc5b3t19",
-          "providerId": "sendgrid",
-          "title": "Design Editor Template Not Allowing Movement of Modules",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-22T09:32:53.000-07:00",
-          "resolvedAt": "2026-04-23T14:18:25.911-07:00",
-          "durationMinutes": 1726,
-          "url": "https://stspg.io/f3zr46g1xnnc"
-        },
-        {
-          "id": "0qm0wjy7lf1x",
-          "providerId": "sendgrid",
-          "title": "Mail Send Delays",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-18T13:07:43.679-07:00",
-          "resolvedAt": "2026-04-18T13:07:43.712-07:00",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/k7jxds59h86y"
-        },
-        {
-          "id": "29qll34cwnms",
-          "providerId": "sendgrid",
-          "title": "Contact uploads being delayed - TNE Marketing Campaigns",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-17T04:58:17.227-07:00",
-          "resolvedAt": "2026-04-17T06:13:28.935-07:00",
-          "durationMinutes": 75,
-          "url": "https://stspg.io/km3zjqjsx662"
-        },
-        {
-          "id": "h5fptc250zz6",
-          "providerId": "sendgrid",
-          "title": "EU located subusers unable to send emails",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-15T09:00:17.894-07:00",
-          "resolvedAt": "2026-04-15T11:44:03.451-07:00",
-          "durationMinutes": 164,
-          "url": "https://stspg.io/tskh6z3sqt03"
-        },
-        {
-          "id": "9xlcyb1mpp7v",
-          "providerId": "sendgrid",
-          "title": "Customers unable to raise support tickets",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-15T08:19:53.272-07:00",
-          "resolvedAt": "2026-04-15T08:49:43.646-07:00",
-          "durationMinutes": 30,
-          "url": "https://stspg.io/gkk8mj4ht7d4"
-        },
-        {
-          "id": "lcym11q4x7s4",
-          "providerId": "sendgrid",
-          "title": "Email Delivery Latency Resolved",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-10T01:08:15.841-07:00",
-          "resolvedAt": "2026-04-10T01:08:15.896-07:00",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/fzl0w91m7pj8"
-        },
-        {
-          "id": "6zl869qhrgwd",
-          "providerId": "sendgrid",
-          "title": "[Retroactive] Customers Unable to Access Support Portal",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-08T13:30:00.000-07:00",
-          "resolvedAt": "2026-04-08T13:30:00.000-07:00",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/3ndmpvb3gl90"
-        },
-        {
-          "id": "40wk32y40rlk",
-          "providerId": "sendgrid",
-          "title": "Legacy Marketing Campaigns not loading for some customers",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-08T08:17:59.651-07:00",
-          "resolvedAt": "2026-04-08T10:06:59.985-07:00",
-          "durationMinutes": 109,
-          "url": "https://stspg.io/4jzz3cvlx4q4"
-        },
-        {
-          "id": "q6xx8vv3swgt",
-          "providerId": "sendgrid",
-          "title": "Retroactive Incident - Email Log and Activity Data Delayed",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-07T14:00:00.000-07:00",
-          "resolvedAt": "2026-04-07T14:00:00.000-07:00",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/bm67jnrg7b4c"
-        },
-        {
-          "id": "yfsl1gtb812s",
-          "providerId": "sendgrid",
-          "title": "Intermittent Account Access and Management Issues",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-06T08:08:32.767-07:00",
-          "resolvedAt": "2026-04-06T14:45:34.514-07:00",
-          "durationMinutes": 397,
-          "url": "https://stspg.io/jmsk22n03pdb"
-        },
-        {
-          "id": "66msmfpqxld2",
-          "providerId": "sendgrid",
-          "title": "Billing Payment Processing Failures",
-          "severity": "minor",
-          "tags": [
-            "billing"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-06T06:23:00.000-07:00",
-          "resolvedAt": "2026-04-07T11:53:07.436-07:00",
-          "durationMinutes": 1770,
-          "url": "https://stspg.io/whtthj0wjz0g"
-        },
-        {
-          "id": "8w0sc18ydm42",
-          "providerId": "sendgrid",
-          "title": "Retroactive Incident - EU Mail Delays",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-25T13:58:02.227-07:00",
-          "resolvedAt": "2026-03-25T13:58:02.261-07:00",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/2ky9s0122tl5"
-        },
-        {
-          "id": "jhn9xb6zn980",
-          "providerId": "sendgrid",
-          "title": "Login Issue Cloudflare CAPTCHA Failing to Load",
-          "severity": "minor",
-          "tags": [
-            "auth"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-18T11:33:19.079-07:00",
-          "resolvedAt": "2026-03-18T19:17:28.313-07:00",
-          "durationMinutes": 464,
-          "url": "https://stspg.io/wbzjwvfcjt5f"
-        },
-        {
-          "id": "yssdwy56qh6b",
-          "providerId": "sendgrid",
-          "title": "Delay in Email Event Processing and Stats",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-05T11:14:03.976-08:00",
-          "resolvedAt": "2026-03-05T11:14:04.012-08:00",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/5751qxhz5sy2"
-        },
-        {
-          "id": "05k6gtjyv50s",
-          "providerId": "sendgrid",
-          "title": "v3 Timezones Update Delay",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-04T08:44:25.806-08:00",
-          "resolvedAt": "2026-03-04T08:44:25.840-08:00",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/16gypydr92mh"
-        }
-      ],
-      "news": []
-    },
-    {
-      "provider": {
-        "id": "plaid",
-        "name": "Plaid",
-        "category": "payment",
-        "icon": "🏦",
-        "domain": "plaid.com",
-        "audienceProfile": "b2b",
-        "apiUrl": "https://status.plaid.com/api/v2/summary.json",
-        "statusPageUrl": "https://status.plaid.com"
-      },
-      "status": {
-        "providerId": "plaid",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T22:33:06.751Z"
-      },
-      "stats": {
-        "providerId": "plaid",
-        "uptime30d": 98.74,
-        "uptime90d": 99.18,
-        "incidentCount30d": 8,
-        "avgMttr30d": 203,
-        "lastIncident": "2026-04-29T02:20:25.000Z",
-        "reliabilityScore": 88,
-        "reliabilityScore90d": 87,
-        "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 4,
-            "uptime": 99.89
-          },
-          {
-            "month": "2026-03",
-            "label": "Mar 26",
-            "incidentCount": 10,
-            "uptime": 98.93
-          },
-          {
-            "month": "2026-04",
-            "label": "Apr 26",
-            "incidentCount": 7,
-            "uptime": 98.73
-          }
-        ],
-        "tagSummary": [
-          {
-            "tag": "availability",
-            "count30d": 2,
-            "count90d": 9
-          },
-          {
-            "tag": "api",
-            "count30d": 2,
-            "count90d": 8
-          },
-          {
-            "tag": "other",
-            "count30d": 2,
-            "count90d": 4
-          },
-          {
-            "tag": "performance",
-            "count30d": 3,
-            "count90d": 4
-          },
-          {
-            "tag": "webhook",
-            "count30d": 1,
-            "count90d": 1
-          },
-          {
-            "tag": "billing",
-            "count30d": 0,
-            "count90d": 1
-          }
-        ],
-        "audienceBreakdown": {
-          "b2b": 8,
-          "b2c": 0,
-          "both": 0,
-          "unknown": 0
-        }
-      },
-      "recentIncidents": [
-        {
-          "id": "q4sv54d0f37q",
-          "providerId": "plaid",
-          "title": "Elevated API errors",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-29T02:20:25.000Z",
-          "resolvedAt": "2026-04-29T03:25:34.281Z",
-          "durationMinutes": 65,
-          "url": "https://stspg.io/8dlx5xm5tsy8"
-        },
-        {
-          "id": "k29d1gtp2jlb",
-          "providerId": "plaid",
-          "title": "IDV Downtime",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T17:33:22.887Z",
-          "resolvedAt": "2026-04-23T17:58:49.670Z",
-          "durationMinutes": 25,
-          "url": "https://stspg.io/hvl5ryfqn39g"
-        },
-        {
-          "id": "wsd0j7m0km9d",
-          "providerId": "plaid",
-          "title": "Transaction Updates Delayed",
-          "severity": "major",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T14:57:56.091Z",
-          "resolvedAt": "2026-04-23T22:23:34.087Z",
-          "durationMinutes": 446,
-          "url": "https://stspg.io/3wg41bsv7r7p"
-        },
-        {
-          "id": "chxcv10dhmjl",
-          "providerId": "plaid",
-          "title": "Service Disruption Impacting Wells Fargo connections",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-22T03:45:26.028Z",
-          "resolvedAt": "2026-04-22T03:57:52.036Z",
-          "durationMinutes": 12,
-          "url": "https://stspg.io/1fylg54m9q54"
-        },
-        {
-          "id": "kf9v1s5nbpw2",
-          "providerId": "plaid",
-          "title": "Service Disruption Impacting Chase connections",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-19T03:37:05.000Z",
-          "resolvedAt": "2026-04-19T13:07:08.083Z",
-          "durationMinutes": 570,
-          "url": "https://stspg.io/hz9tf2s45nnw"
-        },
-        {
-          "id": "5p7y1pt78bwn",
-          "providerId": "plaid",
-          "title": "Elevated Link errors",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-18T01:30:12.000Z",
-          "resolvedAt": "2026-04-18T07:47:41.610Z",
-          "durationMinutes": 377,
-          "url": "https://stspg.io/khx7ssh8pb66"
-        },
-        {
-          "id": "mn1lbqzs9vyb",
-          "providerId": "plaid",
-          "title": "Increased Transactions webhook latency",
-          "severity": "minor",
-          "tags": [
-            "webhook",
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-01T20:30:14.000Z",
-          "resolvedAt": "2026-04-01T21:07:17.115Z",
-          "durationMinutes": 37,
-          "url": "https://stspg.io/738kjm96cq13"
-        },
-        {
-          "id": "1lzscpjmcpk0",
-          "providerId": "plaid",
-          "title": "Transaction Updates Delayed",
-          "severity": "maintenance",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-01T05:07:25.230Z",
-          "resolvedAt": "2026-04-01T14:27:33.357Z",
-          "durationMinutes": 560,
-          "url": "https://stspg.io/8ywm8zbnhjtq"
-        },
-        {
-          "id": "bxx5spttlpxn",
-          "providerId": "plaid",
-          "title": "Elevated API errors",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-31T19:01:53.567Z",
-          "resolvedAt": "2026-03-31T20:33:53.486Z",
-          "durationMinutes": 92,
-          "url": "https://stspg.io/hpkfxksr43p8"
-        },
-        {
-          "id": "l6yt1gm7f8qn",
-          "providerId": "plaid",
-          "title": "Service Disruption Impacting Wells Fargo connections",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-30T15:16:20.846Z",
-          "resolvedAt": "2026-03-30T17:19:10.143Z",
-          "durationMinutes": 123,
-          "url": "https://stspg.io/75m5ptd1lvnw"
-        },
-        {
-          "id": "s1q96rbw2pdy",
-          "providerId": "plaid",
-          "title": "Elevated dashboard error rates",
-          "severity": "major",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-27T17:06:02.955Z",
-          "resolvedAt": "2026-03-27T21:26:58.032Z",
-          "durationMinutes": 261,
-          "url": "https://stspg.io/38c2x4qjmznl"
-        },
-        {
-          "id": "sgsmk7x65hww",
-          "providerId": "plaid",
-          "title": "Elevated dashboard error rates",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-26T15:53:12.021Z",
-          "resolvedAt": "2026-03-26T16:32:12.356Z",
-          "durationMinutes": 39,
-          "url": "https://stspg.io/nyn9g6g3lly0"
-        },
-        {
-          "id": "wl3b2qkbvrmn",
-          "providerId": "plaid",
-          "title": "IDV Downtime",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-19T15:32:05.773Z",
-          "resolvedAt": "2026-03-19T15:32:05.826Z",
-          "durationMinutes": 0,
-          "url": "https://stspg.io/pgw99vh24cj7"
-        },
-        {
-          "id": "v5hhyzp65n66",
-          "providerId": "plaid",
-          "title": "Service Disruption Impacting Fidelity and Fidelity NetBenefit connections",
-          "severity": "minor",
-          "tags": [
-            "availability"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-13T16:28:41.477Z",
-          "resolvedAt": "2026-03-13T17:37:55.259Z",
-          "durationMinutes": 69,
-          "url": "https://stspg.io/hz7dq2qdv14g"
-        },
-        {
-          "id": "4wjypksz5nby",
-          "providerId": "plaid",
-          "title": "API downtime",
-          "severity": "critical",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-03-09T21:44:39.000Z",
-          "resolvedAt": "2026-03-09T23:14:47.517Z",
-          "durationMinutes": 90,
-          "url": "https://stspg.io/t99dqsk5r46m"
-        }
-      ],
-      "news": [
-        {
-          "id": "47442452",
-          "title": "Launch HN: Voltair (YC W26) – Drone and charging network for power utilities",
-          "url": "https://news.ycombinator.com/item?id=47442452",
-          "source": "hackernews",
-          "publishedAt": "2026-03-19T16:57:02Z",
-          "points": 85,
-          "commentCount": 27
-        },
-        {
-          "id": "47322794",
-          "title": "SHOW HN: A usage circuit breaker for Cloudflare Workers",
-          "url": "https://news.ycombinator.com/item?id=47322794",
-          "source": "hackernews",
-          "publishedAt": "2026-03-10T13:09:00Z",
-          "points": 29,
-          "commentCount": 9
         }
       ]
     }
@@ -5025,282 +1872,7 @@
           ]
         }
       ]
-    },
-    {
-      "category": "infra",
-      "tags": [
-        {
-          "tag": "other",
-          "count30d": 46,
-          "count90d": 61,
-          "trend": "up",
-          "providers": [
-            "vercel",
-            "cloudflare",
-            "github",
-            "netlify",
-            "render"
-          ]
-        },
-        {
-          "tag": "performance",
-          "count30d": 14,
-          "count90d": 32,
-          "trend": "stable",
-          "providers": [
-            "vercel",
-            "cloudflare",
-            "github",
-            "netlify",
-            "render"
-          ]
-        },
-        {
-          "tag": "availability",
-          "count30d": 18,
-          "count90d": 28,
-          "trend": "up",
-          "providers": [
-            "vercel",
-            "github",
-            "netlify",
-            "render"
-          ]
-        },
-        {
-          "tag": "network",
-          "count30d": 17,
-          "count90d": 25,
-          "trend": "up",
-          "providers": [
-            "vercel",
-            "cloudflare",
-            "netlify",
-            "render"
-          ]
-        },
-        {
-          "tag": "api",
-          "count30d": 14,
-          "count90d": 24,
-          "trend": "up",
-          "providers": [
-            "vercel",
-            "cloudflare",
-            "github",
-            "netlify"
-          ]
-        },
-        {
-          "tag": "deployment",
-          "count30d": 6,
-          "count90d": 19,
-          "trend": "stable",
-          "providers": [
-            "vercel",
-            "netlify",
-            "render"
-          ]
-        },
-        {
-          "tag": "webhook",
-          "count30d": 2,
-          "count90d": 6,
-          "trend": "stable",
-          "providers": [
-            "vercel",
-            "github"
-          ]
-        },
-        {
-          "tag": "inference",
-          "count30d": 3,
-          "count90d": 3,
-          "trend": "up",
-          "providers": [
-            "github"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "data",
-      "tags": [
-        {
-          "tag": "other",
-          "count30d": 6,
-          "count90d": 28,
-          "trend": "stable",
-          "providers": [
-            "supabase",
-            "pinecone",
-            "mongodb",
-            "upstash"
-          ]
-        },
-        {
-          "tag": "database",
-          "count30d": 3,
-          "count90d": 14,
-          "trend": "stable",
-          "providers": [
-            "supabase",
-            "mongodb",
-            "upstash"
-          ]
-        },
-        {
-          "tag": "network",
-          "count30d": 1,
-          "count90d": 13,
-          "trend": "down",
-          "providers": [
-            "supabase",
-            "mongodb",
-            "upstash"
-          ]
-        },
-        {
-          "tag": "api",
-          "count30d": 2,
-          "count90d": 11,
-          "trend": "down",
-          "providers": [
-            "supabase",
-            "mongodb"
-          ]
-        },
-        {
-          "tag": "performance",
-          "count30d": 2,
-          "count90d": 9,
-          "trend": "stable",
-          "providers": [
-            "supabase",
-            "mongodb",
-            "upstash"
-          ]
-        },
-        {
-          "tag": "availability",
-          "count30d": 3,
-          "count90d": 9,
-          "trend": "stable",
-          "providers": [
-            "supabase",
-            "pinecone",
-            "mongodb",
-            "upstash"
-          ]
-        },
-        {
-          "tag": "auth",
-          "count30d": 2,
-          "count90d": 4,
-          "trend": "up",
-          "providers": [
-            "supabase",
-            "mongodb"
-          ]
-        },
-        {
-          "tag": "billing",
-          "count30d": 1,
-          "count90d": 2,
-          "trend": "up",
-          "providers": [
-            "supabase",
-            "mongodb"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "payment",
-      "tags": [
-        {
-          "tag": "performance",
-          "count30d": 40,
-          "count90d": 48,
-          "trend": "up",
-          "providers": [
-            "twilio",
-            "sendgrid",
-            "plaid"
-          ]
-        },
-        {
-          "tag": "other",
-          "count30d": 20,
-          "count90d": 24,
-          "trend": "up",
-          "providers": [
-            "twilio",
-            "sendgrid",
-            "plaid"
-          ]
-        },
-        {
-          "tag": "api",
-          "count30d": 7,
-          "count90d": 14,
-          "trend": "up",
-          "providers": [
-            "twilio",
-            "sendgrid",
-            "plaid"
-          ]
-        },
-        {
-          "tag": "availability",
-          "count30d": 2,
-          "count90d": 9,
-          "trend": "stable",
-          "providers": [
-            "plaid"
-          ]
-        },
-        {
-          "tag": "network",
-          "count30d": 7,
-          "count90d": 7,
-          "trend": "up",
-          "providers": [
-            "twilio"
-          ]
-        },
-        {
-          "tag": "auth",
-          "count30d": 2,
-          "count90d": 5,
-          "trend": "stable",
-          "providers": [
-            "twilio",
-            "sendgrid"
-          ]
-        },
-        {
-          "tag": "billing",
-          "count30d": 1,
-          "count90d": 2,
-          "trend": "up",
-          "providers": [
-            "sendgrid",
-            "plaid"
-          ]
-        },
-        {
-          "tag": "webhook",
-          "count30d": 1,
-          "count90d": 2,
-          "trend": "up",
-          "providers": [
-            "sendgrid",
-            "plaid"
-          ]
-        }
-      ]
     }
   ],
-  "generatedAt": "2026-04-29T22:33:17.015Z"
+  "generatedAt": "2026-04-29T23:59:11.865Z"
 }
