@@ -12,6 +12,7 @@ export const PROVIDERS: Provider[] = [
   { id: 'vercel',     name: 'Vercel',        category: 'infra',   color: '#ffffff', icon: '▲',  statusPageUrl: 'https://www.vercel-status.com',     apiUrl: 'https://www.vercel-status.com/api/v2/summary.json' },
   { id: 'cloudflare', name: 'Cloudflare',    category: 'infra',   color: '#f6821f', icon: '☁️', statusPageUrl: 'https://www.cloudflarestatus.com',  apiUrl: 'https://www.cloudflarestatus.com/api/v2/summary.json' },
   { id: 'github',     name: 'GitHub',        category: 'infra',   color: '#ffffff', icon: '🐙', statusPageUrl: 'https://www.githubstatus.com',      apiUrl: 'https://www.githubstatus.com/api/v2/summary.json' },
+  { id: 'azure',      name: 'Azure',         category: 'infra',   color: '#0089d6', icon: '🔷', statusPageUrl: 'https://azure.status.microsoft/en-us/status/', apiUrl: 'https://azurestatuscdn.azureedge.net/en-us/status/feed/' },
   { id: 'netlify',    name: 'Netlify',       category: 'infra',   color: '#00c7b7', icon: '🌐', statusPageUrl: 'https://www.netlifystatus.com',     apiUrl: 'https://www.netlifystatus.com/api/v2/summary.json' },
   { id: 'render',     name: 'Render',        category: 'infra',   color: '#46e3b7', icon: '🎨', statusPageUrl: 'https://status.render.com',         apiUrl: 'https://status.render.com/api/v2/summary.json' },
   // Data & Storage

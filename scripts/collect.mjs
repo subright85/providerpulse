@@ -27,6 +27,7 @@ const PROVIDERS = [
   { id: 'vercel',     name: 'Vercel',        category: 'infra',   icon: '▲',  apiUrl: 'https://www.vercel-status.com/api/v2/summary.json',    statusPageUrl: 'https://www.vercel-status.com' },
   { id: 'cloudflare', name: 'Cloudflare',    category: 'infra',   icon: '☁️', apiUrl: 'https://www.cloudflarestatus.com/api/v2/summary.json', statusPageUrl: 'https://www.cloudflarestatus.com' },
   { id: 'github',     name: 'GitHub',        category: 'infra',   icon: '🐙', apiUrl: 'https://www.githubstatus.com/api/v2/summary.json',     statusPageUrl: 'https://www.githubstatus.com' },
+  { id: 'azure',      name: 'Azure',         category: 'infra',   icon: '🔷', apiUrl: 'https://azurestatuscdn.azureedge.net/en-us/status/feed/', statusPageUrl: 'https://azure.status.microsoft/en-us/status/', type: 'azure-rss' },
   { id: 'netlify',    name: 'Netlify',       category: 'infra',   icon: '🌐', apiUrl: 'https://www.netlifystatus.com/api/v2/summary.json',    statusPageUrl: 'https://www.netlifystatus.com' },
   { id: 'render',     name: 'Render',        category: 'infra',   icon: '🎨', apiUrl: 'https://status.render.com/api/v2/summary.json',        statusPageUrl: 'https://status.render.com' },
   // Data & Storage
@@ -248,6 +249,53 @@ async function fetchStatuspageProvider(p) {
   }
 }
 
+// Azure: RSS feed — active incidents only, no historical data
+async function fetchAzureProvider(p) {
+  try {
+    const res = await safeFetch(p.apiUrl);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const xml = await res.text();
+
+    const itemMatches = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)];
+    const incidents = itemMatches.map((m, idx) => {
+      const item = m[1];
+      const title = (item.match(/<title><!\[CDATA\[([^\]]*)\]\]><\/title>/) || item.match(/<title>([^<]*)<\/title>/) || [])[1]?.trim() ?? 'Azure Incident';
+      const link  = (item.match(/<link>([^<]*)<\/link>/) || [])[1]?.trim() ?? p.statusPageUrl;
+      const pubDate = (item.match(/<pubDate>([^<]*)<\/pubDate>/) || [])[1]?.trim() ?? null;
+      return {
+        id: `azure-${idx}-${pubDate ?? Date.now()}`,
+        providerId: p.id,
+        title,
+        severity: 'major',
+        tags: tagIncident(title),
+        startedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
+        resolvedAt: null,
+        durationMinutes: null,
+        url: link || p.statusPageUrl,
+      };
+    });
+
+    const indicator = incidents.length > 0 ? 'major' : 'none';
+    return {
+      provider: p,
+      status: { providerId: p.id, indicator, description: indicator === 'none' ? 'All Systems Operational' : 'Active Incident', updatedAt: new Date().toISOString() },
+      stats: {
+        providerId: p.id,
+        uptime30d: null, uptime90d: null,
+        incidentCount30d: incidents.length,
+        avgMttr30d: null,
+        lastIncident: incidents[0]?.startedAt ?? null,
+        reliabilityScore: null,
+        monthlyTrend: [], tagSummary: [],
+      },
+      recentIncidents: incidents,
+    };
+  } catch (err) {
+    console.error(`  ✗ [${p.name}] Azure RSS failed: ${err.message}`);
+    return nullStats(p);
+  }
+}
+
 // Google Cloud status.cloud.google.com/incidents.json (custom format)
 async function fetchGCPProvider(p) {
   try {
@@ -300,6 +348,7 @@ async function fetchGCPProvider(p) {
 
 async function fetchProvider(p) {
   if (p.type === 'gcp') return fetchGCPProvider(p);
+  if (p.type === 'azure-rss') return fetchAzureProvider(p);
   return fetchStatuspageProvider(p);
 }
 
