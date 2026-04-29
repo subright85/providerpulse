@@ -15,16 +15,16 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:10.007Z"
+        "updatedAt": "2026-04-29T06:30:24.008Z"
       },
       "stats": {
         "providerId": "openai",
-        "uptime30d": 96.74,
-        "uptime90d": 98.91,
+        "uptime30d": 97.19,
+        "uptime90d": 99.06,
         "incidentCount30d": 25,
-        "avgMttr30d": 204,
-        "lastIncident": "2026-04-28T22:46:00Z",
-        "reliabilityScore": 62,
+        "avgMttr30d": 191,
+        "lastIncident": "2026-04-29T06:06:15Z",
+        "reliabilityScore": 63,
         "reliabilityScore90d": 86,
         "monthlyTrend": [
           {
@@ -43,14 +43,14 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 25,
-            "uptime": 96.53
+            "uptime": 97.02
           }
         ],
         "tagSummary": [
           {
             "tag": "api",
-            "count30d": 14,
-            "count90d": 14
+            "count30d": 13,
+            "count90d": 13
           },
           {
             "tag": "inference",
@@ -86,6 +86,35 @@
         }
       },
       "recentIncidents": [
+        {
+          "id": "01KQBXGR1S2JW48DA0795D4MGZ",
+          "providerId": "openai",
+          "title": "ChatGPT users may encounter issues in conversation",
+          "severity": "major",
+          "tags": [
+            "inference"
+          ],
+          "audience": "b2c",
+          "startedAt": "2026-04-29T06:06:15Z",
+          "resolvedAt": "2026-04-29T05:27:00Z",
+          "durationMinutes": -39,
+          "url": "https://status.openai.com"
+        },
+        {
+          "id": "01KQBTE67HFNEC7R3J3Y22YC3G",
+          "providerId": "openai",
+          "title": "Users may experience elevated error rate for gpt-4o-mini in the API",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "audience": "b2b",
+          "startedAt": "2026-04-29T05:12:25Z",
+          "resolvedAt": "2026-04-29T05:41:04Z",
+          "durationMinutes": 29,
+          "url": "https://status.openai.com"
+        },
         {
           "id": "01KQB4AMHC9CKFYT863PMXN1YR",
           "providerId": "openai",
@@ -271,34 +300,6 @@
           "resolvedAt": "2026-04-16T21:21:07Z",
           "durationMinutes": 100,
           "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KP96N94V5AJX22P8APDX6XH2",
-          "providerId": "openai",
-          "title": "ChatGPT FedRAMP workspaces not loading",
-          "severity": "critical",
-          "tags": [
-            "inference"
-          ],
-          "audience": "b2c",
-          "startedAt": "2026-04-15T18:32:35Z",
-          "resolvedAt": "2026-04-15T18:55:03Z",
-          "durationMinutes": 22,
-          "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KP6EBCNE70DBFZ7Z56VG44N8",
-          "providerId": "openai",
-          "title": "Account Creation Issues",
-          "severity": "minor",
-          "tags": [
-            "other"
-          ],
-          "audience": "unknown",
-          "startedAt": "2026-04-14T16:49:17Z",
-          "resolvedAt": "2026-04-14T17:09:21Z",
-          "durationMinutes": 20,
-          "url": "https://status.openai.com"
         }
       ],
       "news": [
@@ -355,7 +356,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:10.854Z"
+        "updatedAt": "2026-04-29T06:30:24.798Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -383,7 +384,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 46,
-            "uptime": 97.08
+            "uptime": 97.09
           }
         ],
         "tagSummary": [
@@ -709,7 +710,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:13.122Z"
+        "updatedAt": "2026-04-29T06:30:25.235Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -812,7 +813,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:13.785Z"
+        "updatedAt": "2026-04-29T06:30:25.839Z"
       },
       "stats": {
         "providerId": "groq",
@@ -937,7 +938,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:14.440Z"
+        "updatedAt": "2026-04-29T06:30:26.493Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1084,7 +1085,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:15.232Z"
+        "updatedAt": "2026-04-29T06:30:27.150Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1372,7 +1373,7 @@
         "providerId": "vercel",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:15.971Z"
+        "updatedAt": "2026-04-29T06:30:27.773Z"
       },
       "stats": {
         "providerId": "vercel",
@@ -1731,7 +1732,7 @@
         "providerId": "cloudflare",
         "indicator": "major",
         "description": "Partial System Outage",
-        "updatedAt": "2026-04-29T03:56:16.591Z"
+        "updatedAt": "2026-04-29T06:30:28.463Z"
       },
       "stats": {
         "providerId": "cloudflare",
@@ -1759,7 +1760,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 91.54
+            "uptime": 91.57
           }
         ],
         "tagSummary": [
@@ -2081,7 +2082,7 @@
         "providerId": "github",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T03:56:17.385Z"
+        "updatedAt": "2026-04-29T06:30:29.219Z"
       },
       "stats": {
         "providerId": "github",
@@ -2109,7 +2110,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 27,
-            "uptime": 93.72
+            "uptime": 93.74
           }
         ],
         "tagSummary": [
@@ -2438,7 +2439,7 @@
         "providerId": "azure",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:17.851Z"
+        "updatedAt": "2026-04-29T06:30:29.638Z"
       },
       "stats": {
         "providerId": "azure",
@@ -2486,7 +2487,7 @@
         "providerId": "netlify",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:18.539Z"
+        "updatedAt": "2026-04-29T06:30:30.370Z"
       },
       "stats": {
         "providerId": "netlify",
@@ -2787,7 +2788,7 @@
         "providerId": "render",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:19.270Z"
+        "updatedAt": "2026-04-29T06:30:31.104Z"
       },
       "stats": {
         "providerId": "render",
@@ -3098,7 +3099,7 @@
         "providerId": "supabase",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:19.908Z"
+        "updatedAt": "2026-04-29T06:30:31.778Z"
       },
       "stats": {
         "providerId": "supabase",
@@ -3126,7 +3127,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 12,
-            "uptime": 95.22
+            "uptime": 95.24
           }
         ],
         "tagSummary": [
@@ -3436,7 +3437,7 @@
         "providerId": "pinecone",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:20.579Z"
+        "updatedAt": "2026-04-29T06:30:32.447Z"
       },
       "stats": {
         "providerId": "pinecone",
@@ -3575,7 +3576,7 @@
         "providerId": "mongodb",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:21.379Z"
+        "updatedAt": "2026-04-29T06:30:33.108Z"
       },
       "stats": {
         "providerId": "mongodb",
@@ -3603,7 +3604,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 3,
-            "uptime": 90.03
+            "uptime": 90.07
           }
         ],
         "tagSummary": [
@@ -3893,7 +3894,7 @@
         "providerId": "upstash",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:22.159Z"
+        "updatedAt": "2026-04-29T06:30:33.942Z"
       },
       "stats": {
         "providerId": "upstash",
@@ -4035,15 +4036,15 @@
         "providerId": "twilio",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-29T03:56:22.828Z"
+        "updatedAt": "2026-04-29T06:30:34.576Z"
       },
       "stats": {
         "providerId": "twilio",
-        "uptime30d": 81.29,
-        "uptime90d": 93.76,
+        "uptime30d": 81.43,
+        "uptime90d": 93.81,
         "incidentCount30d": 50,
-        "avgMttr30d": 825,
-        "lastIncident": "2026-04-28T13:53:13.239-07:00",
+        "avgMttr30d": 836,
+        "lastIncident": "2026-04-28T21:52:53.371-07:00",
         "reliabilityScore": 64,
         "reliabilityScore90d": 88,
         "monthlyTrend": [
@@ -4063,7 +4064,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 50,
-            "uptime": 80.07
+            "uptime": 80.29
           }
         ],
         "tagSummary": [
@@ -4102,9 +4103,23 @@
       },
       "recentIncidents": [
         {
+          "id": "js1932809r3j",
+          "providerId": "twilio",
+          "title": "SMS Delivery Delays from Twilio to Telefonica Costa Rica",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "audience": "b2b",
+          "startedAt": "2026-04-28T21:52:53.371-07:00",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/hzczyrp35l1v"
+        },
+        {
           "id": "xfbygc0vj207",
           "providerId": "twilio",
-          "title": "SMS Delivery Delays from Twilio Phone Numbers to Orange Cameroon",
+          "title": "SMS Delivery Delays from Twilio to Orange Cameroon",
           "severity": "minor",
           "tags": [
             "performance"
@@ -4299,20 +4314,6 @@
           "resolvedAt": "2026-04-23T13:37:57.542-07:00",
           "durationMinutes": 142,
           "url": "https://stspg.io/w571w0qhh7zh"
-        },
-        {
-          "id": "zl24vtfjlxzn",
-          "providerId": "twilio",
-          "title": "Intermittent Issues with API Recording Downloads",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T10:31:40.028-07:00",
-          "resolvedAt": "2026-04-23T14:46:20.461-07:00",
-          "durationMinutes": 255,
-          "url": "https://stspg.io/wm4zr9fdzjmd"
         }
       ],
       "news": [
@@ -4342,7 +4343,7 @@
         "providerId": "sendgrid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:23.496Z"
+        "updatedAt": "2026-04-29T06:30:35.192Z"
       },
       "stats": {
         "providerId": "sendgrid",
@@ -4370,7 +4371,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 11,
-            "uptime": 97.89
+            "uptime": 97.9
           }
         ],
         "tagSummary": [
@@ -4641,7 +4642,7 @@
         "providerId": "plaid",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-29T03:56:24.161Z"
+        "updatedAt": "2026-04-29T06:30:35.786Z"
       },
       "stats": {
         "providerId": "plaid",
@@ -4951,19 +4952,6 @@
       "category": "llm",
       "tags": [
         {
-          "tag": "api",
-          "count30d": 44,
-          "count90d": 48,
-          "trend": "up",
-          "providers": [
-            "openai",
-            "anthropic",
-            "google-ai",
-            "cohere",
-            "deepseek"
-          ]
-        },
-        {
           "tag": "inference",
           "count30d": 45,
           "count90d": 48,
@@ -4973,6 +4961,19 @@
             "anthropic",
             "google-ai",
             "groq"
+          ]
+        },
+        {
+          "tag": "api",
+          "count30d": 43,
+          "count90d": 47,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "google-ai",
+            "cohere",
+            "deepseek"
           ]
         },
         {
@@ -5320,5 +5321,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-29T03:56:34.009Z"
+  "generatedAt": "2026-04-29T06:30:45.509Z"
 }
