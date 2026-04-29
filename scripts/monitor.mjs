@@ -3,8 +3,7 @@
  * Sends Telegram notification when new incidents appear or resolve.
  * Run by GitHub Actions every 5 minutes via monitor.yml.
  *
- * Required env: TELEGRAM_BOT_TOKEN
- * Optional env: TELEGRAM_CHAT_ID (defaults to hardcoded chat id)
+ * Required env: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
@@ -16,7 +15,11 @@ const ROOT = join(__dir, '..');
 const STATE_FILE = join(ROOT, 'public', 'data', 'monitor-state.json');
 
 const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID ?? '8640645351';
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+if (!TELEGRAM_CHAT_ID && TELEGRAM_TOKEN) {
+  console.error('TELEGRAM_CHAT_ID env var required');
+  process.exit(1);
+}
 
 const MONITORED = [
   {
