@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { ProviderData, Incident, MonthlyTrend, NewsItem, TagSummaryItem, IncidentTag, Provider } from '../types';
+import type { ProviderData, Incident, MonthlyTrend, NewsItem, TagSummaryItem, IncidentTag, Provider, IncidentAudience, AudienceBreakdown } from '../types';
 
 const SEV_CONFIG = {
   critical:    { color: 'text-red-400',    bg: 'bg-red-500/15',    label: 'Critical' },
@@ -45,6 +45,61 @@ function fmtRelative(iso: string): string {
 interface Props {
   data: ProviderData;
   onClose: () => void;
+}
+
+const AUDIENCE_CONFIG: Record<IncidentAudience, { label: string; cls: string; tooltip: string }> = {
+  b2c:     { label: 'USERS',  cls: 'bg-emerald-500/20 text-emerald-300', tooltip: 'End-user impact (web app, login, consumer-facing)' },
+  b2b:     { label: 'API',    cls: 'bg-blue-500/20 text-blue-300',       tooltip: 'Developer/business impact (API, SDK, integrations)' },
+  both:    { label: 'BOTH',   cls: 'bg-violet-500/20 text-violet-300',   tooltip: 'Affects both end-users and developers' },
+  unknown: { label: '?',      cls: 'bg-white/8 text-white/40',           tooltip: 'Audience impact unclear from description' },
+};
+
+function AudienceBadge({ audience }: { audience: IncidentAudience }) {
+  const cfg = AUDIENCE_CONFIG[audience] ?? AUDIENCE_CONFIG.unknown;
+  return (
+    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${cfg.cls}`} title={cfg.tooltip}>
+      {cfg.label}
+    </span>
+  );
+}
+
+function ImpactBreakdown({ breakdown }: { breakdown: AudienceBreakdown }) {
+  const total = breakdown.b2b + breakdown.b2c + breakdown.both + breakdown.unknown;
+  if (total === 0) return null;
+  const segments: { key: IncidentAudience; pct: number; count: number }[] = [
+    { key: 'b2c',     pct: (breakdown.b2c / total) * 100,     count: breakdown.b2c },
+    { key: 'b2b',     pct: (breakdown.b2b / total) * 100,     count: breakdown.b2b },
+    { key: 'both',    pct: (breakdown.both / total) * 100,    count: breakdown.both },
+    { key: 'unknown', pct: (breakdown.unknown / total) * 100, count: breakdown.unknown },
+  ].filter(s => s.count > 0);
+  const segColor: Record<IncidentAudience, string> = {
+    b2c:     'bg-emerald-400',
+    b2b:     'bg-blue-400',
+    both:    'bg-violet-400',
+    unknown: 'bg-white/20',
+  };
+  return (
+    <div className="bg-white/4 border border-white/8 rounded-xl p-4">
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-white/40 text-xs font-semibold uppercase tracking-widest">Impact Breakdown</p>
+        <span className="text-white/20 text-[10px]">{total} incidents · 30d</span>
+      </div>
+      <div className="flex w-full h-2 rounded-full overflow-hidden bg-white/5">
+        {segments.map(s => (
+          <div key={s.key} className={segColor[s.key]} style={{ width: `${s.pct}%` }} title={`${AUDIENCE_CONFIG[s.key].label}: ${s.count}`} />
+        ))}
+      </div>
+      <div className="flex flex-wrap gap-x-4 gap-y-1 mt-3">
+        {segments.map(s => (
+          <div key={s.key} className="flex items-center gap-1.5">
+            <span className={`w-2 h-2 rounded-sm ${segColor[s.key]}`} />
+            <span className="text-white/70 text-[11px] font-semibold">{AUDIENCE_CONFIG[s.key].label}</span>
+            <span className="text-white/35 text-[11px] tabular-nums">{Math.round(s.pct)}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 function getScoreColor(score: number | null): string {
@@ -118,6 +173,9 @@ export default function ProviderDetail({ data, onClose }: Props) {
 
           {/* Monthly trend */}
           {stats.monthlyTrend.length > 0 && <TrendChart trend={stats.monthlyTrend} />}
+
+          {/* Impact breakdown (B2B vs B2C audience) */}
+          <ImpactBreakdown breakdown={stats.audienceBreakdown} />
 
           {/* Tag breakdown */}
           {stats.tagSummary.length > 0 && <TagBreakdown tags={stats.tagSummary} />}
@@ -254,7 +312,8 @@ function IncidentRow({ inc }: { inc: Incident }) {
       <span className={`mt-0.5 px-1.5 py-0.5 rounded text-[10px] font-bold uppercase shrink-0 ${sev.bg} ${sev.color}`}>{sev.label}</span>
       <div className="flex-1 min-w-0">
         <p className="text-white/80 text-xs font-medium leading-snug">{inc.title}</p>
-        <div className="flex flex-wrap gap-1 mt-1">
+        <div className="flex flex-wrap items-center gap-1 mt-1">
+          <AudienceBadge audience={inc.audience} />
           {inc.tags?.map(tag => <TagPill key={tag} tag={tag} />)}
         </div>
         <div className="flex gap-2 mt-1">

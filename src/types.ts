@@ -7,6 +7,8 @@ export type IncidentTag =
   | 'auth' | 'rate-limit' | 'billing' | 'database'
   | 'network' | 'webhook' | 'deployment' | 'other';
 
+export type IncidentAudience = 'b2b' | 'b2c' | 'both' | 'unknown';
+
 export interface Provider {
   id: string;
   name: string;
@@ -24,10 +26,18 @@ export interface Incident {
   title: string;
   severity: IncidentSeverity;
   tags: IncidentTag[];
+  audience: IncidentAudience;
   startedAt: string;
   resolvedAt: string | null;
   durationMinutes: number | null;
   url: string;
+}
+
+export interface AudienceBreakdown {
+  b2b: number;
+  b2c: number;
+  both: number;
+  unknown: number;
 }
 
 export interface MonthlyTrend {
@@ -84,6 +94,7 @@ export interface ProviderStats {
   reliabilityScore90d: number | null;
   monthlyTrend: MonthlyTrend[];
   tagSummary: TagSummaryItem[];
+  audienceBreakdown: AudienceBreakdown;
 }
 
 export interface ProviderData {

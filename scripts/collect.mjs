@@ -15,30 +15,32 @@ const OUT = join(ROOT, 'public', 'data', 'providers.json');
 
 const HEADERS = { 'User-Agent': 'ProviderPulse/1.0 (contact@providerpulse.dev)' };
 
+// audienceProfile: 'mixed' = consumer apps + dev API (use keyword classifier),
+//                  'b2b' = developer/infra only (skip classifier, default to b2b)
 const PROVIDERS = [
   // LLM
-  { id: 'openai',     name: 'OpenAI',        category: 'llm',     icon: '🤖', domain: 'openai.com',          apiUrl: 'https://status.openai.com/api/v2/summary.json',        statusPageUrl: 'https://status.openai.com' },
-  { id: 'anthropic',  name: 'Anthropic',     category: 'llm',     icon: '🧠', domain: 'anthropic.com',       apiUrl: 'https://status.anthropic.com/api/v2/summary.json',     statusPageUrl: 'https://status.anthropic.com' },
-  { id: 'google-ai',  name: 'Google AI',     category: 'llm',     icon: '✨', domain: 'cloud.google.com',    apiUrl: 'https://status.cloud.google.com/incidents.json',       statusPageUrl: 'https://status.cloud.google.com', type: 'gcp' },
-  { id: 'groq',       name: 'Groq',          category: 'llm',     icon: '⚡', domain: 'groq.com',            apiUrl: 'https://groqstatus.com/api/v2/summary.json',           statusPageUrl: 'https://groqstatus.com' },
-  { id: 'cohere',     name: 'Cohere',        category: 'llm',     icon: '🔮', domain: 'cohere.com',          apiUrl: 'https://status.cohere.com/api/v2/summary.json',        statusPageUrl: 'https://status.cohere.com' },
-  { id: 'deepseek',   name: 'DeepSeek',      category: 'llm',     icon: '🐋', domain: 'deepseek.com',        apiUrl: 'https://status.deepseek.com/api/v2/summary.json',      statusPageUrl: 'https://status.deepseek.com' },
-  // Infrastructure
-  { id: 'vercel',     name: 'Vercel',        category: 'infra',   icon: '▲',  domain: 'vercel.com',          apiUrl: 'https://www.vercel-status.com/api/v2/summary.json',    statusPageUrl: 'https://www.vercel-status.com' },
-  { id: 'cloudflare', name: 'Cloudflare',    category: 'infra',   icon: '☁️', domain: 'cloudflare.com',      apiUrl: 'https://www.cloudflarestatus.com/api/v2/summary.json', statusPageUrl: 'https://www.cloudflarestatus.com' },
-  { id: 'github',     name: 'GitHub',        category: 'infra',   icon: '🐙', domain: 'github.com',          apiUrl: 'https://www.githubstatus.com/api/v2/summary.json',     statusPageUrl: 'https://www.githubstatus.com' },
-  { id: 'azure',      name: 'Azure',         category: 'infra',   icon: '🔷', domain: 'azure.microsoft.com', apiUrl: 'https://azurestatuscdn.azureedge.net/en-us/status/feed/', statusPageUrl: 'https://azure.status.microsoft/en-us/status/', type: 'azure-rss' },
-  { id: 'netlify',    name: 'Netlify',       category: 'infra',   icon: '🌐', domain: 'netlify.com',         apiUrl: 'https://www.netlifystatus.com/api/v2/summary.json',    statusPageUrl: 'https://www.netlifystatus.com' },
-  { id: 'render',     name: 'Render',        category: 'infra',   icon: '🎨', domain: 'render.com',          apiUrl: 'https://status.render.com/api/v2/summary.json',        statusPageUrl: 'https://status.render.com' },
-  // Data & Storage
-  { id: 'supabase',   name: 'Supabase',      category: 'data',    icon: '🗄️', domain: 'supabase.com',        apiUrl: 'https://status.supabase.com/api/v2/summary.json',      statusPageUrl: 'https://status.supabase.com' },
-  { id: 'pinecone',   name: 'Pinecone',      category: 'data',    icon: '🌲', domain: 'pinecone.io',         apiUrl: 'https://status.pinecone.io/api/v2/summary.json',       statusPageUrl: 'https://status.pinecone.io' },
-  { id: 'mongodb',    name: 'MongoDB Atlas', category: 'data',    icon: '🍃', domain: 'mongodb.com',         apiUrl: 'https://status.mongodb.com/api/v2/summary.json',       statusPageUrl: 'https://status.mongodb.com' },
-  { id: 'upstash',    name: 'Upstash',       category: 'data',    icon: '🔴', domain: 'upstash.com',         apiUrl: 'https://status.upstash.com/api/v2/summary.json',       statusPageUrl: 'https://status.upstash.com' },
-  // Payments & Communication
-  { id: 'twilio',     name: 'Twilio',        category: 'payment', icon: '📡', domain: 'twilio.com',          apiUrl: 'https://status.twilio.com/api/v2/summary.json',        statusPageUrl: 'https://status.twilio.com' },
-  { id: 'sendgrid',   name: 'SendGrid',      category: 'payment', icon: '📧', domain: 'sendgrid.com',        apiUrl: 'https://status.sendgrid.com/api/v2/summary.json',      statusPageUrl: 'https://status.sendgrid.com' },
-  { id: 'plaid',      name: 'Plaid',         category: 'payment', icon: '🏦', domain: 'plaid.com',           apiUrl: 'https://status.plaid.com/api/v2/summary.json',         statusPageUrl: 'https://status.plaid.com' },
+  { id: 'openai',     name: 'OpenAI',        category: 'llm',     icon: '🤖', domain: 'openai.com',          audienceProfile: 'mixed', apiUrl: 'https://status.openai.com/api/v2/summary.json',        statusPageUrl: 'https://status.openai.com' },
+  { id: 'anthropic',  name: 'Anthropic',     category: 'llm',     icon: '🧠', domain: 'anthropic.com',       audienceProfile: 'mixed', apiUrl: 'https://status.anthropic.com/api/v2/summary.json',     statusPageUrl: 'https://status.anthropic.com' },
+  { id: 'google-ai',  name: 'Google AI',     category: 'llm',     icon: '✨', domain: 'cloud.google.com',    audienceProfile: 'mixed', apiUrl: 'https://status.cloud.google.com/incidents.json',       statusPageUrl: 'https://status.cloud.google.com', type: 'gcp' },
+  { id: 'groq',       name: 'Groq',          category: 'llm',     icon: '⚡', domain: 'groq.com',            audienceProfile: 'b2b',   apiUrl: 'https://groqstatus.com/api/v2/summary.json',           statusPageUrl: 'https://groqstatus.com' },
+  { id: 'cohere',     name: 'Cohere',        category: 'llm',     icon: '🔮', domain: 'cohere.com',          audienceProfile: 'b2b',   apiUrl: 'https://status.cohere.com/api/v2/summary.json',        statusPageUrl: 'https://status.cohere.com' },
+  { id: 'deepseek',   name: 'DeepSeek',      category: 'llm',     icon: '🐋', domain: 'deepseek.com',        audienceProfile: 'mixed', apiUrl: 'https://status.deepseek.com/api/v2/summary.json',      statusPageUrl: 'https://status.deepseek.com' },
+  // Infrastructure (all B2B)
+  { id: 'vercel',     name: 'Vercel',        category: 'infra',   icon: '▲',  domain: 'vercel.com',          audienceProfile: 'b2b',   apiUrl: 'https://www.vercel-status.com/api/v2/summary.json',    statusPageUrl: 'https://www.vercel-status.com' },
+  { id: 'cloudflare', name: 'Cloudflare',    category: 'infra',   icon: '☁️', domain: 'cloudflare.com',      audienceProfile: 'b2b',   apiUrl: 'https://www.cloudflarestatus.com/api/v2/summary.json', statusPageUrl: 'https://www.cloudflarestatus.com' },
+  { id: 'github',     name: 'GitHub',        category: 'infra',   icon: '🐙', domain: 'github.com',          audienceProfile: 'b2b',   apiUrl: 'https://www.githubstatus.com/api/v2/summary.json',     statusPageUrl: 'https://www.githubstatus.com' },
+  { id: 'azure',      name: 'Azure',         category: 'infra',   icon: '🔷', domain: 'azure.microsoft.com', audienceProfile: 'b2b',   apiUrl: 'https://azurestatuscdn.azureedge.net/en-us/status/feed/', statusPageUrl: 'https://azure.status.microsoft/en-us/status/', type: 'azure-rss' },
+  { id: 'netlify',    name: 'Netlify',       category: 'infra',   icon: '🌐', domain: 'netlify.com',         audienceProfile: 'b2b',   apiUrl: 'https://www.netlifystatus.com/api/v2/summary.json',    statusPageUrl: 'https://www.netlifystatus.com' },
+  { id: 'render',     name: 'Render',        category: 'infra',   icon: '🎨', domain: 'render.com',          audienceProfile: 'b2b',   apiUrl: 'https://status.render.com/api/v2/summary.json',        statusPageUrl: 'https://status.render.com' },
+  // Data & Storage (all B2B)
+  { id: 'supabase',   name: 'Supabase',      category: 'data',    icon: '🗄️', domain: 'supabase.com',        audienceProfile: 'b2b',   apiUrl: 'https://status.supabase.com/api/v2/summary.json',      statusPageUrl: 'https://status.supabase.com' },
+  { id: 'pinecone',   name: 'Pinecone',      category: 'data',    icon: '🌲', domain: 'pinecone.io',         audienceProfile: 'b2b',   apiUrl: 'https://status.pinecone.io/api/v2/summary.json',       statusPageUrl: 'https://status.pinecone.io' },
+  { id: 'mongodb',    name: 'MongoDB Atlas', category: 'data',    icon: '🍃', domain: 'mongodb.com',         audienceProfile: 'b2b',   apiUrl: 'https://status.mongodb.com/api/v2/summary.json',       statusPageUrl: 'https://status.mongodb.com' },
+  { id: 'upstash',    name: 'Upstash',       category: 'data',    icon: '🔴', domain: 'upstash.com',         audienceProfile: 'b2b',   apiUrl: 'https://status.upstash.com/api/v2/summary.json',       statusPageUrl: 'https://status.upstash.com' },
+  // Payments & Communication (all B2B)
+  { id: 'twilio',     name: 'Twilio',        category: 'payment', icon: '📡', domain: 'twilio.com',          audienceProfile: 'b2b',   apiUrl: 'https://status.twilio.com/api/v2/summary.json',        statusPageUrl: 'https://status.twilio.com' },
+  { id: 'sendgrid',   name: 'SendGrid',      category: 'payment', icon: '📧', domain: 'sendgrid.com',        audienceProfile: 'b2b',   apiUrl: 'https://status.sendgrid.com/api/v2/summary.json',      statusPageUrl: 'https://status.sendgrid.com' },
+  { id: 'plaid',      name: 'Plaid',         category: 'payment', icon: '🏦', domain: 'plaid.com',           audienceProfile: 'b2b',   apiUrl: 'https://status.plaid.com/api/v2/summary.json',         statusPageUrl: 'https://status.plaid.com' },
 ];
 
 const SEVERITY_WEIGHT = { critical: 1.0, major: 0.7, minor: 0.2, maintenance: 0.0 };
@@ -60,6 +62,32 @@ const TAG_PATTERNS = [
 function tagIncident(title) {
   const tags = TAG_PATTERNS.filter(({ re }) => re.test(title)).map(({ tag }) => tag);
   return tags.length > 0 ? tags : ['other'];
+}
+
+// Audience classification: who is impacted by this incident?
+//   b2c = end-user facing (ChatGPT, Claude.ai, web apps, login portals)
+//   b2b = developer/company (API, SDK, webhooks, programmatic integrations)
+//   both = clearly affects both audiences
+//   unknown = description too vague to classify
+const B2C_RE = /chatgpt|claude\.ai|claude\s+app|gemini\s+app|web\s+app|website|sign[\s-]?in|sign[\s-]?up|\blogin\b|portal|consumer|chat\s+ui|playground/i;
+const B2B_RE = /\bapi\b|\bsdk\b|webhook|endpoint|integration|oauth|programmatic|server[\s-]to[\s-]server|inference|completion|embedding|http\s*[45]\d\d|codex|sora|moderation|fine.?tun|model\s+(?:gpt|claude|gemini)/i;
+
+function classifyAudience(title, profile) {
+  // Pure B2B providers (infra, data, payments) — every incident affects developers/companies
+  if (profile === 'b2b') return 'b2b';
+  // Mixed providers (OpenAI, Anthropic, Google AI, DeepSeek): keyword-based
+  const isB2C = B2C_RE.test(title);
+  const isB2B = B2B_RE.test(title);
+  if (isB2C && isB2B) return 'both';
+  if (isB2C) return 'b2c';
+  if (isB2B) return 'b2b';
+  return 'unknown';
+}
+
+function buildAudienceBreakdown(incidents) {
+  const b = { b2b: 0, b2c: 0, both: 0, unknown: 0 };
+  for (const inc of incidents) b[inc.audience] = (b[inc.audience] ?? 0) + 1;
+  return b;
 }
 
 // 90d uses scaled penalties (×3 window) so the same incident count doesn't
@@ -147,6 +175,7 @@ function buildStats(p, incidents, cutoff30) {
     reliabilityScore90d: calcReliabilityScore(uptime90d, nonMaint90, 90),
     monthlyTrend: buildMonthlyTrend(incidents),
     tagSummary: buildTagSummary(incidents, cutoff30),
+    audienceBreakdown: buildAudienceBreakdown(recent30),
   };
 }
 
@@ -185,7 +214,7 @@ function nullStats(p) {
   return {
     provider: p,
     status: { providerId: p.id, indicator: 'none', description: 'Status unavailable', updatedAt: new Date().toISOString() },
-    stats: { providerId: p.id, uptime30d: null, uptime90d: null, incidentCount30d: 0, avgMttr30d: null, lastIncident: null, reliabilityScore: null, reliabilityScore90d: null, monthlyTrend: [], tagSummary: [] },
+    stats: { providerId: p.id, uptime30d: null, uptime90d: null, incidentCount30d: 0, avgMttr30d: null, lastIncident: null, reliabilityScore: null, reliabilityScore90d: null, monthlyTrend: [], tagSummary: [], audienceBreakdown: { b2b: 0, b2c: 0, both: 0, unknown: 0 } },
     recentIncidents: [],
   };
 }
@@ -233,6 +262,7 @@ async function fetchStatuspageProvider(p) {
           title: inc.name,
           severity,
           tags: tagIncident(inc.name),
+          audience: classifyAudience(inc.name, p.audienceProfile),
           startedAt: inc.created_at,
           resolvedAt: inc.resolved_at ?? null,
           durationMinutes: end ? Math.round((end - start) / 60000) : null,
@@ -272,6 +302,7 @@ async function fetchAzureProvider(p) {
         title,
         severity: 'major',
         tags: tagIncident(title),
+        audience: classifyAudience(title, p.audienceProfile),
         startedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
         resolvedAt: null,
         durationMinutes: null,
@@ -292,6 +323,7 @@ async function fetchAzureProvider(p) {
         reliabilityScore: null,
         reliabilityScore90d: null,
         monthlyTrend: [], tagSummary: [],
+        audienceBreakdown: buildAudienceBreakdown(incidents),
       },
       recentIncidents: incidents,
     };
@@ -327,6 +359,7 @@ async function fetchGCPProvider(p) {
           title,
           severity,
           tags: tagIncident(title),
+          audience: classifyAudience(title, p.audienceProfile),
           startedAt: startDate.toISOString(),
           resolvedAt: endDate ? endDate.toISOString() : null,
           durationMinutes: endDate ? Math.round((endDate - startDate) / 60000) : null,
