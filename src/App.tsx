@@ -90,7 +90,7 @@ export default function App() {
         <div className="mt-10 pt-6 border-t border-white/6 text-center space-y-1">
           <p className="text-white/20 text-xs">Data sourced from official status pages · Refreshed every 30 minutes</p>
           <p className="text-white/15 text-xs">Score = severity-weighted uptime · Critical −8pts · Major −4pts · Minor −0.5pts</p>
-          <p className="text-white/15 text-xs">Free · Open data · <a href="mailto:providerpulse.kelp689@silomails.com" className="hover:text-white/40 underline">Contact</a></p>
+          <p className="text-white/15 text-xs">Free · Open data · <a href="https://github.com/subright85/providerpulse/discussions" target="_blank" rel="noopener noreferrer" className="hover:text-white/40 underline">Discussions</a></p>
         </div>
       </div>
 
