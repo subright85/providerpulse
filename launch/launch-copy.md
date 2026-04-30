@@ -24,53 +24,60 @@ Leave empty. HN convention is title-only for Show HN. The first comment carries 
 ### First comment (post within 30 seconds of submission)
 
 ```
-Hi HN — author here.
+hey HN — author here.
 
-I started this because I was picking between OpenAI and Anthropic for a
-production app and there was no easy way to compare reliability over time.
-Status pages tell you "is it down right now?" not "how reliable has this
-been over the past 90 days?" — which is what actually matters when you're
-betting your product on someone's API.
+Built this because I kept picking LLM providers blind. Status pages
+tell you "down right now" — they don't tell you "this thing has been
+down 4 times in the last 90 days."
 
-ProviderPulse pulls each provider's status page API every 30 minutes,
-breaks it down to component level, and computes a 30-day and 90-day
-reliability score. OpenAI alone publishes 25 separate components
-(Chat Completions, Embeddings, Audio, Sora, Fine-tuning, Moderations,
-Files, Batch, Codex, Responses, …) — most status comparison sites stop
-at the 4-category top-level summary, which is what makes "ChatGPT down
-but the API is fine" invisible elsewhere.
+It pulls every provider's status API every 30 min and breaks it down
+per component. OpenAI alone publishes 25 components (Chat Completions,
+Sora, Embeddings, Audio, Codex, Realtime, ...). Most status aggregators
+stop at the 4 top-level groups OpenAI rolls up to — that's where the
+"ChatGPT is down but the API is fine" signal disappears.
 
-Currently 8 providers: OpenAI, Anthropic, Google AI, Groq, Cohere,
+8 providers right now: OpenAI, Anthropic, Google AI, Groq, Cohere,
 DeepSeek, Perplexity, AI21.
 
-Some things from the last 90 days that surprised me:
+A few things that surprised me from the data:
 
-- OpenAI and Anthropic both had 15 incidents. Same count, different shape:
-  OpenAI's roughly 50/50 between ChatGPT (consumer) and API (developer);
-  Anthropic's were mostly Claude.ai web app, with only a couple of pure
-  API incidents.
-- "api" and "inference" tags account for 90% of incidents across all
-  providers. Other categories (auth, billing, database) are basically
-  noise.
-- Google AI, Perplexity, and AI21 had 0–1 incidents in 90 days. Either
-  they're more stable or they post less aggressively. Probably some of
-  both.
+- OpenAI and Anthropic both had 15 incidents in 90 days. Same number,
+  totally different shape — OpenAI splits ~50/50 between ChatGPT
+  (consumer) and API (developer); Anthropic's were almost all
+  Claude.ai web, only a couple of pure API ones.
+- "api" and "inference" account for ~90% of all LLM incidents. Auth,
+  billing, database stuff is basically noise. If you're worried about
+  LLM downtime, you're really worried about inference downtime.
+- Google AI, Perplexity, and AI21 had 0–1 incidents in 90 days each.
+  Either they're more stable or they post less aggressively, probably
+  some of both.
 
-Limitations I want to be upfront about:
-- Source is each provider's self-reported status. They may underreport.
-- 90-day window is intentional — incident data gets noisy beyond that.
-- Private/regional outages we can't see externally aren't here.
+Stuff to be honest about:
+- Source is each provider's self-reported status. They underreport
+  routinely.
+- 90 days is intentional — incident data gets noisy past that.
+- Private or regional outages aren't visible externally so they're not
+  in here.
 
-Free, no signup, no email collection. Built solo over the past two weeks.
+Free, no signup, no email collection. Built solo over the past 2 weeks.
 
-Roadmap is open — alerts and more providers are top of the list. Happy
-to take feedback on the methodology, what's broken, providers I should
-add.
+Top of the roadmap is per-component alerts and more providers — open
+to suggestions on which ones, and happy to take feedback on the
+methodology or anything broken.
 
 [ProviderPulse URL]
 ```
 
-Word count target: 250–280. Currently ~270.
+Word count target: 250–280. Currently ~290.
+
+Tone notes:
+- "hey HN" not "Hi HN" — slightly more casual, dev voice.
+- "kept picking … blind" / "totally different shape" — conversational,
+  not corporate.
+- "Stuff to be honest about" not "Limitations" — sounds like a person
+  not a press release.
+- Avoid bullet-headed buzzwords ("Roadmap:", "Limitations:"). Lead the
+  sentence with a verb instead.
 
 ---
 
