@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-04-30T18:53:20.967Z"
+        "updatedAt": "2026-04-30T20:12:18.877Z"
       },
       "stats": {
         "providerId": "openai",
@@ -485,16 +485,16 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T18:53:21.776Z"
+        "updatedAt": "2026-04-30T20:12:19.646Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 96.88,
+        "uptime30d": 97.16,
         "uptime90d": 98.96,
-        "incidentCount30d": 50,
-        "avgMttr30d": 58,
+        "incidentCount30d": 49,
+        "avgMttr30d": 55,
         "lastIncident": "2026-04-30T13:10:09.292Z",
-        "reliabilityScore": 62,
+        "reliabilityScore": 63,
         "reliabilityScore90d": 64,
         "monthlyTrend": [
           {
@@ -513,13 +513,13 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 49,
-            "uptime": 97.13
+            "uptime": 97.14
           }
         ],
         "tagSummary": [
           {
             "tag": "inference",
-            "count30d": 35,
+            "count30d": 34,
             "count90d": 35
           },
           {
@@ -529,7 +529,7 @@
           },
           {
             "tag": "availability",
-            "count30d": 7,
+            "count30d": 6,
             "count90d": 7
           },
           {
@@ -555,7 +555,7 @@
         ],
         "audienceBreakdown": {
           "b2b": 2,
-          "b2c": 13,
+          "b2c": 12,
           "both": 4,
           "unknown": 31
         }
@@ -873,7 +873,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T18:53:22.261Z"
+        "updatedAt": "2026-04-30T20:12:20.149Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -977,7 +977,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T18:53:23.000Z"
+        "updatedAt": "2026-04-30T20:12:20.865Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1205,7 +1205,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T18:53:23.711Z"
+        "updatedAt": "2026-04-30T20:12:21.553Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1491,7 +1491,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T18:53:24.478Z"
+        "updatedAt": "2026-04-30T20:12:22.200Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1793,7 +1793,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T18:53:25.065Z"
+        "updatedAt": "2026-04-30T20:12:22.771Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1849,9 +1849,9 @@
       },
       "status": {
         "providerId": "ai21",
-        "indicator": "minor",
-        "description": "Partially Degraded Service",
-        "updatedAt": "2026-04-30T18:53:25.803Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-04-30T20:12:23.442Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1905,7 +1905,7 @@
         {
           "id": "n313qpb9pclg",
           "name": "Maestro Websearch",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "id": "8byw33cwy620",
@@ -1932,7 +1932,7 @@
       "tags": [
         {
           "tag": "inference",
-          "count30d": 48,
+          "count30d": 47,
           "count90d": 50,
           "trend": "up",
           "providers": [
@@ -1982,7 +1982,7 @@
         },
         {
           "tag": "availability",
-          "count30d": 9,
+          "count30d": 8,
           "count90d": 9,
           "trend": "up",
           "providers": [
@@ -2023,5 +2023,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-30T18:53:30.412Z"
+  "generatedAt": "2026-04-30T20:12:28.271Z"
 }
