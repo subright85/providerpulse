@@ -25,6 +25,8 @@ const PROVIDERS = [
   { id: 'groq',      name: 'Groq',      category: 'llm', icon: '⚡', domain: 'groq.com',         audienceProfile: 'b2b',   apiUrl: 'https://groqstatus.com/api/v2/summary.json',       statusPageUrl: 'https://groqstatus.com' },
   { id: 'cohere',    name: 'Cohere',    category: 'llm', icon: '🔮', domain: 'cohere.com',       audienceProfile: 'b2b',   apiUrl: 'https://status.cohere.com/api/v2/summary.json',    statusPageUrl: 'https://status.cohere.com' },
   { id: 'deepseek',  name: 'DeepSeek',  category: 'llm', icon: '🐋', domain: 'deepseek.com',     audienceProfile: 'mixed', apiUrl: 'https://status.deepseek.com/api/v2/summary.json',  statusPageUrl: 'https://status.deepseek.com' },
+  { id: 'perplexity',name: 'Perplexity',category: 'llm', icon: '🔎', domain: 'perplexity.ai',    audienceProfile: 'mixed', apiUrl: 'https://status.perplexity.com/api/v2/summary.json',statusPageUrl: 'https://status.perplexity.com' },
+  { id: 'ai21',      name: 'AI21',      category: 'llm', icon: '📜', domain: 'ai21.com',         audienceProfile: 'b2b',   apiUrl: 'https://status.ai21.com/api/v2/summary.json',      statusPageUrl: 'https://status.ai21.com' },
 ];
 
 const SEVERITY_WEIGHT = { critical: 1.0, major: 0.7, minor: 0.2, maintenance: 0.0 };

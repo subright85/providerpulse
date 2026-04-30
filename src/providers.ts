@@ -9,6 +9,8 @@ export const PROVIDERS: Provider[] = [
   { id: 'groq',       name: 'Groq',      category: 'llm', domain: 'groq.com',         color: '#f97316', icon: '⚡', statusPageUrl: 'https://groqstatus.com',         apiUrl: 'https://groqstatus.com/api/v2/summary.json' },
   { id: 'cohere',     name: 'Cohere',    category: 'llm', domain: 'cohere.com',       color: '#6366f1', icon: '🔮', statusPageUrl: 'https://status.cohere.com',     apiUrl: 'https://status.cohere.com/api/v2/summary.json' },
   { id: 'deepseek',   name: 'DeepSeek',  category: 'llm', domain: 'deepseek.com',     color: '#00b4d8', icon: '🐋', statusPageUrl: 'https://status.deepseek.com',   apiUrl: 'https://status.deepseek.com/api/v2/summary.json' },
+  { id: 'perplexity', name: 'Perplexity',category: 'llm', domain: 'perplexity.ai',    color: '#1fb8cd', icon: '🔎', statusPageUrl: 'https://status.perplexity.com', apiUrl: 'https://status.perplexity.com/api/v2/summary.json' },
+  { id: 'ai21',       name: 'AI21',      category: 'llm', domain: 'ai21.com',         color: '#ff6b35', icon: '📜', statusPageUrl: 'https://status.ai21.com',       apiUrl: 'https://status.ai21.com/api/v2/summary.json' },
 ];
 
 export const CATEGORY_LABELS: Record<string, string> = {
