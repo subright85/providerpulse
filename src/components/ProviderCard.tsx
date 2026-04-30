@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { ProviderData, Provider, ProviderComponent } from '../types';
+import type { ProviderData, Provider, ProviderComponent, MonthlyTrend } from '../types';
 
 const INDICATOR_CONFIG = {
   none:        { label: 'Operational',  bg: 'bg-emerald-500/12', text: 'text-emerald-400', dot: 'bg-emerald-400' },
@@ -24,27 +24,23 @@ function fmtLastIncident(iso: string | null): string {
   return `${days}d ago`;
 }
 
-// Score uses cool palette only (emerald→blue→indigo→violet) so it can't be
-// mistaken for the warm status indicator (red/orange/yellow).
 function scoreColor(score: number): string {
   return score >= 90 ? '#34d399' : score >= 75 ? '#60a5fa' : score >= 60 ? '#818cf8' : '#a78bfa';
 }
 
 function ScoreRing({ score, period }: { score: number | null; period: '30D' | '90D' }) {
-  const size = period === '30D' ? 48 : 36;
-  const r = period === '30D' ? 20 : 14;
-  const stroke = period === '30D' ? 2.5 : 2;
-  const fontSize = period === '30D' ? '11px' : '9px';
-  const labelSize = period === '30D' ? '7px' : '6px';
-
+  const size = 44;
+  const r = 18;
+  const stroke = 2.5;
   if (score === null) {
     return (
       <div
-        className="rounded-full border border-white/10 flex items-center justify-center text-white/25 font-medium"
-        style={{ width: size, height: size, fontSize: labelSize }}
+        className="rounded-full border border-white/10 flex flex-col items-center justify-center text-white/25"
+        style={{ width: size, height: size }}
         title={`${period} reliability unavailable`}
       >
-        N/A
+        <span className="text-[9px] font-bold leading-none">N/A</span>
+        <span className="text-[6px] text-white/30 font-semibold uppercase tracking-wide leading-none mt-0.5">{period}</span>
       </div>
     );
   }
@@ -62,9 +58,8 @@ function ScoreRing({ score, period }: { score: number | null; period: '30D' | '9
         <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth={stroke}
           strokeDasharray={`${dash} ${circ}`} strokeLinecap="round" />
       </svg>
-      <span className="font-bold leading-none" style={{ color, fontSize }}>{score}</span>
-      <span className="text-white/30 font-semibold uppercase tracking-wide leading-none mt-0.5"
-        style={{ fontSize: labelSize }}>{period}</span>
+      <span className="text-[11px] font-bold leading-none" style={{ color }}>{score}</span>
+      <span className="text-[6px] text-white/30 font-semibold uppercase tracking-wide leading-none mt-0.5">{period}</span>
     </div>
   );
 }
@@ -84,112 +79,143 @@ function ProviderIcon({ provider }: { provider: Provider }) {
   );
 }
 
+function componentDotColor(status: ProviderComponent['status']): string {
+  switch (status) {
+    case 'major_outage':         return 'bg-red-500';
+    case 'partial_outage':       return 'bg-orange-500';
+    case 'degraded_performance': return 'bg-yellow-500';
+    case 'under_maintenance':    return 'bg-blue-500';
+    default:                     return 'bg-emerald-500/60';
+  }
+}
+
+// Visualize all components as a dot grid — like a status calendar but for
+// components. Each dot = one component, colored by status. Failing first.
+function ComponentDots({ components }: { components: ProviderComponent[] }) {
+  if (components.length === 0) return null;
+  const sorted = [...components].sort((a, b) => {
+    const aOk = a.status === 'operational' ? 1 : 0;
+    const bOk = b.status === 'operational' ? 1 : 0;
+    return aOk - bOk;
+  });
+  return (
+    <div className="flex flex-wrap gap-1">
+      {sorted.map(c => (
+        <span
+          key={c.id}
+          className={`w-2 h-2 rounded-sm ${componentDotColor(c.status)}`}
+          title={`${c.name} — ${c.status.replace('_', ' ')}`}
+        />
+      ))}
+    </div>
+  );
+}
+
+// 3-month incident sparkline (bars). Tiny, fits inside card.
+function IncidentSparkline({ trend }: { trend: MonthlyTrend[] }) {
+  if (trend.length === 0) return null;
+  const max = Math.max(...trend.map(t => t.incidentCount), 1);
+  return (
+    <div className="flex items-end gap-1 h-6">
+      {trend.map(m => {
+        const h = (m.incidentCount / max) * 100;
+        return (
+          <div key={m.month} className="flex flex-col items-center gap-0.5 flex-1">
+            <div className="w-full bg-white/5 rounded-sm" style={{ height: '20px' }}>
+              <div
+                className="w-full bg-blue-400/60 rounded-sm"
+                style={{ height: `${h}%`, marginTop: `${100 - h}%` }}
+                title={`${m.label}: ${m.incidentCount} incidents`}
+              />
+            </div>
+            <span className="text-[7px] text-white/30 leading-none">{m.label.split(' ')[0]}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 interface Props {
   data: ProviderData;
   onClick: () => void;
 }
 
 export default function ProviderCard({ data, onClick }: Props) {
-  const { provider, status, stats, recentIncidents } = data;
+  const { provider, status, stats, recentIncidents, components } = data;
   const ind = INDICATOR_CONFIG[status.indicator] ?? INDICATOR_CONFIG.none;
   const isActive = status.indicator !== 'none' && status.indicator !== 'maintenance';
   const borderCls = isActive
     ? `border-l-[3px] ${ACTIVE_BORDER[status.indicator as keyof typeof ACTIVE_BORDER] ?? 'border-yellow-500/40'} border-t border-r border-b border-t-white/8 border-r-white/8 border-b-white/8`
     : 'border border-white/8';
 
-  // Most recent active incident title (for the card summary line)
   const activeIncident = recentIncidents.find(i =>
     i.resolvedAt === null && i.severity !== 'maintenance'
   );
+  const failingComps = components.filter(c => c.status !== 'operational');
 
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left bg-white/4 rounded-2xl p-4 hover:bg-white/6 transition-all duration-150 active:scale-99 ${borderCls}`}
+      className={`w-full text-left bg-white/4 rounded-2xl p-4 hover:bg-white/6 transition-all duration-150 active:scale-99 flex flex-col gap-3 ${borderCls}`}
     >
-      <div className="flex items-center gap-3">
+      {/* Header — logo, name, status pill, score rings */}
+      <div className="flex items-start gap-3">
         <ProviderIcon provider={provider} />
-
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <p className="font-semibold text-white text-sm">{provider.name}</p>
+            <p className="font-semibold text-white text-sm truncate">{provider.name}</p>
             <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold ${ind.bg} ${ind.text}`}>
               <span className={`w-1 h-1 rounded-full ${isActive ? 'animate-pulse' : ''} ${ind.dot}`} />
               {ind.label}
             </span>
           </div>
-
-          {/* Active incident summary line */}
           {activeIncident && (
-            <p className="text-[11px] text-orange-300/80 mt-1 truncate leading-tight">
+            <p className="text-[11px] text-orange-300/80 mt-0.5 truncate leading-tight">
               ⚠ {activeIncident.title}
             </p>
           )}
-
-          {/* Component health summary — the LLM-only differentiator */}
-          <ComponentSummary components={data.components} />
-
-          <div className="flex gap-4 mt-2">
-            <Stat label="30d uptime" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} ok={stats.uptime30d !== null && stats.uptime30d >= 99.5} />
-            <Stat label="Incidents" value={String(stats.incidentCount30d)} ok={stats.incidentCount30d === 0} />
-            <Stat label="Last inc." value={fmtLastIncident(stats.lastIncident)} ok={!stats.lastIncident} />
-          </div>
         </div>
-
-        <div className="flex flex-col items-center gap-1.5 shrink-0">
+        <div className="flex gap-1.5 shrink-0">
           <ScoreRing score={stats.reliabilityScore} period="30D" />
           <ScoreRing score={stats.reliabilityScore90d} period="90D" />
         </div>
       </div>
+
+      {/* Component dot grid — visual at-a-glance health */}
+      {components.length > 0 && (
+        <div className="bg-white/3 rounded-lg p-2.5">
+          <div className="flex items-center justify-between mb-1.5">
+            <span className="text-[10px] text-white/40 font-semibold uppercase tracking-wide">Components</span>
+            <span className={`text-[10px] tabular-nums ${failingComps.length === 0 ? 'text-emerald-400' : 'text-orange-300'}`}>
+              {failingComps.length === 0 ? `${components.length} OK` : `${failingComps.length} of ${components.length} affected`}
+            </span>
+          </div>
+          <ComponentDots components={components} />
+        </div>
+      )}
+
+      {/* Stats row + 3-month sparkline */}
+      <div className="grid grid-cols-3 gap-2">
+        <Stat label="30d uptime" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} ok={stats.uptime30d !== null && stats.uptime30d >= 99.5} />
+        <Stat label="Incidents" value={String(stats.incidentCount30d)} ok={stats.incidentCount30d === 0} />
+        <Stat label="Last inc." value={fmtLastIncident(stats.lastIncident)} ok={!stats.lastIncident} />
+      </div>
+
+      {stats.monthlyTrend.length > 0 && (
+        <div className="border-t border-white/6 pt-2">
+          <p className="text-[10px] text-white/30 font-semibold uppercase tracking-wide mb-1">3-month incidents</p>
+          <IncidentSparkline trend={stats.monthlyTrend} />
+        </div>
+      )}
     </button>
   );
-}
-
-function ComponentSummary({ components }: { components: ProviderComponent[] }) {
-  if (components.length === 0) return null;
-  const failing = components.filter(c => c.status !== 'operational');
-  if (failing.length === 0) {
-    return (
-      <p className="text-[11px] text-emerald-400/70 mt-1 leading-tight">
-        ✓ All {components.length} components operational
-      </p>
-    );
-  }
-  // Show up to 3 failing components inline
-  const display = failing.slice(0, 3);
-  const more = failing.length - display.length;
-  return (
-    <div className="flex flex-wrap gap-1 mt-1">
-      {display.map(c => (
-        <span
-          key={c.id}
-          className={`text-[10px] px-1.5 py-0.5 rounded ${componentStatusBadge(c.status)}`}
-          title={c.description ?? c.status}
-        >
-          {c.name}
-        </span>
-      ))}
-      {more > 0 && (
-        <span className="text-[10px] px-1.5 py-0.5 text-white/40">+{more} more</span>
-      )}
-    </div>
-  );
-}
-
-function componentStatusBadge(status: ProviderComponent['status']): string {
-  switch (status) {
-    case 'major_outage':         return 'bg-red-500/20 text-red-300';
-    case 'partial_outage':       return 'bg-orange-500/20 text-orange-300';
-    case 'degraded_performance': return 'bg-yellow-500/20 text-yellow-300';
-    case 'under_maintenance':    return 'bg-blue-500/20 text-blue-300';
-    default:                     return 'bg-white/10 text-white/50';
-  }
 }
 
 function Stat({ label, value, ok }: { label: string; value: string; ok: boolean }) {
   return (
     <div>
-      <p className={`text-xs font-semibold ${ok ? 'text-emerald-400' : 'text-white/60'}`}>{value}</p>
+      <p className={`text-xs font-semibold ${ok ? 'text-emerald-400' : 'text-white/70'}`}>{value}</p>
       <p className="text-white/25 text-[10px] uppercase tracking-wide mt-0.5">{label}</p>
     </div>
   );

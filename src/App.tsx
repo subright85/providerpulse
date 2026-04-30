@@ -30,7 +30,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-white">
-      <div className="max-w-2xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-8">
 
         {/* Header */}
         <div className="mb-6">
@@ -73,9 +73,9 @@ export default function App() {
           </div>
         )}
 
-        {/* Provider list */}
+        {/* Provider grid */}
         {data && (
-          <div className="flex flex-col gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
             {providers.map(p => (
               <ProviderCard key={p.provider.id} data={p} onClick={() => setSelected(p)} />
             ))}
