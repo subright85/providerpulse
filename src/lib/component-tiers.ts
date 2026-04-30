@@ -3,9 +3,9 @@
 // of a flat 25-dot blob, which is the LLM-only differentiator vs generic
 // status aggregators.
 //
-// Manually curated for OpenAI + Anthropic (the two providers most users have
-// in their stack). Other providers fall back to 'api' until Sanji's mapping
-// table arrives.
+// Mappings curated from Sanji's audit of all 8 provider status APIs.
+// Components not in the table fall back to 'api' (most LLM provider
+// components are API endpoints by default).
 
 export type ComponentTier = 'enduser' | 'api' | 'infra';
 
@@ -37,8 +37,8 @@ const MAPPINGS: Record<string, Record<string, ComponentTier>> = {
     'Sora':                'enduser',
     'Voice mode':          'enduser',
     'Conversations':       'enduser',
-    'Agent':               'enduser',
     'Connectors/Apps':     'enduser',
+    'Codex Web':           'enduser',
     // API services (developer/business APIs)
     'Chat Completions':    'api',
     'Responses':           'api',
@@ -53,25 +53,51 @@ const MAPPINGS: Record<string, Record<string, ComponentTier>> = {
     'File uploads':        'api',
     'Compliance API':      'api',
     'Codex API':           'api',
+    'Agent':               'api',
     // Developer infra (auth, tools, compliance)
     'Login':               'infra',
     'VS Code extension':   'infra',
     'CLI':                 'infra',
-    'Codex Web':           'infra',
     'FedRAMP':             'infra',
   },
   anthropic: {
     'claude.ai':                              'enduser',
     'Claude Cowork':                          'enduser',
+    'Claude for Government':                  'enduser',
     'Claude API (api.anthropic.com)':         'api',
     'Claude Console (platform.claude.com)':   'infra',
     'Claude Code':                            'infra',
-    'Claude for Government':                  'infra',
   },
+  groq: {
+    // All model endpoints fall through to 'api' default
+    'Website': 'infra',
+    'Docs':    'infra',
+  },
+  cohere: {
+    'Coral':          'enduser',  // consumer assistant product
+    'Playground':     'enduser',  // borderline but Sanji's classification
+    'Website':        'infra',
+    'Docs':           'infra',
+    'Infrastructure': 'infra',
+    // All command-*/embed-*/rerank-*/embeddings endpoints fall through to 'api'
+  },
+  deepseek: {
+    '网页对话服务 (Web Chat Service)': 'enduser',
+    'API 服务 (API Service)':          'api',
+  },
+  ai21: {
+    'Studio Platform':    'enduser',
+    'Maestro':            'api',
+    'Maestro Websearch':  'api',
+    'Maestro Filesearch': 'api',
+    'jamba-mini':         'api',
+    'jamba-large':        'api',
+  },
+  // perplexity and google-ai have 0 components — nothing to map yet
 };
 
 export function getComponentTier(providerId: string, componentName: string): ComponentTier {
   const mapping = MAPPINGS[providerId];
-  if (!mapping) return 'api'; // unmapped providers default to API services
+  if (!mapping) return 'api';
   return mapping[componentName] ?? 'api';
 }
