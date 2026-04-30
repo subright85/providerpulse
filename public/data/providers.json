@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-04-30T06:36:17.003Z"
+        "updatedAt": "2026-04-30T09:19:36.385Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 25,
-            "uptime": 97.2
+            "uptime": 97.21
           }
         ],
         "tagSummary": [
@@ -485,7 +485,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T06:36:18.159Z"
+        "updatedAt": "2026-04-30T09:19:37.114Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -513,7 +513,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 48,
-            "uptime": 97.11
+            "uptime": 97.12
           }
         ],
         "tagSummary": [
@@ -873,7 +873,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T06:36:18.635Z"
+        "updatedAt": "2026-04-30T09:19:37.554Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -977,7 +977,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T06:36:19.368Z"
+        "updatedAt": "2026-04-30T09:19:38.239Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1205,7 +1205,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T06:36:20.138Z"
+        "updatedAt": "2026-04-30T09:19:38.861Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1491,16 +1491,16 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T06:36:20.993Z"
+        "updatedAt": "2026-04-30T09:19:39.543Z"
       },
       "stats": {
         "providerId": "deepseek",
-        "uptime30d": 99.65,
+        "uptime30d": 99.75,
         "uptime90d": 99.22,
-        "incidentCount30d": 4,
-        "avgMttr30d": 87,
+        "incidentCount30d": 3,
+        "avgMttr30d": 95,
         "lastIncident": "2026-04-22T18:23:18.547+08:00",
-        "reliabilityScore": 86,
+        "reliabilityScore": 90,
         "reliabilityScore90d": 84,
         "monthlyTrend": [
           {
@@ -1530,17 +1530,17 @@
           },
           {
             "tag": "performance",
-            "count30d": 1,
+            "count30d": 0,
             "count90d": 6
           },
           {
             "tag": "api",
-            "count30d": 2,
+            "count30d": 1,
             "count90d": 5
           }
         ],
         "audienceBreakdown": {
-          "b2b": 2,
+          "b2b": 1,
           "b2c": 0,
           "both": 0,
           "unknown": 2
@@ -1793,7 +1793,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T06:36:21.894Z"
+        "updatedAt": "2026-04-30T09:19:40.037Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1851,7 +1851,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T06:36:22.649Z"
+        "updatedAt": "2026-04-30T09:19:40.729Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1944,7 +1944,7 @@
         },
         {
           "tag": "api",
-          "count30d": 44,
+          "count30d": 43,
           "count90d": 48,
           "trend": "up",
           "providers": [
@@ -1969,7 +1969,7 @@
         },
         {
           "tag": "performance",
-          "count30d": 6,
+          "count30d": 5,
           "count90d": 14,
           "trend": "stable",
           "providers": [
@@ -2023,5 +2023,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-30T06:36:27.312Z"
+  "generatedAt": "2026-04-30T09:19:45.080Z"
 }
