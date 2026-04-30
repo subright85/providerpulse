@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-04-30T20:12:18.877Z"
+        "updatedAt": "2026-04-30T21:33:31.429Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 25,
-            "uptime": 97.25
+            "uptime": 97.26
           }
         ],
         "tagSummary": [
@@ -485,7 +485,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T20:12:19.646Z"
+        "updatedAt": "2026-04-30T21:33:32.178Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -513,7 +513,7 @@
             "month": "2026-04",
             "label": "Apr 26",
             "incidentCount": 49,
-            "uptime": 97.14
+            "uptime": 97.15
           }
         ],
         "tagSummary": [
@@ -873,7 +873,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T20:12:20.149Z"
+        "updatedAt": "2026-04-30T21:33:32.610Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -977,7 +977,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T20:12:20.865Z"
+        "updatedAt": "2026-04-30T21:33:33.183Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1205,7 +1205,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T20:12:21.553Z"
+        "updatedAt": "2026-04-30T21:33:33.968Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1491,7 +1491,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T20:12:22.200Z"
+        "updatedAt": "2026-04-30T21:33:34.702Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1793,7 +1793,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T20:12:22.771Z"
+        "updatedAt": "2026-04-30T21:33:35.343Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1851,7 +1851,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T20:12:23.442Z"
+        "updatedAt": "2026-04-30T21:33:36.082Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -2023,5 +2023,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-30T20:12:28.271Z"
+  "generatedAt": "2026-04-30T21:33:41.628Z"
 }
