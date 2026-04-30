@@ -33,8 +33,12 @@ been over the past 90 days?" — which is what actually matters when you're
 betting your product on someone's API.
 
 ProviderPulse pulls each provider's status page API every 30 minutes,
-breaks it down to component level (Chat Completions, Embeddings, Audio,
-etc.), and computes a 30-day and 90-day reliability score.
+breaks it down to component level, and computes a 30-day and 90-day
+reliability score. OpenAI alone publishes 25 separate components
+(Chat Completions, Embeddings, Audio, Sora, Fine-tuning, Moderations,
+Files, Batch, Codex, Responses, …) — most status comparison sites stop
+at the 4-category top-level summary, which is what makes "ChatGPT down
+but the API is fine" invisible elsewhere.
 
 Currently 8 providers: OpenAI, Anthropic, Google AI, Groq, Cohere,
 DeepSeek, Perplexity, AI21.
@@ -84,9 +88,12 @@ Tracking LLM API reliability across 8 providers — 90 days of component-level u
 Built a tool to track LLM API reliability over 90 days, because status
 pages only tell you "down right now," not "how reliable has this been."
 
-Currently tracks 8 LLM APIs at component level — OpenAI alone has 25
-components (Chat Completions, Embeddings, Audio, Batch, Fine-tuning,
-each with its own status).
+Currently tracks 8 LLM APIs at component level. OpenAI publishes 25
+separate components on their status page (Chat Completions, Embeddings,
+Audio, Sora, Fine-tuning, Moderations, Files, Batch, Codex, Responses,
+each with its own status). Other status aggregators stop at the 4
+top-level categories OpenAI rolls up to — that's where the "ChatGPT
+down but the API is fine" signal gets lost.
 
 Some patterns from the data:
 - OpenAI and Anthropic both had ~15 incidents in 90 days, but with very
@@ -213,14 +220,15 @@ overused, dilutes).
 
 ### Tagline (60 char)
 ```
-Component-level reliability for 8 LLM APIs. Free, 90 days of history.
+Component-level reliability for 8 LLM APIs. 90 days of history.
 ```
 
 ### Description (260 char)
 ```
-ProviderPulse tracks 8 LLM APIs at component level — OpenAI Chat
-Completions vs Embeddings vs Audio, separately. 90-day reliability
-scores from each provider's official status page. Free, no signup.
+Tracks 8 LLM APIs at component level — OpenAI publishes 25 components
+(Chat Completions, Sora, Embeddings, Audio, …); we expose all of them.
+90-day reliability from each provider's official status page. Free,
+no signup.
 ```
 
 ### First comment (founder)
