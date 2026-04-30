@@ -272,6 +272,20 @@ URL: [link]
 
 ---
 
+## OG image (you'll need to make this)
+
+`public/og.png` — 1200×630 PNG. Used by Twitter/Slack/HN unfurls.
+Meta tags already point to it; just drop the file in `public/` and
+it'll be live next deploy.
+
+Easiest path: take a clean dashboard screenshot at desktop width,
+crop to 1200×630, paste the title + tagline on top in Figma or
+Cleanshot. Even a hero card screenshot works as a placeholder.
+
+Tip: keep readable text large (24px+) since unfurls render small.
+
+---
+
 ## Screenshots / GIFs (you'll need to record these)
 
 Tools: ScreenStudio (macOS, paid) or Loom (free). Cleanshot X for stills.
