@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { ProviderData, Provider, ProviderComponent, MonthlyTrend } from '../types';
+import { getComponentTier, TIER_LABELS, TIER_ICONS, TIER_RING, type ComponentTier } from '../lib/component-tiers';
 
 const INDICATOR_CONFIG = {
   none:        { label: 'Operational',  bg: 'bg-emerald-500/12', text: 'text-emerald-400', dot: 'bg-emerald-400' },
@@ -89,24 +90,58 @@ function componentDotColor(status: ProviderComponent['status']): string {
   }
 }
 
-// Visualize all components as a dot grid — like a status calendar but for
-// components. Each dot = one component, colored by status. Failing first.
-function ComponentDots({ components }: { components: ProviderComponent[] }) {
+// Three-tier grouped view: End-user / API services / Developer infra.
+// Lets a card show "ChatGPT down (B2C) but API fine (B2B)" — the core
+// LLM-only differentiator vs generic status aggregators.
+function ComponentTiers({ providerId, components }: { providerId: string; components: ProviderComponent[] }) {
   if (components.length === 0) return null;
-  const sorted = [...components].sort((a, b) => {
-    const aOk = a.status === 'operational' ? 1 : 0;
-    const bOk = b.status === 'operational' ? 1 : 0;
-    return aOk - bOk;
-  });
+
+  const grouped: Record<ComponentTier, ProviderComponent[]> = {
+    enduser: [],
+    api:     [],
+    infra:   [],
+  };
+  for (const c of components) {
+    grouped[getComponentTier(providerId, c.name)].push(c);
+  }
+  // Failing first within each tier, then alphabetical.
+  for (const tier of Object.keys(grouped) as ComponentTier[]) {
+    grouped[tier].sort((a, b) => {
+      const aOk = a.status === 'operational' ? 1 : 0;
+      const bOk = b.status === 'operational' ? 1 : 0;
+      if (aOk !== bOk) return aOk - bOk;
+      return a.name.localeCompare(b.name);
+    });
+  }
+
+  const tierOrder: ComponentTier[] = ['enduser', 'api', 'infra'];
+
   return (
-    <div className="flex flex-wrap gap-1">
-      {sorted.map(c => (
-        <span
-          key={c.id}
-          className={`w-2 h-2 rounded-sm ${componentDotColor(c.status)}`}
-          title={`${c.name} — ${c.status.replace('_', ' ')}`}
-        />
-      ))}
+    <div className="flex flex-col gap-1.5">
+      {tierOrder.map(tier => {
+        const items = grouped[tier];
+        if (items.length === 0) return null;
+        const failing = items.filter(c => c.status !== 'operational').length;
+        return (
+          <div key={tier} className="flex items-center gap-2">
+            <span className={`text-[10px] font-semibold uppercase tracking-wide w-20 shrink-0 ${TIER_RING[tier]}`}>
+              {TIER_ICONS[tier]} {TIER_LABELS[tier]}
+            </span>
+            <div className="flex flex-wrap gap-1 flex-1">
+              {items.map(c => (
+                <span
+                  key={c.id}
+                  className={`w-2 h-2 rounded-sm ${componentDotColor(c.status)}`}
+                  title={`${c.name} — ${c.status.replace('_', ' ')}`}
+                />
+              ))}
+            </div>
+            <span className={`text-[10px] tabular-nums shrink-0 ${failing > 0 ? 'text-orange-300' : 'text-white/30'}`}>
+              {failing > 0 ? `${failing}/${items.length}` : `${items.length} ok`}
+            </span>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -182,16 +217,16 @@ export default function ProviderCard({ data, onClick }: Props) {
         </div>
       </div>
 
-      {/* Component dot grid — visual at-a-glance health */}
+      {/* Components grouped by audience tier (B2C / B2B / Infra) */}
       {components.length > 0 && (
         <div className="bg-white/3 rounded-lg p-2.5">
-          <div className="flex items-center justify-between mb-1.5">
+          <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] text-white/40 font-semibold uppercase tracking-wide">Components</span>
             <span className={`text-[10px] tabular-nums ${failingComps.length === 0 ? 'text-emerald-400' : 'text-orange-300'}`}>
               {failingComps.length === 0 ? `${components.length} OK` : `${failingComps.length} of ${components.length} affected`}
             </span>
           </div>
-          <ComponentDots components={components} />
+          <ComponentTiers providerId={provider.id} components={components} />
         </div>
       )}
 
