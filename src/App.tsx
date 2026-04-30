@@ -6,7 +6,6 @@ import ProviderDetail from './components/ProviderDetail';
 import SubscribeForm from './components/SubscribeForm';
 import ReportForm from './components/ReportForm';
 import AdSlot from './components/AdSlot';
-import CompareLinks from './components/CompareLinks';
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/providers.json`;
 
@@ -82,11 +81,10 @@ export default function App() {
           </div>
         )}
 
-        {/* Subscribe + Compare + Report (free) */}
+        {/* Subscribe + Report (free) */}
         {data && (
           <div className="mt-8 flex flex-col gap-4">
             <SubscribeForm providers={providers} />
-            <CompareLinks />
             <AdSlot />
             <ReportForm providers={providers} />
           </div>

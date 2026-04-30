@@ -116,15 +116,15 @@ function IncidentSparkline({ trend }: { trend: MonthlyTrend[] }) {
   if (trend.length === 0) return null;
   const max = Math.max(...trend.map(t => t.incidentCount), 1);
   return (
-    <div className="flex items-end gap-1 h-6">
+    <div className="flex gap-1 items-end">
       {trend.map(m => {
         const h = (m.incidentCount / max) * 100;
         return (
-          <div key={m.month} className="flex flex-col items-center gap-0.5 flex-1">
-            <div className="w-full bg-white/5 rounded-sm" style={{ height: '20px' }}>
+          <div key={m.month} className="flex flex-col items-center gap-0.5 flex-1 min-w-0">
+            <div className="w-full h-5 bg-white/5 rounded-sm flex items-end overflow-hidden">
               <div
                 className="w-full bg-blue-400/60 rounded-sm"
-                style={{ height: `${h}%`, marginTop: `${100 - h}%` }}
+                style={{ height: `${Math.max(h, 4)}%` }}
                 title={`${m.label}: ${m.incidentCount} incidents`}
               />
             </div>
