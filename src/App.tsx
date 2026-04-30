@@ -6,6 +6,7 @@ import ProviderDetail from './components/ProviderDetail';
 import SubscribeForm from './components/SubscribeForm';
 import ReportForm from './components/ReportForm';
 import AdSlot from './components/AdSlot';
+import VerifyHandler from './components/VerifyHandler';
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/providers.json`;
 
@@ -49,6 +50,9 @@ export default function App() {
             </div>
           )}
         </div>
+
+        {/* Verify/unsubscribe banner from email link clicks */}
+        <VerifyHandler />
 
         {/* Active incidents banner */}
         {data && activeIncidents.length > 0 && (

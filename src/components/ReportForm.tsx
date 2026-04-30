@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import type { ProviderData } from '../types';
 import { supabase, supabaseEnabled } from '../lib/supabase';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
+
+const COOLDOWN_KEY = 'pp_report_last';
+const COOLDOWN_MS = 60_000;
 
 const INCIDENT_TYPES = [
   { id: 'outage',     label: 'Full outage' },
@@ -25,9 +28,21 @@ export default function ReportForm({ providers }: Props) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const honeypot = useRef('');
+  const mountedAt = useRef(Date.now());
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (honeypot.current) { setStatus('success'); return; }
+    if (Date.now() - mountedAt.current < 2_000) { setStatus('success'); return; }
+    const last = Number(localStorage.getItem(COOLDOWN_KEY) ?? 0);
+    if (Date.now() - last < COOLDOWN_MS) {
+      setStatus('error');
+      setErrorMsg('Please wait a minute before submitting another report.');
+      return;
+    }
+
     if (!supabaseEnabled || !supabase) {
       setStatus('error');
       setErrorMsg('Reports are not configured yet — coming soon!');
@@ -52,6 +67,7 @@ export default function ReportForm({ providers }: Props) {
       setErrorMsg(error.message || 'Failed to submit. Try again.');
       return;
     }
+    localStorage.setItem(COOLDOWN_KEY, String(Date.now()));
     setStatus('success');
     setDescription('');
     setEmail('');
@@ -89,6 +105,17 @@ export default function ReportForm({ providers }: Props) {
         <p className="text-white font-semibold text-sm">🚨 Report an incident</p>
         <button type="button" onClick={() => setOpen(false)} className="text-white/40 hover:text-white text-sm">✕</button>
       </div>
+
+      {/* Honeypot — hidden from users, bots auto-fill it. */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        onChange={e => { honeypot.current = e.target.value; }}
+        className="absolute left-[-9999px] w-px h-px opacity-0"
+        aria-hidden="true"
+      />
 
       <select
         value={providerId}

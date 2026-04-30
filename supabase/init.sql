@@ -52,3 +52,49 @@ create policy "anon insert reports" on public.reports
 -- Approved reports can be read publicly (community section)
 create policy "anon read approved reports" on public.reports
   for select to anon using (status = 'approved');
+
+-- ─── verify_subscriber RPC ───────────────────────────────
+-- Anon users can't UPDATE subscribers directly (no policy). They call this
+-- security-definer function with the unsubscribe_token from the verification
+-- email — it flips verified=true atomically. Returns the email so the page
+-- can show a friendly confirmation.
+create or replace function public.verify_subscriber(token text)
+returns text
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  result text;
+begin
+  update public.subscribers
+    set verified = true
+    where unsubscribe_token = token
+    returning email into result;
+  return result;  -- null if token didn't match
+end;
+$$;
+
+revoke all on function public.verify_subscriber(text) from public;
+grant execute on function public.verify_subscriber(text) to anon;
+
+-- ─── unsubscribe RPC ─────────────────────────────────────
+-- Same pattern for unsubscribe links in alert emails.
+create or replace function public.unsubscribe(token text)
+returns text
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  result text;
+begin
+  delete from public.subscribers
+    where unsubscribe_token = token
+    returning email into result;
+  return result;
+end;
+$$;
+
+revoke all on function public.unsubscribe(text) from public;
+grant execute on function public.unsubscribe(text) to anon;
