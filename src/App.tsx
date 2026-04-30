@@ -4,6 +4,7 @@ import type { AppData, ProviderData } from './types';
 import ProviderCard from './components/ProviderCard';
 import ProviderDetail from './components/ProviderDetail';
 import AdSlot from './components/AdSlot';
+import FloatingDonateButton from './components/FloatingDonateButton';
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/providers.json`;
 
@@ -95,6 +96,8 @@ export default function App() {
       </div>
 
       {selected && <ProviderDetail data={selected} onClose={() => setSelected(null)} />}
+
+      <FloatingDonateButton />
     </div>
   );
 }
