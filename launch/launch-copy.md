@@ -1,83 +1,76 @@
 # Launch Copy — ProviderPulse
 
-All copy in dev/founder voice. No hype words, no emoji floods, no marketing speak.
-Tone reference: Hacker News top comments (dry, evidence-based, slightly understated).
+All copy in dev/founder voice. Plain, factual, slightly understated.
+Tone reference: HN top comments and "Show HN" posts that stuck — they
+describe what the thing does and what it doesn't, and stop there.
+
+What to avoid:
+- "Excited to announce" / "thrilled to share"
+- "Game-changer" / "revolutionary" / "cutting-edge"
+- "I tracked X, here's what surprised me!" framing
+- Em-dash heavy bullet lists
+- More than 1–2 emojis per post
+
+What works:
+- Specific numbers ("8 providers, 25 components, 30-day window")
+- Stating what the tool *doesn't* do alongside what it does
+- "Open to feedback" / "happy to take questions"
 
 ---
 
 ## Show HN
 
 ### Title
+
 ```
-Show HN: I tracked 90 days of LLM API outages — here's the dashboard
+Show HN: ProviderPulse – Component-level uptime tracking for LLM APIs
 ```
 
-Backup (less story, more data):
+Backup, slightly more story:
 ```
-Show HN: Component-level uptime tracking for OpenAI, Anthropic, and 6 more LLM APIs
+Show HN: A reliability dashboard for OpenAI, Anthropic, and 6 other LLM APIs
 ```
 
 ### Body (HN submission text)
 
-Leave empty. HN convention is title-only for Show HN. The first comment carries the substance.
+Leave empty. HN convention is title-only for Show HN. Substance goes
+in the first comment.
 
 ### First comment (post within 30 seconds of submission)
 
 ```
-hey HN — author here.
+Author here.
 
-Built this because I kept picking LLM providers blind. Status pages
-tell you "down right now" — they don't tell you "this thing has been
-down 4 times in the last 90 days."
+ProviderPulse pulls each provider's status API every 30 minutes,
+breaks each one out per component, and shows 30-day and 90-day
+reliability scores. Eight LLM API providers right now: OpenAI,
+Anthropic, Google AI, Groq, Cohere, DeepSeek, Perplexity, AI21.
 
-It pulls every provider's status API every 30 min and breaks it down
-per component. OpenAI alone publishes 25 components (Chat Completions,
-Sora, Embeddings, Audio, Codex, Realtime, ...). Most status aggregators
-stop at the 4 top-level groups OpenAI rolls up to — that's where the
-"ChatGPT is down but the API is fine" signal disappears.
+The thing I most wanted from this was component-level granularity.
+OpenAI's status API publishes 25 separate components (Chat Completions,
+Embeddings, Audio, Sora, Codex, Realtime, …), but most aggregators
+roll those up to 4 top-level groups, which is where the "ChatGPT is
+down but the API is fine" distinction disappears. The dashboard groups
+components into three audiences — end-user, API services, and
+developer infra — so you can tell at a glance which side of a provider
+is broken.
 
-8 providers right now: OpenAI, Anthropic, Google AI, Groq, Cohere,
-DeepSeek, Perplexity, AI21.
+Limitations I want to be upfront about:
+- The source is each provider's self-reported status. They underreport.
+- 90-day window is intentional; incident data gets noisy past that.
+- Private or regional outages we can't observe externally aren't here.
+- Azure and AWS aren't in here — they don't expose component status the
+  same way.
 
-A few things that surprised me from the data:
-
-- OpenAI and Anthropic both had 15 incidents in 90 days. Same number,
-  totally different shape — OpenAI splits ~50/50 between ChatGPT
-  (consumer) and API (developer); Anthropic's were almost all
-  Claude.ai web, only a couple of pure API ones.
-- "api" and "inference" account for ~90% of all LLM incidents. Auth,
-  billing, database stuff is basically noise. If you're worried about
-  LLM downtime, you're really worried about inference downtime.
-- Google AI, Perplexity, and AI21 had 0–1 incidents in 90 days each.
-  Either they're more stable or they post less aggressively, probably
-  some of both.
-
-Stuff to be honest about:
-- Source is each provider's self-reported status. They underreport
-  routinely.
-- 90 days is intentional — incident data gets noisy past that.
-- Private or regional outages aren't visible externally so they're not
-  in here.
-
-Free, no signup, no email collection. Built solo over the past 2 weeks.
-
-Top of the roadmap is per-component alerts and more providers — open
-to suggestions on which ones, and happy to take feedback on the
-methodology or anything broken.
+Free, no signup, no email collection. Static site, source-available.
+Top of the roadmap is per-component email alerts and a few more
+providers. Open to feedback on what's missing and on the scoring
+methodology.
 
 [ProviderPulse URL]
 ```
 
-Word count target: 250–280. Currently ~290.
-
-Tone notes:
-- "hey HN" not "Hi HN" — slightly more casual, dev voice.
-- "kept picking … blind" / "totally different shape" — conversational,
-  not corporate.
-- "Stuff to be honest about" not "Limitations" — sounds like a person
-  not a press release.
-- Avoid bullet-headed buzzwords ("Roadmap:", "Limitations:"). Lead the
-  sentence with a verb instead.
+Word count target: 200–250. Currently ~220.
 
 ---
 
@@ -87,34 +80,28 @@ Tone notes:
 
 **Title**:
 ```
-Tracking LLM API reliability across 8 providers — 90 days of component-level uptime [free dashboard]
+Component-level uptime tracking for OpenAI, Anthropic, and 6 other LLM APIs (free dashboard)
 ```
 
 **Body**:
 ```
-Built a tool to track LLM API reliability over 90 days, because status
-pages only tell you "down right now," not "how reliable has this been."
+Built a dashboard that pulls each provider's status API every 30 min
+and breaks the data out per component, with 30-day and 90-day
+reliability scores. Eight providers: OpenAI, Anthropic, Google AI,
+Groq, Cohere, DeepSeek, Perplexity, AI21.
 
-Currently tracks 8 LLM APIs at component level. OpenAI publishes 25
-separate components on their status page (Chat Completions, Embeddings,
-Audio, Sora, Fine-tuning, Moderations, Files, Batch, Codex, Responses,
-each with its own status). Other status aggregators stop at the 4
-top-level categories OpenAI rolls up to — that's where the "ChatGPT
-down but the API is fine" signal gets lost.
+The differentiator vs StatusGator/IncidentHub is that components don't
+get rolled up. OpenAI alone publishes 25 (Chat Completions, Embeddings,
+Audio, Realtime, etc.); the dashboard groups them by audience —
+end-user surfaces, API services, developer infra — so you can tell
+when ChatGPT is the problem versus when the API itself is.
 
-Some patterns from the data:
-- OpenAI and Anthropic both had ~15 incidents in 90 days, but with very
-  different shapes — OpenAI splits ~50/50 between ChatGPT and API,
-  Anthropic is mostly Claude.ai web app.
-- "api" and "inference" tags account for 90% of incidents across all
-  providers. Auth/billing/database categories are basically noise.
-- DeepSeek had 13 incidents in the last 90 days; Cohere had 4. Same
-  vertical, 3x reliability gap.
-
-Free, no signup. Open to feedback on what's missing — alerts and more
-providers are top of roadmap.
+Source is each provider's self-reported status, so it inherits their
+underreporting. 90-day window is intentional. Free, no signup.
 
 [URL]
+
+Open to feedback on missing providers and the scoring weights.
 ```
 
 ### r/MachineLearning
@@ -129,49 +116,43 @@ Use `[P]` tag.
 **Body**:
 ```
 Methodology
-- Pulls every 30 min from each provider's StatusPage.io API (or
-  equivalent — Google AI uses a different format)
-- Component-level granularity: 8 providers, ~80 components total
-- Reliability score = severity-weighted, with separate 30-day and 90-day
-  windows
-- 90-day penalties scaled to compensate for the larger window so the
-  longer view doesn't always look worse
+- Pulls each provider's StatusPage.io API every 30 min (Google AI uses
+  a different incidents.json format)
+- Component-level granularity: 8 providers, ~90 components total
+- Reliability score = severity-weighted; 30-day and 90-day windows,
+  with 90-day penalties scaled to compensate for the larger window
+
+Limits
+- Self-reported source data
+- 90-day window only
+- Azure / AWS not covered (different status formats)
 
 Free dashboard: [URL]
-Source: GitHub Discussions enabled — happy to take questions on
-weighting and methodology there.
 
-Particularly interested in feedback on the severity weighting (currently
-critical: 8pt, major: 4pt, minor: 0.5pt — empirically tuned, not
-principled).
+Open to feedback on the severity weighting (currently 8 / 4 / 0.5
+for critical / major / minor — empirically tuned, not principled).
+GitHub Discussions enabled for methodology questions.
 ```
 
 ### r/SideProject (post a few days after HN)
 
 **Title**:
 ```
-I built a real-time uptime tracker for LLM APIs — solo, 2 weeks
+ProviderPulse — built a reliability dashboard for LLM APIs over 2 weeks
 ```
 
 **Body**:
 ```
-The "why": I was choosing between OpenAI and Anthropic for a production
-app and there was no easy way to compare reliability over time. Status
-pages give you "right now," nothing historical.
+Picked OpenAI vs Anthropic for a production app and there wasn't an
+easy way to compare reliability over time, so I built one.
 
-What I learned:
-- StatusPage.io is more standardized than I expected (most providers use
-  the same format)
-- A few don't — Google AI uses a custom incidents.json, Azure has only
-  RSS, AWS has its own thing
-- Providers underreport routinely — components stay "operational" while
-  users report errors
-- Component-level data is rare in this space (StatusGator/IncidentHub
-  stop at provider level)
+ProviderPulse pulls each provider's status API every 30 min and breaks
+the data out per component. Eight LLM providers covered. Free, no
+signup, static site.
 
-Tech: Vite + React + Vercel (free)
+Tech: Vite + React + Vercel
 Time: ~2 weeks part-time
-Free dashboard: [URL]
+URL: [link]
 
 Roadmap and feedback welcome.
 ```
@@ -180,46 +161,37 @@ Roadmap and feedback welcome.
 
 ## Twitter / X thread (HN +1 day)
 
-7 tweets. First one needs a GIF (dashboard scroll, ~5 sec).
+5 tweets. Tweet 1 needs an OG image or hero GIF.
 
 ```
-1/ I tracked 90 days of LLM API outages across 8 providers.
-   Some things surprised me. 🧵
+1/ Built ProviderPulse — a free dashboard for tracking LLM API
+   reliability. 8 providers, component-level, 30-day and 90-day
+   scores.
 
-   [GIF: dashboard scroll]
+   [Image: hero shot]
 
-2/ OpenAI had 15 incidents. So did Anthropic.
-   Same count, very different shape:
-   - OpenAI: ~50/50 between ChatGPT (consumer) and API (developer)
-   - Anthropic: mostly Claude.ai web app, only 2 pure API incidents
+2/ Most status aggregators stop at the provider level (OpenAI: down)
+   but providers themselves publish much finer-grained data. OpenAI
+   alone has 25 components. The dashboard exposes all of them.
 
-3/ "api" and "inference" tags account for 90% of incidents across
-   all providers. Auth, billing, database categories are basically
-   noise.
+3/ Components are grouped by audience: end-user surfaces (ChatGPT,
+   claude.ai), API services (Chat Completions, Embeddings, Maestro),
+   and developer infra (auth, console, CLI). Lets you see which side
+   of a provider is broken.
 
-   If you're worried about LLM downtime, you're really worried
-   about inference downtime.
+   [Image: OpenAI card 3-tier zoom]
 
-4/ DeepSeek: 13 incidents in 90 days.
-   Cohere: 4 in 90 days.
-   Same vertical (LLM API), 3x reliability gap.
+4/ Source is each provider's self-reported status. They underreport.
+   90-day window only. Azure/AWS not covered — they don't expose
+   component status the same way.
 
-5/ Most stable in the dataset: Google AI, Perplexity, AI21 — 0–1
-   incidents each in 90 days. Either they're genuinely more reliable
-   or they post less aggressively. Probably some of both.
-
-6/ Built ProviderPulse to make all this comparable.
-   Free, real-time, component-level.
-   8 LLM APIs covered. 90-day history. No signup.
+5/ Free, no signup. Top of the roadmap is per-component email alerts.
+   Open to feedback on missing providers.
 
    [URL]
-
-7/ Built solo over 2 weeks. If this is useful to you, share helps.
-   Open to feedback on what's missing.
 ```
 
-Hashtags (last tweet only): `#LLM #DevTools` (avoid `#AI #BuildInPublic` —
-overused, dilutes).
+Hashtags (last tweet only): `#LLM #DevTools`.
 
 ---
 
@@ -232,127 +204,86 @@ Component-level reliability for 8 LLM APIs. 90 days of history.
 
 ### Description (260 char)
 ```
-Tracks 8 LLM APIs at component level — OpenAI publishes 25 components
-(Chat Completions, Sora, Embeddings, Audio, …); we expose all of them.
-90-day reliability from each provider's official status page. Free,
-no signup.
+Tracks 8 LLM APIs at component level. OpenAI publishes 25 components
+(Chat Completions, Sora, Embeddings, Audio, …); the dashboard exposes
+all of them. 90-day reliability from each provider's official status
+page. Free, no signup.
 ```
 
 ### First comment (founder)
 
 ```
-Hi PH — author here.
+Author here.
 
-Started this because picking an LLM provider for production was
-impossible to do based on reliability — status pages only show "right
-now," and the comparison sites stop at provider level (which doesn't
-help when ChatGPT is down but the API is fine).
+ProviderPulse is the dashboard I wanted when picking between LLM
+providers for production. Status pages tell you what's down right now;
+this tells you what's been down repeatedly over the past 90 days, and
+which specific components were affected.
 
-ProviderPulse pulls each provider's status API every 30 min, breaks it
-down per component, and shows 90 days of history.
-
-Free forever for the dashboard. Open to feedback on what's missing.
-Suggestions for providers to add are very welcome.
+8 providers covered. Free, no signup. Open to feedback on missing
+providers and on the weighting.
 ```
 
 ---
 
-## Newsletter pitch (1-2 sentences for tip submissions)
+## Newsletter pitch (1-2 sentences)
 
 For TLDR, Console, BetterDev, Pragmatic Engineer:
 
 ```
-ProviderPulse — a free dashboard that tracks 90 days of incident
-history for 8 LLM API providers (OpenAI, Anthropic, Google AI, Groq,
-Cohere, DeepSeek, Perplexity, AI21). Component-level granularity, so
-you can see "ChatGPT down but API fine" instead of just "OpenAI down."
+ProviderPulse — a free dashboard tracking 90 days of incident history
+for 8 LLM API providers (OpenAI, Anthropic, Google AI, Groq, Cohere,
+DeepSeek, Perplexity, AI21), with component-level granularity so you
+can see "ChatGPT down but API fine" instead of just "OpenAI down."
 
 URL: [link]
 ```
 
 ---
 
-## OG image (you'll need to make this)
+## OG image (auto-generated)
 
-`public/og.png` — 1200×630 PNG. Used by Twitter/Slack/HN unfurls.
-Meta tags already point to it; just drop the file in `public/` and
-it'll be live next deploy.
-
-Easiest path: take a clean dashboard screenshot at desktop width,
-crop to 1200×630, paste the title + tagline on top in Figma or
-Cleanshot. Even a hero card screenshot works as a placeholder.
-
-Tip: keep readable text large (24px+) since unfurls render small.
+`public/og.png` — 1200×630 PNG. Generated by `launch/capture.mjs` from
+the live site. Re-run the script to refresh it.
 
 ---
 
-## Screenshots / GIFs (you'll need to record these)
+## Screenshots / GIFs
 
-Tools: ScreenStudio (macOS, paid) or Loom (free). Cleanshot X for stills.
+`launch/capture.mjs` produces these PNGs in `launch/screenshots/`:
 
-### Hero shot (HN first comment, Twitter tweet 1, PH gallery)
-- Dashboard at top, scroll to show all 8 cards
-- One card with active incident (or stage a yellow component dot if all
-  green when you record)
-- Show the 30D + 90D rings clearly
+- `1-hero-desktop.png` — hero shot (8 cards + Live Issues banner)
+- `2-fullpage-desktop.png` — full scroll
+- `3-openai-card.png` — single card zoom
+- `4-openai-detail-modal.png` — detail modal
+- `5-mobile-hero.png` — mobile single column
+- `6-mobile-fullpage.png` — mobile scroll
 
-### GIF 1 — Dashboard scroll (5 sec)
-- Top of page → all cards visible → bottom
-- Demonstrates 8 providers + bento layout
+For animated GIFs (Twitter thread tweet 1, HN comment hero), record
+manually — auto-capture won't catch hover/interaction gracefully:
 
-### GIF 2 — Component dot tooltip (3 sec)
-- Click an OpenAI card to open detail
-- Hover one of the 25 component dots → tooltip with status
+1. Dashboard scroll (5 sec) — top → all 8 cards → footer
+2. Component tooltip (3 sec) — hover dot → tooltip with status
+3. Detail modal open (3 sec) — click card → modal opens
 
-### GIF 3 — 30D vs 90D scores (3 sec)
-- Just the dual rings updating across cards
-- Shows the historical-vs-recent dimension
-
-### GIF 4 — Active incident banner (5 sec)
-- Top banner with "Live Issues" pill
-- Click → opens detail modal with active incident
-
-Each GIF: 2–5 MB max. Resize in HandBrake or ezgif.com if too big.
+Tools: ScreenStudio (macOS, paid), Loom (free), Cleanshot X (stills).
+Each GIF: 2–5 MB max.
 
 ---
 
-## Launch day checklist (5/5 Tuesday)
+## Launch day checklist (Tuesday)
 
 ```
-4:55am PST — open HN submit page, paste title (no body)
-5:00am PST — submit
+4:55am PST — open HN submit page
+5:00am PST — submit (title only)
 5:00:30 PST — post first comment with [URL] filled in
 5:00–6:00 — refresh, respond to first comments within 5 min
 6:00–9:00 — keep responding, every 30 min minimum
-9:00 — submit to TLDR / Console / BetterDev (HN already on first page)
-        if it's at top
-9:00 — start writing/scheduling the Twitter thread for tomorrow
+9:00 — submit to TLDR / Console / BetterDev if HN is on first page
+9:00 — schedule the Twitter thread for the next day
 ```
 
 Day +1: Twitter thread, then r/LocalLLaMA.
 Day +2-3: r/MachineLearning, r/SideProject.
+Day +5-7: blog post on dev.to / Medium (cross-post launch/blog-post.md).
 Day +7-14: ProductHunt.
-```
-
----
-
-## Things to NOT say
-
-Avoid these phrases — they read as AI-generated marketing, not founder:
-
-- "Excited to announce"
-- "Thrilled to share"
-- "Game-changer"
-- "Revolutionary"
-- "Cutting-edge"
-- "I'm proud to introduce"
-- "Beyond just X, this is Y"
-- Em-dash heavy bullet lists
-- More than 1–2 emojis per post
-
-What works on HN/Reddit/Twitter (dev voice):
-- Specific numbers ("90 days," "8 providers," "15 incidents")
-- Concrete observations ("Anthropic's mostly Claude.ai, OpenAI's split")
-- Honest limitations stated up front
-- Self-deprecation in moderation ("noisy beyond that," "probably some of both")
-- "Open to feedback" / "happy to take questions" — not "looking forward to your insights"

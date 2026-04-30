@@ -68,7 +68,24 @@ async function run() {
     await ctx.close();
   }
 
-  // 5. Mobile — 390x844 (iPhone 14 Pro), single column
+  // 5. OG image — 1200×630, written to public/og.png so Vercel ships it
+  {
+    const ctx = await browser.newContext({
+      viewport: { width: 1200, height: 630 },
+      deviceScaleFactor: 2,
+    });
+    const page = await ctx.newPage();
+    await page.goto(URL, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(1500);
+    await page.screenshot({
+      path: join(__dir, '..', 'public', 'og.png'),
+      clip: { x: 0, y: 0, width: 1200, height: 630 },
+    });
+    console.log('✓ public/og.png (OG image)');
+    await ctx.close();
+  }
+
+  // 6. Mobile — 390x844 (iPhone 14 Pro), single column
   {
     const ctx = await browser.newContext({
       viewport: { width: 390, height: 844 },
