@@ -3,10 +3,7 @@ import './index.css';
 import type { AppData, ProviderData } from './types';
 import ProviderCard from './components/ProviderCard';
 import ProviderDetail from './components/ProviderDetail';
-import SubscribeForm from './components/SubscribeForm';
-import ReportForm from './components/ReportForm';
 import AdSlot from './components/AdSlot';
-import VerifyHandler from './components/VerifyHandler';
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/providers.json`;
 
@@ -51,9 +48,6 @@ export default function App() {
           )}
         </div>
 
-        {/* Verify/unsubscribe banner from email link clicks */}
-        <VerifyHandler />
-
         {/* Active incidents banner */}
         {data && activeIncidents.length > 0 && (
           <ActiveIncidentsBanner incidents={activeIncidents} onSelect={setSelected} />
@@ -85,12 +79,10 @@ export default function App() {
           </div>
         )}
 
-        {/* Subscribe + Report (free) */}
+        {/* "Tools we use" placeholder (Carbon Ads slot post-launch) */}
         {data && (
-          <div className="mt-8 flex flex-col gap-4">
-            <SubscribeForm providers={providers} />
+          <div className="mt-8">
             <AdSlot />
-            <ReportForm providers={providers} />
           </div>
         )}
 
@@ -98,7 +90,7 @@ export default function App() {
         <div className="mt-10 pt-6 border-t border-white/6 text-center space-y-1">
           <p className="text-white/20 text-xs">Data sourced from official status pages · Refreshed every 30 minutes</p>
           <p className="text-white/15 text-xs">Score = severity-weighted uptime · Critical −8pts · Major −4pts · Minor −0.5pts</p>
-          <p className="text-white/15 text-xs">All features free · No subscription · <a href="mailto:hello@providerpulse.dev" className="hover:text-white/40 underline">Enterprise tier</a></p>
+          <p className="text-white/15 text-xs">Free · Open data · <a href="mailto:hello@providerpulse.dev" className="hover:text-white/40 underline">Contact</a></p>
         </div>
       </div>
 

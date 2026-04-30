@@ -1,7 +1,10 @@
 /**
- * Monitors OpenAI and Anthropic status pages.
+ * Monitors LLM provider status pages.
  * Sends Telegram notification when new incidents appear or resolve.
  * Run by GitHub Actions every 5 minutes via monitor.yml.
+ *
+ * Loads providers from public/data/providers.json so it stays in sync with
+ * collect.mjs (Statuspage.io providers only — GCP/Azure formats skipped here).
  *
  * Required env: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
  */
@@ -21,17 +24,6 @@ if (!TELEGRAM_CHAT_ID && TELEGRAM_TOKEN) {
   process.exit(1);
 }
 
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
-const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? 'alerts@providerpulse.dev';
-const SITE_URL = process.env.SITE_URL ?? 'https://subright85.github.io/providerpulse';
-const subscriptionsEnabled = SUPABASE_URL && SUPABASE_SERVICE_KEY && RESEND_API_KEY;
-
-// Loaded from public/data/providers.json so monitor stays in sync with collect.mjs.
-// Statuspage.io providers only — Azure (RSS) and Google AI (custom format) are
-// skipped here because the new-incident dedupe logic relies on Statuspage's
-// /api/v2/summary.json shape.
 function loadMonitored() {
   const dataPath = join(ROOT, 'public', 'data', 'providers.json');
   if (!existsSync(dataPath)) return [];
@@ -80,122 +72,6 @@ async function sendTelegram(text) {
   if (!res.ok) console.error('Telegram error:', await res.text());
 }
 
-// Fetch verified subscribers who follow at least one of the given provider IDs.
-async function fetchSubscribersFor(providerIds) {
-  if (!subscriptionsEnabled) return [];
-  try {
-    const url = `${SUPABASE_URL}/rest/v1/subscribers`
-      + `?providers=ov.{${providerIds.join(',')}}`
-      + `&verified=eq.true`
-      + `&select=email,providers,unsubscribe_token`;
-    const res = await fetch(url, {
-      headers: {
-        apikey: SUPABASE_SERVICE_KEY,
-        Authorization: `Bearer ${SUPABASE_SERVICE_KEY}`,
-      },
-      signal: AbortSignal.timeout(10000),
-    });
-    if (!res.ok) {
-      console.error(`Supabase subscribers fetch failed: HTTP ${res.status}`);
-      return [];
-    }
-    return res.json();
-  } catch (e) {
-    console.error('Supabase fetch error:', e.message);
-    return [];
-  }
-}
-
-// Send verification emails to any unverified subscribers older than 1 minute
-// (gives the SubscribeForm time to settle, avoids racing the insert) but younger
-// than 24 hours (don't keep retrying stale signups forever).
-async function sendPendingVerifications() {
-  if (!subscriptionsEnabled) return;
-  try {
-    const now = Date.now();
-    const minAge = new Date(now - 60_000).toISOString();
-    const maxAge = new Date(now - 24 * 60 * 60_000).toISOString();
-    const url = `${SUPABASE_URL}/rest/v1/subscribers`
-      + `?verified=eq.false`
-      + `&created_at=lt.${minAge}`
-      + `&created_at=gt.${maxAge}`
-      + `&select=email,unsubscribe_token,created_at`;
-    const res = await fetch(url, {
-      headers: {
-        apikey: SUPABASE_SERVICE_KEY,
-        Authorization: `Bearer ${SUPABASE_SERVICE_KEY}`,
-      },
-      signal: AbortSignal.timeout(10000),
-    });
-    if (!res.ok) {
-      console.error(`Supabase pending verifications fetch failed: HTTP ${res.status}`);
-      return;
-    }
-    const pending = await res.json();
-    if (pending.length === 0) return;
-    console.log(`Sending ${pending.length} verification email(s)...`);
-    for (const sub of pending) {
-      const verifyLink = `${SITE_URL}/?verify=${sub.unsubscribe_token}`;
-      const html = `
-        <div style="font-family: system-ui, sans-serif; max-width: 540px; padding: 20px; color: #1a1a1a;">
-          <h2 style="margin: 0 0 12px 0;">Confirm your ProviderPulse alerts</h2>
-          <p style="margin: 0 0 16px 0; color: #555;">Click to confirm you want LLM API incident alerts at this address.</p>
-          <a href="${verifyLink}" style="display: inline-block; padding: 10px 16px; background: #0a0a0f; color: #fff; text-decoration: none; border-radius: 8px;">Confirm subscription</a>
-          <p style="margin: 24px 0 0 0; font-size: 12px; color: #999;">If you didn't sign up, ignore this email — no further messages will be sent.</p>
-        </div>
-      `;
-      await sendEmail(sub.email, 'Confirm your ProviderPulse alerts', html);
-    }
-  } catch (e) {
-    console.error('sendPendingVerifications error:', e.message);
-  }
-}
-
-async function sendEmail(to, subject, html) {
-  if (!RESEND_API_KEY) return false;
-  try {
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ from: RESEND_FROM_EMAIL, to, subject, html }),
-      signal: AbortSignal.timeout(10000),
-    });
-    if (!res.ok) {
-      console.error(`Resend send failed for ${to}: HTTP ${res.status}`, await res.text());
-      return false;
-    }
-    return true;
-  } catch (e) {
-    console.error(`Resend error for ${to}:`, e.message);
-    return false;
-  }
-}
-
-function buildIncidentEmail(provider, incident, unsubToken) {
-  const sev = SEV_LABEL[incident.impact] ?? 'Issue';
-  const link = incident.shortlink ?? provider.statusPageUrl;
-  const unsubLink = `${SITE_URL}/?unsub=${unsubToken}`;
-  return {
-    subject: `${provider.name}: ${sev} — ${incident.name}`,
-    html: `
-      <div style="font-family: system-ui, sans-serif; max-width: 540px; padding: 20px; color: #1a1a1a;">
-        <h2 style="margin: 0 0 12px 0;">${provider.icon} ${provider.name} — ${sev}</h2>
-        <p style="margin: 0 0 8px 0; font-weight: 600; font-size: 16px;">${incident.name}</p>
-        <p style="margin: 0 0 16px 0; color: #555;">A new incident was just posted on ${provider.name}'s status page.</p>
-        <a href="${link}" style="display: inline-block; padding: 10px 16px; background: #0a0a0f; color: #fff; text-decoration: none; border-radius: 8px;">View on status page</a>
-        <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;" />
-        <p style="font-size: 12px; color: #999; margin: 0;">
-          You're receiving this because you subscribed to alerts on ProviderPulse.
-          <a href="${SITE_URL}">Visit dashboard</a> · <a href="${unsubLink}">Unsubscribe</a>
-        </p>
-      </div>
-    `,
-  };
-}
-
 async function fetchStatus(p) {
   const res = await fetch(p.apiUrl, {
     headers: { 'User-Agent': 'ProviderPulse-Monitor/1.0' },
@@ -230,7 +106,7 @@ async function main() {
       continue;
     }
 
-    // New incidents not seen before → alert (Telegram for admin + email for subscribers)
+    // New incidents not seen before → Telegram alert
     const newIncs = activeIncidents.filter(i => !prevIds.has(i.id));
     for (const inc of newIncs) {
       const sev = SEV_EMOJI[inc.impact] ?? '🟡';
@@ -243,20 +119,6 @@ async function main() {
       ].join('\n');
       console.log(`[${p.name}] NEW incident: ${inc.name}`);
       await sendTelegram(msg);
-
-      const subs = await fetchSubscribersFor([p.id]);
-      if (subs.length > 0) {
-        console.log(`[${p.name}] notifying ${subs.length} verified subscriber(s) by email`);
-        let failCount = 0;
-        for (const sub of subs) {
-          const { subject, html } = buildIncidentEmail(p, inc, sub.unsubscribe_token);
-          const ok = await sendEmail(sub.email, subject, html);
-          if (!ok) failCount++;
-        }
-        if (failCount > 0) {
-          await sendTelegram(`⚠️ <b>Email delivery failed</b>: ${failCount}/${subs.length} subscribers for ${p.name} incident "${inc.name}". Check Resend domain verification.`);
-        }
-      }
     }
 
     // Provider recovered: previously had active incidents, now all clear
@@ -276,10 +138,6 @@ async function main() {
   }
 
   saveState(state);
-
-  // After provider checks, send any pending verification emails (double opt-in).
-  await sendPendingVerifications();
-
   console.log('Monitor run complete.');
 }
 
