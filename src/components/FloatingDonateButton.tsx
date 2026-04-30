@@ -24,10 +24,10 @@ export default function FloatingDonateButton() {
     <>
       {showToast && (
         <div className="fixed bottom-20 right-4 z-50 max-w-xs animate-fade-in">
-          <div className="bg-[#1a1a22] border border-white/10 rounded-2xl shadow-xl px-4 py-3 text-sm text-white/85">
+          <div className="bg-[#0a0a0a] border-2 border-white px-4 py-3 text-sm text-white font-mono" style={{ boxShadow: '4px 4px 0 #fff' }}>
             <button
               onClick={() => setShowToast(false)}
-              className="absolute top-1 right-2 text-white/30 hover:text-white/60 text-xs"
+              className="absolute top-1 right-2 text-white/40 hover:text-white text-xs"
               aria-label="Close"
             >
               ✕
@@ -42,10 +42,10 @@ export default function FloatingDonateButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Buy me a coffee"
-        className="fixed bottom-4 right-4 z-50 group flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFE433] text-black font-semibold rounded-full px-4 py-2.5 shadow-lg shadow-yellow-400/20 transition-all hover:shadow-xl hover:scale-105"
+        className="pp-btn-primary fixed bottom-4 right-4 z-50 flex items-center gap-2 px-4 py-2.5 text-sm uppercase"
       >
         <span className="text-lg leading-none">☕</span>
-        <span className="text-sm hidden sm:inline">Buy me a coffee</span>
+        <span className="hidden sm:inline">Buy me a coffee</span>
       </a>
     </>
   );
