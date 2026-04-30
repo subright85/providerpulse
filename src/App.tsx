@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './index.css';
 import type { AppData, ProviderData } from './types';
+import { Analytics } from '@vercel/analytics/react';
 import ProviderCard from './components/ProviderCard';
 import ProviderDetail from './components/ProviderDetail';
 import AdSlot from './components/AdSlot';
@@ -98,6 +99,7 @@ export default function App() {
       {selected && <ProviderDetail data={selected} onClose={() => setSelected(null)} />}
 
       <FloatingDonateButton />
+      <Analytics />
     </div>
   );
 }
