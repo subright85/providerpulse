@@ -106,37 +106,66 @@ export default function App() {
 
 const BANNER_CLS: Record<string, string> = {
   critical: 'border-[#ff006e] bg-[#ff006e]/10',
-  major:    'border-[#ffff00] bg-[#ffff00]/10',
-  minor:    'border-[#ffff00] bg-[#ffff00]/5',
+  major:    'border-[#ff8800] bg-[#ff8800]/10',
+  minor:    'border-[#ffff00] bg-[#ffff00]/10',
 };
+
+const BANNER_BAR: Record<string, string> = {
+  critical: 'bg-[#ff006e]',
+  major:    'bg-[#ff8800]',
+  minor:    'bg-[#ffff00]',
+};
+
+function fmtRelative(iso: string | null | undefined): string {
+  if (!iso) return 'recently';
+  const diff = Date.now() - new Date(iso).getTime();
+  const min = Math.floor(diff / 60_000);
+  if (min < 1) return 'just now';
+  if (min < 60) return `${min} minute${min === 1 ? '' : 's'} ago`;
+  const hr = Math.floor(min / 60);
+  if (hr < 24) return `${hr} hour${hr === 1 ? '' : 's'} ago`;
+  const d = Math.floor(hr / 24);
+  return `${d} day${d === 1 ? '' : 's'} ago`;
+}
 
 function ActiveIncidentsBanner({ incidents, onSelect }: { incidents: ProviderData[]; onSelect: (p: ProviderData) => void }) {
   const worstSev = incidents.some(p => p.status.indicator === 'critical') ? 'critical'
     : incidents.some(p => p.status.indicator === 'major') ? 'major'
     : 'minor';
 
+  // Pick the most-impactful incident as the lead
+  const lead = [...incidents].sort((a, b) => {
+    const order = { critical: 0, major: 1, minor: 2, maintenance: 3, none: 4 };
+    return (order[a.status.indicator] ?? 5) - (order[b.status.indicator] ?? 5);
+  })[0];
+
+  const leadActive = lead.recentIncidents.find(i => !i.resolvedAt && i.severity !== 'maintenance');
+  const more = incidents.length - 1;
+
   return (
-    <div className={`mb-5 border-2 px-4 py-3 font-mono ${BANNER_CLS[worstSev]}`}>
-      <div className="flex items-center gap-3 flex-wrap">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-white/70 shrink-0">▶ Live Issues</span>
-        <div className="flex items-center gap-3 flex-wrap flex-1">
-          {incidents.map(p => (
-            <button
-              key={p.provider.id}
-              onClick={() => onSelect(p)}
-              className="flex items-center gap-1.5 text-xs font-bold uppercase text-white hover:text-[#00ff00] transition-colors"
-            >
-              <img
-                src={`https://www.google.com/s2/favicons?domain=${p.provider.domain}&sz=32`}
-                alt=""
-                className="w-3.5 h-3.5"
-              />
-              <span>{p.provider.name}</span>
-            </button>
-          ))}
+    <button
+      onClick={() => onSelect(lead)}
+      className={`mb-5 w-full text-left border-2 font-mono relative overflow-hidden ${BANNER_CLS[worstSev]}`}
+    >
+      {/* Severity accent bar — left edge */}
+      <span className={`absolute left-0 top-0 bottom-0 w-1 ${BANNER_BAR[worstSev]}`} />
+      <div className="flex items-start gap-3 px-4 py-3 pl-5">
+        <span className="text-[#ffff00] text-xl leading-none mt-0.5 shrink-0">⚠</span>
+        <div className="flex-1 min-w-0">
+          <p className="text-xs sm:text-sm leading-snug">
+            <span className="font-bold uppercase tracking-wider text-white">Active incident:</span>{' '}
+            <span className="text-white/85">
+              {lead.provider.name} — {leadActive?.title ?? lead.status.description}
+              {more > 0 && (
+                <span className="text-white/50"> · +{more} other provider{more === 1 ? '' : 's'} affected</span>
+              )}
+            </span>
+          </p>
+          <p className="text-[10px] uppercase tracking-wider text-white/50 mt-1">
+            ↳ updated {fmtRelative(lead.status.updatedAt)}
+          </p>
         </div>
-        <span className="text-white/40 text-[10px] uppercase shrink-0">{incidents.length} affected</span>
       </div>
-    </div>
+    </button>
   );
 }
