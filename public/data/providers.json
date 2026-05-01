@@ -15,24 +15,18 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-04-30T23:58:43.892Z"
+        "updatedAt": "2026-05-01T04:09:49.130Z"
       },
       "stats": {
         "providerId": "openai",
-        "uptime30d": 97.27,
-        "uptime90d": 99.09,
+        "uptime30d": 97.4,
+        "uptime90d": 99.13,
         "incidentCount30d": 25,
-        "avgMttr30d": 195,
-        "lastIncident": "2026-04-29T21:59:10Z",
-        "reliabilityScore": 64,
-        "reliabilityScore90d": 87,
+        "avgMttr30d": 191,
+        "lastIncident": "2026-05-01T03:55:28Z",
+        "reliabilityScore": 67,
+        "reliabilityScore90d": 88,
         "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
           {
             "month": "2026-03",
             "label": "Mar 26",
@@ -42,18 +36,24 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 25,
-            "uptime": 97.27
+            "incidentCount": 24,
+            "uptime": 97.4
+          },
+          {
+            "month": "2026-05",
+            "label": "May 26",
+            "incidentCount": 1,
+            "uptime": 99.6
           }
         ],
         "tagSummary": [
           {
-            "tag": "inference",
-            "count30d": 13,
-            "count90d": 13
+            "tag": "api",
+            "count30d": 14,
+            "count90d": 14
           },
           {
-            "tag": "api",
+            "tag": "inference",
             "count30d": 13,
             "count90d": 13
           },
@@ -86,6 +86,21 @@
         }
       },
       "recentIncidents": [
+        {
+          "id": "01KQGTTQ0XNZDK834NBFFQGMG9",
+          "providerId": "openai",
+          "title": "Elevated error rates affecting ChatGPT for some users in Europe",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "audience": "b2c",
+          "startedAt": "2026-05-01T03:55:28Z",
+          "resolvedAt": "2026-05-01T04:02:32Z",
+          "durationMinutes": 7,
+          "url": "https://status.openai.com"
+        },
         {
           "id": "01KQDM1K1826RP1FFN86ZNA3WG",
           "providerId": "openai",
@@ -287,21 +302,6 @@
           "resolvedAt": "2026-04-20T19:17:46Z",
           "durationMinutes": 108,
           "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KPNN2V2SMP3TAN3MCJK87W50",
-          "providerId": "openai",
-          "title": "Users unable to load ChatGPT, Codex and API Platform",
-          "severity": "major",
-          "tags": [
-            "inference",
-            "api"
-          ],
-          "audience": "both",
-          "startedAt": "2026-04-20T14:35:33Z",
-          "resolvedAt": "2026-04-20T18:48:04Z",
-          "durationMinutes": 253,
-          "url": "https://status.openai.com"
         }
       ],
       "components": [
@@ -485,24 +485,18 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T23:58:44.669Z"
+        "updatedAt": "2026-05-01T04:09:50.039Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 97.16,
+        "uptime30d": 97.18,
         "uptime90d": 98.96,
-        "incidentCount30d": 49,
-        "avgMttr30d": 55,
+        "incidentCount30d": 48,
+        "avgMttr30d": 56,
         "lastIncident": "2026-04-30T13:10:09.292Z",
         "reliabilityScore": 63,
         "reliabilityScore90d": 64,
         "monthlyTrend": [
-          {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
           {
             "month": "2026-03",
             "label": "Mar 26",
@@ -514,17 +508,23 @@
             "label": "Apr 26",
             "incidentCount": 49,
             "uptime": 97.16
+          },
+          {
+            "month": "2026-05",
+            "label": "May 26",
+            "incidentCount": 0,
+            "uptime": 100
           }
         ],
         "tagSummary": [
           {
             "tag": "inference",
-            "count30d": 34,
+            "count30d": 33,
             "count90d": 35
           },
           {
             "tag": "api",
-            "count30d": 28,
+            "count30d": 27,
             "count90d": 28
           },
           {
@@ -539,7 +539,7 @@
           },
           {
             "tag": "performance",
-            "count30d": 3,
+            "count30d": 2,
             "count90d": 3
           },
           {
@@ -557,7 +557,7 @@
           "b2b": 2,
           "b2c": 12,
           "both": 4,
-          "unknown": 31
+          "unknown": 30
         }
       },
       "recentIncidents": [
@@ -873,7 +873,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T23:58:45.121Z"
+        "updatedAt": "2026-05-01T04:09:50.520Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -886,12 +886,6 @@
         "reliabilityScore90d": 100,
         "monthlyTrend": [
           {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 1,
-            "uptime": 99.94
-          },
-          {
             "month": "2026-03",
             "label": "Mar 26",
             "incidentCount": 0,
@@ -900,6 +894,12 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
+            "incidentCount": 0,
+            "uptime": 100
+          },
+          {
+            "month": "2026-05",
+            "label": "May 26",
             "incidentCount": 0,
             "uptime": 100
           }
@@ -977,7 +977,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T23:58:45.806Z"
+        "updatedAt": "2026-05-01T04:09:51.260Z"
       },
       "stats": {
         "providerId": "groq",
@@ -990,12 +990,6 @@
         "reliabilityScore90d": 99,
         "monthlyTrend": [
           {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 3,
-            "uptime": 99.89
-          },
-          {
             "month": "2026-03",
             "label": "Mar 26",
             "incidentCount": 1,
@@ -1004,6 +998,12 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
+            "incidentCount": 0,
+            "uptime": 100
+          },
+          {
+            "month": "2026-05",
+            "label": "May 26",
             "incidentCount": 0,
             "uptime": 100
           }
@@ -1205,7 +1205,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T23:58:46.507Z"
+        "updatedAt": "2026-05-01T04:09:52.058Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1218,12 +1218,6 @@
         "reliabilityScore90d": 95,
         "monthlyTrend": [
           {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 1,
-            "uptime": 99.86
-          },
-          {
             "month": "2026-03",
             "label": "Mar 26",
             "incidentCount": 0,
@@ -1234,6 +1228,12 @@
             "label": "Apr 26",
             "incidentCount": 3,
             "uptime": 99.93
+          },
+          {
+            "month": "2026-05",
+            "label": "May 26",
+            "incidentCount": 0,
+            "uptime": 100
           }
         ],
         "tagSummary": [
@@ -1491,7 +1491,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T23:58:47.354Z"
+        "updatedAt": "2026-05-01T04:09:52.896Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1504,12 +1504,6 @@
         "reliabilityScore90d": 84,
         "monthlyTrend": [
           {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 4,
-            "uptime": 99.92
-          },
-          {
             "month": "2026-03",
             "label": "Mar 26",
             "incidentCount": 6,
@@ -1520,6 +1514,12 @@
             "label": "Apr 26",
             "incidentCount": 3,
             "uptime": 99.75
+          },
+          {
+            "month": "2026-05",
+            "label": "May 26",
+            "incidentCount": 0,
+            "uptime": 100
           }
         ],
         "tagSummary": [
@@ -1793,7 +1793,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T23:58:48.014Z"
+        "updatedAt": "2026-05-01T04:09:53.696Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1806,12 +1806,6 @@
         "reliabilityScore90d": 100,
         "monthlyTrend": [
           {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
             "month": "2026-03",
             "label": "Mar 26",
             "incidentCount": 0,
@@ -1820,6 +1814,12 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
+            "incidentCount": 0,
+            "uptime": 100
+          },
+          {
+            "month": "2026-05",
+            "label": "May 26",
             "incidentCount": 0,
             "uptime": 100
           }
@@ -1851,7 +1851,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-04-30T23:58:48.766Z"
+        "updatedAt": "2026-05-01T04:09:54.426Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1864,12 +1864,6 @@
         "reliabilityScore90d": 100,
         "monthlyTrend": [
           {
-            "month": "2026-02",
-            "label": "Feb 26",
-            "incidentCount": 0,
-            "uptime": 100
-          },
-          {
             "month": "2026-03",
             "label": "Mar 26",
             "incidentCount": 0,
@@ -1878,6 +1872,12 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
+            "incidentCount": 0,
+            "uptime": 100
+          },
+          {
+            "month": "2026-05",
+            "label": "May 26",
             "incidentCount": 0,
             "uptime": 100
           }
@@ -1932,7 +1932,7 @@
       "tags": [
         {
           "tag": "inference",
-          "count30d": 47,
+          "count30d": 46,
           "count90d": 50,
           "trend": "up",
           "providers": [
@@ -1945,7 +1945,7 @@
         {
           "tag": "api",
           "count30d": 43,
-          "count90d": 48,
+          "count90d": 49,
           "trend": "up",
           "providers": [
             "openai",
@@ -1969,7 +1969,7 @@
         },
         {
           "tag": "performance",
-          "count30d": 5,
+          "count30d": 4,
           "count90d": 14,
           "trend": "stable",
           "providers": [
@@ -2023,5 +2023,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-04-30T23:58:53.031Z"
+  "generatedAt": "2026-05-01T04:09:58.850Z"
 }
