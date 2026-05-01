@@ -32,7 +32,7 @@ export default function FloatingDonateButton() {
             >
               ✕
             </button>
-            <p className="pr-4">If LLMDown helps, ☕ buy me a coffee?</p>
+            <p className="pr-4">If IsLLMDown helps, ☕ buy me a coffee?</p>
           </div>
         </div>
       )}

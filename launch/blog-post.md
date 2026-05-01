@@ -1,12 +1,12 @@
-# LLMDown — Component-level uptime tracking for LLM APIs
+# IsLLMDown — Component-level uptime tracking for LLM APIs
 
-I built LLMDown because I kept picking LLM providers without a
+I built IsLLMDown because I kept picking LLM providers without a
 clear way to compare reliability. Status pages tell you what's down
 *right now*. They don't tell you what's been down repeatedly over the
 past 90 days, and they roll up to top-level categories that hide
 useful detail.
 
-LLMDown pulls each provider's status API every 30 minutes and
+IsLLMDown pulls each provider's status API every 30 minutes and
 breaks the data down per component, with 30-day and 90-day reliability
 scores.
 

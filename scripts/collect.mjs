@@ -13,7 +13,7 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dir, '..');
 const OUT = join(ROOT, 'public', 'data', 'providers.json');
 
-const HEADERS = { 'User-Agent': 'LLMDown/1.0 (contact@providerpulse.dev)' };
+const HEADERS = { 'User-Agent': 'IsLLMDown/1.0 (contact@providerpulse.dev)' };
 
 // LLM-only focus. Component-level health for 6 major LLM API providers.
 // audienceProfile: 'mixed' = consumer apps + dev API (use keyword classifier),

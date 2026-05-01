@@ -1,18 +1,18 @@
-# LLMDown
+# IsLLMDown
 
 **The LLM API health dashboard.**
 Real-time, component-level uptime tracking for 8 LLM providers — with 90 days of incident history.
 
-🌐 **Live demo**: [llmdown.vercel.app](https://llmdown.vercel.app/)
+🌐 **Live demo**: [isllmdown.vercel.app](https://isllmdown.vercel.app/)
 
 ---
 
 ## Why this exists
 
 Status pages tell you _"is it down right now?"_
-LLMDown tells you _"how reliable has this been over the past 90 days?"_ — which is what you actually need when picking an LLM API for production.
+IsLLMDown tells you _"how reliable has this been over the past 90 days?"_ — which is what you actually need when picking an LLM API for production.
 
-Most existing trackers (StatusGator, IncidentHub) operate at the provider level. LLMDown goes deeper: **component-level health** for every provider — because OpenAI alone has 25 components (Chat Completions, Embeddings, Audio, Batch, Files, Moderations, Vision...), each with its own status.
+Most existing trackers (StatusGator, IncidentHub) operate at the provider level. IsLLMDown goes deeper: **component-level health** for every provider — because OpenAI alone has 25 components (Chat Completions, Embeddings, Audio, Batch, Files, Moderations, Vision...), each with its own status.
 
 ---
 
@@ -131,7 +131,7 @@ Issues + feature requests: [github.com/subright85/providerpulse/issues](https://
 
 ## Support
 
-If LLMDown is useful:
+If IsLLMDown is useful:
 
 - ⭐ **Star this repo** — helps other devs find it
 - ☕ [Buy me a coffee](#) — keeps the project free

@@ -33,7 +33,7 @@ export default function App() {
 
         {/* Header */}
         <div className="mb-8 border-b-2 border-white pb-6">
-          <h1 className="pp-display text-4xl sm:text-5xl uppercase">LLMDown</h1>
+          <h1 className="pp-display text-4xl sm:text-5xl uppercase">IsLLMDown</h1>
           <p className="text-white/70 text-sm mt-2 font-mono">
             Component-level health for the LLM APIs your stack depends on.
           </p>
