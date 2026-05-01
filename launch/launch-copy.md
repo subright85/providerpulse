@@ -1,4 +1,4 @@
-# Launch Copy — ProviderPulse
+# Launch Copy — LLMDown
 
 All copy in dev/founder voice. Plain, factual, slightly understated.
 Tone reference: HN top comments and "Show HN" posts that stuck — they
@@ -23,7 +23,7 @@ What works:
 ### Title
 
 ```
-Show HN: ProviderPulse – Component-level uptime tracking for LLM APIs
+Show HN: LLMDown – Component-level uptime tracking for LLM APIs
 ```
 
 Backup, slightly more story:
@@ -41,7 +41,7 @@ in the first comment.
 ```
 Author here.
 
-ProviderPulse pulls each provider's status API every 30 minutes,
+LLMDown pulls each provider's status API every 30 minutes,
 breaks each one out per component, and shows 30-day and 90-day
 reliability scores. Eight LLM API providers right now: OpenAI,
 Anthropic, Google AI, Groq, Cohere, DeepSeek, Perplexity, AI21.
@@ -67,7 +67,7 @@ Top of the roadmap is per-component email alerts and a few more
 providers. Open to feedback on what's missing and on the scoring
 methodology.
 
-[ProviderPulse URL]
+[LLMDown URL]
 ```
 
 Word count target: 200–250. Currently ~220.
@@ -110,7 +110,7 @@ Use `[P]` tag.
 
 **Title**:
 ```
-[P] ProviderPulse: Component-level reliability tracking for 8 LLM APIs (90 days of incident data)
+[P] LLMDown: Component-level reliability tracking for 8 LLM APIs (90 days of incident data)
 ```
 
 **Body**:
@@ -138,7 +138,7 @@ GitHub Discussions enabled for methodology questions.
 
 **Title**:
 ```
-ProviderPulse — built a reliability dashboard for LLM APIs over 2 weeks
+LLMDown — built a reliability dashboard for LLM APIs over 2 weeks
 ```
 
 **Body**:
@@ -146,7 +146,7 @@ ProviderPulse — built a reliability dashboard for LLM APIs over 2 weeks
 Picked OpenAI vs Anthropic for a production app and there wasn't an
 easy way to compare reliability over time, so I built one.
 
-ProviderPulse pulls each provider's status API every 30 min and breaks
+LLMDown pulls each provider's status API every 30 min and breaks
 the data out per component. Eight LLM providers covered. Free, no
 signup, static site.
 
@@ -164,7 +164,7 @@ Roadmap and feedback welcome.
 5 tweets. Tweet 1 needs an OG image or hero GIF.
 
 ```
-1/ Built ProviderPulse — a free dashboard for tracking LLM API
+1/ Built LLMDown — a free dashboard for tracking LLM API
    reliability. 8 providers, component-level, 30-day and 90-day
    scores.
 
@@ -215,7 +215,7 @@ page. Free, no signup.
 ```
 Author here.
 
-ProviderPulse is the dashboard I wanted when picking between LLM
+LLMDown is the dashboard I wanted when picking between LLM
 providers for production. Status pages tell you what's down right now;
 this tells you what's been down repeatedly over the past 90 days, and
 which specific components were affected.
@@ -231,7 +231,7 @@ providers and on the weighting.
 For TLDR, Console, BetterDev, Pragmatic Engineer:
 
 ```
-ProviderPulse — a free dashboard tracking 90 days of incident history
+LLMDown — a free dashboard tracking 90 days of incident history
 for 8 LLM API providers (OpenAI, Anthropic, Google AI, Groq, Cohere,
 DeepSeek, Perplexity, AI21), with component-level granularity so you
 can see "ChatGPT down but API fine" instead of just "OpenAI down."

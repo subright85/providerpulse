@@ -74,7 +74,7 @@ async function sendTelegram(text) {
 
 async function fetchStatus(p) {
   const res = await fetch(p.apiUrl, {
-    headers: { 'User-Agent': 'ProviderPulse-Monitor/1.0' },
+    headers: { 'User-Agent': 'LLMDown-Monitor/1.0' },
     signal: AbortSignal.timeout(10000),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);

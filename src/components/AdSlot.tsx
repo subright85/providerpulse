@@ -38,7 +38,7 @@ export default function AdSlot() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 text-[#00ff00] hover:underline text-xs font-bold uppercase"
         >
-          ☕ Like ProviderPulse? Buy me a coffee
+          ☕ Like LLMDown? Buy me a coffee
         </a>
         <p className="text-white/40 text-[10px] mt-1">Solo project, free forever — coffee keeps the cron jobs running.</p>
       </div>

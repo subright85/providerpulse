@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const OUT = join(__dir, 'screenshots');
-const URL = process.env.PP_URL ?? 'https://providerpulse-woad.vercel.app/';
+const URL = process.env.PP_URL ?? 'https://llmdown.vercel.app/';
 
 async function run() {
   const browser = await chromium.launch();
