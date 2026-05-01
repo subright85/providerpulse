@@ -3,11 +3,11 @@ import type { ProviderData, Provider, ProviderComponent, MonthlyTrend } from '..
 import { getComponentTier, TIER_LABELS, TIER_ICONS, type ComponentTier } from '../lib/component-tiers';
 
 const INDICATOR_CONFIG = {
-  none:        { label: 'OPERATIONAL',  cls: 'border-[#00ff00] text-[#00ff00] bg-[#00ff00]/10', dot: 'bg-[#00ff00]' },
-  minor:       { label: 'DEGRADED',     cls: 'border-[#ffff00] text-[#ffff00] bg-[#ffff00]/10', dot: 'bg-[#ffff00]' },
-  major:       { label: 'MAJOR',        cls: 'border-[#ff8800] text-[#ff8800] bg-[#ff8800]/10', dot: 'bg-[#ff8800]' },
-  critical:    { label: 'CRITICAL',     cls: 'border-[#ff006e] text-[#ff006e] bg-[#ff006e]/10', dot: 'bg-[#ff006e]' },
-  maintenance: { label: 'MAINTENANCE',  cls: 'border-[#00ffff] text-[#00ffff] bg-[#00ffff]/10', dot: 'bg-[#00ffff]' },
+  none:        { label: 'Operational',  cls: 'border-green-200 text-green-700 bg-green-50',  dot: 'bg-green-500' },
+  minor:       { label: 'Degraded',     cls: 'border-yellow-200 text-yellow-700 bg-yellow-50', dot: 'bg-yellow-500' },
+  major:       { label: 'Major',        cls: 'border-orange-200 text-orange-700 bg-orange-50', dot: 'bg-orange-500' },
+  critical:    { label: 'Critical',     cls: 'border-red-200 text-red-700 bg-red-50', dot: 'bg-red-500' },
+  maintenance: { label: 'Maintenance',  cls: 'border-sky-200 text-sky-700 bg-sky-50', dot: 'bg-sky-500' },
 };
 
 function fmtLastIncident(iso: string | null): string {
@@ -19,30 +19,30 @@ function fmtLastIncident(iso: string | null): string {
 }
 
 function scoreColor(score: number): string {
-  return score >= 90 ? '#00ff00' : score >= 75 ? '#00ffff' : score >= 60 ? '#ffff00' : '#ff8800';
+  return score >= 90 ? '#16a34a' : score >= 75 ? '#0ea5e9' : score >= 60 ? '#ca8a04' : '#dc2626';
 }
 
 function ScoreBox({ score, period }: { score: number | null; period: '30D' | '90D' }) {
   if (score === null) {
     return (
       <div
-        className="border-2 border-white/30 px-2 py-1 flex flex-col items-center justify-center text-white/40 font-mono shrink-0"
+        className="border border-slate-200 rounded-md px-2 py-1 flex flex-col items-center justify-center text-slate-400 shrink-0 min-w-[44px]"
         title={`${period} reliability unavailable`}
       >
-        <span className="text-[11px] font-bold leading-none">N/A</span>
-        <span className="text-[7px] uppercase tracking-wider mt-0.5">{period}</span>
+        <span className="text-[11px] font-semibold leading-none pp-tabular">N/A</span>
+        <span className="text-[8px] uppercase tracking-wider mt-0.5 text-slate-400">{period}</span>
       </div>
     );
   }
   const color = scoreColor(score);
   return (
     <div
-      className="border-2 px-2 py-1 flex flex-col items-center justify-center font-mono shrink-0"
+      className="border rounded-md px-2 py-1 flex flex-col items-center justify-center shrink-0 min-w-[44px]"
       style={{ borderColor: color, color }}
       title={`${period} reliability score`}
     >
-      <span className="text-[14px] font-bold leading-none tabular-nums">{score}</span>
-      <span className="text-[7px] uppercase tracking-wider mt-0.5 opacity-80">{period}</span>
+      <span className="text-[14px] font-semibold leading-none pp-tabular">{score}</span>
+      <span className="text-[8px] uppercase tracking-wider mt-0.5 opacity-80">{period}</span>
     </div>
   );
 }
@@ -56,7 +56,7 @@ function ProviderIcon({ provider }: { provider: Provider }) {
     <img
       src={`https://www.google.com/s2/favicons?domain=${provider.domain}&sz=64`}
       alt={provider.name}
-      className="w-6 h-6 shrink-0"
+      className="w-6 h-6 shrink-0 rounded"
       onError={() => setFailed(true)}
     />
   );
@@ -64,28 +64,24 @@ function ProviderIcon({ provider }: { provider: Provider }) {
 
 function componentDotColor(status: ProviderComponent['status']): string {
   switch (status) {
-    case 'major_outage':         return 'bg-[#ff006e]';
-    case 'partial_outage':       return 'bg-[#ff8800]';
-    case 'degraded_performance': return 'bg-[#ffff00]';
-    case 'under_maintenance':    return 'bg-[#00ffff]';
-    default:                     return 'bg-[#00ff00]/70';
+    case 'major_outage':         return 'bg-red-500';
+    case 'partial_outage':       return 'bg-orange-500';
+    case 'degraded_performance': return 'bg-yellow-500';
+    case 'under_maintenance':    return 'bg-sky-500';
+    default:                     return 'bg-green-500/80';
   }
 }
 
-const TIER_BORDER: Record<ComponentTier, string> = {
-  enduser: 'text-[#00ffff]',
-  api:     'text-[#00ff00]',
-  infra:   'text-white/50',
+const TIER_LABEL_CLR: Record<ComponentTier, string> = {
+  enduser: 'text-sky-700',
+  api:     'text-emerald-700',
+  infra:   'text-slate-500',
 };
 
 function ComponentTiers({ providerId, components }: { providerId: string; components: ProviderComponent[] }) {
   if (components.length === 0) return null;
 
-  const grouped: Record<ComponentTier, ProviderComponent[]> = {
-    enduser: [],
-    api:     [],
-    infra:   [],
-  };
+  const grouped: Record<ComponentTier, ProviderComponent[]> = { enduser: [], api: [], infra: [] };
   for (const c of components) {
     grouped[getComponentTier(providerId, c.name)].push(c);
   }
@@ -101,26 +97,26 @@ function ComponentTiers({ providerId, components }: { providerId: string; compon
   const tierOrder: ComponentTier[] = ['enduser', 'api', 'infra'];
 
   return (
-    <div className="flex flex-col gap-1.5 font-mono">
+    <div className="flex flex-col gap-1.5">
       {tierOrder.map(tier => {
         const items = grouped[tier];
         if (items.length === 0) return null;
         const failing = items.filter(c => c.status !== 'operational').length;
         return (
           <div key={tier} className="flex items-center gap-2">
-            <span className={`text-[10px] font-bold uppercase tracking-wider w-20 shrink-0 ${TIER_BORDER[tier]}`}>
+            <span className={`text-[10px] font-semibold uppercase tracking-wide w-20 shrink-0 ${TIER_LABEL_CLR[tier]}`}>
               {TIER_ICONS[tier]} {TIER_LABELS[tier]}
             </span>
             <div className="flex flex-wrap gap-1 flex-1">
               {items.map(c => (
                 <span
                   key={c.id}
-                  className={`w-2 h-2 ${componentDotColor(c.status)}`}
+                  className={`w-2 h-2 rounded-sm ${componentDotColor(c.status)}`}
                   title={`${c.name} — ${c.status.replace('_', ' ')}`}
                 />
               ))}
             </div>
-            <span className={`text-[10px] font-bold tabular-nums shrink-0 ${failing > 0 ? 'text-[#ff8800]' : 'text-white/40'}`}>
+            <span className={`text-[10px] font-semibold pp-tabular shrink-0 ${failing > 0 ? 'text-orange-600' : 'text-slate-400'}`}>
               {failing > 0 ? `${failing}/${items.length}` : `${items.length}`}
             </span>
           </div>
@@ -134,19 +130,19 @@ function IncidentSparkline({ trend }: { trend: MonthlyTrend[] }) {
   if (trend.length === 0) return null;
   const max = Math.max(...trend.map(t => t.incidentCount), 1);
   return (
-    <div className="flex gap-1 items-end font-mono">
+    <div className="flex gap-1 items-end">
       {trend.map(m => {
         const h = (m.incidentCount / max) * 100;
         return (
           <div key={m.month} className="flex flex-col items-center gap-0.5 flex-1 min-w-0">
-            <div className="w-full h-5 bg-white/5 border-2 border-white/10 flex items-end overflow-hidden">
+            <div className="w-full h-5 bg-slate-100 rounded-sm flex items-end overflow-hidden">
               <div
-                className="w-full bg-[#00ffff]"
+                className="w-full bg-sky-500 rounded-sm"
                 style={{ height: `${Math.max(h, 4)}%` }}
                 title={`${m.label}: ${m.incidentCount} incidents`}
               />
             </div>
-            <span className="text-[7px] text-white/40 uppercase leading-none">{m.label.split(' ')[0]}</span>
+            <span className="text-[8px] text-slate-400 leading-none">{m.label.split(' ')[0]}</span>
           </div>
         );
       })}
@@ -179,14 +175,14 @@ export default function ProviderCard({ data, onClick }: Props) {
         <ProviderIcon provider={provider} />
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <p className="pp-display text-base text-white truncate">{provider.name}</p>
-            <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 border-2 text-[9px] font-bold uppercase tracking-wider font-mono ${ind.cls}`}>
-              <span className={`w-1.5 h-1.5 ${isActive ? 'animate-pulse' : ''} ${ind.dot}`} />
+            <p className="text-base font-semibold text-slate-900 truncate">{provider.name}</p>
+            <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded border text-[10px] font-medium ${ind.cls}`}>
+              <span className={`w-1.5 h-1.5 rounded-full ${isActive ? 'animate-pulse' : ''} ${ind.dot}`} />
               {ind.label}
             </span>
           </div>
           {activeIncident && (
-            <p className="text-[11px] text-[#ff8800] mt-1 truncate leading-tight font-mono">
+            <p className="text-[11px] text-orange-700 mt-1 truncate leading-tight">
               ⚠ {activeIncident.title}
             </p>
           )}
@@ -199,11 +195,11 @@ export default function ProviderCard({ data, onClick }: Props) {
 
       {/* Components grouped by audience tier */}
       {components.length > 0 && (
-        <div className="border-2 border-white/20 p-2.5">
-          <div className="flex items-center justify-between mb-2 font-mono">
-            <span className="text-[10px] text-white/50 font-bold uppercase tracking-wider">Components</span>
-            <span className={`text-[10px] font-bold tabular-nums ${failingComps.length === 0 ? 'text-[#00ff00]' : 'text-[#ff8800]'}`}>
-              {failingComps.length === 0 ? `${components.length} OK` : `${failingComps.length}/${components.length} AFFECTED`}
+        <div className="rounded-md bg-slate-50 border border-slate-100 p-2.5">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Components</span>
+            <span className={`text-[10px] font-semibold pp-tabular ${failingComps.length === 0 ? 'text-green-700' : 'text-orange-600'}`}>
+              {failingComps.length === 0 ? `${components.length} OK` : `${failingComps.length}/${components.length} affected`}
             </span>
           </div>
           <ComponentTiers providerId={provider.id} components={components} />
@@ -211,15 +207,15 @@ export default function ProviderCard({ data, onClick }: Props) {
       )}
 
       {/* Stats row */}
-      <div className="grid grid-cols-3 gap-2 font-mono">
-        <Stat label="30D UPTIME" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} ok={stats.uptime30d !== null && stats.uptime30d >= 99.5} />
-        <Stat label="INCIDENTS" value={String(stats.incidentCount30d)} ok={stats.incidentCount30d === 0} />
-        <Stat label="LAST INC." value={fmtLastIncident(stats.lastIncident)} ok={!stats.lastIncident} />
+      <div className="grid grid-cols-3 gap-2">
+        <Stat label="30d uptime" value={stats.uptime30d !== null ? `${stats.uptime30d}%` : '—'} ok={stats.uptime30d !== null && stats.uptime30d >= 99.5} />
+        <Stat label="Incidents" value={String(stats.incidentCount30d)} ok={stats.incidentCount30d === 0} />
+        <Stat label="Last inc." value={fmtLastIncident(stats.lastIncident)} ok={!stats.lastIncident} />
       </div>
 
       {stats.monthlyTrend.length > 0 && (
-        <div className="border-t-2 border-white/20 pt-2">
-          <p className="text-[10px] text-white/40 font-bold uppercase tracking-wider mb-1 font-mono">3-month incidents</p>
+        <div className="border-t border-slate-100 pt-2">
+          <p className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider mb-1">3-month incidents</p>
           <IncidentSparkline trend={stats.monthlyTrend} />
         </div>
       )}
@@ -230,8 +226,8 @@ export default function ProviderCard({ data, onClick }: Props) {
 function Stat({ label, value, ok }: { label: string; value: string; ok: boolean }) {
   return (
     <div>
-      <p className={`text-sm font-bold tabular-nums ${ok ? 'text-[#00ff00]' : 'text-white/85'}`}>{value}</p>
-      <p className="text-white/40 text-[9px] font-bold uppercase tracking-wider mt-0.5">{label}</p>
+      <p className={`text-sm font-semibold pp-tabular ${ok ? 'text-green-700' : 'text-slate-700'}`}>{value}</p>
+      <p className="text-slate-400 text-[10px] uppercase tracking-wider mt-0.5">{label}</p>
     </div>
   );
 }

@@ -12,9 +12,9 @@ const COFFEE_URL = 'https://buymeacoffee.com/subright85';
 
 export default function AdSlot() {
   return (
-    <div className="border-2 border-dashed border-white/30 px-4 py-4 flex flex-col gap-3 bg-white/3 font-mono">
+    <div className="rounded-lg border border-dashed border-slate-300 bg-white px-4 py-4 flex flex-col gap-3">
       <div className="text-center">
-        <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest">Built with</p>
+        <p className="text-slate-400 text-[10px] font-semibold uppercase tracking-widest">Built with</p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
           {STACK.map(s => (
             <a
@@ -22,25 +22,25 @@ export default function AdSlot() {
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/70 hover:text-[#00ff00] text-xs font-bold uppercase transition-colors"
+              className="text-slate-600 hover:text-sky-600 text-xs font-medium transition-colors"
             >
               {s.name}
-              {s.tag && <span className="ml-1 text-[9px] text-white/30">({s.tag})</span>}
+              {s.tag && <span className="ml-1 text-[9px] text-slate-400">({s.tag})</span>}
             </a>
           ))}
         </div>
       </div>
 
-      <div className="border-t-2 border-white/20 pt-3 text-center">
+      <div className="border-t border-slate-100 pt-3 text-center">
         <a
           href={COFFEE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-[#00ff00] hover:underline text-xs font-bold uppercase"
+          className="inline-flex items-center gap-1.5 text-sky-700 hover:text-sky-800 hover:underline text-xs font-semibold"
         >
           ☕ Like IsLLMDown? Buy me a coffee
         </a>
-        <p className="text-white/40 text-[10px] mt-1">Solo project, free forever — coffee keeps the cron jobs running.</p>
+        <p className="text-slate-400 text-[10px] mt-1">Solo project, free forever — coffee keeps the cron jobs running.</p>
       </div>
     </div>
   );
