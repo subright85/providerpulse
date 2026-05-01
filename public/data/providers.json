@@ -15,15 +15,15 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-01T12:01:51.934Z"
+        "updatedAt": "2026-05-01T14:01:07.648Z"
       },
       "stats": {
         "providerId": "openai",
-        "uptime30d": 97.4,
-        "uptime90d": 99.13,
+        "uptime30d": 97.41,
+        "uptime90d": 99.14,
         "incidentCount30d": 25,
-        "avgMttr30d": 191,
-        "lastIncident": "2026-05-01T03:55:28Z",
+        "avgMttr30d": 199,
+        "lastIncident": "2026-05-01T13:52:09Z",
         "reliabilityScore": 67,
         "reliabilityScore90d": 88,
         "monthlyTrend": [
@@ -36,36 +36,31 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 24,
-            "uptime": 97.4
+            "incidentCount": 23,
+            "uptime": 97.41
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 1,
-            "uptime": 99.86
+            "incidentCount": 2,
+            "uptime": 99.88
           }
         ],
         "tagSummary": [
+          {
+            "tag": "inference",
+            "count30d": 14,
+            "count90d": 14
+          },
           {
             "tag": "api",
             "count30d": 14,
             "count90d": 14
           },
           {
-            "tag": "inference",
-            "count30d": 13,
-            "count90d": 13
-          },
-          {
             "tag": "other",
             "count30d": 4,
             "count90d": 4
-          },
-          {
-            "tag": "auth",
-            "count30d": 2,
-            "count90d": 2
           },
           {
             "tag": "availability",
@@ -76,16 +71,36 @@
             "tag": "performance",
             "count30d": 1,
             "count90d": 1
+          },
+          {
+            "tag": "auth",
+            "count30d": 1,
+            "count90d": 1
           }
         ],
         "audienceBreakdown": {
           "b2b": 10,
-          "b2c": 10,
+          "b2c": 9,
           "both": 2,
-          "unknown": 3
+          "unknown": 4
         }
       },
       "recentIncidents": [
+        {
+          "id": "01KQHWZ9710V886SZKWE20HFAX",
+          "providerId": "openai",
+          "title": "Elevated error rates for image generation",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "audience": "unknown",
+          "startedAt": "2026-05-01T13:52:09Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://status.openai.com"
+        },
         {
           "id": "01KQGTTQ0XNZDK834NBFFQGMG9",
           "providerId": "openai",
@@ -287,21 +302,6 @@
           "resolvedAt": "2026-04-20T23:13:00Z",
           "durationMinutes": -4,
           "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KPNZ1BW91D4S3V5PWWEVQ5F1",
-          "providerId": "openai",
-          "title": "Elevated errors for ChatGPT conversations in Europe",
-          "severity": "minor",
-          "tags": [
-            "inference",
-            "api"
-          ],
-          "audience": "b2c",
-          "startedAt": "2026-04-20T17:29:30Z",
-          "resolvedAt": "2026-04-20T19:17:46Z",
-          "durationMinutes": 108,
-          "url": "https://status.openai.com"
         }
       ],
       "components": [
@@ -328,7 +328,7 @@
         {
           "id": "01JMXBRMFE4MAP2BHSJNZ787WX",
           "name": "Images",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "01JMXBRMFE5ESNNV8JDHVCGSRD",
@@ -485,7 +485,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-01T12:01:52.700Z"
+        "updatedAt": "2026-05-01T14:01:08.615Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -873,7 +873,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-01T12:01:53.175Z"
+        "updatedAt": "2026-05-01T14:01:09.104Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -977,7 +977,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-01T12:01:53.860Z"
+        "updatedAt": "2026-05-01T14:01:09.878Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1205,7 +1205,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-01T12:01:54.567Z"
+        "updatedAt": "2026-05-01T14:01:10.597Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1491,7 +1491,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-01T12:01:55.256Z"
+        "updatedAt": "2026-05-01T14:01:11.345Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1793,7 +1793,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-01T12:01:55.890Z"
+        "updatedAt": "2026-05-01T14:01:12.026Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1851,7 +1851,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-01T12:01:56.541Z"
+        "updatedAt": "2026-05-01T14:01:12.799Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1932,8 +1932,8 @@
       "tags": [
         {
           "tag": "inference",
-          "count30d": 44,
-          "count90d": 50,
+          "count30d": 45,
+          "count90d": 51,
           "trend": "up",
           "providers": [
             "openai",
@@ -1993,8 +1993,8 @@
         },
         {
           "tag": "auth",
-          "count30d": 5,
-          "count90d": 5,
+          "count30d": 4,
+          "count90d": 4,
           "trend": "up",
           "providers": [
             "openai",
@@ -2023,5 +2023,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-01T12:02:01.229Z"
+  "generatedAt": "2026-05-01T14:01:17.932Z"
 }
