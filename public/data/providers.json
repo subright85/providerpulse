@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-02T16:56:04.393Z"
+        "updatedAt": "2026-05-02T17:52:23.317Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 3,
-            "uptime": 98.86
+            "uptime": 98.89
           }
         ],
         "tagSummary": [
@@ -485,7 +485,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-02T16:56:05.028Z"
+        "updatedAt": "2026-05-02T17:52:24.036Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -873,7 +873,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-02T16:56:05.488Z"
+        "updatedAt": "2026-05-02T17:52:24.505Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -977,7 +977,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-02T16:56:06.133Z"
+        "updatedAt": "2026-05-02T17:52:25.155Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1205,7 +1205,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-02T16:56:06.871Z"
+        "updatedAt": "2026-05-02T17:52:25.886Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1491,7 +1491,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-02T16:56:07.496Z"
+        "updatedAt": "2026-05-02T17:52:26.545Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1793,7 +1793,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-02T16:56:08.291Z"
+        "updatedAt": "2026-05-02T17:52:27.294Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1851,7 +1851,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-02T16:56:09.011Z"
+        "updatedAt": "2026-05-02T17:52:28.049Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -2023,5 +2023,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-02T16:56:13.631Z"
+  "generatedAt": "2026-05-02T17:52:32.527Z"
 }
