@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-04T10:18:22.435Z"
+        "updatedAt": "2026-05-04T12:10:41.353Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 3,
-            "uptime": 99.43
+            "uptime": 99.45
           }
         ],
         "tagSummary": [
@@ -485,7 +485,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T10:18:23.288Z"
+        "updatedAt": "2026-05-04T12:10:42.361Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -513,7 +513,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 1,
-            "uptime": 99.59
+            "uptime": 99.6
           }
         ],
         "tagSummary": [
@@ -874,7 +874,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T10:18:23.732Z"
+        "updatedAt": "2026-05-04T12:10:42.836Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -978,7 +978,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T10:18:24.358Z"
+        "updatedAt": "2026-05-04T12:10:43.533Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1206,7 +1206,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T10:18:25.102Z"
+        "updatedAt": "2026-05-04T12:10:44.199Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1492,7 +1492,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T10:18:25.770Z"
+        "updatedAt": "2026-05-04T12:10:44.917Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1779,7 +1779,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T10:18:26.328Z"
+        "updatedAt": "2026-05-04T12:10:45.535Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1835,9 +1835,9 @@
       },
       "status": {
         "providerId": "ai21",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T10:18:27.037Z"
+        "indicator": "minor",
+        "description": "Partially Degraded Service",
+        "updatedAt": "2026-05-04T12:10:46.280Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1891,7 +1891,7 @@
         {
           "id": "n313qpb9pclg",
           "name": "Maestro Websearch",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "8byw33cwy620",
@@ -2009,5 +2009,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-04T10:18:31.579Z"
+  "generatedAt": "2026-05-04T12:10:50.779Z"
 }
