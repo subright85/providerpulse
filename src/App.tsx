@@ -15,10 +15,15 @@ export default function App() {
   const [selected, setSelected] = useState<ProviderData | null>(null);
 
   useEffect(() => {
-    fetch(DATA_URL)
-      .then(r => r.json())
-      .then(setData)
-      .catch(() => setError(true));
+    const load = () =>
+      fetch(`${DATA_URL}?t=${Math.floor(Date.now() / 60000)}`)  // 1-min cache bust
+        .then(r => { if (!r.ok) throw new Error(r.status.toString()); return r.json(); })
+        .then(setData)
+        .catch(() => setError(prev => prev || true));
+
+    load();
+    const timer = setInterval(load, 5 * 60 * 1000);  // re-fetch every 5 min
+    return () => clearInterval(timer);
   }, []);
 
   const providers = data?.providers ?? [];
