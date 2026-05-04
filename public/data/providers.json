@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-04T00:12:01.924Z"
+        "updatedAt": "2026-05-04T04:28:19.507Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 3,
-            "uptime": 99.35
+            "uptime": 99.39
           }
         ],
         "tagSummary": [
@@ -485,7 +485,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T00:12:02.754Z"
+        "updatedAt": "2026-05-04T04:28:20.195Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -873,7 +873,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T00:12:03.225Z"
+        "updatedAt": "2026-05-04T04:28:20.658Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -977,7 +977,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T00:12:03.941Z"
+        "updatedAt": "2026-05-04T04:28:21.301Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1205,7 +1205,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T00:12:04.590Z"
+        "updatedAt": "2026-05-04T04:28:22.036Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1491,12 +1491,12 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T00:12:05.281Z"
+        "updatedAt": "2026-05-04T04:28:22.676Z"
       },
       "stats": {
         "providerId": "deepseek",
         "uptime30d": 99.76,
-        "uptime90d": 99.22,
+        "uptime90d": 99.23,
         "incidentCount30d": 2,
         "avgMttr30d": 136,
         "lastIncident": "2026-04-22T18:23:18.547+08:00",
@@ -1531,12 +1531,12 @@
           {
             "tag": "performance",
             "count30d": 0,
-            "count90d": 6
+            "count90d": 5
           },
           {
             "tag": "api",
             "count30d": 1,
-            "count90d": 5
+            "count90d": 4
           }
         ],
         "audienceBreakdown": {
@@ -1717,21 +1717,6 @@
           "resolvedAt": "2026-02-06T09:47:32.031+08:00",
           "durationMinutes": 7,
           "url": "https://stspg.io/8tcd7bn3lp1n"
-        },
-        {
-          "id": "970nz1ss7q0g",
-          "providerId": "deepseek",
-          "title": "【已解决】DeepSeek 网页/API 性能异常（[Resolved]DeepSeek Web/API Service Degraded Performance）",
-          "severity": "minor",
-          "tags": [
-            "performance",
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-02-03T10:03:07.102+08:00",
-          "resolvedAt": "2026-02-03T10:30:54.669+08:00",
-          "durationMinutes": 28,
-          "url": "https://stspg.io/tpp7mh4fcydk"
         }
       ],
       "components": [
@@ -1793,7 +1778,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T00:12:05.973Z"
+        "updatedAt": "2026-05-04T04:28:23.469Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1851,7 +1836,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T00:12:06.653Z"
+        "updatedAt": "2026-05-04T04:28:24.160Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1945,7 +1930,7 @@
         {
           "tag": "api",
           "count30d": 42,
-          "count90d": 50,
+          "count90d": 49,
           "trend": "up",
           "providers": [
             "openai",
@@ -1970,7 +1955,7 @@
         {
           "tag": "performance",
           "count30d": 3,
-          "count90d": 14,
+          "count90d": 13,
           "trend": "stable",
           "providers": [
             "openai",
@@ -2023,5 +2008,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-04T00:12:10.926Z"
+  "generatedAt": "2026-05-04T04:28:28.361Z"
 }
