@@ -15,15 +15,15 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-04T14:38:57.640Z"
+        "updatedAt": "2026-05-04T17:12:27.537Z"
       },
       "stats": {
         "providerId": "openai",
-        "uptime30d": 97.35,
-        "uptime90d": 99.12,
+        "uptime30d": 97.31,
+        "uptime90d": 99.1,
         "incidentCount30d": 25,
-        "avgMttr30d": 196,
-        "lastIncident": "2026-05-01T14:25:56Z",
+        "avgMttr30d": 199,
+        "lastIncident": "2026-05-04T15:29:27Z",
         "reliabilityScore": 67,
         "reliabilityScore90d": 88,
         "monthlyTrend": [
@@ -36,24 +36,24 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 22,
+            "incidentCount": 21,
             "uptime": 97.42
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 3,
-            "uptime": 99.46
+            "incidentCount": 4,
+            "uptime": 99.1
           }
         ],
         "tagSummary": [
           {
-            "tag": "api",
+            "tag": "inference",
             "count30d": 15,
             "count90d": 15
           },
           {
-            "tag": "inference",
+            "tag": "api",
             "count30d": 14,
             "count90d": 14
           },
@@ -71,21 +71,30 @@
             "tag": "performance",
             "count30d": 1,
             "count90d": 1
-          },
-          {
-            "tag": "auth",
-            "count30d": 1,
-            "count90d": 1
           }
         ],
         "audienceBreakdown": {
           "b2b": 11,
-          "b2c": 9,
-          "both": 2,
+          "b2c": 10,
+          "both": 1,
           "unknown": 3
         }
       },
       "recentIncidents": [
+        {
+          "id": "01KQSSQK74KJVJVGCS97TV156G",
+          "providerId": "openai",
+          "title": "Issue affecting some pages on the ChatGPT website",
+          "severity": "minor",
+          "tags": [
+            "inference"
+          ],
+          "audience": "b2c",
+          "startedAt": "2026-05-04T15:29:27Z",
+          "resolvedAt": "2026-05-04T17:10:21Z",
+          "durationMinutes": 101,
+          "url": "https://status.openai.com"
+        },
         {
           "id": "01KQHYX4D53W6GT8FDTT9PHBQ3",
           "providerId": "openai",
@@ -288,20 +297,6 @@
           "resolvedAt": "2026-04-22T03:35:13Z",
           "durationMinutes": 159,
           "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KPPY7B8PMYHJWDNFY9TMJX33",
-          "providerId": "openai",
-          "title": "Some users may encounter issues with GPT-5.4-C model in Codex",
-          "severity": "minor",
-          "tags": [
-            "inference"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-21T02:34:32Z",
-          "resolvedAt": "2026-04-21T04:33:18Z",
-          "durationMinutes": 119,
-          "url": "https://status.openai.com"
         }
       ],
       "components": [
@@ -485,12 +480,12 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T14:38:58.497Z"
+        "updatedAt": "2026-05-04T17:12:28.235Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 97.38,
-        "uptime90d": 99.04,
+        "uptime30d": 97.36,
+        "uptime90d": 99.03,
         "incidentCount30d": 47,
         "avgMttr30d": 57,
         "lastIncident": "2026-05-04T14:07:57.452Z",
@@ -513,7 +508,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 3,
-            "uptime": 99.52
+            "uptime": 99.36
           }
         ],
         "tagSummary": [
@@ -587,8 +582,8 @@
           ],
           "audience": "unknown",
           "startedAt": "2026-05-04T13:59:17.710Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-05-04T14:45:58.262Z",
+          "durationMinutes": 47,
           "url": "https://stspg.io/23s852zsyx18"
         },
         {
@@ -875,7 +870,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T14:38:58.979Z"
+        "updatedAt": "2026-05-04T17:12:28.727Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -979,7 +974,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T14:38:59.691Z"
+        "updatedAt": "2026-05-04T17:12:29.409Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1207,7 +1202,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T14:39:00.456Z"
+        "updatedAt": "2026-05-04T17:12:30.087Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1493,7 +1488,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T14:39:01.193Z"
+        "updatedAt": "2026-05-04T17:12:30.755Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1780,7 +1775,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T14:39:01.842Z"
+        "updatedAt": "2026-05-04T17:12:31.368Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1838,7 +1833,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-04T14:39:02.582Z"
+        "updatedAt": "2026-05-04T17:12:32.129Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1918,9 +1913,21 @@
       "category": "llm",
       "tags": [
         {
+          "tag": "inference",
+          "count30d": 47,
+          "count90d": 52,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "google-ai",
+            "groq"
+          ]
+        },
+        {
           "tag": "api",
-          "count30d": 45,
-          "count90d": 51,
+          "count30d": 44,
+          "count90d": 50,
           "trend": "up",
           "providers": [
             "openai",
@@ -1928,18 +1935,6 @@
             "google-ai",
             "cohere",
             "deepseek"
-          ]
-        },
-        {
-          "tag": "inference",
-          "count30d": 46,
-          "count90d": 51,
-          "trend": "up",
-          "providers": [
-            "openai",
-            "anthropic",
-            "google-ai",
-            "groq"
           ]
         },
         {
@@ -1980,11 +1975,10 @@
         },
         {
           "tag": "auth",
-          "count30d": 4,
-          "count90d": 4,
+          "count30d": 3,
+          "count90d": 3,
           "trend": "up",
           "providers": [
-            "openai",
             "anthropic",
             "cohere"
           ]
@@ -2010,5 +2004,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-04T14:39:06.975Z"
+  "generatedAt": "2026-05-04T17:12:36.786Z"
 }
