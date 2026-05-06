@@ -1,0 +1,14 @@
+name = "isllmdown-cron"
+main = "src/index.ts"
+compatibility_date = "2026-05-01"
+
+# Two cron triggers — Worker handler dispatches based on which fired.
+# Cloudflare Workers Free tier supports unlimited cron triggers down to 1 min.
+[triggers]
+crons = [
+  "*/15 * * * *",  # collect — every 15 min
+  "*/5 * * * *",   # monitor — every 5 min
+]
+
+# Secret: GITHUB_TOKEN (set via `wrangler secret put GITHUB_TOKEN`)
+# PAT scope: repo (or fine-grained: actions:write on subright85/providerpulse)
