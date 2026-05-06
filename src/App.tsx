@@ -10,11 +10,13 @@ import FloatingDonateButton from './components/FloatingDonateButton';
 const DATA_URL = 'https://raw.githubusercontent.com/subright85/IsLLMDown/main/public/data/providers.json';
 const COFFEE_URL = import.meta.env.VITE_DONATION_COFFEE_URL ?? 'https://buymeacoffee.com/sukim';
 const STALE_THRESHOLD_MS = 30 * 60 * 1000;  // warn if data > 30 min old
+const BMC_BANNER_DISMISS_KEY = 'isllmdown_bmc_banner_dismissed';
 
 export default function App() {
   const [data, setData] = useState<AppData | null>(null);
   const [error, setError] = useState(false);
   const [selected, setSelected] = useState<ProviderData | null>(null);
+  const [bmcBannerDismissed, setBmcBannerDismissed] = useState(true);
 
   useEffect(() => {
     const load = () =>
@@ -28,6 +30,22 @@ export default function App() {
     return () => clearInterval(timer);
   }, []);
 
+  // Read banner-dismissed flag client-side only (avoid SSR mismatch); default to
+  // hidden until we've checked, so the banner doesn't flash for returning users.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (!window.localStorage.getItem(BMC_BANNER_DISMISS_KEY)) {
+      setBmcBannerDismissed(false);
+    }
+  }, []);
+
+  const dismissBmcBanner = () => {
+    setBmcBannerDismissed(true);
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(BMC_BANNER_DISMISS_KEY, '1');
+    }
+  };
+
   const providers = data?.providers ?? [];
   const overallDown = providers.filter(p => p.status.indicator !== 'none' && p.status.indicator !== 'maintenance').length;
   const activeIncidents = providers.filter(p =>
@@ -36,27 +54,41 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
+      {/* Top BMC banner — full-width, dismissible (persisted in localStorage) */}
+      {!bmcBannerDismissed && (
+        <div className="bg-amber-50 border-b border-amber-200">
+          <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4 text-sm">
+            <span className="text-amber-900">
+              <span className="mr-1">☕</span>
+              <strong>Enjoying IsLLMDown?</strong> It's free, and stays free —{' '}
+              <a
+                href={COFFEE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-semibold hover:text-amber-700"
+              >
+                Buy me a coffee →
+              </a>
+            </span>
+            <button
+              onClick={dismissBmcBanner}
+              aria-label="Dismiss"
+              className="shrink-0 text-amber-700 hover:text-amber-900 text-base leading-none px-2 py-1"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-6xl mx-auto px-4 py-8">
 
         {/* Header */}
         <div className="mb-8 border-b border-slate-200 pb-6">
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <h1 className="pp-display text-3xl sm:text-4xl text-slate-900">IsLLMDown</h1>
-              <p className="text-slate-600 text-sm mt-1.5">
-                Component-level health for the LLM APIs your stack depends on.
-              </p>
-            </div>
-            <a
-              href={COFFEE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-amber-800 bg-amber-50 border border-amber-200 rounded-md hover:bg-amber-100 transition"
-            >
-              <span className="text-base leading-none">☕</span>
-              <span className="hidden sm:inline">Buy me a coffee</span>
-            </a>
-          </div>
+          <h1 className="pp-display text-3xl sm:text-4xl text-slate-900">IsLLMDown</h1>
+          <p className="text-slate-600 text-sm mt-1.5">
+            Component-level health for the LLM APIs your stack depends on.
+          </p>
           {data && (
             <div className="flex items-center flex-wrap gap-3 mt-4">
               <span className={`flex items-center gap-2 text-xs font-medium px-2.5 py-1 rounded-md border ${overallDown === 0 ? 'border-green-200 text-green-700 bg-green-50' : 'border-yellow-200 text-yellow-700 bg-yellow-50'}`}>
