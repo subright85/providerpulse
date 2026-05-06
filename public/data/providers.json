@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T00:07:03.648Z"
+        "updatedAt": "2026-05-06T04:01:33.792Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 4,
-            "uptime": 99.33
+            "uptime": 99.36
           }
         ],
         "tagSummary": [
@@ -480,7 +480,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T00:07:04.397Z"
+        "updatedAt": "2026-05-06T04:01:34.587Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -508,7 +508,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 3,
-            "uptime": 99.53
+            "uptime": 99.54
           }
         ],
         "tagSummary": [
@@ -870,7 +870,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T00:07:04.844Z"
+        "updatedAt": "2026-05-06T04:01:35.049Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -974,7 +974,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T00:07:05.459Z"
+        "updatedAt": "2026-05-06T04:01:35.690Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1202,7 +1202,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T00:07:06.087Z"
+        "updatedAt": "2026-05-06T04:01:36.366Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1486,19 +1486,19 @@
       },
       "status": {
         "providerId": "deepseek",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T00:07:06.804Z"
+        "indicator": "major",
+        "description": "Partial System Outage",
+        "updatedAt": "2026-05-06T04:01:37.388Z"
       },
       "stats": {
         "providerId": "deepseek",
         "uptime30d": 99.76,
         "uptime90d": 99.23,
-        "incidentCount30d": 2,
+        "incidentCount30d": 3,
         "avgMttr30d": 136,
-        "lastIncident": "2026-04-22T18:23:18.547+08:00",
-        "reliabilityScore": 91,
-        "reliabilityScore90d": 84,
+        "lastIncident": "2026-05-06T11:53:04.745+08:00",
+        "reliabilityScore": 87,
+        "reliabilityScore90d": 83,
         "monthlyTrend": [
           {
             "month": "2026-03",
@@ -1515,35 +1515,50 @@
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 0,
+            "incidentCount": 1,
             "uptime": 100
           }
         ],
         "tagSummary": [
+          {
+            "tag": "performance",
+            "count30d": 1,
+            "count90d": 6
+          },
           {
             "tag": "other",
             "count30d": 1,
             "count90d": 6
           },
           {
-            "tag": "performance",
-            "count30d": 0,
-            "count90d": 5
-          },
-          {
             "tag": "api",
-            "count30d": 1,
-            "count90d": 4
+            "count30d": 2,
+            "count90d": 5
           }
         ],
         "audienceBreakdown": {
-          "b2b": 1,
+          "b2b": 2,
           "b2c": 0,
           "both": 0,
           "unknown": 1
         }
       },
       "recentIncidents": [
+        {
+          "id": "6cqq25c3c5j9",
+          "providerId": "deepseek",
+          "title": "DeepSeek 网页/API 性能异常（DeepSeek Web/API Service Degraded Performance）",
+          "severity": "major",
+          "tags": [
+            "performance",
+            "api"
+          ],
+          "audience": "b2b",
+          "startedAt": "2026-05-06T11:53:04.745+08:00",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/tgcfbtmqbpms"
+        },
         {
           "id": "5w5lp464fzsj",
           "providerId": "deepseek",
@@ -1720,13 +1735,13 @@
         {
           "id": "j4n367d9mh3x",
           "name": "API 服务 (API Service)",
-          "status": "operational",
+          "status": "partial_outage",
           "description": "https://api.deepseek.com 的状态 (The status of https://api.deepseek.com)"
         },
         {
           "id": "b76wbf9n5nq3",
           "name": "网页对话服务 (Web Chat Service)",
-          "status": "operational",
+          "status": "partial_outage",
           "description": "https://chat.deepseek.com 的状态 (The status of https://chat.deepseek.com)"
         }
       ],
@@ -1775,7 +1790,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T00:07:07.319Z"
+        "updatedAt": "2026-05-06T04:01:37.981Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1833,7 +1848,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T00:07:08.094Z"
+        "updatedAt": "2026-05-06T04:01:38.678Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1926,8 +1941,8 @@
         },
         {
           "tag": "api",
-          "count30d": 43,
-          "count90d": 50,
+          "count30d": 44,
+          "count90d": 51,
           "trend": "up",
           "providers": [
             "openai",
@@ -1951,8 +1966,8 @@
         },
         {
           "tag": "performance",
-          "count30d": 3,
-          "count90d": 11,
+          "count30d": 4,
+          "count90d": 12,
           "trend": "stable",
           "providers": [
             "openai",
@@ -2004,5 +2019,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-06T00:07:13.924Z"
+  "generatedAt": "2026-05-06T04:01:43.115Z"
 }
