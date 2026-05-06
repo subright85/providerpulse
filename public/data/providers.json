@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T07:00:57.450Z"
+        "updatedAt": "2026-05-06T07:15:57.755Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,7 +480,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T07:00:58.161Z"
+        "updatedAt": "2026-05-06T07:15:57.959Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -870,7 +870,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T07:00:57.413Z"
+        "updatedAt": "2026-05-06T07:15:57.632Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -974,7 +974,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T07:00:57.592Z"
+        "updatedAt": "2026-05-06T07:15:57.889Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1202,7 +1202,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T07:00:57.692Z"
+        "updatedAt": "2026-05-06T07:15:57.880Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1486,17 +1486,17 @@
       },
       "status": {
         "providerId": "deepseek",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T07:00:57.918Z"
+        "indicator": "minor",
+        "description": "Partially Degraded Service",
+        "updatedAt": "2026-05-06T07:15:57.883Z"
       },
       "stats": {
         "providerId": "deepseek",
         "uptime30d": 99.74,
         "uptime90d": 99.22,
-        "incidentCount30d": 3,
+        "incidentCount30d": 4,
         "avgMttr30d": 94,
-        "lastIncident": "2026-05-06T11:53:04.745+08:00",
+        "lastIncident": "2026-05-06T15:13:45.515+08:00",
         "reliabilityScore": 87,
         "reliabilityScore90d": 83,
         "monthlyTrend": [
@@ -1515,35 +1515,50 @@
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 1,
+            "incidentCount": 2,
             "uptime": 99.9
           }
         ],
         "tagSummary": [
           {
             "tag": "performance",
-            "count30d": 1,
+            "count30d": 2,
+            "count90d": 7
+          },
+          {
+            "tag": "api",
+            "count30d": 3,
             "count90d": 6
           },
           {
             "tag": "other",
             "count30d": 1,
             "count90d": 6
-          },
-          {
-            "tag": "api",
-            "count30d": 2,
-            "count90d": 5
           }
         ],
         "audienceBreakdown": {
-          "b2b": 2,
+          "b2b": 3,
           "b2c": 0,
           "both": 0,
           "unknown": 1
         }
       },
       "recentIncidents": [
+        {
+          "id": "d9c1gqhzsrcl",
+          "providerId": "deepseek",
+          "title": "DeepSeek 网页/API 性能异常（DeepSeek Web/API Service Degraded Performance）",
+          "severity": "minor",
+          "tags": [
+            "performance",
+            "api"
+          ],
+          "audience": "b2b",
+          "startedAt": "2026-05-06T15:13:45.515+08:00",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/hf658kdwks6y"
+        },
         {
           "id": "6cqq25c3c5j9",
           "providerId": "deepseek",
@@ -1735,13 +1750,13 @@
         {
           "id": "j4n367d9mh3x",
           "name": "API 服务 (API Service)",
-          "status": "operational",
+          "status": "degraded_performance",
           "description": "https://api.deepseek.com 的状态 (The status of https://api.deepseek.com)"
         },
         {
           "id": "b76wbf9n5nq3",
           "name": "网页对话服务 (Web Chat Service)",
-          "status": "operational",
+          "status": "degraded_performance",
           "description": "https://chat.deepseek.com 的状态 (The status of https://chat.deepseek.com)"
         }
       ],
@@ -1790,7 +1805,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T07:00:57.973Z"
+        "updatedAt": "2026-05-06T07:15:57.949Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1846,9 +1861,9 @@
       },
       "status": {
         "providerId": "ai21",
-        "indicator": "minor",
-        "description": "Partially Degraded Service",
-        "updatedAt": "2026-05-06T07:00:58.262Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-05-06T07:15:58.110Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1902,7 +1917,7 @@
         {
           "id": "n313qpb9pclg",
           "name": "Maestro Websearch",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "id": "8byw33cwy620",
@@ -1941,8 +1956,8 @@
         },
         {
           "tag": "api",
-          "count30d": 44,
-          "count90d": 51,
+          "count30d": 45,
+          "count90d": 52,
           "trend": "up",
           "providers": [
             "openai",
@@ -1966,8 +1981,8 @@
         },
         {
           "tag": "performance",
-          "count30d": 4,
-          "count90d": 12,
+          "count30d": 5,
+          "count90d": 13,
           "trend": "stable",
           "providers": [
             "openai",
@@ -2019,5 +2034,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-06T07:00:58.780Z"
+  "generatedAt": "2026-05-06T07:15:58.505Z"
 }
