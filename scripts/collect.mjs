@@ -5,7 +5,7 @@
  * Writes output to public/data/providers.json
  */
 
-import { writeFileSync, mkdirSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -203,6 +203,7 @@ function nullStats(p) {
     stats: { providerId: p.id, uptime30d: null, uptime90d: null, incidentCount30d: 0, avgMttr30d: null, lastIncident: null, reliabilityScore: null, reliabilityScore90d: null, monthlyTrend: [], tagSummary: [], audienceBreakdown: { b2b: 0, b2c: 0, both: 0, unknown: 0 } },
     recentIncidents: [],
     components: [],
+    _failed: true,
   };
 }
 
@@ -422,13 +423,37 @@ function buildCategoryTagTrends(results) {
 }
 
 async function main() {
+  // Load prior providers.json — if a provider fetch fails this run, fall back
+  // to the previous good entry instead of overwriting with "Status unavailable".
+  let priorById = new Map();
+  if (existsSync(OUT)) {
+    try {
+      const prior = JSON.parse(readFileSync(OUT, 'utf8'));
+      priorById = new Map((prior.providers ?? []).map(e => [e.provider.id, e]));
+    } catch (e) {
+      console.warn(`Could not parse prior data: ${e.message}`);
+    }
+  }
+
   console.log(`Collecting ${PROVIDERS.length} providers...`);
   const results = [];
   for (const p of PROVIDERS) {
     process.stdout.write(`  ${p.name}... `);
-    const data = await fetchProvider(p);
+    let data = await fetchProvider(p);
+
+    if (data._failed && priorById.has(p.id)) {
+      const priorEntry = priorById.get(p.id);
+      if (!priorEntry._failed) {
+        data = priorEntry;
+        console.log(`USING PRIOR (fetch failed, prior data kept)`);
+      } else {
+        console.log(`failed (prior also unavailable)`);
+      }
+    } else {
+      console.log(`score=${data.stats.reliabilityScore ?? '?'} uptime30d=${data.stats.uptime30d ?? '?'}% inc30d=${data.stats.incidentCount30d}`);
+    }
+
     results.push(data);
-    console.log(`score=${data.stats.reliabilityScore ?? '?'} uptime30d=${data.stats.uptime30d ?? '?'}% inc30d=${data.stats.incidentCount30d}`);
     await new Promise(r => setTimeout(r, 400));
   }
 
@@ -439,6 +464,9 @@ async function main() {
     console.log(`${entry.news.length} items`);
     await new Promise(r => setTimeout(r, 300));
   }
+
+  // Strip internal markers before writing
+  for (const r of results) delete r._failed;
 
   const categoryTagTrends = buildCategoryTagTrends(results);
   const output = { providers: results, categoryTagTrends, generatedAt: new Date().toISOString() };

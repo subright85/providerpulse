@@ -97,17 +97,26 @@ async function main() {
     const activeIncidents = data.incidents ?? [];
     const activeIds = new Set(activeIncidents.map(i => i.id));
     const isFirstRun = state[p.id] === undefined;
-    const prev = state[p.id] ?? { knownIds: [], indicator: 'none' };
-    const prevIds = new Set(prev.knownIds ?? []);
+    const prev = state[p.id] ?? { seenEver: [], activeIds: [], indicator: 'none' };
+    // seenEver: every incident ID we've ever alerted on — never shrinks. Prevents
+    // re-alerting when a resolved incident gets reopened (flap spam).
+    // Backward-compat: migrate from old `knownIds` field on first read.
+    const seenEver = new Set(prev.seenEver ?? prev.knownIds ?? []);
+    const prevActiveIds = new Set(prev.activeIds ?? prev.knownIds ?? []);
 
     if (isFirstRun) {
       console.log(`[${p.name}] baselining (${activeIncidents.length} active recorded, no alerts on first run)`);
-      state[p.id] = { knownIds: [...activeIds], indicator, lastCheckedAt: new Date().toISOString() };
+      state[p.id] = {
+        seenEver: [...activeIds],
+        activeIds: [...activeIds],
+        indicator,
+        lastCheckedAt: new Date().toISOString(),
+      };
       continue;
     }
 
-    // New incidents not seen before → Telegram alert
-    const newIncs = activeIncidents.filter(i => !prevIds.has(i.id));
+    // New incidents we've never alerted on → Telegram alert
+    const newIncs = activeIncidents.filter(i => !seenEver.has(i.id));
     for (const inc of newIncs) {
       const sev = SEV_EMOJI[inc.impact] ?? '🟡';
       const label = SEV_LABEL[inc.impact] ?? inc.impact;
@@ -119,10 +128,11 @@ async function main() {
       ].join('\n');
       console.log(`[${p.name}] NEW incident: ${inc.name}`);
       await sendTelegram(msg);
+      seenEver.add(inc.id);
     }
 
     // Provider recovered: previously had active incidents, now all clear
-    const hadActive = prev.indicator !== 'none' && prevIds.size > 0;
+    const hadActive = prev.indicator !== 'none' && prevActiveIds.size > 0;
     const nowClear = indicator === 'none' && activeIds.size === 0;
     if (hadActive && nowClear) {
       const msg = `✅ <b>${p.icon} ${p.name} is back to operational</b>\nAll systems normal.`;
@@ -131,7 +141,8 @@ async function main() {
     }
 
     state[p.id] = {
-      knownIds: [...activeIds],
+      seenEver: [...seenEver],
+      activeIds: [...activeIds],
       indicator,
       lastCheckedAt: new Date().toISOString(),
     };

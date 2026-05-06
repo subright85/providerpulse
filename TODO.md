@@ -4,14 +4,11 @@ Found in code review 2026-05-06.
 
 ## 🔴 CRITICAL (data integrity / user-visible)
 
-- [ ] **collect.mjs `nullStats` overwrite** — `scripts/collect.mjs:282-285, 444-446`
-  Network hiccup makes good data get replaced with "Status unavailable" and committed. Fix: read existing `providers.json`, merge — keep prior entry for any provider that returned `nullStats` this run.
+- [x] **collect.mjs `nullStats` overwrite** — fixed 2026-05-06. Prior `providers.json` is read at start; any provider that returns `nullStats` this run falls back to the prior good entry instead of overwriting with "Status unavailable".
 
-- [ ] **monitor.mjs flap re-alerts** — `scripts/monitor.mjs:98, 133-137`
-  `knownIds` only holds currently-active incidents, so resolve-then-reopen fires a duplicate Telegram alert. Fix: separate `seenEver: Set<string>` that only grows.
+- [x] **monitor.mjs flap re-alerts** — fixed 2026-05-06. `state[p.id]` now tracks `seenEver` (never shrinks) separately from `activeIds`; alerts fire only on IDs not in `seenEver`. Backward-compat with old `knownIds` field on first read.
 
-- [ ] **App.tsx sticky error flag** — `src/App.tsx:22`
-  `setError(prev => prev || true)` never resets. One transient 404 leaves the error UI stuck for the session. Fix: `setError(false)` in `.then`, `setError(true)` in `.catch` (no guard).
+- [x] **App.tsx sticky error flag** — fixed 2026-05-06. `.then` calls `setError(false)`, `.catch` calls `setError(true)` (no `prev || true` guard).
 
 ## 🟠 IMPORTANT
 
