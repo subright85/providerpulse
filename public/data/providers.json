@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T18:00:50.764Z"
+        "updatedAt": "2026-05-06T18:16:01.213Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,7 +480,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T18:00:51.292Z"
+        "updatedAt": "2026-05-06T18:16:01.803Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T18:00:50.516Z"
+        "updatedAt": "2026-05-06T18:16:01.134Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,17 +973,17 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T18:00:50.815Z"
+        "updatedAt": "2026-05-06T18:16:01.295Z"
       },
       "stats": {
         "providerId": "groq",
         "uptime30d": 100,
-        "uptime90d": 99.97,
+        "uptime90d": 99.98,
         "incidentCount30d": 0,
         "avgMttr30d": null,
         "lastIncident": "2026-03-19T12:51:18Z",
         "reliabilityScore": 100,
-        "reliabilityScore90d": 99,
+        "reliabilityScore90d": 100,
         "monthlyTrend": [
           {
             "month": "2026-03",
@@ -1006,12 +1006,12 @@
         ],
         "tagSummary": [
           {
-            "tag": "performance",
+            "tag": "inference",
             "count30d": 0,
-            "count90d": 2
+            "count90d": 1
           },
           {
-            "tag": "inference",
+            "tag": "performance",
             "count30d": 0,
             "count90d": 1
           }
@@ -1050,20 +1050,6 @@
           "startedAt": "2026-02-07T10:02:11Z",
           "resolvedAt": "2026-02-07T11:34:59Z",
           "durationMinutes": 93,
-          "url": "https://groqstatus.com"
-        },
-        {
-          "id": "01KGQFXHTZXMDX343SYCGZERYD",
-          "providerId": "groq",
-          "title": "meta-llama/llama-4-scout-17b-16e-instruct Degraded Performance",
-          "severity": "minor",
-          "tags": [
-            "performance"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-02-05T18:09:35Z",
-          "resolvedAt": "2026-02-05T18:32:49Z",
-          "durationMinutes": 23,
           "url": "https://groqstatus.com"
         }
       ],
@@ -1187,7 +1173,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T18:00:50.844Z"
+        "updatedAt": "2026-05-06T18:16:01.352Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1473,7 +1459,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T18:00:50.993Z"
+        "updatedAt": "2026-05-06T18:16:01.432Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1790,7 +1776,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T18:00:51.022Z"
+        "updatedAt": "2026-05-06T18:16:01.453Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1848,7 +1834,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T18:00:51.290Z"
+        "updatedAt": "2026-05-06T18:16:01.680Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1967,8 +1953,8 @@
         {
           "tag": "performance",
           "count30d": 5,
-          "count90d": 12,
-          "trend": "stable",
+          "count90d": 11,
+          "trend": "up",
           "providers": [
             "openai",
             "anthropic",
@@ -2019,5 +2005,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-06T18:00:51.702Z"
+  "generatedAt": "2026-05-06T18:16:02.094Z"
 }
