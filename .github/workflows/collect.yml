@@ -1,8 +1,9 @@
 name: Collect Provider Status
 
 on:
-  schedule:
-    - cron: '*/10 * * * *'
+  # schedule disabled — Cloudflare Worker (isllmdown-cron) triggers via workflow_dispatch
+  # schedule:
+  #   - cron: '*/10 * * * *'
   workflow_dispatch:
 
 permissions:
