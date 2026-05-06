@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T04:01:33.792Z"
+        "updatedAt": "2026-05-06T04:49:10.595Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,7 +480,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T04:01:34.587Z"
+        "updatedAt": "2026-05-06T04:49:11.315Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -508,7 +508,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 3,
-            "uptime": 99.54
+            "uptime": 99.55
           }
         ],
         "tagSummary": [
@@ -870,7 +870,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T04:01:35.049Z"
+        "updatedAt": "2026-05-06T04:49:11.772Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -974,7 +974,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T04:01:35.690Z"
+        "updatedAt": "2026-05-06T04:49:12.468Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1202,7 +1202,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T04:01:36.366Z"
+        "updatedAt": "2026-05-06T04:49:13.143Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1486,16 +1486,16 @@
       },
       "status": {
         "providerId": "deepseek",
-        "indicator": "major",
-        "description": "Partial System Outage",
-        "updatedAt": "2026-05-06T04:01:37.388Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-05-06T04:49:14.008Z"
       },
       "stats": {
         "providerId": "deepseek",
-        "uptime30d": 99.76,
-        "uptime90d": 99.23,
+        "uptime30d": 99.74,
+        "uptime90d": 99.22,
         "incidentCount30d": 3,
-        "avgMttr30d": 136,
+        "avgMttr30d": 94,
         "lastIncident": "2026-05-06T11:53:04.745+08:00",
         "reliabilityScore": 87,
         "reliabilityScore90d": 83,
@@ -1516,7 +1516,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 1,
-            "uptime": 100
+            "uptime": 99.89
           }
         ],
         "tagSummary": [
@@ -1547,7 +1547,7 @@
         {
           "id": "6cqq25c3c5j9",
           "providerId": "deepseek",
-          "title": "DeepSeek 网页/API 性能异常（DeepSeek Web/API Service Degraded Performance）",
+          "title": "【已恢复】DeepSeek 网页/API 性能异常（[Resolved]DeepSeek Web/API Service Degraded Performance）",
           "severity": "major",
           "tags": [
             "performance",
@@ -1555,8 +1555,8 @@
           ],
           "audience": "b2b",
           "startedAt": "2026-05-06T11:53:04.745+08:00",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-05-06T12:04:16.876+08:00",
+          "durationMinutes": 11,
           "url": "https://stspg.io/tgcfbtmqbpms"
         },
         {
@@ -1735,13 +1735,13 @@
         {
           "id": "j4n367d9mh3x",
           "name": "API 服务 (API Service)",
-          "status": "partial_outage",
+          "status": "operational",
           "description": "https://api.deepseek.com 的状态 (The status of https://api.deepseek.com)"
         },
         {
           "id": "b76wbf9n5nq3",
           "name": "网页对话服务 (Web Chat Service)",
-          "status": "partial_outage",
+          "status": "operational",
           "description": "https://chat.deepseek.com 的状态 (The status of https://chat.deepseek.com)"
         }
       ],
@@ -1790,7 +1790,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T04:01:37.981Z"
+        "updatedAt": "2026-05-06T04:49:14.617Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1848,7 +1848,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T04:01:38.678Z"
+        "updatedAt": "2026-05-06T04:49:15.354Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -2019,5 +2019,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-06T04:01:43.115Z"
+  "generatedAt": "2026-05-06T04:49:19.626Z"
 }
