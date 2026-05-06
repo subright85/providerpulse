@@ -7,7 +7,7 @@ import ProviderDetail from './components/ProviderDetail';
 import AdSlot from './components/AdSlot';
 import FloatingDonateButton from './components/FloatingDonateButton';
 
-const DATA_URL = 'https://raw.githubusercontent.com/subright85/providerpulse/main/public/data/providers.json';
+const DATA_URL = 'https://raw.githubusercontent.com/subright85/IsLLMDown/main/public/data/providers.json';
 
 export default function App() {
   const [data, setData] = useState<AppData | null>(null);
@@ -97,7 +97,7 @@ export default function App() {
         <div className="mt-12 pt-6 border-t border-slate-200 text-center space-y-1">
           <p className="text-slate-500 text-xs">Data sourced from official status pages · Refreshed every 10 minutes</p>
           <p className="text-slate-400 text-xs">Score = severity-weighted uptime · Critical −8pts · Major −4pts · Minor −0.5pts</p>
-          <p className="text-slate-400 text-xs">Free · Open data · <a href="https://github.com/subright85/providerpulse/discussions" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Discussions</a></p>
+          <p className="text-slate-400 text-xs">Free · Open data · <a href="https://github.com/subright85/IsLLMDown/discussions" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Discussions</a></p>
         </div>
       </div>
 

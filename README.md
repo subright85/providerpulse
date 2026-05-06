@@ -91,8 +91,8 @@ Component count grows as providers expand their status reporting.
 ## Running locally
 
 ```bash
-git clone https://github.com/subright85/providerpulse.git
-cd providerpulse
+git clone https://github.com/subright85/IsLLMDown.git
+cd IsLLMDown
 npm install
 npm run dev
 ```
@@ -116,7 +116,7 @@ node scripts/monitor.mjs   # Detect new incidents since last run
 - [ ] Custom watchlist ("My stack" — pick exact components to monitor)
 - [ ] CSV export of incident history
 
-Issues + feature requests: [github.com/subright85/providerpulse/issues](https://github.com/subright85/providerpulse/issues)
+Issues + feature requests: [github.com/subright85/IsLLMDown/issues](https://github.com/subright85/IsLLMDown/issues)
 
 ---
 
@@ -135,7 +135,7 @@ If IsLLMDown is useful:
 
 - ⭐ **Star this repo** — helps other devs find it
 - ☕ [Buy me a coffee](#) — keeps the project free
-- 🐛 [Report issues](https://github.com/subright85/providerpulse/issues)
+- 🐛 [Report issues](https://github.com/subright85/IsLLMDown/issues)
 - 💡 Suggest providers or features
 
 ---

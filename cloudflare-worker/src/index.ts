@@ -3,7 +3,7 @@ export interface Env {
 }
 
 const OWNER = "subright85";
-const REPO = "providerpulse";
+const REPO = "IsLLMDown";
 
 async function dispatch(workflow: string, token: string): Promise<void> {
   const url = `https://api.github.com/repos/${OWNER}/${REPO}/actions/workflows/${workflow}/dispatches`;

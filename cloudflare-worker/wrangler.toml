@@ -11,4 +11,4 @@ crons = [
 ]
 
 # Secret: GITHUB_TOKEN (set via `wrangler secret put GITHUB_TOKEN`)
-# PAT scope: repo (or fine-grained: actions:write on subright85/providerpulse)
+# PAT scope: repo (or fine-grained: actions:write on subright85/IsLLMDown)

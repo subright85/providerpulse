@@ -19,7 +19,7 @@ wrangler login            # browser auth (one time)
 
 Create a GitHub Personal Access Token:
 - https://github.com/settings/tokens → Fine-grained
-- Resource: only `subright85/providerpulse`
+- Resource: only `subright85/IsLLMDown`
 - Permissions: **Actions: Read and write**
 - Copy the token
 
