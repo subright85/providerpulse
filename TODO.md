@@ -12,19 +12,15 @@ Found in code review 2026-05-06.
 
 ## 🟠 IMPORTANT
 
-- [ ] **Google AI silently excluded from monitoring** — `monitor.mjs:34-36`
-  Filter `endsWith('/summary.json')` skips GCP format. Google AI outage → no Telegram alert.
+- [x] **Google AI silently excluded from monitoring** — fixed 2026-05-06. Added `fetchStatusGCP` branch + included `type === 'gcp'` in `loadMonitored` filter; GCP incidents normalized to Statuspage shape so downstream alert logic stays uniform.
 
-- [ ] **monitor.mjs Telegram fetch missing timeout** — `monitor.mjs:67-72`
-  Bare `fetch` without `AbortSignal.timeout`. Telegram API hang blocks entire run, state lost.
+- [x] **monitor.mjs Telegram fetch missing timeout** — fixed 2026-05-06. `sendTelegram` wraps fetch in try/catch with `AbortSignal.timeout(8000)`.
 
-- [ ] **collect.mjs sequential fetching** — `scripts/collect.mjs:427-433`
-  8 providers fetched serially. Switch to `Promise.allSettled()` for ~10x speedup.
+- [x] **collect.mjs sequential fetching** — fixed 2026-05-06. `PROVIDERS.map(p => fetchProvider(p))` then `Promise.all` for both data and news. Removed 400/300ms inter-provider sleeps.
 
-- [ ] **README ↔ cron drift** — `README.md` says "30 min collect, 5 min monitor", actual cron is `*/10` and `*/5`. Update README to match reality.
+- [x] **README ↔ cron drift** — fixed 2026-05-06. Diagram + tech stack now correctly say "Cloudflare Worker (15-min collect, 5-min monitor) → workflow_dispatch".
 
-- [ ] **No "browser-fetched at" indicator** — `src/App.tsx:51-53`
-  `data.generatedAt` shows collect time. Users can't see if their browser is fetching fresh data vs cached.
+- [x] **Stale data indicator** — fixed 2026-05-06. Header now shows "Updated X ago" relative format; if `generatedAt` > 30 min ago a "⚠ Data may be stale" badge appears.
 
 ## 🌩️ Infra
 

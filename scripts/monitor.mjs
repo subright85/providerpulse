@@ -1,10 +1,11 @@
 /**
  * Monitors LLM provider status pages.
  * Sends Telegram notification when new incidents appear or resolve.
- * Run by GitHub Actions every 5 minutes via monitor.yml.
+ * Run every 5 minutes via Cloudflare Worker → workflow_dispatch (monitor.yml).
  *
  * Loads providers from public/data/providers.json so it stays in sync with
- * collect.mjs (Statuspage.io providers only — GCP/Azure formats skipped here).
+ * collect.mjs. Statuspage.io and GCP formats both supported. Azure RSS is
+ * skipped (no real-time signal worth alerting on).
  *
  * Required env: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
  */
@@ -31,13 +32,14 @@ function loadMonitored() {
     const data = JSON.parse(readFileSync(dataPath, 'utf8'));
     return data.providers
       .map(d => d.provider)
-      .filter(p => p.apiUrl?.endsWith('/summary.json'))
+      .filter(p => p.apiUrl?.endsWith('/summary.json') || p.type === 'gcp')
       .map(p => ({
         id: p.id,
         name: p.name,
         icon: p.icon,
         apiUrl: p.apiUrl,
         statusPageUrl: p.statusPageUrl,
+        type: p.type,
       }));
   } catch (e) {
     console.error('Failed to load monitored providers:', e.message);
@@ -64,12 +66,17 @@ async function sendTelegram(text) {
     console.log('[DRY RUN] Telegram message:\n' + text);
     return;
   }
-  const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text, parse_mode: 'HTML' }),
-  });
-  if (!res.ok) console.error('Telegram error:', await res.text());
+  try {
+    const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text, parse_mode: 'HTML' }),
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) console.error('Telegram error:', await res.text());
+  } catch (e) {
+    console.error('Telegram send failed:', e.message);
+  }
 }
 
 async function fetchStatus(p) {
@@ -81,13 +88,44 @@ async function fetchStatus(p) {
   return res.json();
 }
 
+// GCP returns a flat array of incidents; active = no `end` field.
+// Normalize to the same shape as Statuspage (`{ status: { indicator }, incidents: [{id, name, impact, shortlink}] }`)
+// so downstream alert/recovery logic stays uniform.
+async function fetchStatusGCP(p) {
+  const res = await fetch(p.apiUrl, {
+    headers: { 'User-Agent': 'IsLLMDown-Monitor/1.0' },
+    signal: AbortSignal.timeout(10000),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const allIncidents = await res.json();
+  const active = (allIncidents ?? []).filter(inc => !inc.end);
+
+  const incidents = active.map(inc => {
+    const title = inc.external_desc || 'Service Incident';
+    const lower = title.toLowerCase();
+    const impact = (lower.includes('outage') || lower.includes('unavailable') || lower.includes('disruption'))
+      ? 'major' : 'minor';
+    return {
+      id: inc.id,
+      name: title,
+      impact,
+      shortlink: `https://status.cloud.google.com/incidents/${inc.id}`,
+    };
+  });
+
+  const indicator = incidents.length === 0 ? 'none'
+    : incidents.some(i => i.impact === 'major') ? 'major' : 'minor';
+
+  return { status: { indicator }, incidents };
+}
+
 async function main() {
   const state = loadState();
 
   for (const p of MONITORED) {
     let data;
     try {
-      data = await fetchStatus(p);
+      data = p.type === 'gcp' ? await fetchStatusGCP(p) : await fetchStatus(p);
     } catch (e) {
       console.error(`[${p.name}] fetch error: ${e.message}`);
       continue;

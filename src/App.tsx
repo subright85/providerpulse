@@ -8,6 +8,8 @@ import AdSlot from './components/AdSlot';
 import FloatingDonateButton from './components/FloatingDonateButton';
 
 const DATA_URL = 'https://raw.githubusercontent.com/subright85/IsLLMDown/main/public/data/providers.json';
+const COFFEE_URL = import.meta.env.VITE_DONATION_COFFEE_URL ?? 'https://buymeacoffee.com/sukim';
+const STALE_THRESHOLD_MS = 30 * 60 * 1000;  // warn if data > 30 min old
 
 export default function App() {
   const [data, setData] = useState<AppData | null>(null);
@@ -38,19 +40,37 @@ export default function App() {
 
         {/* Header */}
         <div className="mb-8 border-b border-slate-200 pb-6">
-          <h1 className="pp-display text-3xl sm:text-4xl text-slate-900">IsLLMDown</h1>
-          <p className="text-slate-600 text-sm mt-1.5">
-            Component-level health for the LLM APIs your stack depends on.
-          </p>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h1 className="pp-display text-3xl sm:text-4xl text-slate-900">IsLLMDown</h1>
+              <p className="text-slate-600 text-sm mt-1.5">
+                Component-level health for the LLM APIs your stack depends on.
+              </p>
+            </div>
+            <a
+              href={COFFEE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-amber-800 bg-amber-50 border border-amber-200 rounded-md hover:bg-amber-100 transition"
+            >
+              <span className="text-base leading-none">☕</span>
+              <span className="hidden sm:inline">Buy me a coffee</span>
+            </a>
+          </div>
           {data && (
-            <div className="flex items-center gap-3 mt-4">
+            <div className="flex items-center flex-wrap gap-3 mt-4">
               <span className={`flex items-center gap-2 text-xs font-medium px-2.5 py-1 rounded-md border ${overallDown === 0 ? 'border-green-200 text-green-700 bg-green-50' : 'border-yellow-200 text-yellow-700 bg-yellow-50'}`}>
                 <span className={`w-1.5 h-1.5 rounded-full ${overallDown === 0 ? 'bg-green-500' : 'bg-yellow-500'} animate-pulse`} />
                 {overallDown === 0 ? 'All providers operational' : `${overallDown} provider${overallDown > 1 ? 's' : ''} with issues`}
               </span>
               <span className="text-slate-400 text-xs pp-mono">
-                Updated {new Date(data.generatedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                Updated {fmtRelative(data.generatedAt)}
               </span>
+              {Date.now() - new Date(data.generatedAt).getTime() > STALE_THRESHOLD_MS && (
+                <span className="text-xs font-medium text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
+                  ⚠ Data may be stale
+                </span>
+              )}
             </div>
           )}
         </div>

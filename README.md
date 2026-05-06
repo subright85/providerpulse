@@ -37,10 +37,11 @@ Most existing trackers (StatusGator, IncidentHub) operate at the provider level.
 │  (8 providers)          │   (e.g. status.openai.com/api/v2/summary.json)
 └────────────┬────────────┘
              │
-             │  GitHub Actions (every 30 min)
+             │  Cloudflare Worker cron → GitHub Actions
+             │  workflow_dispatch (15-min collect / 5-min monitor)
              ▼
 ┌─────────────────────────┐
-│  scripts/collect.mjs    │   Aggregates all summaries
+│  scripts/collect.mjs    │   Aggregates all summaries (15 min)
 │  scripts/monitor.mjs    │   Detects new incidents (5 min)
 └────────────┬────────────┘
              │
@@ -57,7 +58,7 @@ Most existing trackers (StatusGator, IncidentHub) operate at the provider level.
 └─────────────────────────┘
 ```
 
-No backend. No paid infra. The dashboard is a static site that reads JSON snapshots refreshed by GitHub Actions every 30 minutes.
+No backend. No paid infra. The dashboard is a static site that reads JSON snapshots refreshed every 15 minutes by a Cloudflare Worker that triggers GitHub Actions via `workflow_dispatch` (free-tier GH `schedule:` cron is throttled too heavily on its own).
 
 ---
 
@@ -65,7 +66,7 @@ No backend. No paid infra. The dashboard is a static site that reads JSON snapsh
 
 - **Frontend**: React 19 · TypeScript · Vite · Tailwind CSS 4
 - **Data collection**: Node.js scripts (`collect.mjs`, `monitor.mjs`)
-- **Scheduling**: GitHub Actions (30-min collect, 5-min monitor)
+- **Scheduling**: Cloudflare Worker cron (15-min collect, 5-min monitor) → GitHub Actions `workflow_dispatch`
 - **Hosting**: Vercel (static)
 - **Data sources**: Each provider's StatusPage.io public API
 

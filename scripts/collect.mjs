@@ -435,35 +435,37 @@ async function main() {
     }
   }
 
-  console.log(`Collecting ${PROVIDERS.length} providers...`);
-  const results = [];
-  for (const p of PROVIDERS) {
-    process.stdout.write(`  ${p.name}... `);
-    let data = await fetchProvider(p);
+  // Parallel fetch: each fetchProvider catches its own errors and returns nullStats,
+  // so Promise.all is safe (no rejections expected).
+  console.log(`Collecting ${PROVIDERS.length} providers in parallel...`);
+  const fetched = await Promise.all(
+    PROVIDERS.map(async p => ({ p, data: await fetchProvider(p) }))
+  );
 
+  const results = [];
+  for (const { p, data: rawData } of fetched) {
+    let data = rawData;
     if (data._failed && priorById.has(p.id)) {
       const priorEntry = priorById.get(p.id);
       if (!priorEntry._failed) {
         data = priorEntry;
-        console.log(`USING PRIOR (fetch failed, prior data kept)`);
+        console.log(`  ${p.name}: USING PRIOR (fetch failed, prior data kept)`);
       } else {
-        console.log(`failed (prior also unavailable)`);
+        console.log(`  ${p.name}: failed (prior also unavailable)`);
       }
     } else {
-      console.log(`score=${data.stats.reliabilityScore ?? '?'} uptime30d=${data.stats.uptime30d ?? '?'}% inc30d=${data.stats.incidentCount30d}`);
+      console.log(`  ${p.name}: score=${data.stats.reliabilityScore ?? '?'} uptime30d=${data.stats.uptime30d ?? '?'}% inc30d=${data.stats.incidentCount30d}`);
     }
-
     results.push(data);
-    await new Promise(r => setTimeout(r, 400));
   }
 
-  console.log('\nFetching news...');
-  for (const entry of results) {
-    process.stdout.write(`  ${entry.provider.name} news... `);
-    entry.news = await fetchProviderNews(entry.provider.name);
-    console.log(`${entry.news.length} items`);
-    await new Promise(r => setTimeout(r, 300));
-  }
+  console.log('\nFetching news in parallel...');
+  await Promise.all(
+    results.map(async entry => {
+      entry.news = await fetchProviderNews(entry.provider.name);
+      console.log(`  ${entry.provider.name} news: ${entry.news.length} items`);
+    })
+  );
 
   // Strip internal markers before writing
   for (const r of results) delete r._failed;
