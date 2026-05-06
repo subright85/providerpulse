@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T16:45:47.350Z"
+        "updatedAt": "2026-05-06T17:00:48.432Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,14 +480,14 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T16:45:47.857Z"
+        "updatedAt": "2026-05-06T17:00:48.987Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 97.51,
-        "uptime90d": 99.08,
+        "uptime30d": 97.38,
+        "uptime90d": 99.04,
         "incidentCount30d": 46,
-        "avgMttr30d": 57,
+        "avgMttr30d": 58,
         "lastIncident": "2026-05-06T15:29:02.399Z",
         "reliabilityScore": 63,
         "reliabilityScore90d": 66,
@@ -508,7 +508,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 4,
-            "uptime": 99.59
+            "uptime": 98.89
           }
         ],
         "tagSummary": [
@@ -566,8 +566,8 @@
           ],
           "audience": "unknown",
           "startedAt": "2026-05-06T15:29:02.399Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-05-06T16:51:13.830Z",
+          "durationMinutes": 82,
           "url": "https://stspg.io/ty4d931rtx9k"
         },
         {
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T16:45:47.262Z"
+        "updatedAt": "2026-05-06T17:00:48.395Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T16:45:47.537Z"
+        "updatedAt": "2026-05-06T17:00:48.625Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1187,7 +1187,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T16:45:47.541Z"
+        "updatedAt": "2026-05-06T17:00:48.706Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1473,7 +1473,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T16:45:47.713Z"
+        "updatedAt": "2026-05-06T17:00:48.887Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1790,7 +1790,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T16:45:47.789Z"
+        "updatedAt": "2026-05-06T17:00:48.825Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1848,7 +1848,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-06T16:45:47.923Z"
+        "updatedAt": "2026-05-06T17:00:49.178Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -2019,5 +2019,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-06T16:45:48.404Z"
+  "generatedAt": "2026-05-06T17:00:49.580Z"
 }
