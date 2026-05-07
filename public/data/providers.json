@@ -13,16 +13,16 @@
       },
       "status": {
         "providerId": "openai",
-        "indicator": "minor",
-        "description": "Partial System Degradation",
-        "updatedAt": "2026-05-07T09:30:55.810Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-05-07T09:45:56.363Z"
       },
       "stats": {
         "providerId": "openai",
-        "uptime30d": 93.47,
-        "uptime90d": 97.82,
+        "uptime30d": 93.42,
+        "uptime90d": 97.81,
         "incidentCount30d": 25,
-        "avgMttr30d": 545,
+        "avgMttr30d": 527,
         "lastIncident": "2026-05-07T07:55:13Z",
         "reliabilityScore": 65,
         "reliabilityScore90d": 88,
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 5,
-            "uptime": 99.48
+            "uptime": 99.25
           }
         ],
         "tagSummary": [
@@ -92,8 +92,8 @@
           ],
           "audience": "b2b",
           "startedAt": "2026-05-07T07:55:13Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-05-07T09:38:00Z",
+          "durationMinutes": 103,
           "url": "https://status.openai.com"
         },
         {
@@ -324,7 +324,7 @@
         {
           "id": "01JMXBRMFE4MAP2BHSJNZ787WX",
           "name": "Images",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "id": "01JMXBRMFE5ESNNV8JDHVCGSRD",
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-05-07T09:30:55.923Z"
+        "updatedAt": "2026-05-07T09:45:56.463Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T09:30:55.700Z"
+        "updatedAt": "2026-05-07T09:45:56.257Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T09:30:55.877Z"
+        "updatedAt": "2026-05-07T09:45:56.459Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1173,7 +1173,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T09:30:55.880Z"
+        "updatedAt": "2026-05-07T09:45:56.466Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1459,7 +1459,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T09:30:56.006Z"
+        "updatedAt": "2026-05-07T09:45:56.448Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1746,7 +1746,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T09:30:55.951Z"
+        "updatedAt": "2026-05-07T09:45:56.527Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1804,7 +1804,7 @@
         "providerId": "ai21",
         "indicator": "major",
         "description": "Partial System Outage",
-        "updatedAt": "2026-05-07T09:30:55.954Z"
+        "updatedAt": "2026-05-07T09:45:56.674Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1975,5 +1975,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-07T09:30:56.410Z"
+  "generatedAt": "2026-05-07T09:45:57.014Z"
 }
