@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-07T08:45:54.838Z"
+        "updatedAt": "2026-05-07T09:00:50.323Z"
       },
       "stats": {
         "providerId": "openai",
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "minor",
         "description": "Partially Degraded Service",
-        "updatedAt": "2026-05-07T08:45:55.827Z"
+        "updatedAt": "2026-05-07T09:00:51.032Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T08:45:54.680Z"
+        "updatedAt": "2026-05-07T09:00:50.366Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T08:45:54.953Z"
+        "updatedAt": "2026-05-07T09:00:50.611Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1173,7 +1173,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T08:45:54.986Z"
+        "updatedAt": "2026-05-07T09:00:50.735Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1459,7 +1459,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T08:45:55.239Z"
+        "updatedAt": "2026-05-07T09:00:50.892Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1746,7 +1746,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T08:45:55.251Z"
+        "updatedAt": "2026-05-07T09:00:50.931Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1802,9 +1802,9 @@
       },
       "status": {
         "providerId": "ai21",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-07T08:45:55.490Z"
+        "indicator": "major",
+        "description": "Partial System Outage",
+        "updatedAt": "2026-05-07T09:00:51.067Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1853,17 +1853,17 @@
         {
           "id": "qvtbxbl2ldk6",
           "name": "Maestro",
-          "status": "operational"
+          "status": "major_outage"
         },
         {
           "id": "n313qpb9pclg",
           "name": "Maestro Websearch",
-          "status": "operational"
+          "status": "major_outage"
         },
         {
           "id": "8byw33cwy620",
           "name": "Maestro Filesearch",
-          "status": "operational"
+          "status": "major_outage"
         },
         {
           "id": "4z5m6gx42hql",
@@ -1975,5 +1975,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-07T08:45:56.264Z"
+  "generatedAt": "2026-05-07T09:00:51.458Z"
 }
