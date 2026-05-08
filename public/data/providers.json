@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T17:45:21.819Z"
+        "updatedAt": "2026-05-08T18:00:29.702Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 8,
-            "uptime": 97.42
+            "uptime": 97.43
           }
         ],
         "tagSummary": [
@@ -481,14 +481,14 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T17:45:22.455Z"
+        "updatedAt": "2026-05-08T18:00:29.742Z"
       },
       "stats": {
         "providerId": "anthropic",
         "uptime30d": 95.9,
         "uptime90d": 98.53,
-        "incidentCount30d": 49,
-        "avgMttr30d": 75,
+        "incidentCount30d": 48,
+        "avgMttr30d": 77,
         "lastIncident": "2026-05-08T17:01:08.466Z",
         "reliabilityScore": 61,
         "reliabilityScore90d": 69,
@@ -509,18 +509,18 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 10,
-            "uptime": 91.44
+            "uptime": 91.45
           }
         ],
         "tagSummary": [
           {
             "tag": "inference",
-            "count30d": 34,
+            "count30d": 33,
             "count90d": 34
           },
           {
             "tag": "api",
-            "count30d": 31,
+            "count30d": 30,
             "count90d": 31
           },
           {
@@ -552,7 +552,7 @@
         "audienceBreakdown": {
           "b2b": 2,
           "b2c": 9,
-          "both": 4,
+          "both": 3,
           "unknown": 34
         }
       },
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T17:45:21.760Z"
+        "updatedAt": "2026-05-08T18:00:29.555Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T17:45:22.018Z"
+        "updatedAt": "2026-05-08T18:00:29.773Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1154,7 +1154,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T17:45:22.058Z"
+        "updatedAt": "2026-05-08T18:00:29.718Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1440,7 +1440,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T17:45:22.344Z"
+        "updatedAt": "2026-05-08T18:00:29.882Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1741,7 +1741,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T17:45:22.360Z"
+        "updatedAt": "2026-05-08T18:00:29.820Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1799,7 +1799,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T17:45:22.535Z"
+        "updatedAt": "2026-05-08T18:00:29.891Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1880,7 +1880,7 @@
       "tags": [
         {
           "tag": "api",
-          "count30d": 51,
+          "count30d": 50,
           "count90d": 53,
           "trend": "up",
           "providers": [
@@ -1893,7 +1893,7 @@
         },
         {
           "tag": "inference",
-          "count30d": 50,
+          "count30d": 49,
           "count90d": 52,
           "trend": "up",
           "providers": [
@@ -1969,5 +1969,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-08T17:45:22.929Z"
+  "generatedAt": "2026-05-08T18:00:30.293Z"
 }
