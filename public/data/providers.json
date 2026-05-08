@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T11:30:36.894Z"
+        "updatedAt": "2026-05-08T11:45:39.851Z"
       },
       "stats": {
         "providerId": "openai",
@@ -479,14 +479,14 @@
       },
       "status": {
         "providerId": "anthropic",
-        "indicator": "minor",
-        "description": "Minor Service Outage",
-        "updatedAt": "2026-05-08T11:30:38.839Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-05-08T11:45:40.593Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 96.13,
-        "uptime90d": 98.49,
+        "uptime30d": 95.94,
+        "uptime90d": 98.43,
         "incidentCount30d": 46,
         "avgMttr30d": 78,
         "lastIncident": "2026-05-08T09:49:14.043Z",
@@ -509,7 +509,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 7,
-            "uptime": 92.04
+            "uptime": 91.33
           }
         ],
         "tagSummary": [
@@ -568,8 +568,8 @@
           ],
           "audience": "unknown",
           "startedAt": "2026-05-08T09:49:14.043Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-05-08T11:40:41.886Z",
+          "durationMinutes": 111,
           "url": "https://stspg.io/zl0w1dmccgf7"
         },
         {
@@ -786,27 +786,27 @@
         {
           "id": "rwppv331jlwc",
           "name": "claude.ai",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "0qbwn08sd68x",
           "name": "Claude Console (platform.claude.com)",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "k8w3r06qmzrp",
           "name": "Claude API (api.anthropic.com)",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "yyzkbfz2thpt",
           "name": "Claude Code",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "bpp5gb3hpjcl",
           "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "0scnb50nvy53",
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T11:30:37.046Z"
+        "updatedAt": "2026-05-08T11:45:39.775Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T11:30:37.238Z"
+        "updatedAt": "2026-05-08T11:45:39.978Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1154,7 +1154,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T11:30:37.295Z"
+        "updatedAt": "2026-05-08T11:45:40.083Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1440,7 +1440,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T11:30:37.362Z"
+        "updatedAt": "2026-05-08T11:45:40.319Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1741,7 +1741,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T11:30:37.346Z"
+        "updatedAt": "2026-05-08T11:45:40.329Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1799,7 +1799,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T11:30:37.686Z"
+        "updatedAt": "2026-05-08T11:45:40.638Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1969,5 +1969,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-08T11:30:39.387Z"
+  "generatedAt": "2026-05-08T11:45:41.069Z"
 }
