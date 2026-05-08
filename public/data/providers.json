@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-08T04:45:37.538Z"
+        "updatedAt": "2026-05-08T05:00:40.283Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 6,
-            "uptime": 99.33
+            "uptime": 99.34
           }
         ],
         "tagSummary": [
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T04:45:38.034Z"
+        "updatedAt": "2026-05-08T05:00:41.008Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -509,7 +509,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 6,
-            "uptime": 91.73
+            "uptime": 91.74
           }
         ],
         "tagSummary": [
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T04:45:37.483Z"
+        "updatedAt": "2026-05-08T05:00:40.349Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T04:45:37.782Z"
+        "updatedAt": "2026-05-08T05:00:40.760Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1173,7 +1173,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T04:45:37.950Z"
+        "updatedAt": "2026-05-08T05:00:40.555Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1459,7 +1459,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T04:45:37.896Z"
+        "updatedAt": "2026-05-08T05:00:40.558Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1746,7 +1746,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T04:45:37.964Z"
+        "updatedAt": "2026-05-08T05:00:40.769Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1804,7 +1804,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T04:45:38.147Z"
+        "updatedAt": "2026-05-08T05:00:40.934Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1975,5 +1975,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-08T04:45:38.552Z"
+  "generatedAt": "2026-05-08T05:00:41.270Z"
 }
