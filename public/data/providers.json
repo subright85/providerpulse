@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-08T13:45:34.367Z"
+        "updatedAt": "2026-05-08T14:00:34.990Z"
       },
       "stats": {
         "providerId": "openai",
@@ -84,7 +84,7 @@
         {
           "id": "01KR3S3Q2RE54PVJ7GZPQNEY8Y",
           "providerId": "openai",
-          "title": "Increased Error Rate for gpt-5.5 Model in the API",
+          "title": "Increased Error Rate for gpt-5.5 model in the API",
           "severity": "minor",
           "tags": [
             "inference",
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T13:45:34.948Z"
+        "updatedAt": "2026-05-08T14:00:35.457Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -509,7 +509,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 7,
-            "uptime": 91.43
+            "uptime": 91.44
           }
         ],
         "tagSummary": [
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T13:45:34.239Z"
+        "updatedAt": "2026-05-08T14:00:35.029Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T13:45:34.627Z"
+        "updatedAt": "2026-05-08T14:00:35.201Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1154,7 +1154,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T13:45:34.600Z"
+        "updatedAt": "2026-05-08T14:00:35.229Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1440,7 +1440,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T13:45:34.687Z"
+        "updatedAt": "2026-05-08T14:00:35.454Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1741,7 +1741,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T13:45:34.653Z"
+        "updatedAt": "2026-05-08T14:00:35.472Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1799,7 +1799,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T13:45:34.981Z"
+        "updatedAt": "2026-05-08T14:00:35.620Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1969,5 +1969,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-08T13:45:35.630Z"
+  "generatedAt": "2026-05-08T14:00:35.949Z"
 }
