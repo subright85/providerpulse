@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T21:00:23.475Z"
+        "updatedAt": "2026-05-08T21:15:25.677Z"
       },
       "stats": {
         "providerId": "openai",
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T21:00:24.131Z"
+        "updatedAt": "2026-05-08T21:15:25.812Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -509,7 +509,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 10,
-            "uptime": 91.59
+            "uptime": 91.6
           }
         ],
         "tagSummary": [
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T21:00:23.417Z"
+        "updatedAt": "2026-05-08T21:15:25.551Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T21:00:23.768Z"
+        "updatedAt": "2026-05-08T21:15:25.722Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1154,7 +1154,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T21:00:23.821Z"
+        "updatedAt": "2026-05-08T21:15:25.768Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1440,7 +1440,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T21:00:24.006Z"
+        "updatedAt": "2026-05-08T21:15:25.774Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1714,6 +1714,15 @@
           "publishedAt": "2026-03-30T21:00:53Z",
           "points": 2,
           "commentCount": 3
+        },
+        {
+          "id": "47719925",
+          "title": "Show HN: I built a $3/yr AI workflow to stop doomscrolling Twitter for tech news",
+          "url": "https://news.ycombinator.com/item?id=47719925",
+          "source": "hackernews",
+          "publishedAt": "2026-04-10T15:49:04Z",
+          "points": 2,
+          "commentCount": 0
         }
       ]
     },
@@ -1732,7 +1741,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T21:00:24.108Z"
+        "updatedAt": "2026-05-08T21:15:25.642Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1790,7 +1799,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T21:00:24.286Z"
+        "updatedAt": "2026-05-08T21:15:25.928Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1960,5 +1969,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-08T21:00:25.243Z"
+  "generatedAt": "2026-05-08T21:15:26.367Z"
 }
