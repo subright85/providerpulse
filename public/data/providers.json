@@ -13,19 +13,19 @@
       },
       "status": {
         "providerId": "openai",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T15:00:30.553Z"
+        "indicator": "minor",
+        "description": "Partial System Degradation",
+        "updatedAt": "2026-05-08T15:15:37.530Z"
       },
       "stats": {
         "providerId": "openai",
-        "uptime30d": 93.96,
-        "uptime90d": 97.99,
+        "uptime30d": 94.01,
+        "uptime90d": 98,
         "incidentCount30d": 25,
-        "avgMttr30d": 481,
-        "lastIncident": "2026-05-08T12:31:00Z",
-        "reliabilityScore": 65,
-        "reliabilityScore90d": 88,
+        "avgMttr30d": 500,
+        "lastIncident": "2026-05-08T15:07:16Z",
+        "reliabilityScore": 72,
+        "reliabilityScore90d": 90,
         "monthlyTrend": [
           {
             "month": "2026-03",
@@ -36,26 +36,31 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 18,
-            "uptime": 94.59
+            "incidentCount": 17,
+            "uptime": 94.64
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 7,
-            "uptime": 97.51
+            "incidentCount": 8,
+            "uptime": 97.52
           }
         ],
         "tagSummary": [
           {
             "tag": "inference",
-            "count30d": 17,
-            "count90d": 17
+            "count30d": 16,
+            "count90d": 16
           },
           {
             "tag": "api",
             "count30d": 15,
             "count90d": 15
+          },
+          {
+            "tag": "performance",
+            "count30d": 2,
+            "count90d": 2
           },
           {
             "tag": "other",
@@ -66,21 +71,30 @@
             "tag": "availability",
             "count30d": 1,
             "count90d": 1
-          },
-          {
-            "tag": "performance",
-            "count30d": 1,
-            "count90d": 1
           }
         ],
         "audienceBreakdown": {
-          "b2b": 12,
-          "b2c": 9,
+          "b2b": 13,
+          "b2c": 8,
           "both": 2,
           "unknown": 2
         }
       },
       "recentIncidents": [
+        {
+          "id": "01KR421V8PCTFKA8EJJC2VCGA3",
+          "providerId": "openai",
+          "title": "Degraded Performance with Codex Cloud Tasks",
+          "severity": "minor",
+          "tags": [
+            "performance"
+          ],
+          "audience": "b2b",
+          "startedAt": "2026-05-08T15:07:16Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://status.openai.com"
+        },
         {
           "id": "01KR3S3Q2RE54PVJ7GZPQNEY8Y",
           "providerId": "openai",
@@ -284,20 +298,6 @@
           "resolvedAt": "2026-04-24T22:15:07Z",
           "durationMinutes": 50,
           "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KPXS9FY1X6WHYM2K3BQHJZQW",
-          "providerId": "openai",
-          "title": "Elevated errors in Codex",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-23T18:23:01Z",
-          "resolvedAt": "2026-04-23T20:29:59Z",
-          "durationMinutes": 127,
-          "url": "https://status.openai.com"
         }
       ],
       "components": [
@@ -349,7 +349,7 @@
         {
           "id": "01JVCV8YSWZFRSM1G5CVP253SK",
           "name": "Codex Web",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "01KMKFAMWKNQ84Z1766MV08ZDE",
@@ -481,15 +481,15 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T15:00:30.879Z"
+        "updatedAt": "2026-05-08T15:15:38.000Z"
       },
       "stats": {
         "providerId": "anthropic",
         "uptime30d": 95.94,
         "uptime90d": 98.48,
-        "incidentCount30d": 47,
-        "avgMttr30d": 78,
-        "lastIncident": "2026-05-08T14:12:26.867Z",
+        "incidentCount30d": 48,
+        "avgMttr30d": 77,
+        "lastIncident": "2026-05-08T15:03:50.656Z",
         "reliabilityScore": 61,
         "reliabilityScore90d": 66,
         "monthlyTrend": [
@@ -502,26 +502,26 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 42,
-            "uptime": 97.59
+            "incidentCount": 41,
+            "uptime": 97.6
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 8,
+            "incidentCount": 9,
             "uptime": 91.49
           }
         ],
         "tagSummary": [
           {
             "tag": "inference",
-            "count30d": 32,
-            "count90d": 33
+            "count30d": 33,
+            "count90d": 34
           },
           {
             "tag": "api",
-            "count30d": 29,
-            "count90d": 30
+            "count30d": 30,
+            "count90d": 31
           },
           {
             "tag": "availability",
@@ -531,7 +531,7 @@
           {
             "tag": "other",
             "count30d": 3,
-            "count90d": 5
+            "count90d": 4
           },
           {
             "tag": "auth",
@@ -553,10 +553,25 @@
           "b2b": 2,
           "b2c": 9,
           "both": 4,
-          "unknown": 32
+          "unknown": 33
         }
       },
       "recentIncidents": [
+        {
+          "id": "fv8psq0wdpkn",
+          "providerId": "anthropic",
+          "title": "Elevated errors on Claude Sonnet 4.6",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "audience": "unknown",
+          "startedAt": "2026-05-08T15:03:50.656Z",
+          "resolvedAt": "2026-05-08T15:11:04.695Z",
+          "durationMinutes": 7,
+          "url": "https://stspg.io/ld9rfd0x347q"
+        },
         {
           "id": "vtt35dc73941",
           "providerId": "anthropic",
@@ -765,21 +780,6 @@
           "resolvedAt": "2026-04-28T13:50:06.606Z",
           "durationMinutes": 20,
           "url": "https://stspg.io/65gx9qk9yyd6"
-        },
-        {
-          "id": "c20m4lbfd6pm",
-          "providerId": "anthropic",
-          "title": "Elevated errors on Claude Haiku 4.5",
-          "severity": "minor",
-          "tags": [
-            "inference",
-            "api"
-          ],
-          "audience": "unknown",
-          "startedAt": "2026-04-28T12:24:00.726Z",
-          "resolvedAt": "2026-04-28T12:45:07.680Z",
-          "durationMinutes": 21,
-          "url": "https://stspg.io/v1941b5q9yxp"
         }
       ],
       "components": [
@@ -869,7 +869,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T15:00:30.434Z"
+        "updatedAt": "2026-05-08T15:15:37.281Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -973,7 +973,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T15:00:30.754Z"
+        "updatedAt": "2026-05-08T15:15:37.744Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1154,7 +1154,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T15:00:30.745Z"
+        "updatedAt": "2026-05-08T15:15:37.759Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1440,7 +1440,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T15:00:30.787Z"
+        "updatedAt": "2026-05-08T15:15:37.637Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1741,7 +1741,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T15:00:30.784Z"
+        "updatedAt": "2026-05-08T15:15:37.769Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1799,7 +1799,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-08T15:00:30.934Z"
+        "updatedAt": "2026-05-08T15:15:38.045Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1879,6 +1879,19 @@
       "category": "llm",
       "tags": [
         {
+          "tag": "api",
+          "count30d": 50,
+          "count90d": 53,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "google-ai",
+            "cohere",
+            "deepseek"
+          ]
+        },
+        {
           "tag": "inference",
           "count30d": 49,
           "count90d": 52,
@@ -1891,23 +1904,22 @@
           ]
         },
         {
-          "tag": "api",
-          "count30d": 49,
-          "count90d": 52,
+          "tag": "other",
+          "count30d": 6,
+          "count90d": 13,
           "trend": "up",
           "providers": [
             "openai",
             "anthropic",
-            "google-ai",
             "cohere",
             "deepseek"
           ]
         },
         {
-          "tag": "other",
+          "tag": "performance",
           "count30d": 6,
-          "count90d": 14,
-          "trend": "stable",
+          "count90d": 9,
+          "trend": "up",
           "providers": [
             "openai",
             "anthropic",
@@ -1924,18 +1936,6 @@
             "openai",
             "anthropic",
             "cohere"
-          ]
-        },
-        {
-          "tag": "performance",
-          "count30d": 5,
-          "count90d": 8,
-          "trend": "up",
-          "providers": [
-            "openai",
-            "anthropic",
-            "cohere",
-            "deepseek"
           ]
         },
         {
@@ -1969,5 +1969,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-08T15:00:31.237Z"
+  "generatedAt": "2026-05-08T15:15:38.341Z"
 }
