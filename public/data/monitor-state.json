@@ -8,7 +8,7 @@
     ],
     "activeIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-05-09T01:20:26.237Z"
+    "lastCheckedAt": "2026-05-09T01:25:14.950Z"
   },
   "anthropic": {
     "seenEver": [
@@ -23,19 +23,19 @@
     ],
     "activeIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-05-09T01:20:26.591Z"
+    "lastCheckedAt": "2026-05-09T01:25:15.228Z"
   },
   "groq": {
     "seenEver": [],
     "activeIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-05-09T01:20:27.039Z"
+    "lastCheckedAt": "2026-05-09T01:25:15.568Z"
   },
   "cohere": {
     "seenEver": [],
     "activeIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-05-09T01:20:27.345Z"
+    "lastCheckedAt": "2026-05-09T01:25:15.816Z"
   },
   "deepseek": {
     "seenEver": [
@@ -44,7 +44,7 @@
     ],
     "activeIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-05-09T01:20:27.739Z"
+    "lastCheckedAt": "2026-05-09T01:25:16.029Z"
   },
   "vercel": {
     "knownIds": [],
@@ -118,18 +118,18 @@
     "seenEver": [],
     "activeIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-05-09T01:20:28.029Z"
+    "lastCheckedAt": "2026-05-09T01:25:16.298Z"
   },
   "ai21": {
     "seenEver": [],
     "activeIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-05-09T01:20:28.360Z"
+    "lastCheckedAt": "2026-05-09T01:25:16.440Z"
   },
   "google-ai": {
     "seenEver": [],
     "activeIds": [],
     "indicator": "none",
-    "lastCheckedAt": "2026-05-09T01:20:26.687Z"
+    "lastCheckedAt": "2026-05-09T01:25:15.292Z"
   }
 }
