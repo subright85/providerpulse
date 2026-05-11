@@ -13,17 +13,17 @@
       },
       "status": {
         "providerId": "openai",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T01:15:18.360Z"
+        "indicator": "minor",
+        "description": "Partial System Degradation",
+        "updatedAt": "2026-05-11T01:30:21.475Z"
       },
       "stats": {
         "providerId": "openai",
-        "uptime30d": 94.02,
-        "uptime90d": 98.01,
+        "uptime30d": 94.36,
+        "uptime90d": 98.12,
         "incidentCount30d": 25,
-        "avgMttr30d": 479,
-        "lastIncident": "2026-05-09T00:07:17Z",
+        "avgMttr30d": 468,
+        "lastIncident": "2026-05-11T01:23:13Z",
         "reliabilityScore": 69,
         "reliabilityScore90d": 89,
         "monthlyTrend": [
@@ -36,13 +36,13 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 16,
-            "uptime": 94.69
+            "incidentCount": 15,
+            "uptime": 95.03
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 9,
+            "incidentCount": 10,
             "uptime": 98.01
           }
         ],
@@ -54,8 +54,8 @@
           },
           {
             "tag": "api",
-            "count30d": 15,
-            "count90d": 15
+            "count30d": 16,
+            "count90d": 16
           },
           {
             "tag": "performance",
@@ -75,12 +75,27 @@
         ],
         "audienceBreakdown": {
           "b2b": 13,
-          "b2c": 8,
-          "both": 2,
+          "b2c": 7,
+          "both": 3,
           "unknown": 2
         }
       },
       "recentIncidents": [
+        {
+          "id": "01KRAA341YK58M05V2DFGDRMFB",
+          "providerId": "openai",
+          "title": "Users may experience elevated errors in ChatGPT uploading files and Codex Cloud creating tasks",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "audience": "both",
+          "startedAt": "2026-05-11T01:23:13Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://status.openai.com"
+        },
         {
           "id": "01KR50YN2DBMTXGPC6BQSJN48J",
           "providerId": "openai",
@@ -283,20 +298,6 @@
           "resolvedAt": "2026-04-28T23:12:55Z",
           "durationMinutes": 27,
           "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
-          "providerId": "openai",
-          "title": "Elevated error rates in Sora API for some users",
-          "severity": "minor",
-          "tags": [
-            "api"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-04-28T13:52:19Z",
-          "resolvedAt": "2026-04-28T16:10:47Z",
-          "durationMinutes": 138,
-          "url": "https://status.openai.com"
         }
       ],
       "components": [
@@ -348,7 +349,12 @@
         {
           "id": "01JVCV8YSWZFRSM1G5CVP253SK",
           "name": "Codex Web",
-          "status": "operational"
+          "status": "degraded_performance"
+        },
+        {
+          "id": "01JMXBNJXG1YMQPPCPCQX3MPA2",
+          "name": "File uploads",
+          "status": "degraded_performance"
         },
         {
           "id": "01KMKFAMWKNQ84Z1766MV08ZDE",
@@ -368,11 +374,6 @@
         {
           "id": "01K8C008QVXHA6JX98PAS42VPD",
           "name": "ChatGPT Atlas",
-          "status": "operational"
-        },
-        {
-          "id": "01JMXBNJXG1YMQPPCPCQX3MPA2",
-          "name": "File uploads",
           "status": "operational"
         },
         {
@@ -480,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T01:15:19.126Z"
+        "updatedAt": "2026-05-11T01:30:22.113Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -508,7 +509,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 13,
-            "uptime": 92.79
+            "uptime": 92.8
           }
         ],
         "tagSummary": [
@@ -866,7 +867,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T01:15:18.384Z"
+        "updatedAt": "2026-05-11T01:30:21.385Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -970,7 +971,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T01:15:18.646Z"
+        "updatedAt": "2026-05-11T01:30:21.656Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1151,7 +1152,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T01:15:18.742Z"
+        "updatedAt": "2026-05-11T01:30:21.758Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1437,7 +1438,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T01:15:18.947Z"
+        "updatedAt": "2026-05-11T01:30:21.870Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1738,7 +1739,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T01:15:19.050Z"
+        "updatedAt": "2026-05-11T01:30:21.893Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1796,7 +1797,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T01:15:19.222Z"
+        "updatedAt": "2026-05-11T01:30:22.178Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1889,8 +1890,8 @@
         },
         {
           "tag": "api",
-          "count30d": 49,
-          "count90d": 53,
+          "count30d": 50,
+          "count90d": 54,
           "trend": "up",
           "providers": [
             "openai",
@@ -1966,5 +1967,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-11T01:15:19.546Z"
+  "generatedAt": "2026-05-11T01:30:22.749Z"
 }
