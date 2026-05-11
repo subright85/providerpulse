@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:15:38.036Z"
+        "updatedAt": "2026-05-11T15:30:39.309Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 10,
-            "uptime": 97.79
+            "uptime": 97.8
           }
         ],
         "tagSummary": [
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:15:38.720Z"
+        "updatedAt": "2026-05-11T15:30:39.462Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -509,7 +509,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 13,
-            "uptime": 93.19
+            "uptime": 93.2
           }
         ],
         "tagSummary": [
@@ -867,7 +867,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:15:37.979Z"
+        "updatedAt": "2026-05-11T15:30:39.211Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -971,7 +971,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:15:38.333Z"
+        "updatedAt": "2026-05-11T15:30:39.423Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1152,7 +1152,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:15:38.408Z"
+        "updatedAt": "2026-05-11T15:30:39.415Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1438,7 +1438,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:15:38.469Z"
+        "updatedAt": "2026-05-11T15:30:39.447Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1739,7 +1739,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:15:38.493Z"
+        "updatedAt": "2026-05-11T15:30:39.467Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1797,7 +1797,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:15:38.724Z"
+        "updatedAt": "2026-05-11T15:30:39.560Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1967,5 +1967,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-11T15:15:39.135Z"
+  "generatedAt": "2026-05-11T15:30:39.978Z"
 }
