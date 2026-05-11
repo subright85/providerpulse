@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T00:00:10.895Z"
+        "updatedAt": "2026-05-11T00:15:11.899Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,14 +480,14 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T00:00:11.570Z"
+        "updatedAt": "2026-05-11T00:15:12.628Z"
       },
       "stats": {
         "providerId": "anthropic",
         "uptime30d": 95.76,
         "uptime90d": 98.57,
-        "incidentCount30d": 44,
-        "avgMttr30d": 84,
+        "incidentCount30d": 43,
+        "avgMttr30d": 86,
         "lastIncident": "2026-05-09T23:33:21.101Z",
         "reliabilityScore": 61,
         "reliabilityScore90d": 69,
@@ -524,7 +524,7 @@
           },
           {
             "tag": "availability",
-            "count30d": 6,
+            "count30d": 5,
             "count90d": 6
           },
           {
@@ -534,7 +534,7 @@
           },
           {
             "tag": "auth",
-            "count30d": 2,
+            "count30d": 1,
             "count90d": 2
           },
           {
@@ -550,7 +550,7 @@
         ],
         "audienceBreakdown": {
           "b2b": 2,
-          "b2c": 7,
+          "b2c": 6,
           "both": 3,
           "unknown": 32
         }
@@ -866,7 +866,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T00:00:10.869Z"
+        "updatedAt": "2026-05-11T00:15:11.820Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -970,7 +970,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T00:00:11.080Z"
+        "updatedAt": "2026-05-11T00:15:12.074Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1151,7 +1151,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T00:00:11.356Z"
+        "updatedAt": "2026-05-11T00:15:12.217Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1437,7 +1437,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T00:00:11.354Z"
+        "updatedAt": "2026-05-11T00:15:12.348Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1738,7 +1738,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T00:00:11.408Z"
+        "updatedAt": "2026-05-11T00:15:12.486Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1794,9 +1794,9 @@
       },
       "status": {
         "providerId": "ai21",
-        "indicator": "minor",
-        "description": "Partially Degraded Service",
-        "updatedAt": "2026-05-11T00:00:12.059Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-05-11T00:15:12.657Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1850,7 +1850,7 @@
         {
           "id": "n313qpb9pclg",
           "name": "Maestro Websearch",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "id": "8byw33cwy620",
@@ -1926,7 +1926,7 @@
         },
         {
           "tag": "availability",
-          "count30d": 8,
+          "count30d": 7,
           "count90d": 8,
           "trend": "up",
           "providers": [
@@ -1937,7 +1937,7 @@
         },
         {
           "tag": "auth",
-          "count30d": 3,
+          "count30d": 2,
           "count90d": 3,
           "trend": "up",
           "providers": [
@@ -1966,5 +1966,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-11T00:00:16.276Z"
+  "generatedAt": "2026-05-11T00:15:13.061Z"
 }
