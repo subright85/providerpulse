@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-11T02:45:21.315Z"
+        "updatedAt": "2026-05-11T03:00:13.939Z"
       },
       "stats": {
         "providerId": "openai",
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T02:45:21.726Z"
+        "updatedAt": "2026-05-11T03:00:14.337Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -509,7 +509,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 13,
-            "uptime": 92.84
+            "uptime": 92.85
           }
         ],
         "tagSummary": [
@@ -867,7 +867,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T02:45:21.144Z"
+        "updatedAt": "2026-05-11T03:00:13.853Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -971,7 +971,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T02:45:21.497Z"
+        "updatedAt": "2026-05-11T03:00:14.121Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1152,7 +1152,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T02:45:21.508Z"
+        "updatedAt": "2026-05-11T03:00:14.191Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1438,7 +1438,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T02:45:21.472Z"
+        "updatedAt": "2026-05-11T03:00:14.243Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1466,7 +1466,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 3,
-            "uptime": 99.7
+            "uptime": 99.71
           }
         ],
         "tagSummary": [
@@ -1739,7 +1739,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T02:45:21.483Z"
+        "updatedAt": "2026-05-11T03:00:14.283Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1797,7 +1797,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T02:45:21.648Z"
+        "updatedAt": "2026-05-11T03:00:14.485Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1967,5 +1967,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-11T02:45:22.037Z"
+  "generatedAt": "2026-05-11T03:00:14.860Z"
 }
