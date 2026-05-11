@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:30:39.309Z"
+        "updatedAt": "2026-05-11T15:45:41.695Z"
       },
       "stats": {
         "providerId": "openai",
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:30:39.462Z"
+        "updatedAt": "2026-05-11T15:45:42.387Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -867,7 +867,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:30:39.211Z"
+        "updatedAt": "2026-05-11T15:45:41.567Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -971,7 +971,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:30:39.423Z"
+        "updatedAt": "2026-05-11T15:45:41.893Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1152,14 +1152,14 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:30:39.415Z"
+        "updatedAt": "2026-05-11T15:45:41.905Z"
       },
       "stats": {
         "providerId": "cohere",
         "uptime30d": 99.93,
         "uptime90d": 99.93,
-        "incidentCount30d": 3,
-        "avgMttr30d": 36,
+        "incidentCount30d": 2,
+        "avgMttr30d": 49,
         "lastIncident": "2026-04-20T22:16:13Z",
         "reliabilityScore": 91,
         "reliabilityScore90d": 95,
@@ -1196,17 +1196,17 @@
           },
           {
             "tag": "auth",
-            "count30d": 1,
+            "count30d": 0,
             "count90d": 1
           },
           {
             "tag": "database",
-            "count30d": 1,
+            "count30d": 0,
             "count90d": 1
           },
           {
             "tag": "api",
-            "count30d": 1,
+            "count30d": 0,
             "count90d": 1
           },
           {
@@ -1216,7 +1216,7 @@
           }
         ],
         "audienceBreakdown": {
-          "b2b": 3,
+          "b2b": 2,
           "b2c": 0,
           "both": 0,
           "unknown": 0
@@ -1438,7 +1438,7 @@
         "providerId": "deepseek",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:30:39.447Z"
+        "updatedAt": "2026-05-11T15:45:42.096Z"
       },
       "stats": {
         "providerId": "deepseek",
@@ -1739,7 +1739,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:30:39.467Z"
+        "updatedAt": "2026-05-11T15:45:42.099Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1797,7 +1797,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-11T15:30:39.560Z"
+        "updatedAt": "2026-05-11T15:45:42.332Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1890,7 +1890,7 @@
         },
         {
           "tag": "api",
-          "count30d": 50,
+          "count30d": 49,
           "count90d": 54,
           "trend": "up",
           "providers": [
@@ -1938,9 +1938,9 @@
         },
         {
           "tag": "auth",
-          "count30d": 2,
+          "count30d": 1,
           "count90d": 3,
-          "trend": "up",
+          "trend": "stable",
           "providers": [
             "anthropic",
             "cohere"
@@ -1957,9 +1957,9 @@
         },
         {
           "tag": "database",
-          "count30d": 1,
+          "count30d": 0,
           "count90d": 1,
-          "trend": "up",
+          "trend": "down",
           "providers": [
             "cohere"
           ]
@@ -1967,5 +1967,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-11T15:30:39.978Z"
+  "generatedAt": "2026-05-11T15:45:42.703Z"
 }
