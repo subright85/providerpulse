@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T15:16:10.438Z"
+        "updatedAt": "2026-05-12T15:31:16.869Z"
       },
       "stats": {
         "providerId": "openai",
@@ -482,7 +482,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T15:16:11.354Z"
+        "updatedAt": "2026-05-12T15:31:18.153Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -868,7 +868,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T15:16:10.331Z"
+        "updatedAt": "2026-05-12T15:31:16.750Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -972,7 +972,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T15:16:10.635Z"
+        "updatedAt": "2026-05-12T15:31:17.025Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1153,7 +1153,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T15:16:10.731Z"
+        "updatedAt": "2026-05-12T15:31:17.050Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1740,7 +1740,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T15:16:11.119Z"
+        "updatedAt": "2026-05-12T15:31:18.084Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1796,9 +1796,9 @@
       },
       "status": {
         "providerId": "ai21",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T15:16:11.343Z"
+        "indicator": "minor",
+        "description": "Partially Degraded Service",
+        "updatedAt": "2026-05-12T15:31:18.208Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1852,7 +1852,7 @@
         {
           "id": "n313qpb9pclg",
           "name": "Maestro Websearch",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "8byw33cwy620",
@@ -1968,5 +1968,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-12T15:16:12.191Z"
+  "generatedAt": "2026-05-12T15:31:18.581Z"
 }
