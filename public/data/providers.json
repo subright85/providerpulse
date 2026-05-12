@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:30:58.506Z"
+        "updatedAt": "2026-05-12T23:45:59.277Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,19 +480,19 @@
       },
       "status": {
         "providerId": "anthropic",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:30:59.695Z"
+        "indicator": "minor",
+        "description": "Minor Service Outage",
+        "updatedAt": "2026-05-12T23:45:59.565Z"
       },
       "stats": {
         "providerId": "anthropic",
         "uptime30d": 95.7,
-        "uptime90d": 98.55,
-        "incidentCount30d": 45,
+        "uptime90d": 98.56,
+        "incidentCount30d": 46,
         "avgMttr30d": 84,
-        "lastIncident": "2026-05-12T19:36:38.000Z",
+        "lastIncident": "2026-05-12T23:38:56.745Z",
         "reliabilityScore": 61,
-        "reliabilityScore90d": 68,
+        "reliabilityScore90d": 67,
         "monthlyTrend": [
           {
             "month": "2026-03",
@@ -503,25 +503,25 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 35,
-            "uptime": 98.14
+            "incidentCount": 34,
+            "uptime": 98.16
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 15,
+            "incidentCount": 16,
             "uptime": 93.8
           }
         ],
         "tagSummary": [
           {
             "tag": "inference",
-            "count30d": 34,
-            "count90d": 36
+            "count30d": 35,
+            "count90d": 37
           },
           {
             "tag": "api",
-            "count30d": 31,
+            "count30d": 32,
             "count90d": 33
           },
           {
@@ -554,10 +554,25 @@
           "b2b": 2,
           "b2c": 6,
           "both": 3,
-          "unknown": 34
+          "unknown": 35
         }
       },
       "recentIncidents": [
+        {
+          "id": "3kkmgccb9z85",
+          "providerId": "anthropic",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "severity": "major",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "audience": "unknown",
+          "startedAt": "2026-05-12T23:38:56.745Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/m2skyvnzdzl4"
+        },
         {
           "id": "c2hjyfpgsprx",
           "providerId": "anthropic",
@@ -763,28 +778,13 @@
           "resolvedAt": "2026-05-04T14:45:58.262Z",
           "durationMinutes": 47,
           "url": "https://stspg.io/23s852zsyx18"
-        },
-        {
-          "id": "zxv1xv501678",
-          "providerId": "anthropic",
-          "title": "Elevated errors on Claude Opus 4.5",
-          "severity": "minor",
-          "tags": [
-            "inference",
-            "api"
-          ],
-          "audience": "unknown",
-          "startedAt": "2026-05-04T08:09:37.657Z",
-          "resolvedAt": "2026-05-04T09:49:29.769Z",
-          "durationMinutes": 100,
-          "url": "https://stspg.io/4mxbctc1ncgy"
         }
       ],
       "components": [
         {
           "id": "rwppv331jlwc",
           "name": "claude.ai",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "0qbwn08sd68x",
@@ -794,17 +794,17 @@
         {
           "id": "k8w3r06qmzrp",
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "yyzkbfz2thpt",
           "name": "Claude Code",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "bpp5gb3hpjcl",
           "name": "Claude Cowork",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "0scnb50nvy53",
@@ -867,7 +867,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:30:58.478Z"
+        "updatedAt": "2026-05-12T23:45:59.181Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -971,7 +971,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:30:58.727Z"
+        "updatedAt": "2026-05-12T23:45:59.355Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1152,7 +1152,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:30:58.904Z"
+        "updatedAt": "2026-05-12T23:45:59.370Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1739,7 +1739,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:30:59.488Z"
+        "updatedAt": "2026-05-12T23:45:59.542Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1797,7 +1797,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:30:59.767Z"
+        "updatedAt": "2026-05-12T23:45:59.712Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1878,7 +1878,7 @@
       "tags": [
         {
           "tag": "api",
-          "count30d": 51,
+          "count30d": 52,
           "count90d": 56,
           "trend": "up",
           "providers": [
@@ -1891,8 +1891,8 @@
         },
         {
           "tag": "inference",
-          "count30d": 50,
-          "count90d": 54,
+          "count30d": 51,
+          "count90d": 55,
           "trend": "up",
           "providers": [
             "openai",
@@ -1967,5 +1967,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-12T23:31:00.734Z"
+  "generatedAt": "2026-05-12T23:46:00.079Z"
 }
