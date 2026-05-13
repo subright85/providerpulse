@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T11:45:55.322Z"
+        "updatedAt": "2026-05-13T12:00:54.568Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,16 +480,16 @@
       },
       "status": {
         "providerId": "anthropic",
-        "indicator": "minor",
-        "description": "Minor Service Outage",
-        "updatedAt": "2026-05-13T11:45:56.352Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-05-13T12:00:55.273Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 95.67,
-        "uptime90d": 98.55,
+        "uptime30d": 95.61,
+        "uptime90d": 98.53,
         "incidentCount30d": 47,
-        "avgMttr30d": 82,
+        "avgMttr30d": 81,
         "lastIncident": "2026-05-13T11:25:07.918Z",
         "reliabilityScore": 61,
         "reliabilityScore90d": 66,
@@ -510,7 +510,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 17,
-            "uptime": 93.98
+            "uptime": 93.86
           }
         ],
         "tagSummary": [
@@ -564,8 +564,8 @@
           ],
           "audience": "b2c",
           "startedAt": "2026-05-13T11:25:07.918Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-05-13T11:57:52.831Z",
+          "durationMinutes": 33,
           "url": "https://stspg.io/rz7z20ngy48f"
         },
         {
@@ -779,7 +779,7 @@
         {
           "id": "rwppv331jlwc",
           "name": "claude.ai",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "0qbwn08sd68x",
@@ -794,7 +794,7 @@
         {
           "id": "yyzkbfz2thpt",
           "name": "Claude Code",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "bpp5gb3hpjcl",
@@ -862,7 +862,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T11:45:55.214Z"
+        "updatedAt": "2026-05-13T12:00:54.507Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -966,7 +966,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T11:45:55.538Z"
+        "updatedAt": "2026-05-13T12:00:54.764Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1147,7 +1147,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T11:45:55.540Z"
+        "updatedAt": "2026-05-13T12:00:54.984Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1734,7 +1734,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T11:45:56.193Z"
+        "updatedAt": "2026-05-13T12:00:55.134Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1792,7 +1792,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T11:45:56.414Z"
+        "updatedAt": "2026-05-13T12:00:55.373Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1961,5 +1961,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-13T11:45:56.841Z"
+  "generatedAt": "2026-05-13T12:00:57.367Z"
 }
