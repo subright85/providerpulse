@@ -15,15 +15,15 @@
         "providerId": "openai",
         "indicator": "minor",
         "description": "Partial System Degradation",
-        "updatedAt": "2026-05-13T08:15:53.448Z"
+        "updatedAt": "2026-05-13T08:30:54.133Z"
       },
       "stats": {
         "providerId": "openai",
         "uptime30d": 94.68,
         "uptime90d": 98.23,
         "incidentCount30d": 25,
-        "avgMttr30d": 466,
-        "lastIncident": "2026-05-13T06:28:11Z",
+        "avgMttr30d": 486,
+        "lastIncident": "2026-05-13T08:18:13Z",
         "reliabilityScore": 73,
         "reliabilityScore90d": 91,
         "monthlyTrend": [
@@ -36,13 +36,13 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 13,
+            "incidentCount": 12,
             "uptime": 95.49
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 12,
+            "incidentCount": 13,
             "uptime": 98.04
           }
         ],
@@ -81,6 +81,20 @@
         }
       },
       "recentIncidents": [
+        {
+          "id": "01KRG6MF021JQ997JCR7R8Y9A0",
+          "providerId": "openai",
+          "title": "Codex 5.5 engines are experiencing high error rate",
+          "severity": "minor",
+          "tags": [
+            "api"
+          ],
+          "audience": "b2b",
+          "startedAt": "2026-05-13T08:18:13Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://status.openai.com"
+        },
         {
           "id": "01KRG0AZKH41DV4D9SNJSXM33Q",
           "providerId": "openai",
@@ -285,20 +299,6 @@
           "resolvedAt": "2026-04-29T22:24:07Z",
           "durationMinutes": 83,
           "url": "https://status.openai.com"
-        },
-        {
-          "id": "01KQBXGR1S2JW48DA0795D4MGZ",
-          "providerId": "openai",
-          "title": "ChatGPT users may encounter issues in conversation",
-          "severity": "major",
-          "tags": [
-            "inference"
-          ],
-          "audience": "b2c",
-          "startedAt": "2026-04-29T06:06:15Z",
-          "resolvedAt": "2026-04-29T05:27:00Z",
-          "durationMinutes": -39,
-          "url": "https://status.openai.com"
         }
       ],
       "components": [
@@ -343,11 +343,6 @@
           "status": "operational"
         },
         {
-          "id": "01JVCV8YSWZFRSM1G5CVP253SK",
-          "name": "Codex Web",
-          "status": "operational"
-        },
-        {
           "id": "01JMXBNJXG1YMQPPCPCQX3MPA2",
           "name": "File uploads",
           "status": "operational"
@@ -355,7 +350,7 @@
         {
           "id": "01KMKFAMWKNQ84Z1766MV08ZDE",
           "name": "CLI",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "01KKAD7C71MCCH3FTREMJH4AAS",
@@ -398,14 +393,9 @@
           "status": "operational"
         },
         {
-          "id": "01KMKFAMWKQ81YWSE1Z18R6VHR",
-          "name": "App",
-          "status": "operational"
-        },
-        {
           "id": "01KMP3KP5MGE23B80K1EK4S8PV",
           "name": "Codex API",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "01JSYVYQSWMJ9QG35XHP08BHA7",
@@ -426,6 +416,16 @@
           "id": "01JQ7EKW990MSPSWVXC7VPV2ZJ",
           "name": "Image Generation",
           "status": "operational"
+        },
+        {
+          "id": "01JMXBRMFEKVBWKK82B44QFMCE",
+          "name": "Audio",
+          "status": "degraded_performance"
+        },
+        {
+          "id": "01KMP3KP5M8X0EBTVW6KN327EE",
+          "name": "VS Code extension",
+          "status": "degraded_performance"
         }
       ],
       "news": [
@@ -482,7 +482,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T08:15:54.294Z"
+        "updatedAt": "2026-05-13T08:30:55.894Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -867,7 +867,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T08:15:53.388Z"
+        "updatedAt": "2026-05-13T08:30:54.105Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -971,7 +971,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T08:15:53.565Z"
+        "updatedAt": "2026-05-13T08:30:54.328Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1152,7 +1152,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T08:15:53.597Z"
+        "updatedAt": "2026-05-13T08:30:54.480Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1739,7 +1739,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T08:15:54.159Z"
+        "updatedAt": "2026-05-13T08:30:55.599Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1797,7 +1797,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-13T08:15:54.383Z"
+        "updatedAt": "2026-05-13T08:30:55.903Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1967,5 +1967,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-13T08:15:54.923Z"
+  "generatedAt": "2026-05-13T08:30:56.445Z"
 }
