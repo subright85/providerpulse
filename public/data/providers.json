@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:45:59.277Z"
+        "updatedAt": "2026-05-13T00:00:59.370Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,16 +480,16 @@
       },
       "status": {
         "providerId": "anthropic",
-        "indicator": "minor",
-        "description": "Minor Service Outage",
-        "updatedAt": "2026-05-12T23:45:59.565Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-05-13T00:01:00.077Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 95.7,
-        "uptime90d": 98.56,
+        "uptime30d": 95.67,
+        "uptime90d": 98.55,
         "incidentCount30d": 46,
-        "avgMttr30d": 84,
+        "avgMttr30d": 82,
         "lastIncident": "2026-05-12T23:38:56.745Z",
         "reliabilityScore": 61,
         "reliabilityScore90d": 67,
@@ -510,7 +510,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 16,
-            "uptime": 93.8
+            "uptime": 93.73
           }
         ],
         "tagSummary": [
@@ -569,8 +569,8 @@
           ],
           "audience": "unknown",
           "startedAt": "2026-05-12T23:38:56.745Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-05-12T23:58:01.075Z",
+          "durationMinutes": 19,
           "url": "https://stspg.io/m2skyvnzdzl4"
         },
         {
@@ -784,7 +784,7 @@
         {
           "id": "rwppv331jlwc",
           "name": "claude.ai",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "0qbwn08sd68x",
@@ -794,17 +794,17 @@
         {
           "id": "k8w3r06qmzrp",
           "name": "Claude API (api.anthropic.com)",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "yyzkbfz2thpt",
           "name": "Claude Code",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "bpp5gb3hpjcl",
           "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "0scnb50nvy53",
@@ -867,7 +867,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:45:59.181Z"
+        "updatedAt": "2026-05-13T00:00:59.276Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -971,7 +971,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:45:59.355Z"
+        "updatedAt": "2026-05-13T00:00:59.438Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1152,7 +1152,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:45:59.370Z"
+        "updatedAt": "2026-05-13T00:00:59.476Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1739,7 +1739,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:45:59.542Z"
+        "updatedAt": "2026-05-13T00:01:00.001Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1797,7 +1797,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-12T23:45:59.712Z"
+        "updatedAt": "2026-05-13T00:01:00.216Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1967,5 +1967,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-12T23:46:00.079Z"
+  "generatedAt": "2026-05-13T00:01:00.564Z"
 }
