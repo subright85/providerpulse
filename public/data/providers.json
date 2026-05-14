@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T20:30:12.864Z"
+        "updatedAt": "2026-05-14T20:45:12.128Z"
       },
       "stats": {
         "providerId": "openai",
@@ -43,7 +43,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 14,
-            "uptime": 97.83
+            "uptime": 97.84
           }
         ],
         "tagSummary": [
@@ -479,17 +479,17 @@
       },
       "status": {
         "providerId": "anthropic",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T20:30:13.136Z"
+        "indicator": "minor",
+        "description": "Partially Degraded Service",
+        "updatedAt": "2026-05-14T20:45:12.895Z"
       },
       "stats": {
         "providerId": "anthropic",
         "uptime30d": 95.67,
         "uptime90d": 98.46,
-        "incidentCount30d": 46,
+        "incidentCount30d": 47,
         "avgMttr30d": 77,
-        "lastIncident": "2026-05-13T12:21:57.633Z",
+        "lastIncident": "2026-05-14T20:33:01.126Z",
         "reliabilityScore": 61,
         "reliabilityScore90d": 64,
         "monthlyTrend": [
@@ -502,25 +502,25 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 32,
-            "uptime": 98.16
+            "incidentCount": 31,
+            "uptime": 98.17
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 18,
+            "incidentCount": 19,
             "uptime": 93.95
           }
         ],
         "tagSummary": [
           {
             "tag": "inference",
-            "count30d": 36,
+            "count30d": 37,
             "count90d": 38
           },
           {
             "tag": "api",
-            "count30d": 33,
+            "count30d": 34,
             "count90d": 35
           },
           {
@@ -548,10 +548,25 @@
           "b2b": 1,
           "b2c": 7,
           "both": 3,
-          "unknown": 35
+          "unknown": 36
         }
       },
       "recentIncidents": [
+        {
+          "id": "6f1wzlw5cjqx",
+          "providerId": "anthropic",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "severity": "minor",
+          "tags": [
+            "inference",
+            "api"
+          ],
+          "audience": "unknown",
+          "startedAt": "2026-05-14T20:33:01.126Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/yw56b4cmlf2s"
+        },
         {
           "id": "yn24rtdnf77b",
           "providerId": "anthropic",
@@ -758,27 +773,13 @@
           "resolvedAt": "2026-05-07T16:36:27.816Z",
           "durationMinutes": 1084,
           "url": "https://stspg.io/0vv7h1hfdddc"
-        },
-        {
-          "id": "437swp24nrf4",
-          "providerId": "anthropic",
-          "title": "Elevated errors across multiple models",
-          "severity": "major",
-          "tags": [
-            "api"
-          ],
-          "audience": "unknown",
-          "startedAt": "2026-05-06T15:29:02.399Z",
-          "resolvedAt": "2026-05-06T16:51:13.830Z",
-          "durationMinutes": 82,
-          "url": "https://stspg.io/ty4d931rtx9k"
         }
       ],
       "components": [
         {
           "id": "rwppv331jlwc",
           "name": "claude.ai",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "0qbwn08sd68x",
@@ -788,17 +789,17 @@
         {
           "id": "k8w3r06qmzrp",
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "yyzkbfz2thpt",
           "name": "Claude Code",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "bpp5gb3hpjcl",
           "name": "Claude Cowork",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "id": "0scnb50nvy53",
@@ -861,7 +862,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T20:30:12.705Z"
+        "updatedAt": "2026-05-14T20:45:11.933Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -965,7 +966,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T20:30:12.878Z"
+        "updatedAt": "2026-05-14T20:45:12.374Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1146,7 +1147,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T20:30:12.902Z"
+        "updatedAt": "2026-05-14T20:45:12.396Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1714,7 +1715,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T20:30:13.107Z"
+        "updatedAt": "2026-05-14T20:45:12.814Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1772,7 +1773,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T20:30:13.387Z"
+        "updatedAt": "2026-05-14T20:45:12.917Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1853,7 +1854,7 @@
       "tags": [
         {
           "tag": "api",
-          "count30d": 53,
+          "count30d": 54,
           "count90d": 58,
           "trend": "up",
           "providers": [
@@ -1866,7 +1867,7 @@
         },
         {
           "tag": "inference",
-          "count30d": 51,
+          "count30d": 52,
           "count90d": 55,
           "trend": "up",
           "providers": [
@@ -1940,5 +1941,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-14T20:30:13.915Z"
+  "generatedAt": "2026-05-14T20:45:13.319Z"
 }
