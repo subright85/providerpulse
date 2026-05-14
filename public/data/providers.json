@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T04:30:35.470Z"
+        "updatedAt": "2026-05-14T04:45:35.308Z"
       },
       "stats": {
         "providerId": "openai",
@@ -481,7 +481,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T04:30:35.965Z"
+        "updatedAt": "2026-05-14T04:45:35.704Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -509,7 +509,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 18,
-            "uptime": 93.64
+            "uptime": 93.65
           }
         ],
         "tagSummary": [
@@ -861,7 +861,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T04:30:35.376Z"
+        "updatedAt": "2026-05-14T04:45:35.183Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -965,7 +965,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T04:30:35.618Z"
+        "updatedAt": "2026-05-14T04:45:35.339Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1146,17 +1146,17 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T04:30:35.625Z"
+        "updatedAt": "2026-05-14T04:45:35.424Z"
       },
       "stats": {
         "providerId": "cohere",
         "uptime30d": 99.97,
-        "uptime90d": 99.93,
+        "uptime90d": 99.98,
         "incidentCount30d": 1,
         "avgMttr30d": 13,
         "lastIncident": "2026-04-20T22:16:13Z",
         "reliabilityScore": 92,
-        "reliabilityScore90d": 95,
+        "reliabilityScore90d": 97,
         "monthlyTrend": [
           {
             "month": "2026-03",
@@ -1200,11 +1200,6 @@
           },
           {
             "tag": "api",
-            "count30d": 0,
-            "count90d": 1
-          },
-          {
-            "tag": "other",
             "count30d": 0,
             "count90d": 1
           }
@@ -1259,20 +1254,6 @@
           "startedAt": "2026-04-11T15:31:05Z",
           "resolvedAt": "2026-04-11T15:39:51Z",
           "durationMinutes": 9,
-          "url": "https://status.cohere.com"
-        },
-        {
-          "id": "01KHAME29P9J8NX2WEQ71F1SQP",
-          "providerId": "cohere",
-          "title": "Some chat models are unresponsive or timing out",
-          "severity": "major",
-          "tags": [
-            "other"
-          ],
-          "audience": "b2b",
-          "startedAt": "2026-02-13T04:34:04Z",
-          "resolvedAt": "2026-02-13T05:51:37Z",
-          "durationMinutes": 78,
           "url": "https://status.cohere.com"
         }
       ],
@@ -1733,7 +1714,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T04:30:35.988Z"
+        "updatedAt": "2026-05-14T04:45:35.516Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1791,7 +1772,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-14T04:30:36.063Z"
+        "updatedAt": "2026-05-14T04:45:35.743Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1898,12 +1879,11 @@
         {
           "tag": "other",
           "count30d": 5,
-          "count90d": 11,
+          "count90d": 10,
           "trend": "up",
           "providers": [
             "openai",
             "anthropic",
-            "cohere",
             "deepseek"
           ]
         },
@@ -1960,5 +1940,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-14T04:30:36.558Z"
+  "generatedAt": "2026-05-14T04:45:36.113Z"
 }
