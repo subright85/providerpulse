@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:16:14.014Z"
+        "updatedAt": "2026-05-15T15:31:11.186Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,7 +480,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:16:14.050Z"
+        "updatedAt": "2026-05-15T15:31:12.361Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -508,7 +508,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 20,
-            "uptime": 93.87
+            "uptime": 93.88
           }
         ],
         "tagSummary": [
@@ -861,7 +861,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:16:13.649Z"
+        "updatedAt": "2026-05-15T15:31:11.716Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -965,7 +965,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:16:14.015Z"
+        "updatedAt": "2026-05-15T15:31:11.712Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1146,7 +1146,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:16:14.016Z"
+        "updatedAt": "2026-05-15T15:31:11.964Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1687,15 +1687,6 @@
           "publishedAt": "2026-03-30T21:00:53Z",
           "points": 2,
           "commentCount": 3
-        },
-        {
-          "id": "47719925",
-          "title": "Show HN: I built a $3/yr AI workflow to stop doomscrolling Twitter for tech news",
-          "url": "https://news.ycombinator.com/item?id=47719925",
-          "source": "hackernews",
-          "publishedAt": "2026-04-10T15:49:04Z",
-          "points": 2,
-          "commentCount": 0
         }
       ]
     },
@@ -1714,7 +1705,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:16:14.289Z"
+        "updatedAt": "2026-05-15T15:31:11.989Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1772,7 +1763,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:16:14.228Z"
+        "updatedAt": "2026-05-15T15:31:12.317Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1940,5 +1931,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-15T15:16:14.764Z"
+  "generatedAt": "2026-05-15T15:31:12.781Z"
 }
