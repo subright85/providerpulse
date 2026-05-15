@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:31:11.186Z"
+        "updatedAt": "2026-05-15T15:46:09.291Z"
       },
       "stats": {
         "providerId": "openai",
@@ -480,7 +480,7 @@
         "providerId": "anthropic",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:31:12.361Z"
+        "updatedAt": "2026-05-15T15:46:09.643Z"
       },
       "stats": {
         "providerId": "anthropic",
@@ -861,7 +861,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:31:11.716Z"
+        "updatedAt": "2026-05-15T15:46:09.089Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -965,7 +965,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:31:11.712Z"
+        "updatedAt": "2026-05-15T15:46:09.358Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1146,7 +1146,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:31:11.964Z"
+        "updatedAt": "2026-05-15T15:46:09.303Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1687,6 +1687,15 @@
           "publishedAt": "2026-03-30T21:00:53Z",
           "points": 2,
           "commentCount": 3
+        },
+        {
+          "id": "47719925",
+          "title": "Show HN: I built a $3/yr AI workflow to stop doomscrolling Twitter for tech news",
+          "url": "https://news.ycombinator.com/item?id=47719925",
+          "source": "hackernews",
+          "publishedAt": "2026-04-10T15:49:04Z",
+          "points": 2,
+          "commentCount": 0
         }
       ]
     },
@@ -1705,7 +1714,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:31:11.989Z"
+        "updatedAt": "2026-05-15T15:46:09.758Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1763,7 +1772,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-15T15:31:12.317Z"
+        "updatedAt": "2026-05-15T15:46:09.736Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1931,5 +1940,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-15T15:31:12.781Z"
+  "generatedAt": "2026-05-15T15:46:10.505Z"
 }
