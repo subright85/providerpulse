@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-16T18:01:00.066Z"
+        "updatedAt": "2026-05-16T18:15:58.978Z"
       },
       "stats": {
         "providerId": "openai",
@@ -477,19 +477,19 @@
       },
       "status": {
         "providerId": "anthropic",
-        "indicator": "none",
-        "description": "All Systems Operational",
-        "updatedAt": "2026-05-16T18:01:00.843Z"
+        "indicator": "minor",
+        "description": "Minor Service Outage",
+        "updatedAt": "2026-05-16T18:15:59.622Z"
       },
       "stats": {
         "providerId": "anthropic",
         "uptime30d": 95.9,
-        "uptime90d": 98.4,
-        "incidentCount30d": 46,
+        "uptime90d": 98.44,
+        "incidentCount30d": 47,
         "avgMttr30d": 77,
-        "lastIncident": "2026-05-15T00:18:38.337Z",
+        "lastIncident": "2026-05-16T18:08:45.590Z",
         "reliabilityScore": 61,
-        "reliabilityScore90d": 64,
+        "reliabilityScore90d": 66,
         "monthlyTrend": [
           {
             "month": "2026-03",
@@ -500,31 +500,31 @@
           {
             "month": "2026-04",
             "label": "Apr 26",
-            "incidentCount": 30,
-            "uptime": 98.17
+            "incidentCount": 29,
+            "uptime": 98.3
           },
           {
             "month": "2026-05",
             "label": "May 26",
-            "incidentCount": 20,
+            "incidentCount": 21,
             "uptime": 94.31
           }
         ],
         "tagSummary": [
           {
-            "tag": "inference",
-            "count30d": 36,
-            "count90d": 38
+            "tag": "api",
+            "count30d": 35,
+            "count90d": 37
           },
           {
-            "tag": "api",
-            "count30d": 34,
-            "count90d": 36
+            "tag": "inference",
+            "count30d": 36,
+            "count90d": 37
           },
           {
             "tag": "availability",
             "count30d": 4,
-            "count90d": 5
+            "count90d": 4
           },
           {
             "tag": "auth",
@@ -546,10 +546,24 @@
           "b2b": 1,
           "b2c": 7,
           "both": 2,
-          "unknown": 36
+          "unknown": 37
         }
       },
       "recentIncidents": [
+        {
+          "id": "v9s6d0jt84hj",
+          "providerId": "anthropic",
+          "title": "Elevated error rates on requests to multiple models",
+          "severity": "major",
+          "tags": [
+            "api"
+          ],
+          "audience": "unknown",
+          "startedAt": "2026-05-16T18:08:45.590Z",
+          "resolvedAt": null,
+          "durationMinutes": null,
+          "url": "https://stspg.io/vsxny8nscrf2"
+        },
         {
           "id": "8z7l5zcy0v3b",
           "providerId": "anthropic",
@@ -756,48 +770,33 @@
           "resolvedAt": "2026-05-08T11:40:41.886Z",
           "durationMinutes": 111,
           "url": "https://stspg.io/zl0w1dmccgf7"
-        },
-        {
-          "id": "9h32bh60z06w",
-          "providerId": "anthropic",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "severity": "minor",
-          "tags": [
-            "inference",
-            "api"
-          ],
-          "audience": "unknown",
-          "startedAt": "2026-05-07T12:10:17.750Z",
-          "resolvedAt": "2026-05-07T12:45:50.391Z",
-          "durationMinutes": 36,
-          "url": "https://stspg.io/q47w2qqgt7ds"
         }
       ],
       "components": [
         {
           "id": "rwppv331jlwc",
           "name": "claude.ai",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "0qbwn08sd68x",
           "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "k8w3r06qmzrp",
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "yyzkbfz2thpt",
           "name": "Claude Code",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "bpp5gb3hpjcl",
           "name": "Claude Cowork",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "id": "0scnb50nvy53",
@@ -860,7 +859,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-16T18:00:59.964Z"
+        "updatedAt": "2026-05-16T18:15:58.612Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -964,7 +963,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-16T18:01:00.236Z"
+        "updatedAt": "2026-05-16T18:15:59.230Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1145,7 +1144,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-16T18:01:00.394Z"
+        "updatedAt": "2026-05-16T18:15:59.204Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1713,7 +1712,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-16T18:01:00.619Z"
+        "updatedAt": "2026-05-16T18:15:59.404Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1771,7 +1770,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-16T18:01:00.883Z"
+        "updatedAt": "2026-05-16T18:16:01.698Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1852,8 +1851,8 @@
       "tags": [
         {
           "tag": "api",
-          "count30d": 54,
-          "count90d": 59,
+          "count30d": 55,
+          "count90d": 60,
           "trend": "up",
           "providers": [
             "openai",
@@ -1866,7 +1865,7 @@
         {
           "tag": "inference",
           "count30d": 51,
-          "count90d": 55,
+          "count90d": 54,
           "trend": "up",
           "providers": [
             "openai",
@@ -1887,17 +1886,6 @@
           ]
         },
         {
-          "tag": "availability",
-          "count30d": 6,
-          "count90d": 8,
-          "trend": "up",
-          "providers": [
-            "openai",
-            "anthropic",
-            "cohere"
-          ]
-        },
-        {
           "tag": "performance",
           "count30d": 5,
           "count90d": 8,
@@ -1906,6 +1894,17 @@
             "openai",
             "cohere",
             "deepseek"
+          ]
+        },
+        {
+          "tag": "availability",
+          "count30d": 6,
+          "count90d": 7,
+          "trend": "up",
+          "providers": [
+            "openai",
+            "anthropic",
+            "cohere"
           ]
         },
         {
@@ -1939,5 +1938,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-16T18:01:01.557Z"
+  "generatedAt": "2026-05-16T18:16:02.098Z"
 }
