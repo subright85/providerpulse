@@ -15,7 +15,7 @@
         "providerId": "openai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-18T22:15:17.323Z"
+        "updatedAt": "2026-05-18T22:30:19.378Z"
       },
       "stats": {
         "providerId": "openai",
@@ -477,16 +477,16 @@
       },
       "status": {
         "providerId": "anthropic",
-        "indicator": "minor",
-        "description": "Minor Service Outage",
-        "updatedAt": "2026-05-18T22:15:18.451Z"
+        "indicator": "none",
+        "description": "All Systems Operational",
+        "updatedAt": "2026-05-18T22:30:20.531Z"
       },
       "stats": {
         "providerId": "anthropic",
-        "uptime30d": 96.05,
-        "uptime90d": 98.6,
+        "uptime30d": 96.04,
+        "uptime90d": 98.59,
         "incidentCount30d": 46,
-        "avgMttr30d": 77,
+        "avgMttr30d": 75,
         "lastIncident": "2026-05-18T22:10:49.001Z",
         "reliabilityScore": 62,
         "reliabilityScore90d": 67,
@@ -507,7 +507,7 @@
             "month": "2026-05",
             "label": "May 26",
             "incidentCount": 23,
-            "uptime": 94.87
+            "uptime": 94.85
           }
         ],
         "tagSummary": [
@@ -561,8 +561,8 @@
           ],
           "audience": "unknown",
           "startedAt": "2026-05-18T22:10:49.001Z",
-          "resolvedAt": null,
-          "durationMinutes": null,
+          "resolvedAt": "2026-05-18T22:19:34.931Z",
+          "durationMinutes": 9,
           "url": "https://stspg.io/wyyn9n652gsz"
         },
         {
@@ -777,27 +777,27 @@
         {
           "id": "rwppv331jlwc",
           "name": "claude.ai",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "0qbwn08sd68x",
           "name": "Claude Console (platform.claude.com)",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "k8w3r06qmzrp",
           "name": "Claude API (api.anthropic.com)",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "yyzkbfz2thpt",
           "name": "Claude Code",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "bpp5gb3hpjcl",
           "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "id": "0scnb50nvy53",
@@ -860,7 +860,7 @@
         "providerId": "google-ai",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-18T22:15:17.232Z"
+        "updatedAt": "2026-05-18T22:30:19.721Z"
       },
       "stats": {
         "providerId": "google-ai",
@@ -964,7 +964,7 @@
         "providerId": "groq",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-18T22:15:17.500Z"
+        "updatedAt": "2026-05-18T22:30:19.706Z"
       },
       "stats": {
         "providerId": "groq",
@@ -1145,7 +1145,7 @@
         "providerId": "cohere",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-18T22:15:17.570Z"
+        "updatedAt": "2026-05-18T22:30:19.938Z"
       },
       "stats": {
         "providerId": "cohere",
@@ -1713,7 +1713,7 @@
         "providerId": "perplexity",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-18T22:15:18.276Z"
+        "updatedAt": "2026-05-18T22:30:20.385Z"
       },
       "stats": {
         "providerId": "perplexity",
@@ -1771,7 +1771,7 @@
         "providerId": "ai21",
         "indicator": "none",
         "description": "All Systems Operational",
-        "updatedAt": "2026-05-18T22:15:18.473Z"
+        "updatedAt": "2026-05-18T22:30:20.608Z"
       },
       "stats": {
         "providerId": "ai21",
@@ -1939,5 +1939,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-05-18T22:15:19.044Z"
+  "generatedAt": "2026-05-18T22:30:20.901Z"
 }
