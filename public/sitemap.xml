@@ -5,4 +5,24 @@
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://isllmdown.vercel.app/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://isllmdown.vercel.app/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://isllmdown.vercel.app/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://isllmdown.vercel.app/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>

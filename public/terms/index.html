@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8fafc" />
+    <title>Terms of Use — IsLLMDown</title>
+    <meta name="description" content="The conditions under which IsLLMDown is offered — best-effort data, no warranty, acceptable use, third-party dependencies, and limitation of liability." />
+    <link rel="canonical" href="https://isllmdown.vercel.app/terms" />
+    <meta property="og:title" content="Terms of Use — IsLLMDown" />
+    <meta property="og:description" content="The conditions under which IsLLMDown is offered." />
+    <meta property="og:url" content="https://isllmdown.vercel.app/terms" />
+    <meta property="og:type" content="article" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; background: #f8fafc; color: #0f172a; -webkit-font-smoothing: antialiased; }
+      .container { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+      header { border-bottom: 1px solid #e2e8f0; padding-bottom: 1.25rem; margin-bottom: 2rem; }
+      header a.brand { color: #0f172a; text-decoration: none; font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; }
+      header p { color: #64748b; font-size: 0.875rem; margin: 0.25rem 0 0; }
+      h1 { font-size: 1.875rem; font-weight: 700; margin: 0 0 0.4rem; color: #0f172a; letter-spacing: -0.02em; }
+      .meta { color: #94a3b8; font-size: 0.8125rem; font-family: 'IBM Plex Mono', monospace; margin-bottom: 1.5rem; }
+      h2 { font-size: 1.125rem; font-weight: 600; margin: 2rem 0 0.6rem; color: #1e293b; }
+      p, li { color: #334155; line-height: 1.7; font-size: 0.95rem; }
+      a { color: #0284c7; }
+      a:hover { text-decoration: underline; }
+      ul { padding-left: 1.5rem; }
+      li { margin-bottom: 0.35rem; }
+      footer { border-top: 1px solid #e2e8f0; padding-top: 1.5rem; margin-top: 3rem; text-align: center; color: #94a3b8; font-size: 0.8125rem; }
+      footer a { color: #0284c7; margin: 0 0.4rem; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a class="brand" href="/">IsLLMDown</a>
+        <p>Component-level health for the LLM APIs your stack depends on.</p>
+      </header>
+
+      <h1>Terms of Use</h1>
+      <p class="meta">Last updated: 20 May 2026</p>
+
+      <p>These terms describe the conditions under which IsLLMDown is offered. By using the site you accept them.</p>
+
+      <h2>Best-effort, no warranty</h2>
+      <p>IsLLMDown aggregates publicly available status data from third-party APIs. We do our best to make the aggregation accurate, current, and complete, but we cannot guarantee it. The site is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, or availability.</p>
+      <p>In particular: the reliability scores shown here are derived from each provider's own incident reporting on its public status page. If a provider under-reports an incident, our score will reflect that under-reporting — we cannot detect outages the provider does not disclose. Conversely, if a provider over-reports or files an incident later corrected, the score will be lower than reality would justify. Treat the scores as a directional signal, not a guarantee of availability.</p>
+
+      <h2>Acceptable use</h2>
+      <p>The site is free to use for any purpose, including commercial. You may link to it, embed screenshots in articles or presentations, cite the data in your own writing, and reference the methodology. Attribution is appreciated but not required.</p>
+      <p>You may not abuse the site by hammering it with scraping requests that would burden the infrastructure or distort the analytics signal. The underlying aggregated JSON is published in the public GitHub repository precisely so that programmatic consumers can fetch the data directly rather than scraping the dashboard.</p>
+
+      <h2>Third-party services</h2>
+      <p>The dashboard depends on the availability and policies of several third parties — Vercel for hosting, GitHub for source-of-truth and data, Cloudflare for the collection worker, and each provider's StatusPage.io endpoint. Outages, rate limits, or policy changes at any of those services may interrupt this site. We do not control those services and accept no liability for their behaviour.</p>
+
+      <h2>Donations</h2>
+      <p>The Buy-Me-A-Coffee link is an optional donation. Donations do not entitle the donor to any service, support, prioritised features, or warranty. The site remains free for all visitors regardless of donations.</p>
+
+      <h2>Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, the maintainers of IsLLMDown are not liable for any damages — direct, indirect, incidental, consequential, or otherwise — arising from your use of the site or from reliance on its data. If you depend on accurate LLM status information for a critical operational decision, verify it against the provider's own status page and your own monitoring.</p>
+
+      <h2>Changes</h2>
+      <p>These terms may be updated. The "Last updated" date at the top of this page reflects the most recent change. Continued use of the site after a change constitutes acceptance of the updated terms.</p>
+
+      <h2>Contact</h2>
+      <p>For questions about these terms, file an issue at <a href="https://github.com/subright85/IsLLMDown/issues" target="_blank" rel="noopener noreferrer">github.com/subright85/IsLLMDown/issues</a>.</p>
+
+      <footer>
+        <a href="/">Dashboard</a> ·
+        <a href="/about">About</a> ·
+        <a href="/privacy">Privacy</a> ·
+        <a href="/terms">Terms</a> ·
+        <a href="/contact">Contact</a>
+      </footer>
+    </div>
+  </body>
+</html>

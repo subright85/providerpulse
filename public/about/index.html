@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8fafc" />
+    <title>About — IsLLMDown</title>
+    <meta name="description" content="What IsLLMDown is, how it tracks component-level reliability for eight LLM API providers, and the methodology behind the 30/90-day scores." />
+    <link rel="canonical" href="https://isllmdown.vercel.app/about" />
+    <meta property="og:title" content="About — IsLLMDown" />
+    <meta property="og:description" content="What IsLLMDown is and how it tracks component-level reliability for LLM API providers." />
+    <meta property="og:url" content="https://isllmdown.vercel.app/about" />
+    <meta property="og:type" content="article" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; background: #f8fafc; color: #0f172a; -webkit-font-smoothing: antialiased; }
+      .container { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+      header { border-bottom: 1px solid #e2e8f0; padding-bottom: 1.25rem; margin-bottom: 2rem; }
+      header a.brand { color: #0f172a; text-decoration: none; font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; }
+      header p { color: #64748b; font-size: 0.875rem; margin: 0.25rem 0 0; }
+      h1 { font-size: 1.875rem; font-weight: 700; margin: 0 0 1.5rem; color: #0f172a; letter-spacing: -0.02em; }
+      h2 { font-size: 1.125rem; font-weight: 600; margin: 2rem 0 0.6rem; color: #1e293b; }
+      p, li { color: #334155; line-height: 1.7; font-size: 0.95rem; }
+      a { color: #0284c7; }
+      a:hover { text-decoration: underline; }
+      ul { padding-left: 1.5rem; }
+      li { margin-bottom: 0.35rem; }
+      footer { border-top: 1px solid #e2e8f0; padding-top: 1.5rem; margin-top: 3rem; text-align: center; color: #94a3b8; font-size: 0.8125rem; }
+      footer a { color: #0284c7; margin: 0 0.4rem; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a class="brand" href="/">IsLLMDown</a>
+        <p>Component-level health for the LLM APIs your stack depends on.</p>
+      </header>
+
+      <h1>About</h1>
+
+      <p>IsLLMDown is a public dashboard that tracks the reliability of major large-language-model API providers at the component level. Most existing status trackers — StatusGator, IncidentHub, the providers' own status pages — report at the provider level. "OpenAI is up" or "Anthropic is degraded." That framing hides the actual texture of the outage. OpenAI alone publishes more than twenty-five separate components — Chat Completions, Embeddings, Audio, Batch, Files, Moderations, Vision, and many others — and on any given day the Chat Completions endpoint can be fully operational while the Batch API is down. A team building production software needs to know which component is affected, not just whether the provider as a whole is in trouble.</p>
+
+      <h2>What it tracks</h2>
+      <p>The site monitors eight providers — OpenAI, Anthropic, Google AI, Groq, Cohere, DeepSeek, Perplexity, and AI21 — across every component each one publishes on its official StatusPage.io endpoint. For each provider, the dashboard shows current component health, the 30-day reliability score, the 90-day reliability score, a three-month sparkline of past incidents, and any active incident with audience tagging (whether the impact falls primarily on API consumers or on end-user products).</p>
+
+      <h2>Methodology</h2>
+      <p>The reliability score is a severity-weighted uptime measure. Each reported incident subtracts from the score in proportion to its severity: critical incidents subtract eight points, major incidents four, minor incidents half a point. Maintenance windows are excluded. Scores are computed daily from the raw incident timeline; we do not estimate, smooth, or backfill missing entries.</p>
+      <p>Two scores are shown side by side: 30-day and 90-day. The 30-day number captures the recent operational picture — what your monitoring would have detected this past month. The 90-day number captures the underlying trend — how reliable the provider has been across a more meaningful sample of operating conditions. Both numbers are useful, for different reasons. The recent score is what you feel today; the trend score is what you should plan around.</p>
+
+      <h2>Data sources</h2>
+      <p>Every data point comes from a provider's own official StatusPage.io endpoint. We do not scrape, infer, or synthesize incident data. A Cloudflare Worker schedules a GitHub Actions workflow that aggregates the public summaries every fifteen minutes and detects new incidents every five minutes. The aggregated JSON is published statically to this site; there is no backend database. The full source, including the collection scripts and provider configuration, is at <a href="https://github.com/subright85/IsLLMDown" target="_blank" rel="noopener noreferrer">github.com/subright85/IsLLMDown</a>.</p>
+
+      <h2>Free, no signup, open data</h2>
+      <p>The site is free and stays free. There is no signup, no paywall, no API gate. The aggregated JSON is published in the same public repository under the same terms as the upstream status pages — anyone is welcome to use it, mirror it, or build something better on top.</p>
+
+      <footer>
+        <a href="/">Dashboard</a> ·
+        <a href="/about">About</a> ·
+        <a href="/privacy">Privacy</a> ·
+        <a href="/terms">Terms</a> ·
+        <a href="/contact">Contact</a>
+      </footer>
+    </div>
+  </body>
+</html>
